@@ -41,10 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MarkBUS.cs" />
+    <Compile Include="AttendanceBUS.cs" />
+    <Compile Include="ClassroomBUS.cs" />
     <Compile Include="StudyScheduleBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FoodScheduleBUS.cs" />
+    <Compile Include="ClassificationBUS.cs" />
+    <Compile Include="StudentBUS.cs" />
     <Compile Include="SubjectBUS.cs" />
+    <Compile Include="TeacherBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">

@@ -1,0 +1,10 @@
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\GUI.exe
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\GUI.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\GUI.exe.config
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
