@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLHSDEMO" Class="EVSchoolDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-LGSU8J3\SQLSERVER;Initial Catalog=QLHSDEMO;User ID=sa" SettingsObjectName="GUI.Properties.Settings" SettingsPropertyName="QLHSDEMOConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="StudentManagementDB" Class="EVSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=StudentManagementDB.mssql.somee.com;Initial Catalog=StudentManagementDB;User ID=baolongsbs_SQLLogin_1" SettingsObjectName="DataAccessLayer.Properties.Settings" SettingsPropertyName="StudentManagementDBConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Attendance" Member="Attendances">
     <Type Name="Attendance">
       <Column Name="AttendanceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="AttendanceDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="AttendanceSemester" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="AttendanceClass" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="AttendanceStudent" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="AttendanceTeacher" Type="System.Int32" DbType="Int" CanBeNull="true" />

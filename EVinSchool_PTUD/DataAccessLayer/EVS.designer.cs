@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GUI
+namespace DataAccessLayer
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -22,8 +22,8 @@ namespace GUI
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QLHSDEMO")]
-	public partial class EVSchoolDBDataContext : System.Data.Linq.DataContext
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="StudentManagementDB")]
+	public partial class EVSDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -59,31 +59,31 @@ namespace GUI
     partial void DeleteTeacher(Teacher instance);
     #endregion
 		
-		public EVSchoolDBDataContext() : 
-				base(global::GUI.Properties.Settings.Default.QLHSDEMOConnectionString, mappingSource)
+		public EVSDataContext() : 
+				base(global::DataAccessLayer.Properties.Settings.Default.StudentManagementDBConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public EVSchoolDBDataContext(string connection) : 
+		public EVSDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public EVSchoolDBDataContext(System.Data.IDbConnection connection) : 
+		public EVSDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public EVSchoolDBDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public EVSDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public EVSchoolDBDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public EVSDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -172,8 +172,6 @@ namespace GUI
 		
 		private System.Nullable<System.DateTime> _AttendanceDate;
 		
-		private System.Nullable<int> _AttendanceSemester;
-		
 		private System.Nullable<int> _AttendanceClass;
 		
 		private System.Nullable<int> _AttendanceStudent;
@@ -196,8 +194,6 @@ namespace GUI
     partial void OnAttendanceIdChanged();
     partial void OnAttendanceDateChanging(System.Nullable<System.DateTime> value);
     partial void OnAttendanceDateChanged();
-    partial void OnAttendanceSemesterChanging(System.Nullable<int> value);
-    partial void OnAttendanceSemesterChanged();
     partial void OnAttendanceClassChanging(System.Nullable<int> value);
     partial void OnAttendanceClassChanged();
     partial void OnAttendanceStudentChanging(System.Nullable<int> value);
@@ -252,26 +248,6 @@ namespace GUI
 					this._AttendanceDate = value;
 					this.SendPropertyChanged("AttendanceDate");
 					this.OnAttendanceDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AttendanceSemester", DbType="Int")]
-		public System.Nullable<int> AttendanceSemester
-		{
-			get
-			{
-				return this._AttendanceSemester;
-			}
-			set
-			{
-				if ((this._AttendanceSemester != value))
-				{
-					this.OnAttendanceSemesterChanging(value);
-					this.SendPropertyChanging();
-					this._AttendanceSemester = value;
-					this.SendPropertyChanged("AttendanceSemester");
-					this.OnAttendanceSemesterChanged();
 				}
 			}
 		}

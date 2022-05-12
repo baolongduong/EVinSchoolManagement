@@ -1,5 +1,4 @@
-﻿using GUI;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -10,7 +9,7 @@ namespace DataAccessLayer
 {
     public class AttendanceDAO
     {
-        EVSchoolDBDataContext db = new EVSchoolDBDataContext(ConfigurationManager.ConnectionStrings["strCon"].ConnectionString);
+        EVSDataContext db = new EVSDataContext(ConfigurationManager.ConnectionStrings["strCon"].ConnectionString);
         public List<Attendance> SelectAll()
         {
             List<Attendance> attendances = db.Attendances.ToList(); ;
@@ -51,7 +50,6 @@ namespace DataAccessLayer
                 try
                 {
                     dbAttendance.AttendanceDate = newAttendance.AttendanceDate;
-                    dbAttendance.AttendanceSemester = newAttendance.AttendanceSemester;
                     dbAttendance.AttendanceClass = newAttendance.AttendanceClass;
                     dbAttendance.AttendanceTeacher = newAttendance.AttendanceTeacher;
                     dbAttendance.AttendanceStudent = newAttendance.AttendanceStudent;

@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using DataAccessLayer;
-using GUI;
+
 
 namespace BusinessLogicLayer
 {
-    class SubjectBUS
+    public class SubjectBUS
     {
         public List<Subject> GetAll()
         {

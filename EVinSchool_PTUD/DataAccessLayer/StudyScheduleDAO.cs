@@ -1,4 +1,4 @@
-﻿using GUI;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -10,7 +10,7 @@ namespace DataAccessLayer
 {
     public class StudyScheduleDAO
     {
-        EVSchoolDBDataContext db = new EVSchoolDBDataContext(ConfigurationManager.ConnectionStrings["strCon"].ConnectionString);
+        EVSDataContext db = new EVSDataContext(ConfigurationManager.ConnectionStrings["strCon"].ConnectionString);
         public List<StudySchedule> SelectAll()
         {
             List<StudySchedule> studySchedules = db.StudySchedules.ToList(); ;

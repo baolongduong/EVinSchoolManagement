@@ -5,14 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using GUI;
 using System.Configuration;
 
 namespace DataAccessLayer
 {
     public class StudentDAO
     {
-        EVSchoolDBDataContext db = new EVSchoolDBDataContext(ConfigurationManager.ConnectionStrings["strCon"].ConnectionString);
+        EVSDataContext db = new EVSDataContext(ConfigurationManager.ConnectionStrings["strCon"].ConnectionString);
         public List<Student> SelectAll()
         {
             List<Student> students = db.Students.ToList(); ;

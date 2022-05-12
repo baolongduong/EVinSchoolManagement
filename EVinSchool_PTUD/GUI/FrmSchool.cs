@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLogicLayer;
 
 namespace GUI
 {
     public partial class FrmSchool : Form
     {
+        TeacherBUS teacherBUS = new TeacherBUS();
         public FrmSchool()
         {
             InitializeComponent();

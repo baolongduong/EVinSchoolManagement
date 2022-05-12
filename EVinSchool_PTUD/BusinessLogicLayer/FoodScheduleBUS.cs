@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using DataAccessLayer;
-using GUI;
+
 
 namespace BusinessLogicLayer
 {
-    class FoodScheduleBUS
+   public class FoodScheduleBUS
     {
         public List<FoodSchedule> GetAll()
         {

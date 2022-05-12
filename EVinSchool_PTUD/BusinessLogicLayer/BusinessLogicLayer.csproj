@@ -57,10 +57,6 @@
       <Project>{9E00F3C6-E2DB-462C-8FB3-33D3269765DB}</Project>
       <Name>DataAccessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GUI\GUI.csproj">
-      <Project>{7D41C09E-0077-4757-95F8-22E044D3E3B8}</Project>
-      <Name>GUI</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

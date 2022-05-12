@@ -7,3 +7,9 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.GenerateResourc
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.exe
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\BusinessLogicLayer.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\DataAccessLayer.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\BusinessLogicLayer.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\DataAccessLayer.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\DataAccessLayer.dll.config
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.CopyComplete

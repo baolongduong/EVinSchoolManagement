@@ -46,9 +46,19 @@
     <Compile Include="AttendanceDAO.cs" />
     <Compile Include="ClassificationDAO.cs" />
     <Compile Include="ClassroomDAO.cs" />
+    <Compile Include="EVS.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EVS.dbml</DependentUpon>
+    </Compile>
     <Compile Include="MarkDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FoodScheduleDAO.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="StudentDAO.cs" />
     <Compile Include="StudyScheduleDAO.cs" />
     <Compile Include="SubjectDAO.cs" />
@@ -58,10 +68,19 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GUI\GUI.csproj">
-      <Project>{7D41C09E-0077-4757-95F8-22E044D3E3B8}</Project>
-      <Name>GUI</Name>
-    </ProjectReference>
+    <None Include="app.config" />
+    <None Include="EVS.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EVS.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EVS.dbml.layout">
+      <DependentUpon>EVS.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

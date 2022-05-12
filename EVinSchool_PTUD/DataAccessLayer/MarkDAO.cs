@@ -1,4 +1,4 @@
-﻿using GUI;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -11,7 +11,7 @@ namespace DataAccessLayer
 {
     public class MarkDAO
     {
-        EVSchoolDBDataContext db = new EVSchoolDBDataContext(ConfigurationManager.ConnectionStrings["strCon"].ConnectionString);
+        EVSDataContext db = new EVSDataContext(ConfigurationManager.ConnectionStrings["strCon"].ConnectionString);
         public List<Mark> SelectAll()
         {
             List<Mark> marks = db.Marks.ToList(); ;
