@@ -4,3 +4,4 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLaye
 D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache

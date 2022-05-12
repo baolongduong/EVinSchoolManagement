@@ -13,3 +13,4 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\BusinessLogicLayer.pdb
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\DataAccessLayer.pdb
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\DataAccessLayer.dll.config
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmSchool.resources

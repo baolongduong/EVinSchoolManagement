@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer;
+using DataAccessLayer;
 
 namespace GUI
 {
@@ -17,6 +18,12 @@ namespace GUI
         public FrmSchool()
         {
             InitializeComponent();
+        }
+
+        private void FrmSchool_Load(object sender, EventArgs e)
+        {
+            List<Teacher> teachers = new TeacherBUS().GetAll();
+            gvTeacher.DataSource = teachers;
         }
     }
 }

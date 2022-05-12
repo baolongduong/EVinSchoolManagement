@@ -29,13 +29,37 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.gvTeacher = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gvTeacher)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // gvTeacher
+            // 
+            this.gvTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvTeacher.Location = new System.Drawing.Point(38, 43);
+            this.gvTeacher.Name = "gvTeacher";
+            this.gvTeacher.RowHeadersWidth = 51;
+            this.gvTeacher.RowTemplate.Height = 24;
+            this.gvTeacher.Size = new System.Drawing.Size(708, 336);
+            this.gvTeacher.TabIndex = 0;
+            // 
+            // FrmSchool
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.gvTeacher);
+            this.Name = "FrmSchool";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmSchool_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gvTeacher)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView gvTeacher;
     }
 }
 
