@@ -80,5 +80,23 @@ namespace DataAccessLayer
             }
             return false;
         }
+
+        public bool CheckLogin(string username, string password)
+        {
+            var q = from p in db.Teachers
+                    where p.TeacherEmail == username
+                    && p.TeacherPassword == password
+                    select p;
+            if (q.Any())
+            {
+
+                return true;
+            }
+            else
+            {
+
+                return false;
+            }
+        }
     }
 }

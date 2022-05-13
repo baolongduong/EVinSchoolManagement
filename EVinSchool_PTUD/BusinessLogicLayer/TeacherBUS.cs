@@ -48,5 +48,11 @@ namespace BusinessLogicLayer
             return result;
 
         }
+
+        public bool checkLogin(string userName, string password)
+        {
+            TeacherDAO teaDAO = new TeacherDAO();
+            return teaDAO.CheckLogin(userName, password);
+        }
     }
 }
