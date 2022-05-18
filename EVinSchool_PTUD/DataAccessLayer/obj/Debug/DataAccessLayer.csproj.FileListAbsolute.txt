@@ -11,4 +11,4 @@ C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolM
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache

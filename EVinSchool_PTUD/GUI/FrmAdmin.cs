@@ -14,10 +14,10 @@ using Bunifu.Utils;
 
 namespace GUI
 {
-    public partial class FrmSchool : BunifuForm
+    public partial class FrmAdmin : BunifuForm
     {
         TeacherBUS teacherBUS = new TeacherBUS();
-        public FrmSchool()
+        public FrmAdmin()
         {
             InitializeComponent();
         }
@@ -56,6 +56,11 @@ namespace GUI
         private void txtID_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
