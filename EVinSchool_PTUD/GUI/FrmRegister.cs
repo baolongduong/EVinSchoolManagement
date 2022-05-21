@@ -24,9 +24,7 @@ namespace GUI
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmLogin frmLogin = new FrmLogin();
-            frmLogin.Show();
+          
         }
         private void FrmRegister_Load(object sender, EventArgs e)
         {
@@ -109,6 +107,13 @@ namespace GUI
                
 
             }
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
         }
     }
 }

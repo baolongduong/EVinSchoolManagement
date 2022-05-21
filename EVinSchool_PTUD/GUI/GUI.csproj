@@ -234,5 +234,8 @@
   <ItemGroup>
     <None Include="images\signature.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\back-button.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

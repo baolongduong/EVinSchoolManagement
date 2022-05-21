@@ -28,8 +28,8 @@
       <Column Name="ClassName" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Association Name="Classroom_Attendance" Member="Attendances" ThisKey="ClassId" OtherKey="AttendanceClass" Type="Attendance" />
       <Association Name="Classroom_FoodSchedule" Member="FoodSchedules" ThisKey="ClassId" OtherKey="ClassId" Type="FoodSchedule" />
-      <Association Name="Classroom_Student" Member="Students" ThisKey="ClassId" OtherKey="StudentClass" Type="Student" />
       <Association Name="Classroom_StudySchedule" Member="StudySchedules" ThisKey="ClassId" OtherKey="ClassID" Type="StudySchedule" />
+      <Association Name="Classroom_Student" Member="Students" ThisKey="ClassId" OtherKey="StudentClass" Type="Student" />
       <Association Name="Classroom_Teacher" Member="Teachers" ThisKey="ClassId" OtherKey="TeacherClass" Type="Teacher" />
     </Type>
   </Table>
@@ -49,8 +49,20 @@
       <Column Name="SubjectId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Score" Type="System.Decimal" DbType="Decimal(10,1)" CanBeNull="true" />
       <Column Name="StudentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarkDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="Student_Mark" Member="Student" ThisKey="StudentId" OtherKey="StudentId" Type="Student" IsForeignKey="true" />
       <Association Name="Subject_Mark" Member="Subject" ThisKey="SubjectId" OtherKey="SubjectId" Type="Subject" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StudySchedule" Member="StudySchedules">
+    <Type Name="StudySchedule">
+      <Column Name="StudySID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TimeStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="StudySubject" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Classroom_StudySchedule" Member="Classroom" ThisKey="ClassID" OtherKey="ClassId" Type="Classroom" IsForeignKey="true" />
+      <Association Name="Subject_StudySchedule" Member="Subject" ThisKey="StudySubject" OtherKey="SubjectId" Type="Subject" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Student" Member="Students">
@@ -64,17 +76,6 @@
       <Association Name="Student_Classification" Member="Classifications" ThisKey="StudentId" OtherKey="StudentId" Type="Classification" />
       <Association Name="Student_Mark" Member="Marks" ThisKey="StudentId" OtherKey="StudentId" Type="Mark" />
       <Association Name="Classroom_Student" Member="Classroom" ThisKey="StudentClass" OtherKey="ClassId" Type="Classroom" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.StudySchedule" Member="StudySchedules">
-    <Type Name="StudySchedule">
-      <Column Name="StudySID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TimeStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="StudySubject" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TimeEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="ClassID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Classroom_StudySchedule" Member="Classroom" ThisKey="ClassID" OtherKey="ClassId" Type="Classroom" IsForeignKey="true" />
-      <Association Name="Subject_StudySchedule" Member="Subject" ThisKey="StudySubject" OtherKey="SubjectId" Type="Subject" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Subject" Member="Subjects">

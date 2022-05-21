@@ -45,12 +45,12 @@ namespace DataAccessLayer
     partial void InsertMark(Mark instance);
     partial void UpdateMark(Mark instance);
     partial void DeleteMark(Mark instance);
-    partial void InsertStudent(Student instance);
-    partial void UpdateStudent(Student instance);
-    partial void DeleteStudent(Student instance);
     partial void InsertStudySchedule(StudySchedule instance);
     partial void UpdateStudySchedule(StudySchedule instance);
     partial void DeleteStudySchedule(StudySchedule instance);
+    partial void InsertStudent(Student instance);
+    partial void UpdateStudent(Student instance);
+    partial void DeleteStudent(Student instance);
     partial void InsertSubject(Subject instance);
     partial void UpdateSubject(Subject instance);
     partial void DeleteSubject(Subject instance);
@@ -129,19 +129,19 @@ namespace DataAccessLayer
 			}
 		}
 		
-		public System.Data.Linq.Table<Student> Students
-		{
-			get
-			{
-				return this.GetTable<Student>();
-			}
-		}
-		
 		public System.Data.Linq.Table<StudySchedule> StudySchedules
 		{
 			get
 			{
 				return this.GetTable<StudySchedule>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Student> Students
+		{
+			get
+			{
+				return this.GetTable<Student>();
 			}
 		}
 		
@@ -656,9 +656,9 @@ namespace DataAccessLayer
 		
 		private EntitySet<FoodSchedule> _FoodSchedules;
 		
-		private EntitySet<Student> _Students;
-		
 		private EntitySet<StudySchedule> _StudySchedules;
+		
+		private EntitySet<Student> _Students;
 		
 		private EntitySet<Teacher> _Teachers;
 		
@@ -676,8 +676,8 @@ namespace DataAccessLayer
 		{
 			this._Attendances = new EntitySet<Attendance>(new Action<Attendance>(this.attach_Attendances), new Action<Attendance>(this.detach_Attendances));
 			this._FoodSchedules = new EntitySet<FoodSchedule>(new Action<FoodSchedule>(this.attach_FoodSchedules), new Action<FoodSchedule>(this.detach_FoodSchedules));
-			this._Students = new EntitySet<Student>(new Action<Student>(this.attach_Students), new Action<Student>(this.detach_Students));
 			this._StudySchedules = new EntitySet<StudySchedule>(new Action<StudySchedule>(this.attach_StudySchedules), new Action<StudySchedule>(this.detach_StudySchedules));
+			this._Students = new EntitySet<Student>(new Action<Student>(this.attach_Students), new Action<Student>(this.detach_Students));
 			this._Teachers = new EntitySet<Teacher>(new Action<Teacher>(this.attach_Teachers), new Action<Teacher>(this.detach_Teachers));
 			OnCreated();
 		}
@@ -748,19 +748,6 @@ namespace DataAccessLayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Classroom_Student", Storage="_Students", ThisKey="ClassId", OtherKey="StudentClass")]
-		public EntitySet<Student> Students
-		{
-			get
-			{
-				return this._Students;
-			}
-			set
-			{
-				this._Students.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Classroom_StudySchedule", Storage="_StudySchedules", ThisKey="ClassId", OtherKey="ClassID")]
 		public EntitySet<StudySchedule> StudySchedules
 		{
@@ -771,6 +758,19 @@ namespace DataAccessLayer
 			set
 			{
 				this._StudySchedules.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Classroom_Student", Storage="_Students", ThisKey="ClassId", OtherKey="StudentClass")]
+		public EntitySet<Student> Students
+		{
+			get
+			{
+				return this._Students;
+			}
+			set
+			{
+				this._Students.Assign(value);
 			}
 		}
 		
@@ -831,18 +831,6 @@ namespace DataAccessLayer
 			entity.Classroom = null;
 		}
 		
-		private void attach_Students(Student entity)
-		{
-			this.SendPropertyChanging();
-			entity.Classroom = this;
-		}
-		
-		private void detach_Students(Student entity)
-		{
-			this.SendPropertyChanging();
-			entity.Classroom = null;
-		}
-		
 		private void attach_StudySchedules(StudySchedule entity)
 		{
 			this.SendPropertyChanging();
@@ -850,6 +838,18 @@ namespace DataAccessLayer
 		}
 		
 		private void detach_StudySchedules(StudySchedule entity)
+		{
+			this.SendPropertyChanging();
+			entity.Classroom = null;
+		}
+		
+		private void attach_Students(Student entity)
+		{
+			this.SendPropertyChanging();
+			entity.Classroom = this;
+		}
+		
+		private void detach_Students(Student entity)
 		{
 			this.SendPropertyChanging();
 			entity.Classroom = null;
@@ -1081,6 +1081,8 @@ namespace DataAccessLayer
 		
 		private System.Nullable<int> _StudentId;
 		
+		private System.Nullable<System.DateTime> _MarkDate;
+		
 		private EntityRef<Student> _Student;
 		
 		private EntityRef<Subject> _Subject;
@@ -1097,6 +1099,8 @@ namespace DataAccessLayer
     partial void OnScoreChanged();
     partial void OnStudentIdChanging(System.Nullable<int> value);
     partial void OnStudentIdChanged();
+    partial void OnMarkDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnMarkDateChanged();
     #endregion
 		
 		public Mark()
@@ -1194,6 +1198,26 @@ namespace DataAccessLayer
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MarkDate", DbType="Date")]
+		public System.Nullable<System.DateTime> MarkDate
+		{
+			get
+			{
+				return this._MarkDate;
+			}
+			set
+			{
+				if ((this._MarkDate != value))
+				{
+					this.OnMarkDateChanging(value);
+					this.SendPropertyChanging();
+					this._MarkDate = value;
+					this.SendPropertyChanged("MarkDate");
+					this.OnMarkDateChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Student_Mark", Storage="_Student", ThisKey="StudentId", OtherKey="StudentId", IsForeignKey=true)]
 		public Student Student
 		{
@@ -1256,6 +1280,246 @@ namespace DataAccessLayer
 					else
 					{
 						this._SubjectId = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Subject");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.StudySchedule")]
+	public partial class StudySchedule : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _StudySID;
+		
+		private System.Nullable<System.DateTime> _TimeStart;
+		
+		private System.Nullable<int> _StudySubject;
+		
+		private System.Nullable<System.DateTime> _TimeEnd;
+		
+		private System.Nullable<int> _ClassID;
+		
+		private EntityRef<Classroom> _Classroom;
+		
+		private EntityRef<Subject> _Subject;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnStudySIDChanging(int value);
+    partial void OnStudySIDChanged();
+    partial void OnTimeStartChanging(System.Nullable<System.DateTime> value);
+    partial void OnTimeStartChanged();
+    partial void OnStudySubjectChanging(System.Nullable<int> value);
+    partial void OnStudySubjectChanged();
+    partial void OnTimeEndChanging(System.Nullable<System.DateTime> value);
+    partial void OnTimeEndChanged();
+    partial void OnClassIDChanging(System.Nullable<int> value);
+    partial void OnClassIDChanged();
+    #endregion
+		
+		public StudySchedule()
+		{
+			this._Classroom = default(EntityRef<Classroom>);
+			this._Subject = default(EntityRef<Subject>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudySID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int StudySID
+		{
+			get
+			{
+				return this._StudySID;
+			}
+			set
+			{
+				if ((this._StudySID != value))
+				{
+					this.OnStudySIDChanging(value);
+					this.SendPropertyChanging();
+					this._StudySID = value;
+					this.SendPropertyChanged("StudySID");
+					this.OnStudySIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TimeStart", DbType="DateTime")]
+		public System.Nullable<System.DateTime> TimeStart
+		{
+			get
+			{
+				return this._TimeStart;
+			}
+			set
+			{
+				if ((this._TimeStart != value))
+				{
+					this.OnTimeStartChanging(value);
+					this.SendPropertyChanging();
+					this._TimeStart = value;
+					this.SendPropertyChanged("TimeStart");
+					this.OnTimeStartChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudySubject", DbType="Int")]
+		public System.Nullable<int> StudySubject
+		{
+			get
+			{
+				return this._StudySubject;
+			}
+			set
+			{
+				if ((this._StudySubject != value))
+				{
+					if (this._Subject.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnStudySubjectChanging(value);
+					this.SendPropertyChanging();
+					this._StudySubject = value;
+					this.SendPropertyChanged("StudySubject");
+					this.OnStudySubjectChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TimeEnd", DbType="DateTime")]
+		public System.Nullable<System.DateTime> TimeEnd
+		{
+			get
+			{
+				return this._TimeEnd;
+			}
+			set
+			{
+				if ((this._TimeEnd != value))
+				{
+					this.OnTimeEndChanging(value);
+					this.SendPropertyChanging();
+					this._TimeEnd = value;
+					this.SendPropertyChanged("TimeEnd");
+					this.OnTimeEndChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClassID", DbType="Int")]
+		public System.Nullable<int> ClassID
+		{
+			get
+			{
+				return this._ClassID;
+			}
+			set
+			{
+				if ((this._ClassID != value))
+				{
+					if (this._Classroom.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnClassIDChanging(value);
+					this.SendPropertyChanging();
+					this._ClassID = value;
+					this.SendPropertyChanged("ClassID");
+					this.OnClassIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Classroom_StudySchedule", Storage="_Classroom", ThisKey="ClassID", OtherKey="ClassId", IsForeignKey=true)]
+		public Classroom Classroom
+		{
+			get
+			{
+				return this._Classroom.Entity;
+			}
+			set
+			{
+				Classroom previousValue = this._Classroom.Entity;
+				if (((previousValue != value) 
+							|| (this._Classroom.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Classroom.Entity = null;
+						previousValue.StudySchedules.Remove(this);
+					}
+					this._Classroom.Entity = value;
+					if ((value != null))
+					{
+						value.StudySchedules.Add(this);
+						this._ClassID = value.ClassId;
+					}
+					else
+					{
+						this._ClassID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Classroom");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Subject_StudySchedule", Storage="_Subject", ThisKey="StudySubject", OtherKey="SubjectId", IsForeignKey=true)]
+		public Subject Subject
+		{
+			get
+			{
+				return this._Subject.Entity;
+			}
+			set
+			{
+				Subject previousValue = this._Subject.Entity;
+				if (((previousValue != value) 
+							|| (this._Subject.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Subject.Entity = null;
+						previousValue.StudySchedules.Remove(this);
+					}
+					this._Subject.Entity = value;
+					if ((value != null))
+					{
+						value.StudySchedules.Add(this);
+						this._StudySubject = value.SubjectId;
+					}
+					else
+					{
+						this._StudySubject = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Subject");
 				}
@@ -1563,246 +1827,6 @@ namespace DataAccessLayer
 		{
 			this.SendPropertyChanging();
 			entity.Student = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.StudySchedule")]
-	public partial class StudySchedule : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _StudySID;
-		
-		private System.Nullable<System.DateTime> _TimeStart;
-		
-		private System.Nullable<int> _StudySubject;
-		
-		private System.Nullable<System.DateTime> _TimeEnd;
-		
-		private System.Nullable<int> _ClassID;
-		
-		private EntityRef<Classroom> _Classroom;
-		
-		private EntityRef<Subject> _Subject;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnStudySIDChanging(int value);
-    partial void OnStudySIDChanged();
-    partial void OnTimeStartChanging(System.Nullable<System.DateTime> value);
-    partial void OnTimeStartChanged();
-    partial void OnStudySubjectChanging(System.Nullable<int> value);
-    partial void OnStudySubjectChanged();
-    partial void OnTimeEndChanging(System.Nullable<System.DateTime> value);
-    partial void OnTimeEndChanged();
-    partial void OnClassIDChanging(System.Nullable<int> value);
-    partial void OnClassIDChanged();
-    #endregion
-		
-		public StudySchedule()
-		{
-			this._Classroom = default(EntityRef<Classroom>);
-			this._Subject = default(EntityRef<Subject>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudySID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int StudySID
-		{
-			get
-			{
-				return this._StudySID;
-			}
-			set
-			{
-				if ((this._StudySID != value))
-				{
-					this.OnStudySIDChanging(value);
-					this.SendPropertyChanging();
-					this._StudySID = value;
-					this.SendPropertyChanged("StudySID");
-					this.OnStudySIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TimeStart", DbType="DateTime")]
-		public System.Nullable<System.DateTime> TimeStart
-		{
-			get
-			{
-				return this._TimeStart;
-			}
-			set
-			{
-				if ((this._TimeStart != value))
-				{
-					this.OnTimeStartChanging(value);
-					this.SendPropertyChanging();
-					this._TimeStart = value;
-					this.SendPropertyChanged("TimeStart");
-					this.OnTimeStartChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudySubject", DbType="Int")]
-		public System.Nullable<int> StudySubject
-		{
-			get
-			{
-				return this._StudySubject;
-			}
-			set
-			{
-				if ((this._StudySubject != value))
-				{
-					if (this._Subject.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnStudySubjectChanging(value);
-					this.SendPropertyChanging();
-					this._StudySubject = value;
-					this.SendPropertyChanged("StudySubject");
-					this.OnStudySubjectChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TimeEnd", DbType="DateTime")]
-		public System.Nullable<System.DateTime> TimeEnd
-		{
-			get
-			{
-				return this._TimeEnd;
-			}
-			set
-			{
-				if ((this._TimeEnd != value))
-				{
-					this.OnTimeEndChanging(value);
-					this.SendPropertyChanging();
-					this._TimeEnd = value;
-					this.SendPropertyChanged("TimeEnd");
-					this.OnTimeEndChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClassID", DbType="Int")]
-		public System.Nullable<int> ClassID
-		{
-			get
-			{
-				return this._ClassID;
-			}
-			set
-			{
-				if ((this._ClassID != value))
-				{
-					if (this._Classroom.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnClassIDChanging(value);
-					this.SendPropertyChanging();
-					this._ClassID = value;
-					this.SendPropertyChanged("ClassID");
-					this.OnClassIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Classroom_StudySchedule", Storage="_Classroom", ThisKey="ClassID", OtherKey="ClassId", IsForeignKey=true)]
-		public Classroom Classroom
-		{
-			get
-			{
-				return this._Classroom.Entity;
-			}
-			set
-			{
-				Classroom previousValue = this._Classroom.Entity;
-				if (((previousValue != value) 
-							|| (this._Classroom.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Classroom.Entity = null;
-						previousValue.StudySchedules.Remove(this);
-					}
-					this._Classroom.Entity = value;
-					if ((value != null))
-					{
-						value.StudySchedules.Add(this);
-						this._ClassID = value.ClassId;
-					}
-					else
-					{
-						this._ClassID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Classroom");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Subject_StudySchedule", Storage="_Subject", ThisKey="StudySubject", OtherKey="SubjectId", IsForeignKey=true)]
-		public Subject Subject
-		{
-			get
-			{
-				return this._Subject.Entity;
-			}
-			set
-			{
-				Subject previousValue = this._Subject.Entity;
-				if (((previousValue != value) 
-							|| (this._Subject.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Subject.Entity = null;
-						previousValue.StudySchedules.Remove(this);
-					}
-					this._Subject.Entity = value;
-					if ((value != null))
-					{
-						value.StudySchedules.Add(this);
-						this._StudySubject = value.SubjectId;
-					}
-					else
-					{
-						this._StudySubject = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Subject");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	
