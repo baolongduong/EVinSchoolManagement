@@ -10,6 +10,8 @@ namespace BusinessLogicLayer
 {
     public class TeacherBUS
     {
+        TeacherDAO tDAO = new TeacherDAO();
+
         public List<Teacher> GetAll()
         {
             List<Teacher> teachers = new TeacherDAO().SelectAll();
@@ -54,5 +56,36 @@ namespace BusinessLogicLayer
             TeacherDAO teaDAO = new TeacherDAO();
             return teaDAO.CheckLogin(userName, password);
         }
+
+        public bool isExistEmail(string email)
+        {
+            List<Teacher> lst = tDAO.SelectAll();
+            foreach (Teacher teacher in lst)
+            {
+                string email_indb = teacher.TeacherEmail;
+                if (email_indb.Trim() == email)
+                {
+                    return true;
+                }
+
+            }
+            return false;
+        }
+
+        public bool isNewClassroom(string email)
+        {
+            List<Teacher> lst = tDAO.SelectAll();
+            foreach (Teacher teacher in lst)
+            {
+                string email_indb = teacher.TeacherEmail;
+                if (email_indb.Trim() == email)
+                {
+                    return true;
+                }
+
+            }
+            return false;
+        }
+
     }
 }

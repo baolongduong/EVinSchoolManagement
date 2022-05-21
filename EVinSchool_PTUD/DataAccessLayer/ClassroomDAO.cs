@@ -21,6 +21,11 @@ namespace DataAccessLayer
             Classroom classrooms = db.Classrooms.SingleOrDefault(b => b.ClassId == code);
             return classrooms;
         }
+        public Classroom GetClassId(string name)
+        {
+            Classroom classrooms = db.Classrooms.SingleOrDefault(b => b.ClassName == name);
+            return classrooms;
+        }
         public List<Classroom> SelectByKeyword(string keyword)
         {
             List<Classroom> classrooms = db.Classrooms.Where(b => b.ClassName.Contains(keyword)).ToList();

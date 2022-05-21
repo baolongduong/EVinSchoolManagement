@@ -11,20 +11,24 @@ namespace BusinessLogicLayer
     {
         public List<Classroom> GetAll()
         {
-            List<Classroom> foodSchedules = new ClassroomDAO().SelectAll();
-            return foodSchedules;
+            List<Classroom> classrooms = new ClassroomDAO().SelectAll();
+            return classrooms;
         }
 
         public Classroom GetDetails(int code)
         {
-            Classroom foodSchedule = new ClassroomDAO().SelectByCode(code);
-            return foodSchedule;
+            Classroom classroom = new ClassroomDAO().SelectByCode(code);
+            return classroom;
         }
-
+        public Classroom GetID(string name)
+        {
+            Classroom classroom = new ClassroomDAO().GetClassId(name);
+            return classroom;
+        }
         public List<Classroom> SelectByKeyword(string keyword)
         {
-            List<Classroom> foodSchedules = new ClassroomDAO().SelectByKeyword(keyword);
-            return foodSchedules;
+            List<Classroom> classrooms = new ClassroomDAO().SelectByKeyword(keyword);
+            return classrooms;
         }
 
         public bool Insert(Classroom newClassroom)
@@ -33,9 +37,9 @@ namespace BusinessLogicLayer
             return result;
         }
 
-        public bool Update(Classroom newAttendance)
+        public bool Update(Classroom newClassroom)
         {
-            bool result = new ClassroomDAO().Update(newAttendance);
+            bool result = new ClassroomDAO().Update(newClassroom);
             return result;
 
         }

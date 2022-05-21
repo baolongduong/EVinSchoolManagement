@@ -98,5 +98,22 @@ namespace DataAccessLayer
                 return false;
             }
         }
+
+       /* public bool CheckClassroom(string classroom)
+        {
+            var q = from t in db.Teachers
+                    join cls in db.Classrooms
+                    on t.Classroom equals cls.ClassId                   ;
+            if (q.C)
+            {
+                return true;
+            }
+            else
+            {
+
+                return false;
+            }
+        }*/
+
     }
 }
