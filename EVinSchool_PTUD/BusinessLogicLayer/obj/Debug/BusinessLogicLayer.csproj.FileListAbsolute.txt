@@ -18,3 +18,13 @@ C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolM
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
 D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojAssemblyReference.cache
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
