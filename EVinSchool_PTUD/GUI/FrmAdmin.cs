@@ -42,18 +42,31 @@ namespace GUI
         {
             bunifuPages1.PageIndex = 0;
         }
-
-        private void bnf_Register_Click(object sender, EventArgs e)
+        private void bnf_Attendance_Click(object sender, EventArgs e)
         {
             bunifuPages1.PageIndex = 1;
         }
-
-        private void bnf_Login_Click(object sender, EventArgs e)
+        private void bnf_Info_Click(object sender, EventArgs e)
         {
             bunifuPages1.PageIndex = 2;
         }
 
-        private void txtID_TextChanged(object sender, EventArgs e)
+        private void bnf_Mark_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 3;
+        }
+
+        private void bnf_Schedule_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 4;
+        }
+
+        private void bnf_Classfication_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 5;
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }
