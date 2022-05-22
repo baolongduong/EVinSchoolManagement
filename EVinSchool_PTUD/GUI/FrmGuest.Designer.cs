@@ -203,7 +203,6 @@ namespace GUI
             this.bunifuPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox4.AutoSizeHeight = true;
             this.bunifuPictureBox4.BorderRadius = 23;
-            this.bunifuPictureBox4.Image = global::GUI.Properties.Resources.evs_logo1;
             this.bunifuPictureBox4.IsCircle = true;
             this.bunifuPictureBox4.Location = new System.Drawing.Point(749, 0);
             this.bunifuPictureBox4.Name = "bunifuPictureBox4";
@@ -321,7 +320,6 @@ namespace GUI
             this.gvStudent.EnableHeadersVisualStyles = false;
             this.gvStudent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.gvStudent.HeaderBackColor = System.Drawing.Color.DarkSlateGray;
-            this.gvStudent.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvStudent.HeaderForeColor = System.Drawing.Color.White;
             this.gvStudent.Location = new System.Drawing.Point(10, 129);
             this.gvStudent.Name = "gvStudent";
@@ -426,7 +424,7 @@ namespace GUI
             this.bunifuPictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox5.AutoSizeHeight = true;
             this.bunifuPictureBox5.BorderRadius = 23;
-            this.bunifuPictureBox5.Image = global::GUI.Properties.Resources.evs_logo1;
+           
             this.bunifuPictureBox5.IsCircle = true;
             this.bunifuPictureBox5.Location = new System.Drawing.Point(753, 1);
             this.bunifuPictureBox5.Name = "bunifuPictureBox5";
@@ -501,7 +499,6 @@ namespace GUI
             this.gvAttendance.EnableHeadersVisualStyles = false;
             this.gvAttendance.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvAttendance.HeaderBackColor = System.Drawing.Color.Navy;
-            this.gvAttendance.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvAttendance.HeaderForeColor = System.Drawing.Color.White;
             this.gvAttendance.Location = new System.Drawing.Point(22, 123);
             this.gvAttendance.Name = "gvAttendance";
@@ -533,7 +530,7 @@ namespace GUI
             this.bunifuPictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox6.AutoSizeHeight = true;
             this.bunifuPictureBox6.BorderRadius = 23;
-            this.bunifuPictureBox6.Image = global::GUI.Properties.Resources.evs_logo1;
+          
             this.bunifuPictureBox6.IsCircle = true;
             this.bunifuPictureBox6.Location = new System.Drawing.Point(753, -4);
             this.bunifuPictureBox6.Name = "bunifuPictureBox6";
@@ -609,7 +606,6 @@ namespace GUI
             this.gvSubject.EnableHeadersVisualStyles = false;
             this.gvSubject.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvSubject.HeaderBackColor = System.Drawing.Color.Navy;
-            this.gvSubject.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvSubject.HeaderForeColor = System.Drawing.Color.White;
             this.gvSubject.Location = new System.Drawing.Point(19, 27);
             this.gvSubject.Name = "gvSubject";
@@ -685,7 +681,6 @@ namespace GUI
             this.gvClassroom.EnableHeadersVisualStyles = false;
             this.gvClassroom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvClassroom.HeaderBackColor = System.Drawing.Color.Navy;
-            this.gvClassroom.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvClassroom.HeaderForeColor = System.Drawing.Color.White;
             this.gvClassroom.Location = new System.Drawing.Point(40, 110);
             this.gvClassroom.Name = "gvClassroom";
@@ -732,7 +727,7 @@ namespace GUI
             this.bunifuPictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox7.AutoSizeHeight = true;
             this.bunifuPictureBox7.BorderRadius = 23;
-            this.bunifuPictureBox7.Image = global::GUI.Properties.Resources.evs_logo1;
+            
             this.bunifuPictureBox7.IsCircle = true;
             this.bunifuPictureBox7.Location = new System.Drawing.Point(749, 1);
             this.bunifuPictureBox7.Name = "bunifuPictureBox7";
@@ -822,7 +817,6 @@ namespace GUI
             this.gvMark.EnableHeadersVisualStyles = false;
             this.gvMark.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvMark.HeaderBackColor = System.Drawing.Color.Navy;
-            this.gvMark.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvMark.HeaderForeColor = System.Drawing.Color.White;
             this.gvMark.Location = new System.Drawing.Point(46, 36);
             this.gvMark.Name = "gvMark";
@@ -854,7 +848,7 @@ namespace GUI
             this.bunifuPictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox8.AutoSizeHeight = true;
             this.bunifuPictureBox8.BorderRadius = 23;
-            this.bunifuPictureBox8.Image = global::GUI.Properties.Resources.evs_logo1;
+            
             this.bunifuPictureBox8.IsCircle = true;
             this.bunifuPictureBox8.Location = new System.Drawing.Point(753, 1);
             this.bunifuPictureBox8.Name = "bunifuPictureBox8";
@@ -930,7 +924,6 @@ namespace GUI
             this.gvClassSchedule.EnableHeadersVisualStyles = false;
             this.gvClassSchedule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvClassSchedule.HeaderBackColor = System.Drawing.Color.Navy;
-            this.gvClassSchedule.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvClassSchedule.HeaderForeColor = System.Drawing.Color.White;
             this.gvClassSchedule.Location = new System.Drawing.Point(19, 27);
             this.gvClassSchedule.Name = "gvClassSchedule";
@@ -1006,7 +999,6 @@ namespace GUI
             this.gvMealSchedule.EnableHeadersVisualStyles = false;
             this.gvMealSchedule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvMealSchedule.HeaderBackColor = System.Drawing.Color.Navy;
-            this.gvMealSchedule.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvMealSchedule.HeaderForeColor = System.Drawing.Color.White;
             this.gvMealSchedule.Location = new System.Drawing.Point(40, 106);
             this.gvMealSchedule.Name = "gvMealSchedule";
@@ -1053,7 +1045,7 @@ namespace GUI
             this.bunifuPictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox9.AutoSizeHeight = true;
             this.bunifuPictureBox9.BorderRadius = 23;
-            this.bunifuPictureBox9.Image = global::GUI.Properties.Resources.evs_logo1;
+           
             this.bunifuPictureBox9.IsCircle = true;
             this.bunifuPictureBox9.Location = new System.Drawing.Point(753, 0);
             this.bunifuPictureBox9.Name = "bunifuPictureBox9";
@@ -1143,7 +1135,6 @@ namespace GUI
             this.gvClassification.EnableHeadersVisualStyles = false;
             this.gvClassification.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvClassification.HeaderBackColor = System.Drawing.Color.Navy;
-            this.gvClassification.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvClassification.HeaderForeColor = System.Drawing.Color.White;
             this.gvClassification.Location = new System.Drawing.Point(46, 36);
             this.gvClassification.Name = "gvClassification";
@@ -1161,7 +1152,7 @@ namespace GUI
             this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox2.AutoSizeHeight = true;
             this.bunifuPictureBox2.BorderRadius = 23;
-            this.bunifuPictureBox2.Image = global::GUI.Properties.Resources.evs_logo1;
+           
             this.bunifuPictureBox2.IsCircle = true;
             this.bunifuPictureBox2.Location = new System.Drawing.Point(0, 0);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";

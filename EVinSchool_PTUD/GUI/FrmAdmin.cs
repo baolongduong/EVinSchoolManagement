@@ -28,52 +28,36 @@ namespace GUI
             //gvTeacher.DataSource = teachers;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void bunifuTileButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bnf_Dashbroad_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageIndex = 0;
+            adminpages.PageIndex = 0;
         }
+
         private void bnf_Attendance_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageIndex = 1;
+            adminpages.PageIndex = 1;
         }
+
         private void bnf_Info_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageIndex = 2;
+            adminpages.PageIndex = 2;
         }
 
         private void bnf_Mark_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageIndex = 3;
+            adminpages.PageIndex = 3;
         }
 
         private void bnf_Schedule_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageIndex = 4;
+            adminpages.PageIndex = 4;
         }
 
         private void bnf_Classfication_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageIndex = 5;
+            adminpages.PageIndex = 5;
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmAdmin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
+       
     }
 }

@@ -247,5 +247,29 @@
   <ItemGroup>
     <None Include="images\back-button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\evs_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\check-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\grade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\score.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

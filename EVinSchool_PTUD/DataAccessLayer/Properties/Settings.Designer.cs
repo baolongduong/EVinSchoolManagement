@@ -43,5 +43,16 @@ namespace DataAccessLayer.Properties {
                 return ((string)(this["StudentManagementDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=StudentManagementDB.mssql.somee.com;Initial Catalog=StudentManagement" +
+            "DB;Persist Security Info=True;User ID=baolongsbs_SQLLogin_1")]
+        public string StudentManagementDBConnectionString1 {
+            get {
+                return ((string)(this["StudentManagementDBConnectionString1"]));
+            }
+        }
     }
 }
