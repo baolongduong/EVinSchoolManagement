@@ -22,6 +22,11 @@ namespace DataAccessLayer
             Teacher teachers = db.Teachers.SingleOrDefault(b => b.TeacherId == code);
             return teachers;
         }
+        public Teacher GetID(string email)
+        {
+            Teacher teachers = db.Teachers.SingleOrDefault(b => b.TeacherEmail.Equals(email));
+            return teachers;
+        }
         public List<Teacher> SelectByKeyword(string keyword)
         {
             List<Teacher> classrooms = db.Teachers.Where(b => b.TeacherName.Contains(keyword)).ToList();
@@ -50,6 +55,8 @@ namespace DataAccessLayer
                 try
                 {
                     dbTeacher.TeacherName = newTeacher.TeacherName;
+                    dbTeacher.TeacherPassword = newTeacher.TeacherPassword;
+                    dbTeacher.TeacherImage = newTeacher.TeacherImage;
                     db.SubmitChanges();
                     return true;
                 }
@@ -99,18 +106,17 @@ namespace DataAccessLayer
             }
         }
 
-       /* public bool CheckClassroom(string classroom)
+       /* public bool CheckClassroom(int classroom)
         {
-            var q = from t in db.Teachers
-                    join cls in db.Classrooms
-                    on t.Classroom equals cls.ClassId                   ;
-            if (q.C)
+            var q = from p in db.Teachers
+                    where p.TeacherClass == classroom
+                    select p ;
+            if (q.Any())
             {
                 return true;
             }
             else
             {
-
                 return false;
             }
         }*/

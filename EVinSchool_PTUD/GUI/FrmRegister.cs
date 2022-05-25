@@ -34,9 +34,8 @@ namespace GUI
             {
             drp_Classroom.Items.Add(classes.ClassName);
             }
-           
-            
-           
+
+
         }
 
         private void FrmRegister_FormClosing(object sender, FormClosingEventArgs e)
@@ -58,7 +57,6 @@ namespace GUI
                 TeacherPassword = txtPassword.Text.Trim(),
                 TeacherName = txtName.Text.Trim(),
                 TeacherClass = clsname.ClassId,
-
             };
             if (string.IsNullOrEmpty(txtEmail.Text))
             {
@@ -68,10 +66,10 @@ namespace GUI
             {
                 errorProvider1.SetError(txtName, "Your name is left blank");
             }
-            if (drp_Classroom != null)
+           /* if (drp_Classroom == null)
             {
                 errorProvider1.SetError(drp_Classroom, "Your classroom is blank");
-            }
+            }*/
             else if (!(txtEmail.Text.Contains("@teacher")))
             {
                 errorProvider1.SetError(txtEmail, "Your email need syntax @teacher");
@@ -88,6 +86,11 @@ namespace GUI
             {
                 errorProvider1.SetError(txtEmail, "Email is existed");
             }
+      
+            else if (teacherBUS.isChosenClassroom((int)teacher.TeacherClass))
+            {
+                errorProvider1.SetError(drp_Classroom, "Classroom is chosen");
+            }
             else
             {
                 errorProvider1.SetError(txtName, null);
@@ -99,12 +102,14 @@ namespace GUI
                 if (result)
                 {
                     bunifuSnackbar1.Show(this, "Create account successfully, it's moving to Login Form");
+                    this.Hide();
+                    FrmLogin frmLogin = new FrmLogin();
+                    frmLogin.Show();
                 }
                 else
                 {
                     bunifuSnackbar1.Show(this, "Create account uncessfully, please check it again");
                 }
-               
 
             }
         }

@@ -121,10 +121,10 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>72</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuPictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pic_TeacherAvatar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOMAAAENCAYAAAD9t9IKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
         dAAAEnQB3mYfeAAAYWlJREFUeF7tvQeYVVW27+v7+t3T3bf7nNt93km3RVGyIMa2u20TignJomQVE+Zu
@@ -1009,7 +1009,7 @@ the school decided to deploy the EVinSchool management system.</value>
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAgD8L
 </value>
   </data>
-  <data name="bunifuLabel11.BaseStylesheet" xml:space="preserve">
+  <data name="lblTeacherID.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 10.8pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(139, 0, 0); text-align: left; }</value>
   </data>
   <data name="bnf_Classfication.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1083,6 +1083,9 @@ the school decided to deploy the EVinSchool management system.</value>
         7jrF3wd92LNSFS7umtV1/BoHmsyeNMxVDXep23d3t5CyLrmeNEf96K8N2Qzz33NSn5vYTHmtNqUvwwmw
         Pzy5Oc4AAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="lbl_TeacherNameAB.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(184, 134, 11); text-align: left; }</value>
   </data>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 19.8pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(139, 0, 0); text-align: left; }</value>

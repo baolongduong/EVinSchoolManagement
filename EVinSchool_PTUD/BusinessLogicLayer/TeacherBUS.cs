@@ -23,6 +23,11 @@ namespace BusinessLogicLayer
             Teacher teachers = new TeacherDAO().SelectByCode(code);
             return teachers;
         }
+        public Teacher GetCode(string email)
+        {
+            Teacher teachers = new TeacherDAO().GetID(email);
+            return teachers;
+        }
 
         public List<Teacher> SelectByKeyword(string keyword)
         {
@@ -72,13 +77,13 @@ namespace BusinessLogicLayer
             return false;
         }
 
-        public bool isNewClassroom(string email)
+        public bool isChosenClassroom(int classroom)
         {
             List<Teacher> lst = tDAO.SelectAll();
             foreach (Teacher teacher in lst)
             {
-                string email_indb = teacher.TeacherEmail;
-                if (email_indb.Trim() == email)
+                int getclassroom = (int)teacher.TeacherClass;
+                if (getclassroom == classroom)
                 {
                     return true;
                 }

@@ -24,8 +24,7 @@ namespace GUI
         InitializeComponent();
         }
        
-        
-            
+                  
         private void btnLogin_Click(object sender, EventArgs e)
         {
             CancelEventArgs oc = new CancelEventArgs();
@@ -51,19 +50,20 @@ namespace GUI
                 errorProvider1.SetError(txtEmail, null);
                 errorProvider1.SetError(txtPassword, null);
                 oc.Cancel = false;
+
                 Teacher teacher = new Teacher()
                 {
                     TeacherEmail = txtEmail.Text,
-                    TeacherPassword = txtPassword.Text
+                    TeacherPassword = txtPassword.Text,
                 };
-
+                
                 bool result = teacherBUS.checkLogin(teacher.TeacherEmail, teacher.TeacherPassword);
-
+                Teacher newteacher = teacherBUS.GetCode(teacher.TeacherEmail);
                 if (result == true)
                 {
                     bunifuSnackbar1.Show(this, "Login successfully, it's moving to Admin Form");
                     this.Hide();
-                    FrmAdmin frmAdmin = new FrmAdmin();
+                    FrmAdmin frmAdmin = new FrmAdmin(newteacher.TeacherId);
                     frmAdmin.Show();
                 }
                 else
@@ -88,6 +88,13 @@ namespace GUI
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGuest_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmGuest frmGuest = new FrmGuest();
+            frmGuest.Show();
         }
     }
     }
