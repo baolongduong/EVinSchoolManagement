@@ -23,6 +23,13 @@ namespace BusinessLogicLayer
             return student;
         }
 
+        public List<Student> GetDetailsByClassId(int classid)
+        {
+            List<Student> student = new StudentDAO().SelectByClassId(classid);
+            return student;
+        }
+
+
         public List<Student> SelectByKeyword(string keyword)
         {
             List<Student> students = new StudentDAO().SelectByKeyword(keyword);
@@ -39,7 +46,11 @@ namespace BusinessLogicLayer
         {
             bool result = new StudentDAO().Update(newStudent);
             return result;
-
+        }
+        public bool UpdateImage(Student newStudent)
+        {
+            bool result = new StudentDAO().UpdateImage(newStudent);
+            return result;
         }
 
 

@@ -114,12 +114,14 @@ namespace GUI
             this.Information = new System.Windows.Forms.TabPage();
             this.btnManageStudent = new Bunifu.Framework.UI.BunifuThinButton2();
             this.crd_Sudent = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblStudentID = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPictureBox4 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuPictureBox3 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.pic_StudentAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel25 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel24 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel23 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbl_TeacherOfStudent = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblStudentAddress = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblStudentClass = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblParentPhone = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblStudentName = new Bunifu.UI.WinForms.BunifuLabel();
@@ -169,7 +171,7 @@ namespace GUI
             this.Information.SuspendLayout();
             this.crd_Sudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_StudentInfo)).BeginInit();
             this.Mark.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
@@ -950,10 +952,10 @@ namespace GUI
             this.adminpages.Location = new System.Drawing.Point(12, 27);
             this.adminpages.Multiline = true;
             this.adminpages.Name = "adminpages";
-            this.adminpages.Page = this.Dashboard;
-            this.adminpages.PageIndex = 0;
-            this.adminpages.PageName = "Dashboard";
-            this.adminpages.PageTitle = "Dashbroad";
+            this.adminpages.Page = this.Information;
+            this.adminpages.PageIndex = 2;
+            this.adminpages.PageName = "Information";
+            this.adminpages.PageTitle = "Info";
             this.adminpages.SelectedIndex = 0;
             this.adminpages.Size = new System.Drawing.Size(818, 518);
             this.adminpages.TabIndex = 20;
@@ -1646,6 +1648,7 @@ namespace GUI
             this.btnManageStudent.Size = new System.Drawing.Size(98, 43);
             this.btnManageStudent.TabIndex = 32;
             this.btnManageStudent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnManageStudent.Click += new System.EventHandler(this.btnManageStudent_Click);
             // 
             // crd_Sudent
             // 
@@ -1653,12 +1656,14 @@ namespace GUI
             this.crd_Sudent.BorderRadius = 5;
             this.crd_Sudent.BottomSahddow = false;
             this.crd_Sudent.color = System.Drawing.Color.Navy;
+            this.crd_Sudent.Controls.Add(this.bunifuLabel11);
+            this.crd_Sudent.Controls.Add(this.lblStudentID);
             this.crd_Sudent.Controls.Add(this.bunifuPictureBox4);
-            this.crd_Sudent.Controls.Add(this.bunifuPictureBox3);
+            this.crd_Sudent.Controls.Add(this.pic_StudentAvatar);
             this.crd_Sudent.Controls.Add(this.bunifuLabel25);
             this.crd_Sudent.Controls.Add(this.bunifuLabel24);
             this.crd_Sudent.Controls.Add(this.bunifuLabel23);
-            this.crd_Sudent.Controls.Add(this.lbl_TeacherOfStudent);
+            this.crd_Sudent.Controls.Add(this.lblStudentAddress);
             this.crd_Sudent.Controls.Add(this.lblStudentClass);
             this.crd_Sudent.Controls.Add(this.lblParentPhone);
             this.crd_Sudent.Controls.Add(this.lblStudentName);
@@ -1670,6 +1675,40 @@ namespace GUI
             this.crd_Sudent.ShadowDepth = 20;
             this.crd_Sudent.Size = new System.Drawing.Size(234, 385);
             this.crd_Sudent.TabIndex = 31;
+            // 
+            // bunifuLabel11
+            // 
+            this.bunifuLabel11.AllowParentOverrides = false;
+            this.bunifuLabel11.AutoEllipsis = false;
+            this.bunifuLabel11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel11.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel11.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel11.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel11.Location = new System.Drawing.Point(12, 25);
+            this.bunifuLabel11.Name = "bunifuLabel11";
+            this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel11.Size = new System.Drawing.Size(26, 22);
+            this.bunifuLabel11.TabIndex = 31;
+            this.bunifuLabel11.Text = "ID:";
+            this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel11.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblStudentID
+            // 
+            this.lblStudentID.AllowParentOverrides = false;
+            this.lblStudentID.AutoEllipsis = false;
+            this.lblStudentID.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblStudentID.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblStudentID.Font = new System.Drawing.Font("Garamond", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentID.ForeColor = System.Drawing.Color.Black;
+            this.lblStudentID.Location = new System.Drawing.Point(48, 26);
+            this.lblStudentID.Name = "lblStudentID";
+            this.lblStudentID.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblStudentID.Size = new System.Drawing.Size(8, 21);
+            this.lblStudentID.TabIndex = 30;
+            this.lblStudentID.Text = "1";
+            this.lblStudentID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblStudentID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuPictureBox4
             // 
@@ -1687,21 +1726,22 @@ namespace GUI
             this.bunifuPictureBox4.TabStop = false;
             this.bunifuPictureBox4.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // bunifuPictureBox3
+            // pic_StudentAvatar
             // 
-            this.bunifuPictureBox3.AllowFocused = false;
-            this.bunifuPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox3.AutoSizeHeight = true;
-            this.bunifuPictureBox3.BorderRadius = 88;
-            this.bunifuPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox3.Image")));
-            this.bunifuPictureBox3.IsCircle = true;
-            this.bunifuPictureBox3.Location = new System.Drawing.Point(35, 31);
-            this.bunifuPictureBox3.Name = "bunifuPictureBox3";
-            this.bunifuPictureBox3.Size = new System.Drawing.Size(176, 176);
-            this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox3.TabIndex = 1;
-            this.bunifuPictureBox3.TabStop = false;
-            this.bunifuPictureBox3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.pic_StudentAvatar.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.pic_StudentAvatar.AllowFocused = false;
+            this.pic_StudentAvatar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pic_StudentAvatar.AutoSizeHeight = true;
+            this.pic_StudentAvatar.BorderRadius = 88;
+            this.pic_StudentAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pic_StudentAvatar.Image")));
+            this.pic_StudentAvatar.IsCircle = true;
+            this.pic_StudentAvatar.Location = new System.Drawing.Point(35, 31);
+            this.pic_StudentAvatar.Name = "pic_StudentAvatar";
+            this.pic_StudentAvatar.Size = new System.Drawing.Size(176, 176);
+            this.pic_StudentAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_StudentAvatar.TabIndex = 1;
+            this.pic_StudentAvatar.TabStop = false;
+            this.pic_StudentAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // bunifuLabel25
             // 
@@ -1754,22 +1794,22 @@ namespace GUI
             this.bunifuLabel23.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel23.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lbl_TeacherOfStudent
+            // lblStudentAddress
             // 
-            this.lbl_TeacherOfStudent.AllowParentOverrides = false;
-            this.lbl_TeacherOfStudent.AutoEllipsis = false;
-            this.lbl_TeacherOfStudent.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbl_TeacherOfStudent.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbl_TeacherOfStudent.Font = new System.Drawing.Font("Garamond", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TeacherOfStudent.ForeColor = System.Drawing.Color.Black;
-            this.lbl_TeacherOfStudent.Location = new System.Drawing.Point(83, 350);
-            this.lbl_TeacherOfStudent.Name = "lbl_TeacherOfStudent";
-            this.lbl_TeacherOfStudent.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_TeacherOfStudent.Size = new System.Drawing.Size(69, 21);
-            this.lbl_TeacherOfStudent.TabIndex = 29;
-            this.lbl_TeacherOfStudent.Text = "21A HBT";
-            this.lbl_TeacherOfStudent.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_TeacherOfStudent.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblStudentAddress.AllowParentOverrides = false;
+            this.lblStudentAddress.AutoEllipsis = false;
+            this.lblStudentAddress.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblStudentAddress.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblStudentAddress.Font = new System.Drawing.Font("Garamond", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentAddress.ForeColor = System.Drawing.Color.Black;
+            this.lblStudentAddress.Location = new System.Drawing.Point(85, 351);
+            this.lblStudentAddress.Name = "lblStudentAddress";
+            this.lblStudentAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblStudentAddress.Size = new System.Drawing.Size(69, 21);
+            this.lblStudentAddress.TabIndex = 29;
+            this.lblStudentAddress.Text = "21A HBT";
+            this.lblStudentAddress.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblStudentAddress.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lblStudentClass
             // 
@@ -1813,7 +1853,7 @@ namespace GUI
             this.lblStudentName.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblStudentName.Font = new System.Drawing.Font("Garamond", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStudentName.ForeColor = System.Drawing.Color.Black;
-            this.lblStudentName.Location = new System.Drawing.Point(68, 235);
+            this.lblStudentName.Location = new System.Drawing.Point(68, 236);
             this.lblStudentName.Name = "lblStudentName";
             this.lblStudentName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblStudentName.Size = new System.Drawing.Size(122, 21);
@@ -1863,6 +1903,7 @@ namespace GUI
             this.btnFind.Size = new System.Drawing.Size(60, 43);
             this.btnFind.TabIndex = 30;
             this.btnFind.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // bunifuLabel20
             // 
@@ -1919,9 +1960,11 @@ namespace GUI
             this.drp_StudentFilter.Name = "drp_StudentFilter";
             this.drp_StudentFilter.Size = new System.Drawing.Size(109, 32);
             this.drp_StudentFilter.TabIndex = 28;
-            this.drp_StudentFilter.Text = null;
+            this.drp_StudentFilter.Text = "Class";
             this.drp_StudentFilter.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.drp_StudentFilter.TextLeftMargin = 5;
+            this.drp_StudentFilter.DropDown += new System.EventHandler(this.drp_StudentFilter_DropDown);
+            this.drp_StudentFilter.SelectedIndexChanged += new System.EventHandler(this.drp_StudentFilter_SelectedIndexChanged);
             // 
             // txtSearch
             // 
@@ -2057,6 +2100,7 @@ namespace GUI
             this.gv_StudentInfo.Size = new System.Drawing.Size(496, 342);
             this.gv_StudentInfo.TabIndex = 26;
             this.gv_StudentInfo.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.gv_StudentInfo.SelectionChanged += new System.EventHandler(this.gv_StudentInfo_SelectionChanged);
             // 
             // bunifuLabel21
             // 
@@ -2891,7 +2935,7 @@ namespace GUI
             this.crd_Sudent.ResumeLayout(false);
             this.crd_Sudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_StudentInfo)).EndInit();
             this.Mark.ResumeLayout(false);
             this.Mark.PerformLayout();
@@ -2969,12 +3013,12 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuDataGridView gv_StudentInfo;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel21;
         private Bunifu.Framework.UI.BunifuThinButton2 btnManageStudent;
-        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox3;
+        private Bunifu.UI.WinForms.BunifuPictureBox pic_StudentAvatar;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel25;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel24;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel23;
-        private Bunifu.UI.WinForms.BunifuLabel lbl_TeacherOfStudent;
+        private Bunifu.UI.WinForms.BunifuLabel lblStudentAddress;
         private Bunifu.UI.WinForms.BunifuLabel lblStudentClass;
         private Bunifu.UI.WinForms.BunifuLabel lblParentPhone;
         private Bunifu.UI.WinForms.BunifuLabel lblStudentName;
@@ -3005,6 +3049,8 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel38;
         private Bunifu.UI.WinForms.BunifuLabel lbl_TeacherNameAB;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
+        private Bunifu.UI.WinForms.BunifuLabel lblStudentID;
     }
 }
 

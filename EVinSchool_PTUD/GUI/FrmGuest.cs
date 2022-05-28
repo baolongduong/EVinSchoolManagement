@@ -16,6 +16,7 @@ namespace GUI
 {
     public partial class FrmGuest : BunifuForm
     {
+        StudentBUS mngStudent = new StudentBUS();
         public FrmGuest()
         {
             InitializeComponent();
@@ -78,5 +79,11 @@ namespace GUI
             gvClassification.DataSource = classifications;
         }
 
+        private void btn_SearchStudent_Click(object sender, EventArgs e)
+        {
+            String keyword = txt_SearchStudent.Text.Trim();
+            List<Student> students = new StudentBUS().SelectByKeyword(keyword);
+            gvStudent.DataSource = students;
+        }
     }
 }
