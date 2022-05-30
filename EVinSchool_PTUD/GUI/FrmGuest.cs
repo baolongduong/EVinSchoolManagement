@@ -16,6 +16,7 @@ namespace GUI
 {
     public partial class FrmGuest : BunifuForm
     {
+        StudentBUS mngStudent = new StudentBUS();
         public FrmGuest()
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace GUI
             gvClassification.DataSource = classifications;
         }
 
+<<<<<<< HEAD
         private void bnf_Dashbroad_Click(object sender, EventArgs e)
         {
             bunifuPages1.PageIndex = 0;
@@ -88,6 +90,13 @@ namespace GUI
         private void gvClassification_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+=======
+        private void btn_SearchStudent_Click(object sender, EventArgs e)
+        {
+            String keyword = txt_SearchStudent.Text.Trim();
+            List<Student> students = new StudentBUS().SelectByKeyword(keyword);
+            gvStudent.DataSource = students;
+>>>>>>> 556a2265a412aff239efb7ac6573185a694838cc
         }
     }
 }

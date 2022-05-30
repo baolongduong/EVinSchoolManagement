@@ -185,5 +185,15 @@ C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\D
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.pdb
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmGuest.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmTeacher.resources
+<<<<<<< HEAD
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAttendace.resources
+=======
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmTeacher.resources
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmStudent.resources
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.dll
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.UI.dll
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\TelerikCommon.dll
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.xml
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.UI.xml
+>>>>>>> 556a2265a412aff239efb7ac6573185a694838cc

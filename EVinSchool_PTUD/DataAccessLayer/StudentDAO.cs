@@ -23,6 +23,12 @@ namespace DataAccessLayer
             Student students = db.Students.SingleOrDefault(b => b.StudentId == code);
             return students;
         }
+
+        public List<Student> SelectByClassId(int classid)
+        {
+            List<Student> students = db.Students.Where(b => b.StudentClass == classid).ToList();
+            return students;
+        }
         public List<Student> SelectByKeyword(string keyword)
         {
             List<Student> classrooms = db.Students.Where(b => b.StudentName.Contains(keyword)).ToList();
@@ -54,6 +60,25 @@ namespace DataAccessLayer
                     dbStudent.StudentClass = newStudent.StudentClass;
                     dbStudent.StudentAddress = newStudent.StudentAddress;
                     dbStudent.ParentPhone = newStudent.ParentPhone;
+                    db.SubmitChanges();
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        public bool UpdateImage(Student newStudent)
+        {
+            Student dbStudent = db.Students.SingleOrDefault(b => b.StudentId == newStudent.StudentId);
+            if (dbStudent != null)
+            {
+                try
+                {
+                    dbStudent.StudentImage = newStudent.StudentImage;
                     db.SubmitChanges();
                     return true;
                 }

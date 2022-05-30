@@ -54,7 +54,6 @@ namespace GUI
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnChangePic = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lbl_TeacherID = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_Class = new Bunifu.UI.WinForms.BunifuLabel();
@@ -62,6 +61,7 @@ namespace GUI
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.openFilePic = new System.Windows.Forms.OpenFileDialog();
+            this.btnChangePic = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.pic_TeacherAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -467,32 +467,6 @@ namespace GUI
             this.btnSave.UseDefaultRadiusAndThickness = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnChangePic
-            // 
-            this.btnChangePic.ActiveBorderThickness = 1;
-            this.btnChangePic.ActiveCornerRadius = 20;
-            this.btnChangePic.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnChangePic.ActiveForecolor = System.Drawing.Color.White;
-            this.btnChangePic.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnChangePic.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnChangePic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChangePic.BackgroundImage")));
-            this.btnChangePic.ButtonText = "Upload";
-            this.btnChangePic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangePic.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePic.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnChangePic.IdleBorderThickness = 1;
-            this.btnChangePic.IdleCornerRadius = 20;
-            this.btnChangePic.IdleFillColor = System.Drawing.Color.White;
-            this.btnChangePic.IdleForecolor = System.Drawing.Color.DarkRed;
-            this.btnChangePic.IdleLineColor = System.Drawing.Color.Red;
-            this.btnChangePic.Location = new System.Drawing.Point(111, 416);
-            this.btnChangePic.Margin = new System.Windows.Forms.Padding(5);
-            this.btnChangePic.Name = "btnChangePic";
-            this.btnChangePic.Size = new System.Drawing.Size(117, 40);
-            this.btnChangePic.TabIndex = 89;
-            this.btnChangePic.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnChangePic.Click += new System.EventHandler(this.btnChangePic_Click);
-            // 
             // lbl_TeacherID
             // 
             this.lbl_TeacherID.AllowParentOverrides = false;
@@ -657,6 +631,32 @@ namespace GUI
             this.bunifuSnackbar1.WarningOptions.IconLeftMargin = 12;
             this.bunifuSnackbar1.ZoomCloseIcon = true;
             // 
+            // btnChangePic
+            // 
+            this.btnChangePic.ActiveBorderThickness = 1;
+            this.btnChangePic.ActiveCornerRadius = 20;
+            this.btnChangePic.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnChangePic.ActiveForecolor = System.Drawing.Color.White;
+            this.btnChangePic.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnChangePic.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnChangePic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChangePic.BackgroundImage")));
+            this.btnChangePic.ButtonText = "Upload";
+            this.btnChangePic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangePic.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePic.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnChangePic.IdleBorderThickness = 1;
+            this.btnChangePic.IdleCornerRadius = 20;
+            this.btnChangePic.IdleFillColor = System.Drawing.Color.White;
+            this.btnChangePic.IdleForecolor = System.Drawing.Color.DarkRed;
+            this.btnChangePic.IdleLineColor = System.Drawing.Color.Red;
+            this.btnChangePic.Location = new System.Drawing.Point(111, 416);
+            this.btnChangePic.Margin = new System.Windows.Forms.Padding(5);
+            this.btnChangePic.Name = "btnChangePic";
+            this.btnChangePic.Size = new System.Drawing.Size(117, 40);
+            this.btnChangePic.TabIndex = 89;
+            this.btnChangePic.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnChangePic.Click += new System.EventHandler(this.btnChangePic_Click);
+            // 
             // FrmTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -713,7 +713,6 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSave;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnChangePic;
         private Bunifu.UI.WinForms.BunifuLabel lbl_TeacherID;
         private Bunifu.UI.WinForms.BunifuLabel lbl_Class;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
@@ -721,5 +720,6 @@ namespace GUI
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
         private System.Windows.Forms.OpenFileDialog openFilePic;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnChangePic;
     }
 }
