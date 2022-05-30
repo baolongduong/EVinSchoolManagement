@@ -950,10 +950,10 @@ namespace GUI
             this.adminpages.Location = new System.Drawing.Point(12, 27);
             this.adminpages.Multiline = true;
             this.adminpages.Name = "adminpages";
-            this.adminpages.Page = this.Dashboard;
-            this.adminpages.PageIndex = 0;
-            this.adminpages.PageName = "Dashboard";
-            this.adminpages.PageTitle = "Dashbroad";
+            this.adminpages.Page = this.Attendance;
+            this.adminpages.PageIndex = 1;
+            this.adminpages.PageName = "Attendance";
+            this.adminpages.PageTitle = "Attendance";
             this.adminpages.SelectedIndex = 0;
             this.adminpages.Size = new System.Drawing.Size(818, 518);
             this.adminpages.TabIndex = 20;
@@ -1492,6 +1492,7 @@ namespace GUI
             this.btnTodayAttendance.Size = new System.Drawing.Size(132, 33);
             this.btnTodayAttendance.TabIndex = 22;
             this.btnTodayAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTodayAttendance.Click += new System.EventHandler(this.btnTodayAttendance_Click);
             // 
             // pb_StudentAttendance
             // 

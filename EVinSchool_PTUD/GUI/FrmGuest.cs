@@ -21,35 +21,7 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            bunifuPages1.PageIndex = 0;
-        }
 
-        private void btnAttendance_Click(object sender, EventArgs e)
-        {
-            bunifuPages1.PageIndex = 1;
-        }
-
-        private void btnClassInfor_Click(object sender, EventArgs e)
-        {
-            bunifuPages1.PageIndex = 2;
-        }
-
-        private void btnStuMark_Click(object sender, EventArgs e)
-        {
-            bunifuPages1.PageIndex = 3;
-        }
-
-        private void btnClassSchedule_Click(object sender, EventArgs e)
-        {
-            bunifuPages1.PageIndex = 4;
-        }
-
-        private void btnClassification_Click(object sender, EventArgs e)
-        {
-            bunifuPages1.PageIndex = 5;
-        }
 
         private void FrmGuest_Load(object sender, EventArgs e)
         {
@@ -78,5 +50,44 @@ namespace GUI
             gvClassification.DataSource = classifications;
         }
 
+        private void bnf_Dashbroad_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 0;
+        }
+
+        private void bnf_Attendance_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 1;
+        }
+
+        private void bnf_CS_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 2;
+        }
+
+        private void FrmGuest_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bnf_SMark_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 3;
+        }
+
+        private void bnf_Schedule_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 4;
+        }
+
+        private void bnf_Classfication_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 5;
+        }
+
+        private void gvClassification_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

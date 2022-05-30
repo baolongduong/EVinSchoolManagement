@@ -18,6 +18,7 @@ namespace GUI
     {
         TeacherBUS teacherBUS = new TeacherBUS();
         ClassroomBUS classroomBUS = new ClassroomBUS();
+        AttendanceBUS attendanceBUS = new AttendanceBUS();
         public FrmAdmin(int teacherID)
         {
             InitializeComponent();
@@ -90,6 +91,11 @@ namespace GUI
             this.Hide();
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.Show();
+        }
+
+        private void btnTodayAttendance_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

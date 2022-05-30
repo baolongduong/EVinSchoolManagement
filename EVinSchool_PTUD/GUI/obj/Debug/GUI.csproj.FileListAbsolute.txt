@@ -95,7 +95,6 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuT
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.exe.licenses
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmLogin.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmRegister.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAdmin.resources
@@ -186,3 +185,5 @@ C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\D
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.pdb
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmGuest.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmTeacher.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAttendace.resources
