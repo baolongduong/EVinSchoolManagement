@@ -952,17 +952,10 @@ namespace GUI
             this.adminpages.Location = new System.Drawing.Point(12, 27);
             this.adminpages.Multiline = true;
             this.adminpages.Name = "adminpages";
-<<<<<<< HEAD
-            this.adminpages.Page = this.Attendance;
-            this.adminpages.PageIndex = 1;
-            this.adminpages.PageName = "Attendance";
-            this.adminpages.PageTitle = "Attendance";
-=======
             this.adminpages.Page = this.Information;
             this.adminpages.PageIndex = 2;
             this.adminpages.PageName = "Information";
             this.adminpages.PageTitle = "Info";
->>>>>>> 556a2265a412aff239efb7ac6573185a694838cc
             this.adminpages.SelectedIndex = 0;
             this.adminpages.Size = new System.Drawing.Size(818, 518);
             this.adminpages.TabIndex = 20;
@@ -1501,7 +1494,6 @@ namespace GUI
             this.btnTodayAttendance.Size = new System.Drawing.Size(132, 33);
             this.btnTodayAttendance.TabIndex = 22;
             this.btnTodayAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTodayAttendance.Click += new System.EventHandler(this.btnTodayAttendance_Click);
             // 
             // pb_StudentAttendance
             // 

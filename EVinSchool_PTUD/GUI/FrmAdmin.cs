@@ -20,11 +20,7 @@ namespace GUI
     {
         TeacherBUS teacherBUS = new TeacherBUS();
         ClassroomBUS classroomBUS = new ClassroomBUS();
-<<<<<<< HEAD
-        AttendanceBUS attendanceBUS = new AttendanceBUS();
-=======
         StudentBUS studentBUS = new StudentBUS();
->>>>>>> 556a2265a412aff239efb7ac6573185a694838cc
         public FrmAdmin(int teacherID)
         {
             InitializeComponent();
@@ -107,11 +103,6 @@ namespace GUI
             frmLogin.Show();
         }
 
-<<<<<<< HEAD
-        private void btnTodayAttendance_Click(object sender, EventArgs e)
-        {
-           
-=======
         private void btnFind_Click(object sender, EventArgs e)
         {
             String keyword = txtSearch.Text.Trim();
@@ -171,7 +162,6 @@ namespace GUI
         private void drp_StudentFilter_DropDown(object sender, EventArgs e)
         {
             loadClass();
->>>>>>> 556a2265a412aff239efb7ac6573185a694838cc
         }
     }
 }
