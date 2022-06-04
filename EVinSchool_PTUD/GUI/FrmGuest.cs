@@ -79,11 +79,57 @@ namespace GUI
             gvClassification.DataSource = classifications;
         }
 
+<<<<<<< Updated upstream
+=======
+
+        private void bnf_Dashbroad_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 0;
+        }
+
+        private void bnf_Attendance_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 1;
+        }
+
+        private void bnf_CS_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 2;
+        }
+
+        private void FrmGuest_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bnf_SMark_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 3;
+        }
+
+        private void bnf_Schedule_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 4;
+        }
+
+        private void bnf_Classfication_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 5;
+        }
+
+        private void gvClassification_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+>>>>>>> Stashed changes
         private void btn_SearchStudent_Click(object sender, EventArgs e)
         {
             String keyword = txt_SearchStudent.Text.Trim();
             List<Student> students = new StudentBUS().SelectByKeyword(keyword);
             gvStudent.DataSource = students;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         }
     }
 }
