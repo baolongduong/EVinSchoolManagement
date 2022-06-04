@@ -888,34 +888,6 @@ the school decided to deploy the EVinSchool management system.</value>
   <data name="bunifuLabel27.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 24pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(139, 0, 0); text-align: center; }</value>
   </data>
-  <data name="btnCheckFood.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAE0AAAArCAYAAAA9pAX3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHkSURBVGhD7Zo/TwJBEEf9oDQ0NFQ0NDQ0NDQ0VHwDCho/
-        Ag0NRtGIRmKkQQs0opEYiWbNW9hTwrHIxIr7veSSy/En2ZeZ2buZO3JibyTNgKQZkDQDkmZA0gxEpX0t
-        Fu6p13N3zaa7qdXcRankTnK5gzxYG2u8bTTcY7frPufzlYVNtkp7GQz8HyEMca/DofuYTlefHh6sjTU+
-        9/tu3Gr5tSMvjQ1pGOZHo3rdLWaz1dXsEfOwJo0vXlUqWw1nETLuulpdy7I1aZiVsE1IW+pdIJGGUUJR
-        pDNpt93D8bE/99LYJSl8Wa5hu8ARpet9MllKIyVJTRGHSCPivDTuTdhqRZz5eOyjzUu7LJd92Ik4pOhp
-        Pr+UdlYoRO+AxQ88PXhpnIi/IWkGJM2ApBmQNAOSZkDSDEiaAUkzIGkGEmk8T/FcJXaTSKOXdshDk/8k
-        kUbHls6tiEMniI6QlxaaayJOaNZ6aaQmBlXX4oRmrZcG952OP0Q64U0DSKQRZYyp3kaj1RURYOBEJoZG
-        bSINKHRh4iKWIIxgYvYZWJMGRBriwowvy1C/iLDfwmBDGpCq7KYYZsfI0jyUFAz1i8KfNjtJlRbAMFvs
-        ebHob+qycDBkCm9KbSMqTaQjaQYkzYCkGZC0vXHuG6xjdqXbp+32AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnCheckStudy.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAE0AAAArCAYAAAA9pAX3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHkSURBVGhD7Zo/TwJBEEf9oDQ0NFQ0NDQ0NDQ0VHwDCho/
-        Ag0NRtGIRmKkQQs0opEYiWbNW9hTwrHIxIr7veSSy/En2ZeZ2buZO3JibyTNgKQZkDQDkmZA0gxEpX0t
-        Fu6p13N3zaa7qdXcRankTnK5gzxYG2u8bTTcY7frPufzlYVNtkp7GQz8HyEMca/DofuYTlefHh6sjTU+
-        9/tu3Gr5tSMvjQ1pGOZHo3rdLWaz1dXsEfOwJo0vXlUqWw1nETLuulpdy7I1aZiVsE1IW+pdIJGGUUJR
-        pDNpt93D8bE/99LYJSl8Wa5hu8ARpet9MllKIyVJTRGHSCPivDTuTdhqRZz5eOyjzUu7LJd92Ik4pOhp
-        Pr+UdlYoRO+AxQ88PXhpnIi/IWkGJM2ApBmQNAOSZkDSDEiaAUkzIGkGEmk8T/FcJXaTSKOXdshDk/8k
-        kUbHls6tiEMniI6QlxaaayJOaNZ6aaQmBlXX4oRmrZcG952OP0Q64U0DSKQRZYyp3kaj1RURYOBEJoZG
-        bSINKHRh4iKWIIxgYvYZWJMGRBriwowvy1C/iLDfwmBDGpCq7KYYZsfI0jyUFAz1i8KfNjtJlRbAMFvs
-        ebHob+qycDBkCm9KbSMqTaQjaQYkzYCkGZC0vXHuG6xjdqXbp+32AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnManageStudy.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAE0AAAArCAYAAAA9pAX3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -930,7 +902,7 @@ the school decided to deploy the EVinSchool management system.</value>
         ebHob+qycDBkCm9KbSMqTaQjaQYkzYCkGZC0vXHuG6xjdqXbp+32AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnFoodManage.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnGuestView.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAE0AAAArCAYAAAA9pAX3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHkSURBVGhD7Zo/TwJBEEf9oDQ0NFQ0NDQ0NDQ0VHwDCho/
@@ -944,17 +916,25 @@ the school decided to deploy the EVinSchool management system.</value>
         ebHob+qycDBkCm9KbSMqTaQjaQYkzYCkGZC0vXHuG6xjdqXbp+32AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuLabel35.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
+  <data name="btnFoodEdit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAE0AAAArCAYAAAA9pAX3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHkSURBVGhD7Zo/TwJBEEf9oDQ0NFQ0NDQ0NDQ0VHwDCho/
+        Ag0NRtGIRmKkQQs0opEYiWbNW9hTwrHIxIr7veSSy/En2ZeZ2buZO3JibyTNgKQZkDQDkmZA0gxEpX0t
+        Fu6p13N3zaa7qdXcRankTnK5gzxYG2u8bTTcY7frPufzlYVNtkp7GQz8HyEMca/DofuYTlefHh6sjTU+
+        9/tu3Gr5tSMvjQ1pGOZHo3rdLWaz1dXsEfOwJo0vXlUqWw1nETLuulpdy7I1aZiVsE1IW+pdIJGGUUJR
+        pDNpt93D8bE/99LYJSl8Wa5hu8ARpet9MllKIyVJTRGHSCPivDTuTdhqRZz5eOyjzUu7LJd92Ik4pOhp
+        Pr+UdlYoRO+AxQ88PXhpnIi/IWkGJM2ApBmQNAOSZkDSDEiaAUkzIGkGEmk8T/FcJXaTSKOXdshDk/8k
+        kUbHls6tiEMniI6QlxaaayJOaNZ6aaQmBlXX4oRmrZcG952OP0Q64U0DSKQRZYyp3kaj1RURYOBEJoZG
+        bSINKHRh4iKWIIxgYvYZWJMGRBriwowvy1C/iLDfwmBDGpCq7KYYZsfI0jyUFAz1i8KfNjtJlRbAMFvs
+        ebHob+qycDBkCm9KbSMqTaQjaQYkzYCkGZC0vXHuG6xjdqXbp+32AAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="bunifuLabel37.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
   </data>
   <data name="bunifuLabel36.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
-  </data>
-  <data name="bunifuLabel34.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 13.8pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
   </data>
   <data name="bunifuLabel33.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 24pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(139, 0, 0); text-align: center; }</value>

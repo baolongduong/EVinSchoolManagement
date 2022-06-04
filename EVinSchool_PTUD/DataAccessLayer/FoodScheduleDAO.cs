@@ -82,5 +82,11 @@ namespace DataAccessLayer
             }
             return false;
         }
+
+        public List<FoodSchedule> SelectByClassId(int classid)
+        {
+            List<FoodSchedule> foodSchedules = db.FoodSchedules.Where(b => b.ClassId == classid).ToList();
+            return foodSchedules;
+        }
     }
 }

@@ -92,8 +92,16 @@ namespace GUI
             lblC_ID.Text = code.ToString();
             pic_TeacherAvatar.ImageLocation = @"../../upload/" + teacher.TeacherImage;
 
+            //Student Information
             List<Student> students = new StudentBUS().GetAll();
             gv_StudentInfo.DataSource = students;
+
+            //Food Schedule
+            List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetAll();
+            gvMealSchedule.DataSource = foodSchedules;
+            gvMealSchedule.Columns[0].Visible = false;
+            gvMealSchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
+            gvMealSchedule.Columns[5].Visible = false;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -157,11 +165,52 @@ namespace GUI
             drp_StudentFilter.DataSource = classrooms;
             drp_StudentFilter.DisplayMember = "ClassName";
             drp_StudentFilter.ValueMember = "ClassId";
+
+            drpdown_FoodClass.DataSource = classrooms;
+            drpdown_FoodClass.DisplayMember = "ClassName";
+            drpdown_FoodClass.ValueMember = "ClassId";
         }
 
         private void drp_StudentFilter_DropDown(object sender, EventArgs e)
         {
             loadClass();
+        }
+
+      
+
+       
+
+        private void drpdown_FoodClass_DropDown(object sender, EventArgs e)
+        {
+            loadClass();
+        }
+
+        private void drpdown_FoodClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int value = 1;
+            if (drpdown_FoodClass.SelectedIndex > 0)
+            {
+                value = Convert.ToInt32(drpdown_FoodClass.SelectedValue.ToString());
+                List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetDetailsByClassId(value);
+                gvMealSchedule.DataSource = foodSchedules;
+            }
+            else
+            {
+                List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetDetailsByClassId(value);
+                gvMealSchedule.DataSource = foodSchedules;
+            }
+        }
+
+        private void btnGuestView_Click(object sender, EventArgs e)
+        {
+            FrmViewSchedule frmschedule = new FrmViewSchedule();
+            frmschedule.Owner = this;
+            frmschedule.Show();
+        }
+
+        private void btnFoodEdit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
