@@ -1,3 +1,17 @@
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\GUI.exe.config
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\GUI.exe
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\GUI.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.exe
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\BusinessLogicLayer.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\DataAccessLayer.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\BusinessLogicLayer.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\DataAccessLayer.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\DataAccessLayer.dll.config
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\GUI.exe.config
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\GUI.exe
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\GUI.pdb
@@ -15,6 +29,76 @@ C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolM
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.exe
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.Licensing.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuRating.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuShapes.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTextBox.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.Deprecated.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.Utils.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.1.5.3.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuRating.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuShapes.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTextBox.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.exe.licenses
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmLogin.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmRegister.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAdmin.resources
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\GUI.exe.config
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\GUI.exe
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\GUI.pdb
@@ -100,6 +184,8 @@ C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\D
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.exe
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmGuest.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmTeacher.resources
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmTeacher.resources
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmStudent.resources
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.dll
@@ -107,94 +193,6 @@ C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\D
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\TelerikCommon.dll
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.xml
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.UI.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\GUI.exe.config
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\GUI.exe
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\GUI.pdb
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.Licensing.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuRating.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuShapes.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTextBox.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.Deprecated.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.Utils.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\BusinessLogicLayer.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\DataAccessLayer.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\BusinessLogicLayer.pdb
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\DataAccessLayer.pdb
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\DataAccessLayer.dll.config
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.1.5.3.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuRating.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuShapes.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTextBox.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.UI.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmGuest.resources
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmRegister.resources
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAdmin.resources
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmLogin.resources
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmStudent.resources
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmTeacher.resources
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.Properties.Resources.resources
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.exe.licenses
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.CopyComplete
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.exe
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.pdb
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmViewSchedule.resources
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmFoodSchedule.resources
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmClass.resources
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddedStudent.resources
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddMark.resources

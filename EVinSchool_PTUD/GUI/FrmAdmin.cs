@@ -18,6 +18,9 @@ namespace GUI
 {
     public partial class FrmAdmin : BunifuForm
     {
+        string conStr = "server = StudentManagementDB.mssql.somee.com; User ID = baolongsbs_SQLLogin_1; password=7bxn3rbj94;database = StudentManagementDB";
+        string listStudentMark = "SELECT st.StudentName, cl.ClassName, sj.SubjectName, m.Score FROM Student as st, Classroom as cl, Subject as sj, Mark as m WHERE st.StudentClass = cl.ClassId and m.StudentId = st.StudentId and sj.SubjectId = m.SubjectId";
+
         TeacherBUS teacherBUS = new TeacherBUS();
         ClassroomBUS classroomBUS = new ClassroomBUS();
         StudentBUS studentBUS = new StudentBUS();
@@ -42,19 +45,6 @@ namespace GUI
             adminpages.PageIndex = 1;
         }
 
-        private void bnf_Info_Click(object sender, EventArgs e)
-        {
-            adminpages.PageIndex = 2;
-            List<Student> students = new StudentBUS().GetAll();
-            gv_StudentInfo.DataSource = students;
-
-
-        }
-
-        private void bnf_Mark_Click(object sender, EventArgs e)
-        {
-            adminpages.PageIndex = 3;
-        }
 
         private void bnf_Schedule_Click(object sender, EventArgs e)
         {
@@ -78,6 +68,8 @@ namespace GUI
             frmTeacher.ShowDialog();
         }
 
+
+
         private void FrmAdmin_Activated(object sender, EventArgs e)
         {
             int code = Int32.Parse(lblTeacherID.Text.ToString());
@@ -92,16 +84,8 @@ namespace GUI
             lblC_ID.Text = code.ToString();
             pic_TeacherAvatar.ImageLocation = @"../../upload/" + teacher.TeacherImage;
 
-            //Student Information
             List<Student> students = new StudentBUS().GetAll();
             gv_StudentInfo.DataSource = students;
-
-            //Food Schedule
-            List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetAll();
-            gvMealSchedule.DataSource = foodSchedules;
-            gvMealSchedule.Columns[0].Visible = false;
-            gvMealSchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
-            gvMealSchedule.Columns[5].Visible = false;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -111,6 +95,13 @@ namespace GUI
             frmLogin.Show();
         }
 
+        //PAGE INFORMATION
+        private void bnf_Info_Click(object sender, EventArgs e)
+        {
+            adminpages.PageIndex = 2;
+            List<Student> students = new StudentBUS().GetAll();
+            gv_StudentInfo.DataSource = students;
+        }
         private void btnFind_Click(object sender, EventArgs e)
         {
             String keyword = txtSearch.Text.Trim();
@@ -145,7 +136,8 @@ namespace GUI
                 //MessageBox.Show(drp_StudentFilter.SelectedValue.ToString());
                 List<Student> students = new StudentBUS().GetDetailsByClassId(value);
                 gv_StudentInfo.DataSource = students;
-            } else
+            }
+            else
             {
                 List<Student> students = new StudentBUS().GetDetailsByClassId(value);
                 gv_StudentInfo.DataSource = students;
@@ -165,10 +157,6 @@ namespace GUI
             drp_StudentFilter.DataSource = classrooms;
             drp_StudentFilter.DisplayMember = "ClassName";
             drp_StudentFilter.ValueMember = "ClassId";
-
-            drpdown_FoodClass.DataSource = classrooms;
-            drpdown_FoodClass.DisplayMember = "ClassName";
-            drpdown_FoodClass.ValueMember = "ClassId";
         }
 
         private void drp_StudentFilter_DropDown(object sender, EventArgs e)
@@ -176,41 +164,118 @@ namespace GUI
             loadClass();
         }
 
-      
-
-       
-
-        private void drpdown_FoodClass_DropDown(object sender, EventArgs e)
+        private void btn_AddClass_Click(object sender, EventArgs e)
         {
-            loadClass();
+            FrmClass frmClass = new FrmClass();
+            frmClass.Owner = this;
+            frmClass.ShowDialog();
         }
 
-        private void drpdown_FoodClass_SelectedIndexChanged(object sender, EventArgs e)
+        private void btn_AddStudent_Click(object sender, EventArgs e)
+        {
+            FrmAddedStudent frmAddStudent = new FrmAddedStudent();
+            frmAddStudent.Owner = this;
+            frmAddStudent.ShowDialog();
+        }
+
+        //PAGE MARK
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            loadMarkTable();
+        }
+
+        private void loadMarkTable()
+        {
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark, conStr);
+            DataSet DS = new DataSet();
+            dataAdapter.Fill(DS);
+            gv_Mark.DataSource = DS.Tables[0];
+        }
+        private void bnf_Mark_Click(object sender, EventArgs e)
+        {
+            adminpages.PageIndex = 3;
+
+            loadMarkTable();
+        }
+        private void drp_MarkClassroom_Click(object sender, EventArgs e)
+        {
+            List<Classroom> classrooms = new ClassroomBUS().GetAll();
+            drp_MarkClassroom.DataSource = classrooms;
+            drp_MarkClassroom.DisplayMember = "ClassName";
+            drp_MarkClassroom.ValueMember = "ClassId";
+        }
+
+        private void drp_Subject_Click(object sender, EventArgs e)
+        {
+            List<Subject> subjects = new SubjectBUS().GetAll();
+            drp_Subject.DataSource = subjects;
+            drp_Subject.DisplayMember = "SubjectName";
+            drp_Subject.ValueMember = "SubjectId";
+        }
+        private void drp_Subject_SelectedIndexChanged(object sender, EventArgs e)
         {
             int value = 1;
-            if (drpdown_FoodClass.SelectedIndex > 0)
+            if (drp_Subject.SelectedIndex > 0)
             {
-                value = Convert.ToInt32(drpdown_FoodClass.SelectedValue.ToString());
-                List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetDetailsByClassId(value);
-                gvMealSchedule.DataSource = foodSchedules;
+                value = Convert.ToInt32(drp_Subject.SelectedValue.ToString());
+                //MessageBox.Show(drp_StudentFilter.SelectedValue.ToString());
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and sj.SubjectId ='" + value + "'", conStr);
+                DataSet DS = new DataSet();
+                dataAdapter.Fill(DS);
+                gv_Mark.DataSource = DS.Tables[0];
+            }
+            else if (drp_Subject.SelectedIndex == -1)
+            {
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark, conStr);
+                DataSet DS = new DataSet();
+                dataAdapter.Fill(DS);
+                gv_Mark.DataSource = DS.Tables[0];
             }
             else
             {
-                List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetDetailsByClassId(value);
-                gvMealSchedule.DataSource = foodSchedules;
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and sj.SubjectId ='" + value + "'", conStr);
+                DataSet DS = new DataSet();
+                dataAdapter.Fill(DS);
+                gv_Mark.DataSource = DS.Tables[0];
             }
         }
 
-        private void btnGuestView_Click(object sender, EventArgs e)
+        private void drp_MarkClassroom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FrmViewSchedule frmschedule = new FrmViewSchedule();
-            frmschedule.Owner = this;
-            frmschedule.Show();
+            int value = 1;
+            if (drp_MarkClassroom.SelectedIndex > 0)
+            {
+                value = Convert.ToInt32(drp_MarkClassroom.SelectedValue.ToString());
+                //MessageBox.Show(drp_StudentFilter.SelectedValue.ToString());
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and cl.ClassId ='" + value + "'", conStr);
+                DataSet DS = new DataSet();
+                dataAdapter.Fill(DS);
+                gv_Mark.DataSource = DS.Tables[0];
+            }
+            else
+            {
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and cl.ClassId ='" + value + "'", conStr);
+                DataSet DS = new DataSet();
+                dataAdapter.Fill(DS);
+                gv_Mark.DataSource = DS.Tables[0];
+            }
         }
 
-        private void btnFoodEdit_Click(object sender, EventArgs e)
+        private void btnAddMark_Click(object sender, EventArgs e)
         {
+            FrmAddMark frmAddMark = new FrmAddMark();
+            frmAddMark.Owner = this;
+            frmAddMark.ShowDialog();
+        }
 
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            String keyword = txt_SearchName.Text.Trim();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and st.StudentName LIKE '%" + keyword + "%'", conStr);
+            DataSet DS = new DataSet();
+            dataAdapter.Fill(DS);
+            gv_Mark.DataSource = DS.Tables[0];
         }
     }
 }

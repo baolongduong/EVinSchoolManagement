@@ -138,7 +138,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -153,6 +152,24 @@
     <Reference Include="TelerikCommon, Version=2022.2.510.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAddMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddMark.Designer.cs">
+      <DependentUpon>FrmAddMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddedStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddedStudent.Designer.cs">
+      <DependentUpon>FrmAddedStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClass.Designer.cs">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGuest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,18 +200,6 @@
     <Compile Include="FrmStudent.Designer.cs">
       <DependentUpon>FrmStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmFoodSchedule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmFoodSchedule.Designer.cs">
-      <DependentUpon>FrmFoodSchedule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmViewSchedule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmViewSchedule.Designer.cs">
-      <DependentUpon>FrmViewSchedule.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +208,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddedStudent.resx">
+      <DependentUpon>FrmAddedStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddMark.resx">
+      <DependentUpon>FrmAddMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClass.resx">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGuest.resx">
       <DependentUpon>FrmGuest.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,12 +231,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStudent.resx">
       <DependentUpon>FrmStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmFoodSchedule.resx">
-      <DependentUpon>FrmFoodSchedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmViewSchedule.resx">
-      <DependentUpon>FrmViewSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTeacher.resx">
       <DependentUpon>FrmTeacher.cs</DependentUpon>
@@ -288,9 +296,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="upload\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\restaurant.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

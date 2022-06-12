@@ -5,6 +5,13 @@ C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolM
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.dll
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
@@ -12,10 +19,3 @@ C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\DataAcces
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
-D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
-D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
-D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
-D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.dll
-D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

@@ -50,6 +50,7 @@ namespace DataAccessLayer
             {
                 try
                 {
+                    dbSuject.MarkDate = newMark.MarkDate;
                     dbSuject.StudentId = newMark.StudentId;
                     dbSuject.SubjectId = newMark.SubjectId;
                     dbSuject.Score = newMark.Score;

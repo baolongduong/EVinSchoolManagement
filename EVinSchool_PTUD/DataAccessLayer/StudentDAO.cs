@@ -60,6 +60,7 @@ namespace DataAccessLayer
                     dbStudent.StudentClass = newStudent.StudentClass;
                     dbStudent.StudentAddress = newStudent.StudentAddress;
                     dbStudent.ParentPhone = newStudent.ParentPhone;
+                    dbStudent.StudentImage = newStudent.StudentImage;
                     db.SubmitChanges();
                     return true;
                 }
