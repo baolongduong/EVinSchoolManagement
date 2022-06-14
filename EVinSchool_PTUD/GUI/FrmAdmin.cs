@@ -100,8 +100,21 @@ namespace GUI
             List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetAll();
             gvMealSchedule.DataSource = foodSchedules;
             gvMealSchedule.Columns[0].Visible = false;
+            gvMealSchedule.Columns[3].Visible = false;
+            gvMealSchedule.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
             gvMealSchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
+            gvMealSchedule.Columns[4].HeaderText = "Time";
             gvMealSchedule.Columns[5].Visible = false;
+
+            //Study Schedule
+            List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleBUS().GetAllBySubjectxClass();
+            gv_StudySchedule.DataSource = studySchedules;
+            gv_StudySchedule.Columns[0].Visible = false;
+            gv_StudySchedule.Columns[1].Visible = false;
+            gv_StudySchedule.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            gv_StudySchedule.Columns[3].DefaultCellStyle.Format = "HH:mm";
+            gv_StudySchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
+
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -142,10 +155,15 @@ namespace GUI
             if (drp_StudentFilter.SelectedIndex > 0)
             {
                 value = Convert.ToInt32(drp_StudentFilter.SelectedValue.ToString());
-                //MessageBox.Show(drp_StudentFilter.SelectedValue.ToString());
                 List<Student> students = new StudentBUS().GetDetailsByClassId(value);
                 gv_StudentInfo.DataSource = students;
-            } else
+            }
+            else if(drp_StudentFilter.SelectedIndex == -1)
+            {
+                List<Student> students = new StudentBUS().GetAll();
+                gv_StudentInfo.DataSource = students;
+            }
+            else
             {
                 List<Student> students = new StudentBUS().GetDetailsByClassId(value);
                 gv_StudentInfo.DataSource = students;
@@ -166,6 +184,7 @@ namespace GUI
             drp_StudentFilter.DisplayMember = "ClassName";
             drp_StudentFilter.ValueMember = "ClassId";
 
+
             drpdown_FoodClass.DataSource = classrooms;
             drpdown_FoodClass.DisplayMember = "ClassName";
             drpdown_FoodClass.ValueMember = "ClassId";
@@ -175,10 +194,6 @@ namespace GUI
         {
             loadClass();
         }
-
-      
-
-       
 
         private void drpdown_FoodClass_DropDown(object sender, EventArgs e)
         {
@@ -193,11 +208,25 @@ namespace GUI
                 value = Convert.ToInt32(drpdown_FoodClass.SelectedValue.ToString());
                 List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetDetailsByClassId(value);
                 gvMealSchedule.DataSource = foodSchedules;
+
+                List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleBUS().GetDetailsBySubjectxClass(value);
+                gv_StudySchedule.DataSource = studySchedules;
+            }
+            else if (drpdown_FoodClass.SelectedIndex == -1)
+            {
+                List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetAll();
+                gvMealSchedule.DataSource = foodSchedules;
+
+                List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleBUS().GetAllBySubjectxClass();
+                gv_StudySchedule.DataSource = studySchedules;
             }
             else
             {
                 List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetDetailsByClassId(value);
                 gvMealSchedule.DataSource = foodSchedules;
+
+                List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleBUS().GetDetailsBySubjectxClass(value);
+                gv_StudySchedule.DataSource = studySchedules;
             }
         }
 
@@ -209,8 +238,20 @@ namespace GUI
         }
 
         private void btnFoodEdit_Click(object sender, EventArgs e)
-        {
+        {          
+                int classid = Convert.ToInt32(drpdown_FoodClass.SelectedValue.ToString());            
+                FrmFoodSchedule frmfoodschle = new FrmFoodSchedule(classid);
+                frmfoodschle.Owner = this;
+                frmfoodschle.Show();        
+           
+        }
 
+        private void btnStudyEdit_Click(object sender, EventArgs e)
+        {
+            int classid = Convert.ToInt32(drpdown_FoodClass.SelectedValue.ToString());
+            FrmStudySchedule frmstudyschle = new FrmStudySchedule(classid);
+            frmstudyschle.Owner = this;
+            frmstudyschle.Show();
         }
     }
 }

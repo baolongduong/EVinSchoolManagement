@@ -39,7 +39,6 @@ namespace BusinessLogicLayer
         {
             bool result = new StudyScheduleDAO().Update(newStudySchedule);
             return result;
-
         }
 
 
@@ -48,6 +47,37 @@ namespace BusinessLogicLayer
             bool result = new StudyScheduleDAO().Delete(code);
             return result;
 
+        }
+
+        public List<StudySchedule> GetDetailsByClassId(int classid)
+        {
+            List<StudySchedule> studySchedules = new StudyScheduleDAO().SelectByClassId(classid);
+            return studySchedules;
+        }
+
+
+        //Mix 3 tables
+        public List<SubjectClassroomOfStudySchedule> GetDetailsBySubjectxClass(int classid)
+        {
+            List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleDAO().StudyxClassxSubject(classid);
+            return studySchedules;
+        }
+
+        public List<SubjectClassroomOfStudySchedule> GetAllBySubjectxClass()
+        {
+            List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleDAO().GetAllStudyxClassxSubject();
+            return studySchedules;
+        }
+        public List<SubjectClassroomOfStudySchedule> GetAllBySubjectxClassByDate(DateTime date, DateTime start)
+        {
+            List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleDAO().StudyxClassxSubjectByDate(date,start);
+            return studySchedules;
+        }
+
+        public SubjectClassroomOfStudySchedule GetSDetails(int code)
+        {
+            SubjectClassroomOfStudySchedule studySchedule = new StudyScheduleDAO().SelectBySCode(code);
+            return studySchedule;
         }
     }
 }

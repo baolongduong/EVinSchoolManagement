@@ -22,6 +22,12 @@ namespace DataAccessLayer
             Subject subject = db.Subjects.SingleOrDefault(b => b.SubjectId == code);
             return subject;
         }
+
+        public Subject GetSubjectId(string name)
+        {
+            Subject subject = db.Subjects.SingleOrDefault(b => b.SubjectName == name);
+            return subject;
+        }
         public List<Subject> SelectByKeyword(string keyword)
         {
             List<Subject> subjects = db.Subjects.Where(b => b.SubjectName.Contains(keyword)).ToList();

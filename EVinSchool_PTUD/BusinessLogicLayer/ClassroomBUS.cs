@@ -51,5 +51,11 @@ namespace BusinessLogicLayer
             return result;
 
         }
+
+        public List<ClassroomJoined> GetAllClassesJoined()
+        {
+            List<ClassroomJoined> classes = new ClassroomDAO().GetAllClassroomJoined();
+            return classes;
+        }
     }
 }

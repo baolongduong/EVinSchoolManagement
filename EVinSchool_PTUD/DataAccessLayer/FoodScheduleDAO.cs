@@ -26,6 +26,11 @@ namespace DataAccessLayer
             List<FoodSchedule> foodSchedules = db.FoodSchedules.Where(b => b.FoodName.Contains(keyword)).ToList();
             return foodSchedules;
         }
+        public List<FoodSchedule> SelectByDate(DateTime date, DateTime start)
+        {
+            List<FoodSchedule> foodSchedules = db.FoodSchedules.Where(b => b.FoodDate == date && b.FoodClassTime == start).ToList();
+            return foodSchedules;
+        }
 
         public bool Insert(FoodSchedule newFoodSchedule)
         {

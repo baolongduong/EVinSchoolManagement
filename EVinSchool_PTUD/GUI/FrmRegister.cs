@@ -49,7 +49,6 @@ namespace GUI
             oc.Cancel = true;
             string name = drp_Classroom.Text.Trim();
             Classroom clsname = new ClassroomBUS().GetID(name);
-
             Teacher teacher = new Teacher()
             {
                 TeacherId = 0,

@@ -30,7 +30,6 @@ namespace GUI
             
             Student student = studentBUS.GetDetails(code);
             
-
             txtStudentName.Text = student.StudentName;
             txtStudentAddress.Text = student.StudentAddress;
             txtParentPhone.Text = student.ParentPhone;

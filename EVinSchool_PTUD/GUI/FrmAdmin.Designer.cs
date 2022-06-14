@@ -143,10 +143,10 @@ namespace GUI
             this.bunifuLabel27 = new Bunifu.UI.WinForms.BunifuLabel();
             this.Schedule = new System.Windows.Forms.TabPage();
             this.drpdown_FoodClass = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.btnManageStudy = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnStudyEdit = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnGuestView = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnFoodEdit = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuDataGridView3 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.gv_StudySchedule = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.gvMealSchedule = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuLabel37 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel36 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -158,6 +158,7 @@ namespace GUI
             this.bunifuLabel38 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel28 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.bunifuShadowPanel1.SuspendLayout();
@@ -174,7 +175,7 @@ namespace GUI
             this.Mark.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.Schedule.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_StudySchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMealSchedule)).BeginInit();
             this.Classtification.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView4)).BeginInit();
@@ -2385,10 +2386,10 @@ namespace GUI
             // 
             this.Schedule.BackColor = System.Drawing.Color.White;
             this.Schedule.Controls.Add(this.drpdown_FoodClass);
-            this.Schedule.Controls.Add(this.btnManageStudy);
+            this.Schedule.Controls.Add(this.btnStudyEdit);
             this.Schedule.Controls.Add(this.btnGuestView);
             this.Schedule.Controls.Add(this.btnFoodEdit);
-            this.Schedule.Controls.Add(this.bunifuDataGridView3);
+            this.Schedule.Controls.Add(this.gv_StudySchedule);
             this.Schedule.Controls.Add(this.gvMealSchedule);
             this.Schedule.Controls.Add(this.bunifuLabel37);
             this.Schedule.Controls.Add(this.bunifuLabel36);
@@ -2443,37 +2444,38 @@ namespace GUI
             this.drpdown_FoodClass.DropDown += new System.EventHandler(this.drpdown_FoodClass_DropDown);
             this.drpdown_FoodClass.SelectedIndexChanged += new System.EventHandler(this.drpdown_FoodClass_SelectedIndexChanged);
             // 
-            // btnManageStudy
+            // btnStudyEdit
             // 
-            this.btnManageStudy.ActiveBorderThickness = 1;
-            this.btnManageStudy.ActiveCornerRadius = 20;
-            this.btnManageStudy.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnManageStudy.ActiveForecolor = System.Drawing.Color.White;
-            this.btnManageStudy.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnManageStudy.BackColor = System.Drawing.Color.White;
-            this.btnManageStudy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageStudy.BackgroundImage")));
-            this.btnManageStudy.ButtonText = "Manage";
-            this.btnManageStudy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnManageStudy.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageStudy.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnManageStudy.IdleBorderThickness = 1;
-            this.btnManageStudy.IdleCornerRadius = 20;
-            this.btnManageStudy.IdleFillColor = System.Drawing.Color.White;
-            this.btnManageStudy.IdleForecolor = System.Drawing.Color.DarkRed;
-            this.btnManageStudy.IdleLineColor = System.Drawing.Color.IndianRed;
-            this.btnManageStudy.Location = new System.Drawing.Point(708, 301);
-            this.btnManageStudy.Margin = new System.Windows.Forms.Padding(5);
-            this.btnManageStudy.Name = "btnManageStudy";
-            this.btnManageStudy.Size = new System.Drawing.Size(77, 43);
-            this.btnManageStudy.TabIndex = 37;
-            this.btnManageStudy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStudyEdit.ActiveBorderThickness = 1;
+            this.btnStudyEdit.ActiveCornerRadius = 20;
+            this.btnStudyEdit.ActiveFillColor = System.Drawing.Color.LightCoral;
+            this.btnStudyEdit.ActiveForecolor = System.Drawing.Color.WhiteSmoke;
+            this.btnStudyEdit.ActiveLineColor = System.Drawing.Color.DarkRed;
+            this.btnStudyEdit.BackColor = System.Drawing.Color.White;
+            this.btnStudyEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStudyEdit.BackgroundImage")));
+            this.btnStudyEdit.ButtonText = "Manage";
+            this.btnStudyEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStudyEdit.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudyEdit.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnStudyEdit.IdleBorderThickness = 1;
+            this.btnStudyEdit.IdleCornerRadius = 20;
+            this.btnStudyEdit.IdleFillColor = System.Drawing.Color.White;
+            this.btnStudyEdit.IdleForecolor = System.Drawing.Color.DarkRed;
+            this.btnStudyEdit.IdleLineColor = System.Drawing.Color.IndianRed;
+            this.btnStudyEdit.Location = new System.Drawing.Point(708, 301);
+            this.btnStudyEdit.Margin = new System.Windows.Forms.Padding(5);
+            this.btnStudyEdit.Name = "btnStudyEdit";
+            this.btnStudyEdit.Size = new System.Drawing.Size(77, 43);
+            this.btnStudyEdit.TabIndex = 37;
+            this.btnStudyEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStudyEdit.Click += new System.EventHandler(this.btnStudyEdit_Click);
             // 
             // btnGuestView
             // 
             this.btnGuestView.ActiveBorderThickness = 1;
             this.btnGuestView.ActiveCornerRadius = 20;
-            this.btnGuestView.ActiveFillColor = System.Drawing.Color.PaleVioletRed;
-            this.btnGuestView.ActiveForecolor = System.Drawing.Color.White;
+            this.btnGuestView.ActiveFillColor = System.Drawing.Color.LightCoral;
+            this.btnGuestView.ActiveForecolor = System.Drawing.Color.WhiteSmoke;
             this.btnGuestView.ActiveLineColor = System.Drawing.Color.DarkRed;
             this.btnGuestView.BackColor = System.Drawing.Color.White;
             this.btnGuestView.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuestView.BackgroundImage")));
@@ -2498,9 +2500,9 @@ namespace GUI
             // 
             this.btnFoodEdit.ActiveBorderThickness = 1;
             this.btnFoodEdit.ActiveCornerRadius = 20;
-            this.btnFoodEdit.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnFoodEdit.ActiveForecolor = System.Drawing.Color.White;
-            this.btnFoodEdit.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnFoodEdit.ActiveFillColor = System.Drawing.Color.LightCoral;
+            this.btnFoodEdit.ActiveForecolor = System.Drawing.Color.WhiteSmoke;
+            this.btnFoodEdit.ActiveLineColor = System.Drawing.Color.DarkRed;
             this.btnFoodEdit.BackColor = System.Drawing.Color.White;
             this.btnFoodEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFoodEdit.BackgroundImage")));
             this.btnFoodEdit.ButtonText = "Manage";
@@ -2520,17 +2522,17 @@ namespace GUI
             this.btnFoodEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnFoodEdit.Click += new System.EventHandler(this.btnFoodEdit_Click);
             // 
-            // bunifuDataGridView3
+            // gv_StudySchedule
             // 
-            this.bunifuDataGridView3.AllowCustomTheming = false;
+            this.gv_StudySchedule.AllowCustomTheming = false;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.bunifuDataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuDataGridView3.BackgroundColor = System.Drawing.Color.Lavender;
-            this.bunifuDataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuDataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bunifuDataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gv_StudySchedule.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.gv_StudySchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gv_StudySchedule.BackgroundColor = System.Drawing.Color.GhostWhite;
+            this.gv_StudySchedule.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gv_StudySchedule.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gv_StudySchedule.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
@@ -2538,26 +2540,26 @@ namespace GUI
             dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.bunifuDataGridView3.ColumnHeadersHeight = 40;
-            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView3.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView3.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView3.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.bunifuDataGridView3.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView3.CurrentTheme.Name = null;
-            this.bunifuDataGridView3.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView3.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView3.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView3.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView3.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gv_StudySchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.gv_StudySchedule.ColumnHeadersHeight = 40;
+            this.gv_StudySchedule.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.gv_StudySchedule.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.gv_StudySchedule.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.gv_StudySchedule.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.gv_StudySchedule.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gv_StudySchedule.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.gv_StudySchedule.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.gv_StudySchedule.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.gv_StudySchedule.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.gv_StudySchedule.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gv_StudySchedule.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.gv_StudySchedule.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.gv_StudySchedule.CurrentTheme.Name = null;
+            this.gv_StudySchedule.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gv_StudySchedule.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.gv_StudySchedule.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.gv_StudySchedule.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.gv_StudySchedule.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -2565,21 +2567,21 @@ namespace GUI
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView3.DefaultCellStyle = dataGridViewCellStyle12;
-            this.bunifuDataGridView3.EnableHeadersVisualStyles = false;
-            this.bunifuDataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView3.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView3.HeaderBgColor = System.Drawing.Color.Empty;
-            this.bunifuDataGridView3.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView3.Location = new System.Drawing.Point(15, 352);
-            this.bunifuDataGridView3.Name = "bunifuDataGridView3";
-            this.bunifuDataGridView3.RowHeadersVisible = false;
-            this.bunifuDataGridView3.RowHeadersWidth = 51;
-            this.bunifuDataGridView3.RowTemplate.Height = 40;
-            this.bunifuDataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView3.Size = new System.Drawing.Size(770, 129);
-            this.bunifuDataGridView3.TabIndex = 36;
-            this.bunifuDataGridView3.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.gv_StudySchedule.DefaultCellStyle = dataGridViewCellStyle12;
+            this.gv_StudySchedule.EnableHeadersVisualStyles = false;
+            this.gv_StudySchedule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.gv_StudySchedule.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.gv_StudySchedule.HeaderBgColor = System.Drawing.Color.Empty;
+            this.gv_StudySchedule.HeaderForeColor = System.Drawing.Color.White;
+            this.gv_StudySchedule.Location = new System.Drawing.Point(15, 352);
+            this.gv_StudySchedule.Name = "gv_StudySchedule";
+            this.gv_StudySchedule.RowHeadersVisible = false;
+            this.gv_StudySchedule.RowHeadersWidth = 51;
+            this.gv_StudySchedule.RowTemplate.Height = 40;
+            this.gv_StudySchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gv_StudySchedule.Size = new System.Drawing.Size(770, 111);
+            this.gv_StudySchedule.TabIndex = 36;
+            this.gv_StudySchedule.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // gvMealSchedule
             // 
@@ -2886,6 +2888,75 @@ namespace GUI
             this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // bunifuSnackbar1
+            // 
+            this.bunifuSnackbar1.AllowDragging = false;
+            this.bunifuSnackbar1.AllowMultipleViews = true;
+            this.bunifuSnackbar1.ClickToClose = true;
+            this.bunifuSnackbar1.DoubleClickToClose = true;
+            this.bunifuSnackbar1.DurationAfterIdle = 3000;
+            this.bunifuSnackbar1.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.bunifuSnackbar1.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.bunifuSnackbar1.ErrorOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.FadeCloseIcon = false;
+            this.bunifuSnackbar1.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.bunifuSnackbar1.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.bunifuSnackbar1.InformationOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.Margin = 10;
+            this.bunifuSnackbar1.MaximumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.MaximumViews = 7;
+            this.bunifuSnackbar1.MessageRightMargin = 15;
+            this.bunifuSnackbar1.MinimumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.ShowBorders = false;
+            this.bunifuSnackbar1.ShowCloseIcon = false;
+            this.bunifuSnackbar1.ShowIcon = true;
+            this.bunifuSnackbar1.ShowShadows = true;
+            this.bunifuSnackbar1.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.bunifuSnackbar1.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.bunifuSnackbar1.SuccessOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ViewsMargin = 7;
+            this.bunifuSnackbar1.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.WarningOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.bunifuSnackbar1.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.bunifuSnackbar1.WarningOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ZoomCloseIcon = true;
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -2925,7 +2996,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
             this.Schedule.ResumeLayout(false);
             this.Schedule.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_StudySchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMealSchedule)).EndInit();
             this.Classtification.ResumeLayout(false);
             this.Classtification.PerformLayout();
@@ -3017,9 +3088,9 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel33;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel28;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogout;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnManageStudy;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnStudyEdit;
         private Bunifu.Framework.UI.BunifuThinButton2 btnFoodEdit;
-        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView3;
+        private Bunifu.UI.WinForms.BunifuDataGridView gv_StudySchedule;
         private Bunifu.UI.WinForms.BunifuDataGridView gvMealSchedule;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel37;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel36;
@@ -3032,6 +3103,7 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuLabel lblStudentID;
         private Bunifu.UI.WinForms.BunifuDropdown drpdown_FoodClass;
         private Bunifu.Framework.UI.BunifuThinButton2 btnGuestView;
+        private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
     }
 }
 
