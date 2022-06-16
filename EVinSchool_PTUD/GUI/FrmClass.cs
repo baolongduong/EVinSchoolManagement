@@ -25,6 +25,9 @@ namespace GUI
         {
             List<Classroom> classrooms = classroomBUS.GetAll();
             gv_Class.DataSource = classrooms;
+            gv_Class.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            gv_Class.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            gv_Class.Columns[0].Visible = false;
         }
 
         private void btn_AddClass_Click(object sender, EventArgs e)
@@ -55,6 +58,7 @@ namespace GUI
         {
             List<Classroom> classrooms = classroomBUS.GetAll();
             gv_Class.DataSource = classrooms;
+            gv_Class.Columns[0].Visible = false;
         }
 
         private void gv_Class_SelectionChanged(object sender, EventArgs e)
@@ -65,7 +69,7 @@ namespace GUI
                 Classroom classroom = new ClassroomBUS().GetDetails(code);
                 if (classroom != null)
                 {
-                    txt_ClassId.Text = classroom.ClassId.ToString();
+                    lbl_ClassID.Text = classroom.ClassId.ToString();
                     txt_ClassName.Text = classroom.ClassName;
                 }
             }
@@ -77,7 +81,7 @@ namespace GUI
 
             Classroom classroom = new Classroom()
             {
-                ClassId = int.Parse(txt_ClassId.Text),
+                ClassId = int.Parse(lbl_ClassID.Text),
                 ClassName = txt_ClassName.Text.Trim()
             };
 
@@ -87,6 +91,8 @@ namespace GUI
             if (result)
             {
                 bunifuSnackbar1.Show(this, "You save your classroom successfully");
+                List<Classroom> classrooms = classroomBUS.GetAll();
+                gv_Class.DataSource = classrooms;
                 this.Owner.Refresh();
                 this.Owner.Activate();
             }

@@ -23,7 +23,11 @@ namespace DataAccessLayer
             Student students = db.Students.SingleOrDefault(b => b.StudentId == code);
             return students;
         }
-
+        public Student GetStudentId(string name)
+        {
+            Student student = db.Students.SingleOrDefault(b => b.StudentName == name);
+            return student;
+        }
         public List<Student> SelectByClassId(int classid)
         {
             List<Student> students = db.Students.Where(b => b.StudentClass == classid).ToList();

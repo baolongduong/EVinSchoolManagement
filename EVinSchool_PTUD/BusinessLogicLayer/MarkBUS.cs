@@ -47,5 +47,11 @@ namespace BusinessLogicLayer
             return result;
 
         }
+
+        public bool isCheckMarkValidation(int subjectId, int studentId)
+        {
+            MarkDAO markDAO = new MarkDAO();
+            return markDAO.CheckMarkValidation(subjectId, studentId);
+        }
     }
 }

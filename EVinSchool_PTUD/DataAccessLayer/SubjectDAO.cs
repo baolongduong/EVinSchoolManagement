@@ -22,7 +22,6 @@ namespace DataAccessLayer
             Subject subject = db.Subjects.SingleOrDefault(b => b.SubjectId == code);
             return subject;
         }
-
         public Subject GetSubjectId(string name)
         {
             Subject subject = db.Subjects.SingleOrDefault(b => b.SubjectName == name);
@@ -55,7 +54,7 @@ namespace DataAccessLayer
             {
                 try
                 {
-                    dbSuject.SubjectName = newSubject.SubjectName;              
+                    dbSuject.SubjectName = newSubject.SubjectName;
                     db.SubmitChanges();
                     return true;
                 }

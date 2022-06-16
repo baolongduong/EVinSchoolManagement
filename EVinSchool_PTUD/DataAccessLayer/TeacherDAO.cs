@@ -106,20 +106,7 @@ namespace DataAccessLayer
             }
         }
 
-       /* public bool CheckClassroom(int classroom)
-        {
-            var q = from p in db.Teachers
-                    where p.TeacherClass == classroom
-                    select p ;
-            if (q.Any())
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }*/
+
 
     }
 }

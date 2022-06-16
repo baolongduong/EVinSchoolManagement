@@ -26,14 +26,24 @@ namespace GUI
 
         private void FrmStudent_Load(object sender, EventArgs e)
         {
+            List<Classroom> classrooms = new ClassroomBUS().GetAll();
+            foreach (var classes in classrooms)
+            {
+                drp_Classroom.Items.Add(classes.ClassName);
+            }
+
             int code = Int32.Parse(txt_Id.Text.ToString());
-            
+
+
+
             Student student = studentBUS.GetDetails(code);
-            
+            Classroom clsname = new ClassroomBUS().GetDetails((int)student.StudentClass);
+
             txtStudentName.Text = student.StudentName;
             txtStudentAddress.Text = student.StudentAddress;
             txtParentPhone.Text = student.ParentPhone;
-            txtClass.Text = student.StudentClass.ToString();
+            lbl_ClassId.Text = student.StudentClass.ToString();
+            drp_Classroom.SelectedItem = clsname.ClassName;
             pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
         }
 
@@ -42,32 +52,26 @@ namespace GUI
             CancelEventArgs oc = new CancelEventArgs();
             oc.Cancel = true;
 
+            string name = drp_Classroom.Text.Trim();
+            Classroom clsname = new ClassroomBUS().GetID(name);
+
             Student student = new Student()
             {
                 StudentId = Int32.Parse(txt_Id.Text.ToString()),
                 StudentName = txtStudentName.Text.Trim(),
                 StudentAddress = txtStudentAddress.Text.Trim(),
                 ParentPhone = txtParentPhone.Text.Trim(),
-                StudentClass = Int32.Parse(txtClass.Text.ToString()),
+                StudentClass = Int32.Parse(clsname.ClassId.ToString()),
                 StudentImage = fileName
             };
             if (string.IsNullOrEmpty(txtStudentName.Text))
             {
                 errorProvider1.SetError(txtStudentName, "Student's name is left blank");
             }          
-            else if (string.IsNullOrEmpty(txtClass.Text))
-            {
-                errorProvider1.SetError(txtClass, "Class is left blank");
-            }
-            else if (txtParentPhone.Text.Trim().Length != 10)
-            {
-                errorProvider1.SetError(txtParentPhone, "Phone number must be 10 characters");
-            }
             else
             {
                 errorProvider1.SetError(txtStudentName, null);
                 errorProvider1.SetError(txtParentPhone, null);
-                errorProvider1.SetError(txtClass, null);
                 oc.Cancel = false;
 
                 bool result = studentBUS.Update(student);

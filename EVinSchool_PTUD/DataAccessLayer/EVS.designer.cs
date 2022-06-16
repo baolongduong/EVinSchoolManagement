@@ -180,6 +180,10 @@ namespace DataAccessLayer
 		
 		private System.Nullable<bool> _AttendanceStatus;
 		
+		private System.Nullable<int> _CheckAttendance;
+		
+		private System.Nullable<System.DateTime> _Date;
+		
 		private EntityRef<Classroom> _Classroom;
 		
 		private EntityRef<Student> _Student;
@@ -202,6 +206,10 @@ namespace DataAccessLayer
     partial void OnAttendanceTeacherChanged();
     partial void OnAttendanceStatusChanging(System.Nullable<bool> value);
     partial void OnAttendanceStatusChanged();
+    partial void OnCheckAttendanceChanging(System.Nullable<int> value);
+    partial void OnCheckAttendanceChanged();
+    partial void OnDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateChanged();
     #endregion
 		
 		public Attendance()
@@ -344,6 +352,46 @@ namespace DataAccessLayer
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckAttendance", DbType="Int")]
+		public System.Nullable<int> CheckAttendance
+		{
+			get
+			{
+				return this._CheckAttendance;
+			}
+			set
+			{
+				if ((this._CheckAttendance != value))
+				{
+					this.OnCheckAttendanceChanging(value);
+					this.SendPropertyChanging();
+					this._CheckAttendance = value;
+					this.SendPropertyChanged("CheckAttendance");
+					this.OnCheckAttendanceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date
+		{
+			get
+			{
+				return this._Date;
+			}
+			set
+			{
+				if ((this._Date != value))
+				{
+					this.OnDateChanging(value);
+					this.SendPropertyChanging();
+					this._Date = value;
+					this.SendPropertyChanged("Date");
+					this.OnDateChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Classroom_Attendance", Storage="_Classroom", ThisKey="AttendanceClass", OtherKey="ClassId", IsForeignKey=true)]
 		public Classroom Classroom
 		{
@@ -481,6 +529,26 @@ namespace DataAccessLayer
 		
 		private string _ClassificationResult;
 		
+		private System.Nullable<decimal> _Math;
+		
+		private System.Nullable<decimal> _Vietnamese;
+		
+		private System.Nullable<decimal> _English;
+		
+		private System.Nullable<decimal> _Morality;
+		
+		private System.Nullable<decimal> _NatureSocial;
+		
+		private System.Nullable<decimal> _HistoryGeography;
+		
+		private System.Nullable<decimal> _Music;
+		
+		private System.Nullable<decimal> _Sports;
+		
+		private System.Nullable<decimal> _Arts;
+		
+		private System.Nullable<decimal> _AttendanceClass;
+		
 		private EntityRef<Student> _Student;
 		
     #region Extensibility Method Definitions
@@ -495,6 +563,26 @@ namespace DataAccessLayer
     partial void OnTotalMarkChanged();
     partial void OnClassificationResultChanging(string value);
     partial void OnClassificationResultChanged();
+    partial void OnMathChanging(System.Nullable<decimal> value);
+    partial void OnMathChanged();
+    partial void OnVietnameseChanging(System.Nullable<decimal> value);
+    partial void OnVietnameseChanged();
+    partial void OnEnglishChanging(System.Nullable<decimal> value);
+    partial void OnEnglishChanged();
+    partial void OnMoralityChanging(System.Nullable<decimal> value);
+    partial void OnMoralityChanged();
+    partial void OnNatureSocialChanging(System.Nullable<decimal> value);
+    partial void OnNatureSocialChanged();
+    partial void OnHistoryGeographyChanging(System.Nullable<decimal> value);
+    partial void OnHistoryGeographyChanged();
+    partial void OnMusicChanging(System.Nullable<decimal> value);
+    partial void OnMusicChanged();
+    partial void OnSportsChanging(System.Nullable<decimal> value);
+    partial void OnSportsChanged();
+    partial void OnArtsChanging(System.Nullable<decimal> value);
+    partial void OnArtsChanged();
+    partial void OnAttendanceClassChanging(System.Nullable<decimal> value);
+    partial void OnAttendanceClassChanged();
     #endregion
 		
 		public Classification()
@@ -583,6 +671,206 @@ namespace DataAccessLayer
 					this._ClassificationResult = value;
 					this.SendPropertyChanged("ClassificationResult");
 					this.OnClassificationResultChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Math", DbType="Decimal(10,1)")]
+		public System.Nullable<decimal> Math
+		{
+			get
+			{
+				return this._Math;
+			}
+			set
+			{
+				if ((this._Math != value))
+				{
+					this.OnMathChanging(value);
+					this.SendPropertyChanging();
+					this._Math = value;
+					this.SendPropertyChanged("Math");
+					this.OnMathChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vietnamese", DbType="Decimal(10,1)")]
+		public System.Nullable<decimal> Vietnamese
+		{
+			get
+			{
+				return this._Vietnamese;
+			}
+			set
+			{
+				if ((this._Vietnamese != value))
+				{
+					this.OnVietnameseChanging(value);
+					this.SendPropertyChanging();
+					this._Vietnamese = value;
+					this.SendPropertyChanged("Vietnamese");
+					this.OnVietnameseChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_English", DbType="Decimal(10,1)")]
+		public System.Nullable<decimal> English
+		{
+			get
+			{
+				return this._English;
+			}
+			set
+			{
+				if ((this._English != value))
+				{
+					this.OnEnglishChanging(value);
+					this.SendPropertyChanging();
+					this._English = value;
+					this.SendPropertyChanged("English");
+					this.OnEnglishChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Morality", DbType="Decimal(10,1)")]
+		public System.Nullable<decimal> Morality
+		{
+			get
+			{
+				return this._Morality;
+			}
+			set
+			{
+				if ((this._Morality != value))
+				{
+					this.OnMoralityChanging(value);
+					this.SendPropertyChanging();
+					this._Morality = value;
+					this.SendPropertyChanged("Morality");
+					this.OnMoralityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NatureSocial", DbType="Decimal(10,1)")]
+		public System.Nullable<decimal> NatureSocial
+		{
+			get
+			{
+				return this._NatureSocial;
+			}
+			set
+			{
+				if ((this._NatureSocial != value))
+				{
+					this.OnNatureSocialChanging(value);
+					this.SendPropertyChanging();
+					this._NatureSocial = value;
+					this.SendPropertyChanged("NatureSocial");
+					this.OnNatureSocialChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HistoryGeography", DbType="Decimal(10,1)")]
+		public System.Nullable<decimal> HistoryGeography
+		{
+			get
+			{
+				return this._HistoryGeography;
+			}
+			set
+			{
+				if ((this._HistoryGeography != value))
+				{
+					this.OnHistoryGeographyChanging(value);
+					this.SendPropertyChanging();
+					this._HistoryGeography = value;
+					this.SendPropertyChanged("HistoryGeography");
+					this.OnHistoryGeographyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Music", DbType="Decimal(10,1)")]
+		public System.Nullable<decimal> Music
+		{
+			get
+			{
+				return this._Music;
+			}
+			set
+			{
+				if ((this._Music != value))
+				{
+					this.OnMusicChanging(value);
+					this.SendPropertyChanging();
+					this._Music = value;
+					this.SendPropertyChanged("Music");
+					this.OnMusicChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sports", DbType="Decimal(10,1)")]
+		public System.Nullable<decimal> Sports
+		{
+			get
+			{
+				return this._Sports;
+			}
+			set
+			{
+				if ((this._Sports != value))
+				{
+					this.OnSportsChanging(value);
+					this.SendPropertyChanging();
+					this._Sports = value;
+					this.SendPropertyChanged("Sports");
+					this.OnSportsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arts", DbType="Decimal(10,1)")]
+		public System.Nullable<decimal> Arts
+		{
+			get
+			{
+				return this._Arts;
+			}
+			set
+			{
+				if ((this._Arts != value))
+				{
+					this.OnArtsChanging(value);
+					this.SendPropertyChanging();
+					this._Arts = value;
+					this.SendPropertyChanged("Arts");
+					this.OnArtsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AttendanceClass", DbType="Decimal(10,1)")]
+		public System.Nullable<decimal> AttendanceClass
+		{
+			get
+			{
+				return this._AttendanceClass;
+			}
+			set
+			{
+				if ((this._AttendanceClass != value))
+				{
+					this.OnAttendanceClassChanging(value);
+					this.SendPropertyChanging();
+					this._AttendanceClass = value;
+					this.SendPropertyChanged("AttendanceClass");
+					this.OnAttendanceClassChanged();
 				}
 			}
 		}

@@ -27,23 +27,19 @@ namespace GUI
         {
             CancelEventArgs oc = new CancelEventArgs();
             oc.Cancel = true;
-
+            string name = drp_Classroom.Text.Trim();
+            Classroom clsname = new ClassroomBUS().GetID(name);
             Student student = new Student()
             {
                 StudentName = txtStudentName.Text.Trim(),
                 StudentAddress = txtStudentAddress.Text.Trim(),
                 ParentPhone = txtParentPhone.Text.Trim(),
-                StudentClass = Int32.Parse(txtClass.Text.ToString()),
+                StudentClass = clsname.ClassId,
                 StudentImage = filename
-
             };
             if (string.IsNullOrEmpty(txtStudentName.Text))
             {
                 errorProvider1.SetError(txtStudentName, "Student's name is left blank");
-            }
-            else if (string.IsNullOrEmpty(txtClass.Text))
-            {
-                errorProvider1.SetError(txtClass, "Class is left blank");
             }
             else if (txtParentPhone.Text.Trim().Length != 10)
             {
@@ -53,19 +49,23 @@ namespace GUI
             {
                 errorProvider1.SetError(txtStudentName, null);
                 errorProvider1.SetError(txtParentPhone, null);
-                errorProvider1.SetError(txtClass, null);
                 oc.Cancel = false;
 
                 bool result = studentBUS.Insert(student);
                 if (result)
                 {
-                    bunifuSnackbar1.Show(this, "You add your profile successfully");
+                    bunifuSnackbar1.Show(this, "You added student successfully");
+                    txtStudentName.Text = null;
+                    txtStudentAddress.Text = null;
+                    txtParentPhone.Text = null;
+                    drp_Classroom.Text = null;
+                    pic_StudentAvatar.ImageLocation = null;
                     this.Owner.Refresh();
                     this.Owner.Activate();
                 }
                 else
                 {
-                    bunifuSnackbar1.Show(this, "Can't edit your profile");
+                    bunifuSnackbar1.Show(this, "Can't add this student");
                 }
             }
         }
@@ -88,6 +88,15 @@ namespace GUI
                 bunifuSnackbar1.Show(this, "Your didn't change your avatar");
             }
 
+        }
+
+        private void FrmAddedStudent_Load(object sender, EventArgs e)
+        {
+            List<Classroom> classrooms = new ClassroomBUS().GetAll();
+            foreach (var classes in classrooms)
+            {
+                drp_Classroom.Items.Add(classes.ClassName);
+            }
         }
     }
 }

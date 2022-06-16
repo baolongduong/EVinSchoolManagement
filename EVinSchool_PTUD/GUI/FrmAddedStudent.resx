@@ -155,19 +155,6 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="txtClass.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAALYAAAApCAYAAACYwNOSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGaSURBVHhe7d0xTgJBGIbhKSk9gqWlJ7H2CDaexcQzeAVb
-        YBcW6SmkgphgDG42Zk3WDRKy/j9OYggXYD7fJ5mCnaV7MxkoZgLwLwwGg+uiKPqj0agcDocdg3Gqwxu1
-        Vp+s2ZuY7zGbPPOXZrNZXZZl17ZtB5wyb7Sqqm4+nzfj8fjZGj6POf/xqNfrdfwKkJa6rjtr+MXi7sWk
-        Q8jz/Naq/4zvAElaLBatxX0fs/5drX1JB1LWNI3vu19j1iFkWfa13W7jNJAu/1EZsw7BPwAKCBuSCBuS
-        CBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuSCBuS
-        CBuSCBuSCBuSCBuSDsLOsmy72+3iFJCug7D90Gw/XxhI2Waz6fI8r2PW+7Dvlsslx60iaX5xQVEUjzHr
-        /TUdPYv7jes5kCrfSk8mk4+j6zrswaXV/r5arb45Kxup8KD9zqTpdFrZ4nwVcz5kcfsFSw9+ELxvwhmM
-        Ux/+x4c127d2L2LGgKoQfgDqKLztcpYT/AAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="bunifuLabel6.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 13.8pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
   </data>

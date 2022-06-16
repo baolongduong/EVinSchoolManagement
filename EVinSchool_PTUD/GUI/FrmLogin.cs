@@ -17,14 +17,30 @@ namespace GUI
     {
         TeacherBUS teacherBUS = new TeacherBUS();
 
-        
-
         public FrmLogin()
-        {      
-        InitializeComponent();
+        {
+            InitializeComponent();
         }
-       
-                  
+
+        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmRegister frmRegister = new FrmRegister();
+            frmRegister.Show();
+        }
+
+        private void btnGuest_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmGuest frmGuest = new FrmGuest();
+            frmGuest.Show();
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             CancelEventArgs oc = new CancelEventArgs();
@@ -44,7 +60,7 @@ namespace GUI
             else if (txtPassword.Text.Trim().Length < 8)
             {
                 errorProvider1.SetError(txtPassword, "Password must be at least 8 characters");
-            }         
+            }
             else
             {
                 errorProvider1.SetError(txtEmail, null);
@@ -56,7 +72,7 @@ namespace GUI
                     TeacherEmail = txtEmail.Text,
                     TeacherPassword = txtPassword.Text,
                 };
-                
+
                 bool result = teacherBUS.checkLogin(teacher.TeacherEmail, teacher.TeacherPassword);
                 Teacher newteacher = teacherBUS.GetCode(teacher.TeacherEmail);
                 if (result == true)
@@ -67,35 +83,11 @@ namespace GUI
                     frmAdmin.Show();
                 }
                 else
-                    bunifuSnackbar1.Show(this,"Login uncessfully, please check it again");
-            }
-           
+                    bunifuSnackbar1.Show(this, "Login uncessfully, please check it again");
             }
 
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmRegister frmRegister = new FrmRegister();
-            frmRegister.Show();
-            
         }
 
-        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnGuest_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmGuest frmGuest = new FrmGuest();
-            frmGuest.Show();
-        }
     }
-    }
+}
 

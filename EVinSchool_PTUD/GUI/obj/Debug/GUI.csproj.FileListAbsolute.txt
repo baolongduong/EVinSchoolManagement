@@ -197,3 +197,7 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.CoreCompileInpu
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.exe
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddedStudent.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddMark.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAttendace.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmClass.resources

@@ -94,7 +94,7 @@ namespace DataAccessLayer
                         {
                             TeacherName = tc.TeacherName,
                             ClassName = cls.ClassName,
-                            NumberOfStudents = db.Students.Where(i=>i.StudentClass == tc.TeacherClass).Count()
+                            NumberOfStudents = db.Students.Where(i => i.StudentClass == tc.TeacherClass).Count()
                         };
             return query.Distinct().ToList();
         }

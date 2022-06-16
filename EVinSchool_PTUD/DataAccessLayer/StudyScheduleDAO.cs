@@ -22,11 +22,12 @@ namespace DataAccessLayer
             StudySchedule studySchedule = db.StudySchedules.SingleOrDefault(b => b.StudySID == code);
             return studySchedule;
         }
-       /* public List<StudySchedule> SelectByKeyword(int keyword)
-        {
-            List<StudySchedule> studySchedules = db.StudySchedules.Where(b => b..Contains(keyword)).ToList();
-            return studySchedules;
-        }*/
+
+        /* public List<StudySchedule> SelectByKeyword(int keyword)
+         {
+             List<StudySchedule> studySchedules = db.StudySchedules.Where(b => b..Contains(keyword)).ToList();
+             return studySchedules;
+         }*/
 
         public bool Insert(StudySchedule newStudySchedule)
         {
@@ -124,9 +125,9 @@ namespace DataAccessLayer
                             SubjectName = subj.SubjectName,
                             ClassName = cls.ClassName
                         };
-            return  query.ToList();
+            return query.ToList();
         }
-        public List<SubjectClassroomOfStudySchedule> StudyxClassxSubjectByDate(DateTime date,DateTime start)
+        public List<SubjectClassroomOfStudySchedule> StudyxClassxSubjectByDate(DateTime date, DateTime start)
         {
             var query = from study in db.StudySchedules
                         join cls in db.Classrooms on study.ClassID equals cls.ClassId
@@ -144,6 +145,7 @@ namespace DataAccessLayer
                         };
             return query.ToList();
         }
+
         public SubjectClassroomOfStudySchedule SelectBySCode(int code)
         {
             var query = from study in db.StudySchedules

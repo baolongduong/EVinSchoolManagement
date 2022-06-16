@@ -49,7 +49,6 @@ namespace BusinessLogicLayer
             return result;
 
         }
-
         public List<FoodSchedule> GetDetailsByClassId(int classid)
         {
             List<FoodSchedule> foodSchedules = new FoodScheduleDAO().SelectByClassId(classid);

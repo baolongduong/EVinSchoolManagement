@@ -23,11 +23,12 @@ namespace DataAccessLayer
             Mark mark = db.Marks.SingleOrDefault(b => b.MarkId == code);
             return mark;
         }
-       /* public List<Mark> SelectByKeyword(string keyword)
-        {
-            List<Mark> marks = db.Marks.Where(b => b..Contains(keyword)).ToList();
-            return marks;
-        }*/
+
+        /* public List<Mark> SelectByKeyword(string keyword)
+         {
+             List<Mark> marks = db.Marks.Where(b => b..Contains(keyword)).ToList();
+             return marks;
+         }*/
 
         public bool Insert(Mark newMark)
         {
@@ -83,6 +84,23 @@ namespace DataAccessLayer
                 }
             }
             return false;
+        }
+
+
+        public bool CheckMarkValidation(int subjectId, int studentId)
+        {
+            var q = from p in db.Marks
+                    where p.SubjectId == subjectId
+                    && p.StudentId == studentId
+                    select p;
+            if (q.Count() >= 2)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

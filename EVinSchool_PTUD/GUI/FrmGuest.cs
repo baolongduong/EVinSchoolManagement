@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,19 +20,19 @@ namespace GUI
         StudentBUS mngStudent = new StudentBUS();
         StudyScheduleBUS studyScheduleBUS = new StudyScheduleBUS();
         FoodScheduleBUS foodScheduleBUS = new FoodScheduleBUS();
-
+        string conStr = "server = StudentManagementDB.mssql.somee.com; User ID = baolongsbs_SQLLogin_1; password=7bxn3rbj94;database = StudentManagementDB";
+        string listStudentMark = "SELECT st.StudentName, cl.ClassName, sj.SubjectName, m.Score FROM Student as st, Classroom as cl, Subject as sj, Mark as m WHERE st.StudentClass = cl.ClassId and m.StudentId = st.StudentId and sj.SubjectId = m.SubjectId";
+        string listClasstification = "SELECT st.StudentName, cl.ClassName, cs.Math, cs.Vietnamese, cs.English, cs.Morality, cs.NatureSocial, cs.HistoryGeography, cs.Music, cs.Sports, cs.Arts, cs.AttendanceClass, cs.TotalMark, cs.ClassificationResult FROM Student as st, Classroom as cl, Classification as cs WHERE st.StudentClass = cl.ClassId and cs.StudentId = st.StudentId";
+       
         public FrmGuest()
         {
             InitializeComponent();
         }
 
-      
-
         private void FrmGuest_Load(object sender, EventArgs e)
         {
             List<Student> students = new StudentBUS().GetAll();
            
-
             gv_StudentInfo.DataSource = students;
             gv_StudentInfo.Columns[0].Visible = false;
             gv_StudentInfo.Columns[5].Visible = false;
@@ -39,31 +40,18 @@ namespace GUI
             //Schedule
             dtp_Schedule.Value = DateTime.Now;
 
-            /*  List<Attendance> attendances = new AttendanceBUS().GetAll();
-              gvAttendance.DataSource = attendances;*/
+            //Subjects
+            List<Subject> subjects = new SubjectBUS().GetAll();
+            gv_Subjects.DataSource = subjects;
 
             List<ClassroomJoined> classrooms = new ClassroomBUS().GetAllClassesJoined();
             gv_Classroom.DataSource = classrooms;
+            //Mark
+            loadMarkTable();
 
-            /*  List<Subject> subjects = new SubjectBUS().GetAll();
-              gvSubject.DataSource = subjects;
-
-              List<Mark> marks = new MarkBUS().GetAll();
-              gvMark.DataSource = marks;
-
-              List<StudySchedule> studySchedules = new StudyScheduleBUS().GetAll();
-              gvClassSchedule.DataSource = studySchedules;
-
-              List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetAll();
-              gvMealSchedule.DataSource = foodSchedules;
-
-              List<Classification> classifications = new ClassificationBUS().GetAll();
-              gvClassification.DataSource = classifications;*/
+            //Classtification
+            loadClasstificationTable();
         }
-
-
-     
-
 
         private void bnf_Dashbroad_Click(object sender, EventArgs e)
         {
@@ -276,8 +264,43 @@ namespace GUI
 
             fpl_Lunch.BackColor = Color.White;
             fpl_Dinner.BackColor = Color.White;
+        }
 
+        private void loadMarkTable()
+        {
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark, conStr);
+            DataSet DS = new DataSet();
+            dataAdapter.Fill(DS);
+            gv_Mark.DataSource = DS.Tables[0];
+        }
 
+        private void loadClasstificationTable()
+        {
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(listClasstification, conStr);
+            DataSet DS = new DataSet();
+            dataAdapter.Fill(DS);
+            gv_Classtification.DataSource = DS.Tables[0];
+            gv_Classtification.Columns[0].Width = 200;
+            gv_Classtification.Columns[12].DefaultCellStyle.ForeColor = Color.Green;
+            gv_Classtification.Columns[13].DefaultCellStyle.ForeColor = Color.Green;
+        }
+
+        private void txt_Classtification_TextChange(object sender, EventArgs e)
+        {
+            String keyword = txt_Classtification.Text.Trim();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(listClasstification + " and st.StudentName LIKE '%" + keyword + "%'", conStr);
+            DataSet DS = new DataSet();
+            dataAdapter.Fill(DS);
+            gv_Classtification.DataSource = DS.Tables[0];
+        }
+
+        private void txt_StudentName_TextChange(object sender, EventArgs e)
+        {
+            String keyword = txt_StudentName.Text.Trim();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and st.StudentName LIKE '%" + keyword + "%'", conStr);
+            DataSet DS = new DataSet();
+            dataAdapter.Fill(DS);
+            gv_Mark.DataSource = DS.Tables[0];
         }
     }
 }
