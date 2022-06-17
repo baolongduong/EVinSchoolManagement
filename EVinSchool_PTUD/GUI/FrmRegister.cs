@@ -22,25 +22,19 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-          
-        }
-        private void FrmRegister_Load(object sender, EventArgs e)
-        {
-            List<Classroom> classrooms = new ClassroomBUS().GetAll();
-           
-            foreach(var classes in classrooms)
-            {
-            drp_Classroom.Items.Add(classes.ClassName);
-            }
-
-
-        }
-
         private void FrmRegister_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void FrmRegister_Load(object sender, EventArgs e)
+        {
+            List<Classroom> classrooms = new ClassroomBUS().GetAll();
+
+            foreach (var classes in classrooms)
+            {
+                drp_Classroom.Items.Add(classes.ClassName);
+            }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -49,7 +43,6 @@ namespace GUI
             oc.Cancel = true;
             string name = drp_Classroom.Text.Trim();
             Classroom clsname = new ClassroomBUS().GetID(name);
-
             Teacher teacher = new Teacher()
             {
                 TeacherId = 0,
@@ -66,10 +59,6 @@ namespace GUI
             {
                 errorProvider1.SetError(txtName, "Your name is left blank");
             }
-           /* if (drp_Classroom == null)
-            {
-                errorProvider1.SetError(drp_Classroom, "Your classroom is blank");
-            }*/
             else if (!(txtEmail.Text.Contains("@teacher")))
             {
                 errorProvider1.SetError(txtEmail, "Your email need syntax @teacher");
@@ -86,7 +75,6 @@ namespace GUI
             {
                 errorProvider1.SetError(txtEmail, "Email is existed");
             }
-      
             else if (teacherBUS.isChosenClassroom((int)teacher.TeacherClass))
             {
                 errorProvider1.SetError(drp_Classroom, "Classroom is chosen");

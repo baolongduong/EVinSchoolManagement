@@ -153,17 +153,35 @@
     <Reference Include="TelerikCommon, Version=2022.2.510.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAddedStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddedStudent.Designer.cs">
+      <DependentUpon>FrmAddedStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddMark.Designer.cs">
+      <DependentUpon>FrmAddMark.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAttendace.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAttendace.Designer.cs">
       <DependentUpon>FrmAttendace.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditAttendance.cs">
+    <Compile Include="FrmClass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditAttendance.Designer.cs">
-      <DependentUpon>FrmEditAttendance.cs</DependentUpon>
+    <Compile Include="FrmClass.Designer.cs">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStudySchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudySchedule.Designer.cs">
+      <DependentUpon>FrmStudySchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmGuest.cs">
       <SubType>Form</SubType>
@@ -215,11 +233,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddedStudent.resx">
+      <DependentUpon>FrmAddedStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddMark.resx">
+      <DependentUpon>FrmAddMark.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAttendace.resx">
       <DependentUpon>FrmAttendace.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditAttendance.resx">
-      <DependentUpon>FrmEditAttendance.cs</DependentUpon>
+    <EmbeddedResource Include="FrmClass.resx">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudySchedule.resx">
+      <DependentUpon>FrmStudySchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGuest.resx">
       <DependentUpon>FrmGuest.cs</DependentUpon>
@@ -304,11 +331,37 @@
   <ItemGroup>
     <None Include="images\back-button.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="upload\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="images\restaurant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\camera.png" />
+    <Content Include="images\check-mark.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\evs_text.png" />
+    <Content Include="images\grade.png" />
+    <Content Include="images\home.png" />
+    <Content Include="images\schedule.png" />
+    <Content Include="images\score.png" />
+    <Content Include="upload\0df6cd09fe270d795436.jpg" />
+    <Content Include="upload\200527_전소민_프로필_013_작업2.jpg" />
+    <Content Include="upload\200914_5f5ec57c9f9feA.jpeg" />
+    <Content Include="upload\269290484_1581154062230033_2245159166418382025_n.jpg" />
+    <Content Include="upload\2d581c2f4afcb9a2e0ed.jpg" />
+    <Content Include="upload\3b36de2788f47baa22e5.jpg" />
+    <Content Include="upload\550full-so--min-jeon.jpg" />
+    <Content Include="upload\675fbf80eabf11721c93f345a156b40f.jpg" />
+    <Content Include="upload\a7e235172b39d8678128.jpg" />
+    <Content Include="upload\actor.jpg" />
+    <Content Include="upload\c578ff927732846cdd23.jpg" />
+    <Content Include="upload\Crying Wojak.jpg" />
+    <Content Include="upload\download.png" />
+    <Content Include="upload\images.png" />
+    <Content Include="upload\jsomin.jpg" />
+    <Content Include="upload\khabanh.jfif" />
+    <Content Include="upload\wojakcry.png" />
+    <Content Include="upload\Wojak_cropped.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

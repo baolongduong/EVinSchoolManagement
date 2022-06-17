@@ -27,15 +27,15 @@ namespace BusinessLogicLayer
         //    return marks;
         //}
 
-        public bool Insert(Mark newFoodSchedule)
+        public bool Insert(Mark newMark)
         {
-            bool result = new MarkDAO().Insert(newFoodSchedule);
+            bool result = new MarkDAO().Insert(newMark);
             return result;
         }
 
-        public bool Update(Mark newFoodSchedule)
+        public bool Update(Mark newMark)
         {
-            bool result = new MarkDAO().Update(newFoodSchedule);
+            bool result = new MarkDAO().Update(newMark);
             return result;
 
         }
@@ -46,6 +46,12 @@ namespace BusinessLogicLayer
             bool result = new MarkDAO().Delete(code);
             return result;
 
+        }
+
+        public bool isCheckMarkValidation(int subjectId, int studentId)
+        {
+            MarkDAO markDAO = new MarkDAO();
+            return markDAO.CheckMarkValidation(subjectId, studentId);
         }
     }
 }

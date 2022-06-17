@@ -49,10 +49,15 @@ namespace BusinessLogicLayer
             return result;
 
         }
-
         public List<FoodSchedule> GetDetailsByClassId(int classid)
         {
             List<FoodSchedule> foodSchedules = new FoodScheduleDAO().SelectByClassId(classid);
+            return foodSchedules;
+        }
+
+        public List<FoodSchedule> GetDetailsByDate(DateTime date, DateTime start)
+        {
+            List<FoodSchedule> foodSchedules = new FoodScheduleDAO().SelectByDate(date,start);
             return foodSchedules;
         }
     }

@@ -22,7 +22,11 @@ namespace BusinessLogicLayer
             Subject subject = new SubjectDAO().SelectByCode(code);
             return subject;
         }
-
+        public Subject GetID(string name)
+        {
+            Subject subject = new SubjectDAO().GetSubjectId(name);
+            return subject;
+        }
         public List<Subject> SelectByKeyword(string keyword)
         {
             List<Subject> subjects = new SubjectDAO().SelectByKeyword(keyword);

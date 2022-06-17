@@ -84,5 +84,19 @@ namespace DataAccessLayer
             }
             return false;
         }
+
+        public List<ClassroomJoined> GetAllClassroomJoined()
+        {
+            var query = from cls in db.Classrooms
+                        join tc in db.Teachers on cls.ClassId equals tc.TeacherClass
+                        join st in db.Students on tc.TeacherClass equals st.StudentClass
+                        select new ClassroomJoined
+                        {
+                            TeacherName = tc.TeacherName,
+                            ClassName = cls.ClassName,
+                            NumberOfStudents = db.Students.Where(i => i.StudentClass == tc.TeacherClass).Count()
+                        };
+            return query.Distinct().ToList();
+        }
     }
 }

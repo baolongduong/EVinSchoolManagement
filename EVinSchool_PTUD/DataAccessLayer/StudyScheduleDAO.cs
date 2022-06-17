@@ -22,11 +22,12 @@ namespace DataAccessLayer
             StudySchedule studySchedule = db.StudySchedules.SingleOrDefault(b => b.StudySID == code);
             return studySchedule;
         }
-       /* public List<StudySchedule> SelectByKeyword(int keyword)
-        {
-            List<StudySchedule> studySchedules = db.StudySchedules.Where(b => b..Contains(keyword)).ToList();
-            return studySchedules;
-        }*/
+
+        /* public List<StudySchedule> SelectByKeyword(int keyword)
+         {
+             List<StudySchedule> studySchedules = db.StudySchedules.Where(b => b..Contains(keyword)).ToList();
+             return studySchedules;
+         }*/
 
         public bool Insert(StudySchedule newStudySchedule)
         {
@@ -51,7 +52,7 @@ namespace DataAccessLayer
                 {
                     dbStudySchedule.StudySubject = newStudySchedule.StudySubject;
                     dbStudySchedule.ClassID = newStudySchedule.ClassID;
-                    dbStudySchedule.TimeStart = newStudySchedule.TimeEnd;
+                    dbStudySchedule.TimeStart = newStudySchedule.TimeStart;
                     dbStudySchedule.TimeEnd = newStudySchedule.TimeEnd;
                     db.SubmitChanges();
                     return true;
@@ -82,6 +83,86 @@ namespace DataAccessLayer
                 }
             }
             return false;
+        }
+
+
+        public List<StudySchedule> SelectByClassId(int classid)
+        {
+            List<StudySchedule> studySchedules = db.StudySchedules.Where(b => b.ClassID == classid).ToList();
+            return studySchedules;
+        }
+        public List<SubjectClassroomOfStudySchedule> GetAllStudyxClassxSubject()
+        {
+            var query = from study in db.StudySchedules
+                        join cls in db.Classrooms on study.ClassID equals cls.ClassId
+                        join subj in db.Subjects on study.StudySubject equals subj.SubjectId
+                        select new SubjectClassroomOfStudySchedule
+                        {
+                            StudyId = study.StudySID,
+                            ClassId = study.ClassID,
+                            StudyDate = study.StudyDate,
+                            TimeStart = study.TimeStart,
+                            TimeEnd = study.TimeEnd,
+                            SubjectName = subj.SubjectName,
+                            ClassName = cls.ClassName
+                        };
+            return query.ToList();
+        }
+
+        public List<SubjectClassroomOfStudySchedule> StudyxClassxSubject(int classid)
+        {
+            var query = from study in db.StudySchedules
+                        join cls in db.Classrooms on study.ClassID equals cls.ClassId
+                        join subj in db.Subjects on study.StudySubject equals subj.SubjectId
+                        where study.ClassID == classid
+                        select new SubjectClassroomOfStudySchedule
+                        {
+                            StudyId = study.StudySID,
+                            ClassId = study.ClassID,
+                            StudyDate = study.StudyDate,
+                            TimeStart = study.TimeStart,
+                            TimeEnd = study.TimeEnd,
+                            SubjectName = subj.SubjectName,
+                            ClassName = cls.ClassName
+                        };
+            return query.ToList();
+        }
+        public List<SubjectClassroomOfStudySchedule> StudyxClassxSubjectByDate(DateTime date, DateTime start)
+        {
+            var query = from study in db.StudySchedules
+                        join cls in db.Classrooms on study.ClassID equals cls.ClassId
+                        join subj in db.Subjects on study.StudySubject equals subj.SubjectId
+                        where study.StudyDate == date && study.TimeStart == start
+                        select new SubjectClassroomOfStudySchedule
+                        {
+                            StudyId = study.StudySID,
+                            ClassId = study.ClassID,
+                            StudyDate = study.StudyDate,
+                            TimeStart = study.TimeStart,
+                            TimeEnd = study.TimeEnd,
+                            SubjectName = subj.SubjectName,
+                            ClassName = cls.ClassName
+                        };
+            return query.ToList();
+        }
+
+        public SubjectClassroomOfStudySchedule SelectBySCode(int code)
+        {
+            var query = from study in db.StudySchedules
+                        join cls in db.Classrooms on study.ClassID equals cls.ClassId
+                        join subj in db.Subjects on study.StudySubject equals subj.SubjectId
+                        where study.StudySID == code
+                        select new SubjectClassroomOfStudySchedule
+                        {
+                            StudyId = study.StudySID,
+                            ClassId = study.ClassID,
+                            StudyDate = study.StudyDate,
+                            TimeStart = study.TimeStart,
+                            TimeEnd = study.TimeEnd,
+                            SubjectName = subj.SubjectName,
+                            ClassName = cls.ClassName
+                        };
+            return query.SingleOrDefault();
         }
     }
 }

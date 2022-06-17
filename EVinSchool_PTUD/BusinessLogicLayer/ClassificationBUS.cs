@@ -22,7 +22,17 @@ namespace BusinessLogicLayer
             Classification classification = new ClassificationDAO().SelectByCode(code);
             return classification;
         }
-
+        public List<ClasstificationJoinedModel> GetFirstScore(int studentId)
+        {
+            List<ClasstificationJoinedModel> classtification = new ClassificationDAO().GetFirstScore(studentId);
+            return classtification;
+        }
+        public List<Subject> CheckInvalidSubject(int studentId)
+        {
+            List<Subject> classtification = new ClassificationDAO().CheckInvalidSubject(studentId);
+            return classtification;
+        }
+       
         public List<Classification> SelectByKeyword(string keyword)
         {
             List<Classification> classifications = new ClassificationDAO().SelectByKeyword(keyword);
@@ -41,7 +51,17 @@ namespace BusinessLogicLayer
             return result;
 
         }
+        public bool isCheckIDValidation(int studentId)
+        {
+            ClassificationDAO classtificationDAO = new ClassificationDAO();
+            return classtificationDAO.checkStudentID(studentId);
+        }
 
+        public Classification getStudentRanked(int studentId)
+        {
+            Classification classtification = new ClassificationDAO().getStudentRanked(studentId);
+            return classtification;
+        }
 
         public bool Delete(int code)
         {

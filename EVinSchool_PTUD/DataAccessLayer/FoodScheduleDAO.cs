@@ -15,7 +15,11 @@ namespace DataAccessLayer
             List<FoodSchedule> foodSchedules = db.FoodSchedules.ToList(); ;
             return foodSchedules;
         }
-
+        public List<FoodSchedule> SelectByClassId(int classid)
+        {
+            List<FoodSchedule> foodSchedules = db.FoodSchedules.Where(b => b.ClassId == classid).ToList();
+            return foodSchedules;
+        }
         public FoodSchedule SelectByCode(int code)
         {
             FoodSchedule foodSchedule = db.FoodSchedules.SingleOrDefault(b => b.FoodId == code);
@@ -24,6 +28,11 @@ namespace DataAccessLayer
         public List<FoodSchedule> SelectByKeyword(string keyword)
         {
             List<FoodSchedule> foodSchedules = db.FoodSchedules.Where(b => b.FoodName.Contains(keyword)).ToList();
+            return foodSchedules;
+        }
+        public List<FoodSchedule> SelectByDate(DateTime date, DateTime start)
+        {
+            List<FoodSchedule> foodSchedules = db.FoodSchedules.Where(b => b.FoodDate == date && b.FoodClassTime == start).ToList();
             return foodSchedules;
         }
 
@@ -82,11 +91,7 @@ namespace DataAccessLayer
             }
             return false;
         }
-
-        public List<FoodSchedule> SelectByClassId(int classid)
-        {
-            List<FoodSchedule> foodSchedules = db.FoodSchedules.Where(b => b.ClassId == classid).ToList();
-            return foodSchedules;
-        }
     }
+
+   
 }

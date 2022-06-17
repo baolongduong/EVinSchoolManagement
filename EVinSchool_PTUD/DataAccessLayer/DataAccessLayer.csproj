@@ -62,6 +62,9 @@
     </Compile>
     <Compile Include="StudentDAO.cs" />
     <Compile Include="StudyScheduleDAO.cs" />
+    <Compile Include="ClassroomJoined.cs" />
+    <Compile Include="ClasstificationJoinedModel.cs" />
+    <Compile Include="SubjectClassroomOfStudySchedule.cs" />
     <Compile Include="SubjectDAO.cs" />
     <Compile Include="TeacherDAO.cs" />
   </ItemGroup>

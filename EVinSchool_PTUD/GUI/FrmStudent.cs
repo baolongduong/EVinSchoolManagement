@@ -17,24 +17,33 @@ namespace GUI
     public partial class FrmStudent : BunifuForm
     {
         StudentBUS studentBUS = new StudentBUS();
-
+        string fileName = null;
         public FrmStudent(int studentid)
         {
             InitializeComponent();
-            lbl_ID.Text = studentid.ToString();
+            txt_Id.Text = studentid.ToString();
         }
 
         private void FrmStudent_Load(object sender, EventArgs e)
         {
-            int code = Int32.Parse(lbl_ID.Text.ToString());
-            
+            List<Classroom> classrooms = new ClassroomBUS().GetAll();
+            foreach (var classes in classrooms)
+            {
+                drp_Classroom.Items.Add(classes.ClassName);
+            }
+
+            int code = Int32.Parse(txt_Id.Text.ToString());
+
+
+
             Student student = studentBUS.GetDetails(code);
-            
+            Classroom clsname = new ClassroomBUS().GetDetails((int)student.StudentClass);
 
             txtStudentName.Text = student.StudentName;
             txtStudentAddress.Text = student.StudentAddress;
             txtParentPhone.Text = student.ParentPhone;
-            txtClass.Text = student.StudentClass.ToString();
+            lbl_ClassId.Text = student.StudentClass.ToString();
+            drp_Classroom.SelectedItem = clsname.ClassName;
             pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
         }
 
@@ -43,34 +52,27 @@ namespace GUI
             CancelEventArgs oc = new CancelEventArgs();
             oc.Cancel = true;
 
+            string name = drp_Classroom.Text.Trim();
+            Classroom clsname = new ClassroomBUS().GetID(name);
+
             Student student = new Student()
             {
-                StudentId = Int32.Parse(lbl_ID.Text.ToString()),
+                StudentId = Int32.Parse(txt_Id.Text.ToString()),
                 StudentName = txtStudentName.Text.Trim(),
                 StudentAddress = txtStudentAddress.Text.Trim(),
                 ParentPhone = txtParentPhone.Text.Trim(),
-                StudentClass = Int32.Parse(txtClass.Text.ToString())
+                StudentClass = Int32.Parse(clsname.ClassId.ToString()),
+                StudentImage = fileName
             };
             if (string.IsNullOrEmpty(txtStudentName.Text))
             {
                 errorProvider1.SetError(txtStudentName, "Student's name is left blank");
             }          
-            else if (string.IsNullOrEmpty(txtClass.Text))
-            {
-                errorProvider1.SetError(txtClass, "Class is left blank");
-            }
-            else if (txtParentPhone.Text.Trim().Length != 10)
-            {
-                errorProvider1.SetError(txtParentPhone, "Phone number must be 10 characters");
-            }
             else
             {
                 errorProvider1.SetError(txtStudentName, null);
                 errorProvider1.SetError(txtParentPhone, null);
-                errorProvider1.SetError(txtClass, null);
                 oc.Cancel = false;
-
-                
 
                 bool result = studentBUS.Update(student);
                 if (result)
@@ -101,27 +103,19 @@ namespace GUI
             try
             {
                 Student student = new Student()
-                { StudentId = Int32.Parse(lbl_ID.Text.ToString()), 
-                };
-                string fileName = openFilePic.SafeFileName;
-                string rootPath = @"../../upload";
-                student.StudentImage = fileName;
-                File.Copy(openFilePic.FileName, rootPath + "/" + fileName, true);
-                bool result = studentBUS.UpdateImage(student);
-                if (result)
                 {
-                    bunifuSnackbar1.Show(this, "You have saved your avatar successfully");
-                    this.Owner.Refresh();
-                    this.Owner.Activate();
-                }
-                else {
-                    bunifuSnackbar1.Show(this, "Your didn't change your avatar");
-                }
+                    StudentId = Int32.Parse(txt_Id.Text.ToString()),
+                };
+                fileName = openFilePic.SafeFileName;
+                string rootPath = @"../../upload";
+                File.Copy(openFilePic.FileName, rootPath + "/" + fileName, true);
+                bunifuSnackbar1.Show(this, "You have upload your avatar successfully");
             }
             catch (Exception ex)
             {
                 bunifuSnackbar1.Show(this, "Your didn't change your avatar");
             }
-        }
+        } 
+        
     }
 }

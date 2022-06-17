@@ -39,7 +39,7 @@ namespace GUI
             this.dtp_Schedule = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.pnl_ClassSchedule = new Bunifu.UI.WinForms.BunifuPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson2 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuLabel12 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -52,6 +52,14 @@ namespace GUI
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.fpl_Lesson1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lunch = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Dinner = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.pnl_ClassSchedule.SuspendLayout();
@@ -228,7 +236,7 @@ namespace GUI
             this.bunifuPictureBox1.BorderRadius = 53;
             this.bunifuPictureBox1.Image = global::GUI.Properties.Resources.evs_logo;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(685, 68);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(685, 69);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(106, 106);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -249,7 +257,15 @@ namespace GUI
             this.pnl_ClassSchedule.BorderColor = System.Drawing.Color.Transparent;
             this.pnl_ClassSchedule.BorderRadius = 15;
             this.pnl_ClassSchedule.BorderThickness = 1;
-            this.pnl_ClassSchedule.Controls.Add(this.flowLayoutPanel1);
+            this.pnl_ClassSchedule.Controls.Add(this.fpl_Lunch);
+            this.pnl_ClassSchedule.Controls.Add(this.fpl_Lesson5);
+            this.pnl_ClassSchedule.Controls.Add(this.fpl_Dinner);
+            this.pnl_ClassSchedule.Controls.Add(this.fpl_Lesson7);
+            this.pnl_ClassSchedule.Controls.Add(this.fpl_Lesson6);
+            this.pnl_ClassSchedule.Controls.Add(this.fpl_Lesson3);
+            this.pnl_ClassSchedule.Controls.Add(this.fpl_Lesson4);
+            this.pnl_ClassSchedule.Controls.Add(this.fpl_Lesson1);
+            this.pnl_ClassSchedule.Controls.Add(this.fpl_Lesson2);
             this.pnl_ClassSchedule.Controls.Add(this.bunifuLabel12);
             this.pnl_ClassSchedule.Controls.Add(this.bunifuLabel11);
             this.pnl_ClassSchedule.Controls.Add(this.bunifuLabel10);
@@ -264,22 +280,19 @@ namespace GUI
             this.pnl_ClassSchedule.Location = new System.Drawing.Point(12, 139);
             this.pnl_ClassSchedule.Name = "pnl_ClassSchedule";
             this.pnl_ClassSchedule.ShowBorders = true;
-            this.pnl_ClassSchedule.Size = new System.Drawing.Size(776, 376);
+            this.pnl_ClassSchedule.Size = new System.Drawing.Size(782, 378);
             this.pnl_ClassSchedule.TabIndex = 89;
             // 
-            // flowLayoutPanel1
+            // fpl_Lesson2
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.AutoScrollMinSize = new System.Drawing.Size(10, 10);
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(176, 55);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(586, 24);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.fpl_Lesson2.AutoScroll = true;
+            this.fpl_Lesson2.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson2.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson2.Location = new System.Drawing.Point(175, 80);
+            this.fpl_Lesson2.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson2.Name = "fpl_Lesson2";
+            this.fpl_Lesson2.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson2.TabIndex = 2;
             // 
             // bunifuLabel12
             // 
@@ -289,12 +302,12 @@ namespace GUI
             this.bunifuLabel12.CursorType = null;
             this.bunifuLabel12.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel12.ForeColor = System.Drawing.Color.Maroon;
-            this.bunifuLabel12.Location = new System.Drawing.Point(22, 341);
+            this.bunifuLabel12.Location = new System.Drawing.Point(18, 343);
             this.bunifuLabel12.Name = "bunifuLabel12";
             this.bunifuLabel12.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel12.Size = new System.Drawing.Size(161, 26);
             this.bunifuLabel12.TabIndex = 0;
-            this.bunifuLabel12.Text = "14:00 - Lesson 6 -";
+            this.bunifuLabel12.Text = "14:40 - Lesson 7 -";
             this.bunifuLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel12.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -306,12 +319,12 @@ namespace GUI
             this.bunifuLabel11.CursorType = null;
             this.bunifuLabel11.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel11.ForeColor = System.Drawing.Color.Maroon;
-            this.bunifuLabel11.Location = new System.Drawing.Point(22, 309);
+            this.bunifuLabel11.Location = new System.Drawing.Point(18, 311);
             this.bunifuLabel11.Name = "bunifuLabel11";
             this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel11.Size = new System.Drawing.Size(146, 26);
             this.bunifuLabel11.TabIndex = 0;
-            this.bunifuLabel11.Text = "13:40 - Dinner -";
+            this.bunifuLabel11.Text = "14:20 - Dinner -";
             this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel11.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -323,12 +336,12 @@ namespace GUI
             this.bunifuLabel10.CursorType = null;
             this.bunifuLabel10.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel10.ForeColor = System.Drawing.Color.Maroon;
-            this.bunifuLabel10.Location = new System.Drawing.Point(22, 277);
+            this.bunifuLabel10.Location = new System.Drawing.Point(18, 279);
             this.bunifuLabel10.Name = "bunifuLabel10";
             this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel10.Size = new System.Drawing.Size(161, 26);
             this.bunifuLabel10.TabIndex = 0;
-            this.bunifuLabel10.Text = "13:00 - Lesson 5 -";
+            this.bunifuLabel10.Text = "13:40 - Lesson 6 -";
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -340,12 +353,12 @@ namespace GUI
             this.bunifuLabel9.CursorType = null;
             this.bunifuLabel9.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel9.ForeColor = System.Drawing.Color.Maroon;
-            this.bunifuLabel9.Location = new System.Drawing.Point(22, 245);
+            this.bunifuLabel9.Location = new System.Drawing.Point(18, 247);
             this.bunifuLabel9.Name = "bunifuLabel9";
             this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel9.Size = new System.Drawing.Size(166, 26);
+            this.bunifuLabel9.Size = new System.Drawing.Size(161, 26);
             this.bunifuLabel9.TabIndex = 0;
-            this.bunifuLabel9.Text = "11:30 - Break time";
+            this.bunifuLabel9.Text = "13:00 - Lesson 5 -";
             this.bunifuLabel9.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel9.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -357,7 +370,7 @@ namespace GUI
             this.bunifuLabel8.CursorType = null;
             this.bunifuLabel8.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel8.ForeColor = System.Drawing.Color.Maroon;
-            this.bunifuLabel8.Location = new System.Drawing.Point(22, 213);
+            this.bunifuLabel8.Location = new System.Drawing.Point(18, 215);
             this.bunifuLabel8.Name = "bunifuLabel8";
             this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel8.Size = new System.Drawing.Size(139, 26);
@@ -374,7 +387,7 @@ namespace GUI
             this.bunifuLabel7.CursorType = null;
             this.bunifuLabel7.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel7.ForeColor = System.Drawing.Color.Maroon;
-            this.bunifuLabel7.Location = new System.Drawing.Point(22, 181);
+            this.bunifuLabel7.Location = new System.Drawing.Point(18, 183);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel7.Size = new System.Drawing.Size(161, 26);
@@ -391,7 +404,7 @@ namespace GUI
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel6.ForeColor = System.Drawing.Color.Maroon;
-            this.bunifuLabel6.Location = new System.Drawing.Point(22, 149);
+            this.bunifuLabel6.Location = new System.Drawing.Point(22, 151);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel6.Size = new System.Drawing.Size(150, 26);
@@ -408,7 +421,7 @@ namespace GUI
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel4.ForeColor = System.Drawing.Color.Maroon;
-            this.bunifuLabel4.Location = new System.Drawing.Point(22, 84);
+            this.bunifuLabel4.Location = new System.Drawing.Point(22, 86);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(150, 26);
@@ -425,7 +438,7 @@ namespace GUI
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel3.ForeColor = System.Drawing.Color.Maroon;
-            this.bunifuLabel3.Location = new System.Drawing.Point(22, 52);
+            this.bunifuLabel3.Location = new System.Drawing.Point(22, 54);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(150, 26);
@@ -442,7 +455,7 @@ namespace GUI
             this.bunifuLabel5.CursorType = null;
             this.bunifuLabel5.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel5.ForeColor = System.Drawing.Color.Maroon;
-            this.bunifuLabel5.Location = new System.Drawing.Point(22, 116);
+            this.bunifuLabel5.Location = new System.Drawing.Point(22, 118);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel5.Size = new System.Drawing.Size(155, 26);
@@ -460,7 +473,7 @@ namespace GUI
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.Maroon;
-            this.bunifuLabel1.Location = new System.Drawing.Point(22, 20);
+            this.bunifuLabel1.Location = new System.Drawing.Point(22, 22);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(223, 26);
@@ -485,12 +498,100 @@ namespace GUI
             this.bunifuSeparator1.Size = new System.Drawing.Size(220, 17);
             this.bunifuSeparator1.TabIndex = 90;
             // 
+            // fpl_Lesson1
+            // 
+            this.fpl_Lesson1.AutoScroll = true;
+            this.fpl_Lesson1.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson1.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson1.Location = new System.Drawing.Point(175, 49);
+            this.fpl_Lesson1.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson1.Name = "fpl_Lesson1";
+            this.fpl_Lesson1.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson1.TabIndex = 2;
+            // 
+            // fpl_Lesson4
+            // 
+            this.fpl_Lesson4.AutoScroll = true;
+            this.fpl_Lesson4.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson4.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson4.Location = new System.Drawing.Point(175, 178);
+            this.fpl_Lesson4.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson4.Name = "fpl_Lesson4";
+            this.fpl_Lesson4.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson4.TabIndex = 2;
+            // 
+            // fpl_Lesson3
+            // 
+            this.fpl_Lesson3.AutoScroll = true;
+            this.fpl_Lesson3.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson3.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson3.Location = new System.Drawing.Point(175, 147);
+            this.fpl_Lesson3.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson3.Name = "fpl_Lesson3";
+            this.fpl_Lesson3.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson3.TabIndex = 2;
+            // 
+            // fpl_Lesson6
+            // 
+            this.fpl_Lesson6.AutoScroll = true;
+            this.fpl_Lesson6.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson6.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson6.Location = new System.Drawing.Point(175, 276);
+            this.fpl_Lesson6.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson6.Name = "fpl_Lesson6";
+            this.fpl_Lesson6.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson6.TabIndex = 2;
+            // 
+            // fpl_Lesson5
+            // 
+            this.fpl_Lesson5.AutoScroll = true;
+            this.fpl_Lesson5.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson5.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson5.Location = new System.Drawing.Point(175, 244);
+            this.fpl_Lesson5.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson5.Name = "fpl_Lesson5";
+            this.fpl_Lesson5.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson5.TabIndex = 2;
+            // 
+            // fpl_Lunch
+            // 
+            this.fpl_Lunch.AutoScroll = true;
+            this.fpl_Lunch.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lunch.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lunch.Location = new System.Drawing.Point(175, 212);
+            this.fpl_Lunch.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lunch.Name = "fpl_Lunch";
+            this.fpl_Lunch.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lunch.TabIndex = 2;
+            // 
+            // fpl_Lesson7
+            // 
+            this.fpl_Lesson7.AutoScroll = true;
+            this.fpl_Lesson7.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson7.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson7.Location = new System.Drawing.Point(175, 336);
+            this.fpl_Lesson7.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson7.Name = "fpl_Lesson7";
+            this.fpl_Lesson7.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson7.TabIndex = 2;
+            // 
+            // fpl_Dinner
+            // 
+            this.fpl_Dinner.AutoScroll = true;
+            this.fpl_Dinner.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Dinner.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Dinner.Location = new System.Drawing.Point(175, 307);
+            this.fpl_Dinner.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Dinner.Name = "fpl_Dinner";
+            this.fpl_Dinner.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Dinner.TabIndex = 2;
+            // 
             // FrmViewSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(800, 513);
+            this.ClientSize = new System.Drawing.Size(800, 515);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.dtp_Schedule);
             this.Controls.Add(this.bunifuPictureBox1);
@@ -537,6 +638,14 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel fpl_Lesson2;
+        private System.Windows.Forms.FlowLayoutPanel fpl_Lesson1;
+        private System.Windows.Forms.FlowLayoutPanel fpl_Lunch;
+        private System.Windows.Forms.FlowLayoutPanel fpl_Lesson5;
+        private System.Windows.Forms.FlowLayoutPanel fpl_Dinner;
+        private System.Windows.Forms.FlowLayoutPanel fpl_Lesson7;
+        private System.Windows.Forms.FlowLayoutPanel fpl_Lesson6;
+        private System.Windows.Forms.FlowLayoutPanel fpl_Lesson3;
+        private System.Windows.Forms.FlowLayoutPanel fpl_Lesson4;
     }
 }

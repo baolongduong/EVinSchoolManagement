@@ -29,7 +29,11 @@ namespace BusinessLogicLayer
             return student;
         }
 
-
+        public Student GetID(string name)
+        {
+            Student student = new StudentDAO().GetStudentId(name);
+            return student;
+        }
         public List<Student> SelectByKeyword(string keyword)
         {
             List<Student> students = new StudentDAO().SelectByKeyword(keyword);
@@ -58,6 +62,7 @@ namespace BusinessLogicLayer
         {
             bool result = new StudentDAO().Delete(code);
             return result;
+
         }
     }
 }

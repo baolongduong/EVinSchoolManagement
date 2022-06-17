@@ -407,7 +407,7 @@ namespace GUI
             this.txtEmail.TextPlaceholder = "Enter your teacher\'s email";
             this.txtEmail.UseSystemPasswordChar = false;
             this.txtEmail.WordWrap = true;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+         
             // 
             // bunifuLabel3
             // 

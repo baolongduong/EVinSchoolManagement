@@ -52,6 +52,16 @@ namespace DataAccessLayer
                 {
                     dbClassification.ClassificationResult = newClassification.ClassificationResult;
                     dbClassification.StudentId = newClassification.StudentId;
+                    dbClassification.Math = newClassification.Math;
+                    dbClassification.Vietnamese = newClassification.Vietnamese;
+                    dbClassification.English = newClassification.English;
+                    dbClassification.Morality = newClassification.Morality;
+                    dbClassification.NatureSocial = newClassification.NatureSocial;
+                    dbClassification.HistoryGeography = newClassification.HistoryGeography;
+                    dbClassification.Music = newClassification.Music;
+                    dbClassification.Arts = newClassification.Arts;
+                    dbClassification.Sports = newClassification.Sports;
+                    dbClassification.AttendanceClass = newClassification.AttendanceClass;
                     dbClassification.TotalMark = newClassification.TotalMark;
                     db.SubmitChanges();
                     return true;
@@ -83,5 +93,67 @@ namespace DataAccessLayer
             }
             return false;
         }
+
+        public List<ClasstificationJoinedModel> GetFirstScore(int studentId)
+        {
+            var query = from mark in db.Marks
+                        join st in db.Students on mark.StudentId equals st.StudentId
+                        join sj in db.Subjects on mark.SubjectId equals sj.SubjectId
+                        where mark.StudentId == studentId
+                        orderby sj.SubjectName, mark.MarkDate descending
+                        select new ClasstificationJoinedModel
+                        {
+                            MarkId = mark.MarkId,
+                            Score = mark.Score,
+                            Subject = sj.SubjectName,
+                        };
+            return query.Distinct().ToList();
+        }
+
+        public List<Subject> CheckInvalidSubject(int studentId)
+        {
+            var query = from mark in db.Marks
+                        join st in db.Students on mark.StudentId equals st.StudentId
+                        join sj in db.Subjects on mark.SubjectId equals sj.SubjectId
+                        where mark.StudentId == studentId
+                        select new ClasstificationJoinedModel
+                        {
+                            Subject = sj.SubjectName,
+                        };
+
+            List<Subject> subjectList = db.Subjects.ToList();
+            List<string> onlyGetSubjectName = new List<string>();
+            foreach (var el in query.ToList())
+            {
+                onlyGetSubjectName.Add(el.Subject);
+            }
+            var newsj = subjectList.Where(p => p.Marks.All(pc => !onlyGetSubjectName.Contains(pc.Subject.SubjectName))).ToList();
+            return newsj;
+        }
+
+        public bool checkStudentID(int studentId)
+        {
+            var q = from p in db.Classifications
+                    where p.StudentId == studentId
+                    select p;
+            if (q.Any())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public Classification getStudentRanked(int studentId)
+        {
+            var q = from p in db.Classifications
+                    where p.StudentId == studentId
+                    select p;
+            return q.FirstOrDefault();
+        }
+
+
     }
 }
