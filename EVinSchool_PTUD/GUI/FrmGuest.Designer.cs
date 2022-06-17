@@ -72,10 +72,6 @@ namespace GUI
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_SearchStudent = new System.Windows.Forms.Button();
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             this.gvStudent = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.txt_SearchStudent = new Bunifu.UI.WinForms.BunifuTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -159,10 +155,10 @@ namespace GUI
             this.bunifuPages1.Location = new System.Drawing.Point(240, 54);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage1;
-            this.bunifuPages1.PageIndex = 0;
-            this.bunifuPages1.PageName = "tabPage1";
-            this.bunifuPages1.PageTitle = "Dashboard";
+            this.bunifuPages1.Page = this.tabPage5;
+            this.bunifuPages1.PageIndex = 4;
+            this.bunifuPages1.PageName = "tabPage5";
+            this.bunifuPages1.PageTitle = " Class Shcedule";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(803, 565);
             this.bunifuPages1.TabIndex = 1;
@@ -190,13 +186,7 @@ namespace GUI
             this.tabPage1.Controls.Add(this.bunifuPictureBox3);
             this.tabPage1.Controls.Add(this.bunifuLabel7);
             this.tabPage1.Controls.Add(this.bunifuLabel2);
-<<<<<<< Updated upstream
             this.tabPage1.Controls.Add(this.btn_SearchStudent);
-=======
-
-            this.tabPage1.Controls.Add(this.btn_SearchStudent);
-
->>>>>>> Stashed changes
             this.tabPage1.Controls.Add(this.gvStudent);
             this.tabPage1.Controls.Add(this.txt_SearchStudent);
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
@@ -207,37 +197,8 @@ namespace GUI
             this.tabPage1.Text = "Dashboard";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-<<<<<<< Updated upstream
             // bunifuPictureBox4
             // 
-=======
-            // btnFind
-            // 
-
-            this.btnFind.ActiveBorderThickness = 1;
-            this.btnFind.ActiveCornerRadius = 20;
-            this.btnFind.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnFind.ActiveForecolor = System.Drawing.Color.White;
-            this.btnFind.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnFind.BackColor = System.Drawing.Color.Transparent;
-            this.btnFind.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFind.BackgroundImage")));
-            this.btnFind.ButtonText = "Find";
-            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFind.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnFind.IdleBorderThickness = 1;
-            this.btnFind.IdleCornerRadius = 20;
-            this.btnFind.IdleFillColor = System.Drawing.Color.White;
-            this.btnFind.IdleForecolor = System.Drawing.Color.DarkRed;
-            this.btnFind.IdleLineColor = System.Drawing.Color.IndianRed;
-            this.btnFind.Location = new System.Drawing.Point(679, 74);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(5);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(60, 43);
-            this.btnFind.TabIndex = 31;
-            this.btnFind.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
->>>>>>> Stashed changes
             this.bunifuPictureBox4.AllowFocused = false;
             this.bunifuPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox4.AutoSizeHeight = true;
@@ -267,10 +228,6 @@ namespace GUI
             this.bunifuPictureBox3.TabIndex = 6;
             this.bunifuPictureBox3.TabStop = false;
             this.bunifuPictureBox3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             // 
             // bunifuLabel7
             // 
@@ -306,10 +263,6 @@ namespace GUI
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             // btn_SearchStudent
             // 
             this.btn_SearchStudent.BackColor = System.Drawing.Color.Salmon;
@@ -367,16 +320,8 @@ namespace GUI
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvStudent.DefaultCellStyle = dataGridViewCellStyle3;
             this.gvStudent.EnableHeadersVisualStyles = false;
-<<<<<<< Updated upstream
             this.gvStudent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.gvStudent.HeaderBackColor = System.Drawing.Color.DarkSlateGray;
-=======
-            this.gvStudent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gvStudent.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.gvStudent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.gvStudent.HeaderBackColor = System.Drawing.Color.DarkSlateGray;
-
->>>>>>> Stashed changes
             this.gvStudent.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvStudent.HeaderForeColor = System.Drawing.Color.White;
             this.gvStudent.Location = new System.Drawing.Point(10, 129);
@@ -391,40 +336,6 @@ namespace GUI
             // 
             // txt_SearchStudent
             // 
-<<<<<<< Updated upstream
-=======
-            this.bunifuTextBox1.AcceptsReturn = false;
-            this.bunifuTextBox1.AcceptsTab = false;
-            this.bunifuTextBox1.AnimationSpeed = 200;
-            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.Navy;
-            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.BorderRadius = 20;
-            this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTextBox1.DefaultText = "";
-            this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox1.HideSelection = true;
-            this.bunifuTextBox1.IconLeft = null;
-            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = null;
-            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(27, 82);
-            this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox1.Modified = false;
-            this.bunifuTextBox1.Multiline = false;
-            this.bunifuTextBox1.Name = "bunifuTextBox1";
->>>>>>> Stashed changes
             this.txt_SearchStudent.AcceptsReturn = false;
             this.txt_SearchStudent.AcceptsTab = false;
             this.txt_SearchStudent.AnimationSpeed = 200;
@@ -456,10 +367,6 @@ namespace GUI
             this.txt_SearchStudent.Modified = false;
             this.txt_SearchStudent.Multiline = false;
             this.txt_SearchStudent.Name = "txt_SearchStudent";
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             stateProperties1.BorderColor = System.Drawing.Color.Navy;
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
@@ -514,10 +421,6 @@ namespace GUI
             this.tabPage2.Text = "Attendance";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             // bunifuPictureBox5
             // 
             this.bunifuPictureBox5.AllowFocused = false;
@@ -534,10 +437,6 @@ namespace GUI
             this.bunifuPictureBox5.TabStop = false;
             this.bunifuPictureBox5.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             // bunifuLabel3
             // 
             this.bunifuLabel3.AllowParentOverrides = false;
@@ -601,17 +500,8 @@ namespace GUI
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvAttendance.DefaultCellStyle = dataGridViewCellStyle6;
             this.gvAttendance.EnableHeadersVisualStyles = false;
-<<<<<<< Updated upstream
             this.gvAttendance.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvAttendance.HeaderBackColor = System.Drawing.Color.Navy;
-=======
-
-            this.gvAttendance.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gvAttendance.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.gvAttendance.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
-            this.gvAttendance.HeaderBackColor = System.Drawing.Color.Navy;
-
->>>>>>> Stashed changes
             this.gvAttendance.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvAttendance.HeaderForeColor = System.Drawing.Color.White;
             this.gvAttendance.Location = new System.Drawing.Point(22, 123);
@@ -623,6 +513,7 @@ namespace GUI
             this.gvAttendance.Size = new System.Drawing.Size(758, 402);
             this.gvAttendance.TabIndex = 0;
             this.gvAttendance.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Navy;
+            this.gvAttendance.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvAttendance_CellContentClick);
             // 
             // tabPage3
             // 
@@ -638,10 +529,6 @@ namespace GUI
             this.tabPage3.Text = "Class Information";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             // bunifuPictureBox6
             // 
             this.bunifuPictureBox6.AllowFocused = false;
@@ -658,10 +545,6 @@ namespace GUI
             this.bunifuPictureBox6.TabStop = false;
             this.bunifuPictureBox6.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             // bunifuGroupBox2
             // 
             this.bunifuGroupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -726,18 +609,8 @@ namespace GUI
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvSubject.DefaultCellStyle = dataGridViewCellStyle9;
             this.gvSubject.EnableHeadersVisualStyles = false;
-<<<<<<< Updated upstream
             this.gvSubject.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvSubject.HeaderBackColor = System.Drawing.Color.Navy;
-=======
-
-            this.gvSubject.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gvSubject.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-
-            this.gvSubject.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
-            this.gvSubject.HeaderBackColor = System.Drawing.Color.Navy;
-
->>>>>>> Stashed changes
             this.gvSubject.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvSubject.HeaderForeColor = System.Drawing.Color.White;
             this.gvSubject.Location = new System.Drawing.Point(19, 27);
@@ -812,17 +685,8 @@ namespace GUI
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvClassroom.DefaultCellStyle = dataGridViewCellStyle12;
             this.gvClassroom.EnableHeadersVisualStyles = false;
-<<<<<<< Updated upstream
             this.gvClassroom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvClassroom.HeaderBackColor = System.Drawing.Color.Navy;
-=======
-            this.gvClassroom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gvClassroom.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-
-            this.gvClassroom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
-            this.gvClassroom.HeaderBackColor = System.Drawing.Color.Navy;
-
->>>>>>> Stashed changes
             this.gvClassroom.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvClassroom.HeaderForeColor = System.Drawing.Color.White;
             this.gvClassroom.Location = new System.Drawing.Point(40, 110);
@@ -864,10 +728,6 @@ namespace GUI
             this.tabPage4.Text = "Student\'s Mark";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             // bunifuPictureBox7
             // 
             this.bunifuPictureBox7.AllowFocused = false;
@@ -962,18 +822,8 @@ namespace GUI
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvMark.DefaultCellStyle = dataGridViewCellStyle15;
             this.gvMark.EnableHeadersVisualStyles = false;
-<<<<<<< Updated upstream
             this.gvMark.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvMark.HeaderBackColor = System.Drawing.Color.Navy;
-=======
-
-            this.gvMark.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gvMark.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-
-            this.gvMark.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
-            this.gvMark.HeaderBackColor = System.Drawing.Color.Navy;
-
->>>>>>> Stashed changes
             this.gvMark.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvMark.HeaderForeColor = System.Drawing.Color.White;
             this.gvMark.Location = new System.Drawing.Point(46, 36);
@@ -1000,10 +850,6 @@ namespace GUI
             this.tabPage5.Text = " Class Shcedule";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             // bunifuPictureBox8
             // 
             this.bunifuPictureBox8.AllowFocused = false;
@@ -1020,10 +866,6 @@ namespace GUI
             this.bunifuPictureBox8.TabStop = false;
             this.bunifuPictureBox8.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             // bunifuGroupBox3
             // 
             this.bunifuGroupBox3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -1088,18 +930,8 @@ namespace GUI
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvClassSchedule.DefaultCellStyle = dataGridViewCellStyle18;
             this.gvClassSchedule.EnableHeadersVisualStyles = false;
-<<<<<<< Updated upstream
             this.gvClassSchedule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvClassSchedule.HeaderBackColor = System.Drawing.Color.Navy;
-=======
-
-            this.gvClassSchedule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gvClassSchedule.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-
-            this.gvClassSchedule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
-            this.gvClassSchedule.HeaderBackColor = System.Drawing.Color.Navy;
-
->>>>>>> Stashed changes
             this.gvClassSchedule.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvClassSchedule.HeaderForeColor = System.Drawing.Color.White;
             this.gvClassSchedule.Location = new System.Drawing.Point(19, 27);
@@ -1111,6 +943,7 @@ namespace GUI
             this.gvClassSchedule.Size = new System.Drawing.Size(717, 173);
             this.gvClassSchedule.TabIndex = 7;
             this.gvClassSchedule.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Navy;
+            this.gvClassSchedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvClassSchedule_CellContentClick);
             // 
             // bunifuLabel1
             // 
@@ -1174,18 +1007,8 @@ namespace GUI
             dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvMealSchedule.DefaultCellStyle = dataGridViewCellStyle21;
             this.gvMealSchedule.EnableHeadersVisualStyles = false;
-<<<<<<< Updated upstream
             this.gvMealSchedule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvMealSchedule.HeaderBackColor = System.Drawing.Color.Navy;
-=======
-
-            this.gvMealSchedule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gvMealSchedule.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-
-            this.gvMealSchedule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
-            this.gvMealSchedule.HeaderBackColor = System.Drawing.Color.Navy;
-
->>>>>>> Stashed changes
             this.gvMealSchedule.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvMealSchedule.HeaderForeColor = System.Drawing.Color.White;
             this.gvMealSchedule.Location = new System.Drawing.Point(40, 106);
@@ -1197,6 +1020,7 @@ namespace GUI
             this.gvMealSchedule.Size = new System.Drawing.Size(717, 166);
             this.gvMealSchedule.TabIndex = 9;
             this.gvMealSchedule.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Navy;
+            this.gvMealSchedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvMealSchedule_CellContentClick);
             // 
             // bunifuGroupBox4
             // 
@@ -1227,10 +1051,6 @@ namespace GUI
             this.tabPage6.Text = "Classification";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             // bunifuPictureBox9
             // 
             this.bunifuPictureBox9.AllowFocused = false;
@@ -1247,10 +1067,6 @@ namespace GUI
             this.bunifuPictureBox9.TabStop = false;
             this.bunifuPictureBox9.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
             // bunifuLabel6
             // 
             this.bunifuLabel6.AllowParentOverrides = false;
@@ -1329,18 +1145,8 @@ namespace GUI
             dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvClassification.DefaultCellStyle = dataGridViewCellStyle24;
             this.gvClassification.EnableHeadersVisualStyles = false;
-<<<<<<< Updated upstream
             this.gvClassification.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.gvClassification.HeaderBackColor = System.Drawing.Color.Navy;
-=======
-
-            this.gvClassification.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gvClassification.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-
-            this.gvClassification.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
-            this.gvClassification.HeaderBackColor = System.Drawing.Color.Navy;
-
->>>>>>> Stashed changes
             this.gvClassification.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvClassification.HeaderForeColor = System.Drawing.Color.White;
             this.gvClassification.Location = new System.Drawing.Point(46, 36);
@@ -1355,43 +1161,19 @@ namespace GUI
             // 
             // bunifuPictureBox2
             // 
-<<<<<<< Updated upstream
-=======
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 1;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.lbl_TeacherNameAB);
-            this.bunifuPanel1.Controls.Add(this.bnf_Classfication);
-            this.bunifuPanel1.Controls.Add(this.bnf_Dashbroad);
-            this.bunifuPanel1.Controls.Add(this.bnf_Attendance);
-            this.bunifuPanel1.Controls.Add(this.bnf_Schedule);
-            this.bunifuPanel1.Controls.Add(this.bnf_CS);
-            this.bunifuPanel1.Controls.Add(this.bnf_SMark);
-            this.bunifuPanel1.Controls.Add(this.bunifuPictureBox10);
-            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 52);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(234, 562);
-            this.bunifuPanel1.TabIndex = 0;
->>>>>>> Stashed changes
             this.bunifuPictureBox2.AllowFocused = false;
             this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox2.AutoSizeHeight = true;
             this.bunifuPictureBox2.BorderRadius = 23;
             this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
             this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(0, 9);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
             this.bunifuPictureBox2.Size = new System.Drawing.Size(46, 46);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox2.TabIndex = 7;
             this.bunifuPictureBox2.TabStop = false;
             this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-<<<<<<< Updated upstream
             // 
             // btnClassification
             // 
@@ -1412,46 +1194,6 @@ namespace GUI
             this.btnClassification.ColorContrastOnClick = 45;
             this.btnClassification.ColorContrastOnHover = 45;
             this.btnClassification.Cursor = System.Windows.Forms.Cursors.Default;
-=======
-
-            // 
-            // lbl_TeacherNameAB
-            // 
-            this.lbl_TeacherNameAB.AllowParentOverrides = false;
-            this.lbl_TeacherNameAB.AutoEllipsis = false;
-            this.lbl_TeacherNameAB.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbl_TeacherNameAB.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbl_TeacherNameAB.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TeacherNameAB.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.lbl_TeacherNameAB.Location = new System.Drawing.Point(63, 180);
-            this.lbl_TeacherNameAB.Name = "lbl_TeacherNameAB";
-            this.lbl_TeacherNameAB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_TeacherNameAB.Size = new System.Drawing.Size(106, 22);
-            this.lbl_TeacherNameAB.TabIndex = 86;
-            this.lbl_TeacherNameAB.Text = "Your name.....";
-            this.lbl_TeacherNameAB.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_TeacherNameAB.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bnf_Classfication
-            // 
-            this.bnf_Classfication.AllowAnimations = true;
-            this.bnf_Classfication.AllowMouseEffects = true;
-            this.bnf_Classfication.AllowToggling = false;
-            this.bnf_Classfication.AnimationSpeed = 200;
-            this.bnf_Classfication.AutoGenerateColors = false;
-            this.bnf_Classfication.AutoRoundBorders = false;
-            this.bnf_Classfication.AutoSizeLeftIcon = true;
-            this.bnf_Classfication.AutoSizeRightIcon = true;
-            this.bnf_Classfication.BackColor = System.Drawing.Color.Transparent;
-            this.bnf_Classfication.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bnf_Classfication.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnf_Classfication.BackgroundImage")));
-            this.bnf_Classfication.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bnf_Classfication.ButtonText = "Classfication";
-            this.bnf_Classfication.ButtonTextMarginLeft = 0;
-            this.bnf_Classfication.ColorContrastOnClick = 45;
-            this.bnf_Classfication.ColorContrastOnHover = 45;
-            this.bnf_Classfication.Cursor = System.Windows.Forms.Cursors.Default;
->>>>>>> Stashed changes
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -1539,10 +1281,11 @@ namespace GUI
             this.bunifuPanel1.Controls.Add(this.btnClassInfor);
             this.bunifuPanel1.Controls.Add(this.btnAttendance);
             this.bunifuPanel1.Controls.Add(this.btnClassification);
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 48);
+            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 52);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(234, 544);
+            this.bunifuPanel1.Size = new System.Drawing.Size(234, 562);
             this.bunifuPanel1.TabIndex = 0;
             // 
             // btnClassSchedule
@@ -1823,7 +1566,7 @@ namespace GUI
             this.bunifuPictureBox1.BorderRadius = 60;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(61, 28);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(61, 37);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(120, 120);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2091,11 +1834,7 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private Bunifu.UI.WinForms.BunifuDataGridView gvMark;
-<<<<<<< Updated upstream
-=======
 
-
->>>>>>> Stashed changes
         private System.Windows.Forms.Button btn_SearchStudent;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox3;
         private Bunifu.UI.WinForms.BunifuDataGridView gvClassSchedule;

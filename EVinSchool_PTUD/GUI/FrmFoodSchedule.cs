@@ -24,10 +24,15 @@ namespace GUI
 
         private void FrmFoodSchedule_Load(object sender, EventArgs e)
         {
-            drpdown_FoodTime.
+           
         }
 
         private void drpdown_FoodTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
         }

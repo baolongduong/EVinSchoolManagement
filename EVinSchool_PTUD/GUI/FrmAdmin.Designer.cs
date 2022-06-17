@@ -101,13 +101,11 @@ namespace GUI
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.Attendance = new System.Windows.Forms.TabPage();
-            this.btnTodayStatus = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.gv_attendancereports = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.btnEditAttendance = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnTodayAttendance = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pb_StudentAttendance = new Bunifu.UI.WinForms.BunifuProgressBar();
             this.bunifuLabel31 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel29 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel17 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel16 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -905,7 +903,7 @@ namespace GUI
             this.bunifuPictureBox1.BorderRadius = 88;
             this.bunifuPictureBox1.Image = global::GUI.Properties.Resources.evs_logo;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(16, -1);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(16, -27);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(176, 176);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1312,13 +1310,11 @@ namespace GUI
             // Attendance
             // 
             this.Attendance.BackColor = System.Drawing.Color.White;
-            this.Attendance.Controls.Add(this.btnTodayStatus);
             this.Attendance.Controls.Add(this.gv_attendancereports);
             this.Attendance.Controls.Add(this.btnEditAttendance);
             this.Attendance.Controls.Add(this.btnTodayAttendance);
             this.Attendance.Controls.Add(this.pb_StudentAttendance);
             this.Attendance.Controls.Add(this.bunifuLabel31);
-            this.Attendance.Controls.Add(this.bunifuLabel29);
             this.Attendance.Controls.Add(this.bunifuLabel17);
             this.Attendance.Controls.Add(this.bunifuLabel16);
             this.Attendance.Controls.Add(this.bunifuLabel10);
@@ -1328,59 +1324,7 @@ namespace GUI
             this.Attendance.Size = new System.Drawing.Size(810, 484);
             this.Attendance.TabIndex = 1;
             this.Attendance.Text = "Attendance";
-            // 
-            // btnTodayStatus
-            // 
-            this.btnTodayStatus.AllowBindingControlAnimation = true;
-            this.btnTodayStatus.AllowBindingControlColorChanges = false;
-            this.btnTodayStatus.AllowBindingControlLocation = true;
-            this.btnTodayStatus.AllowCheckBoxAnimation = false;
-            this.btnTodayStatus.AllowCheckmarkAnimation = true;
-            this.btnTodayStatus.AllowOnHoverStates = true;
-            this.btnTodayStatus.AutoCheck = true;
-            this.btnTodayStatus.BackColor = System.Drawing.Color.Transparent;
-            this.btnTodayStatus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTodayStatus.BackgroundImage")));
-            this.btnTodayStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTodayStatus.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.btnTodayStatus.BorderRadius = 12;
-            this.btnTodayStatus.Checked = true;
-            this.btnTodayStatus.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
-            this.btnTodayStatus.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnTodayStatus.CustomCheckmarkImage = null;
-            this.btnTodayStatus.Location = new System.Drawing.Point(167, 377);
-            this.btnTodayStatus.MinimumSize = new System.Drawing.Size(17, 17);
-            this.btnTodayStatus.Name = "btnTodayStatus";
-            this.btnTodayStatus.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnTodayStatus.OnCheck.BorderRadius = 12;
-            this.btnTodayStatus.OnCheck.BorderThickness = 2;
-            this.btnTodayStatus.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.btnTodayStatus.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.btnTodayStatus.OnCheck.CheckmarkThickness = 2;
-            this.btnTodayStatus.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.btnTodayStatus.OnDisable.BorderRadius = 12;
-            this.btnTodayStatus.OnDisable.BorderThickness = 2;
-            this.btnTodayStatus.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.btnTodayStatus.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.btnTodayStatus.OnDisable.CheckmarkThickness = 2;
-            this.btnTodayStatus.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnTodayStatus.OnHoverChecked.BorderRadius = 12;
-            this.btnTodayStatus.OnHoverChecked.BorderThickness = 2;
-            this.btnTodayStatus.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnTodayStatus.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.btnTodayStatus.OnHoverChecked.CheckmarkThickness = 2;
-            this.btnTodayStatus.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnTodayStatus.OnHoverUnchecked.BorderRadius = 12;
-            this.btnTodayStatus.OnHoverUnchecked.BorderThickness = 1;
-            this.btnTodayStatus.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.btnTodayStatus.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTodayStatus.OnUncheck.BorderRadius = 12;
-            this.btnTodayStatus.OnUncheck.BorderThickness = 1;
-            this.btnTodayStatus.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.btnTodayStatus.Size = new System.Drawing.Size(21, 21);
-            this.btnTodayStatus.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.btnTodayStatus.TabIndex = 24;
-            this.btnTodayStatus.ThreeState = false;
-            this.btnTodayStatus.ToolTipText = null;
+            this.Attendance.Click += new System.EventHandler(this.Attendance_Click);
             // 
             // gv_attendancereports
             // 
@@ -1442,6 +1386,7 @@ namespace GUI
             this.gv_attendancereports.Size = new System.Drawing.Size(740, 150);
             this.gv_attendancereports.TabIndex = 23;
             this.gv_attendancereports.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.gv_attendancereports.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_attendancereports_CellContentClick);
             // 
             // btnEditAttendance
             // 
@@ -1461,7 +1406,7 @@ namespace GUI
             this.btnEditAttendance.IdleFillColor = System.Drawing.Color.White;
             this.btnEditAttendance.IdleForecolor = System.Drawing.Color.DarkRed;
             this.btnEditAttendance.IdleLineColor = System.Drawing.Color.IndianRed;
-            this.btnEditAttendance.Location = new System.Drawing.Point(397, 322);
+            this.btnEditAttendance.Location = new System.Drawing.Point(392, 336);
             this.btnEditAttendance.Margin = new System.Windows.Forms.Padding(5);
             this.btnEditAttendance.Name = "btnEditAttendance";
             this.btnEditAttendance.Size = new System.Drawing.Size(117, 33);
@@ -1486,12 +1431,13 @@ namespace GUI
             this.btnTodayAttendance.IdleFillColor = System.Drawing.Color.White;
             this.btnTodayAttendance.IdleForecolor = System.Drawing.Color.DarkRed;
             this.btnTodayAttendance.IdleLineColor = System.Drawing.Color.IndianRed;
-            this.btnTodayAttendance.Location = new System.Drawing.Point(262, 322);
+            this.btnTodayAttendance.Location = new System.Drawing.Point(257, 336);
             this.btnTodayAttendance.Margin = new System.Windows.Forms.Padding(5);
             this.btnTodayAttendance.Name = "btnTodayAttendance";
             this.btnTodayAttendance.Size = new System.Drawing.Size(132, 33);
             this.btnTodayAttendance.TabIndex = 22;
             this.btnTodayAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTodayAttendance.Click += new System.EventHandler(this.btnTodayAttendance_Click);
             // 
             // pb_StudentAttendance
             // 
@@ -1504,7 +1450,7 @@ namespace GUI
             this.pb_StudentAttendance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.pb_StudentAttendance.BorderRadius = 9;
             this.pb_StudentAttendance.BorderThickness = 1;
-            this.pb_StudentAttendance.Location = new System.Drawing.Point(211, 427);
+            this.pb_StudentAttendance.Location = new System.Drawing.Point(211, 407);
             this.pb_StudentAttendance.Maximum = 100;
             this.pb_StudentAttendance.MaximumValue = 100;
             this.pb_StudentAttendance.Minimum = 0;
@@ -1527,7 +1473,7 @@ namespace GUI
             this.bunifuLabel31.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel31.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel31.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel31.Location = new System.Drawing.Point(38, 427);
+            this.bunifuLabel31.Location = new System.Drawing.Point(38, 407);
             this.bunifuLabel31.Name = "bunifuLabel31";
             this.bunifuLabel31.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel31.Size = new System.Drawing.Size(150, 26);
@@ -1535,23 +1481,6 @@ namespace GUI
             this.bunifuLabel31.Text = "Attendance rate:";
             this.bunifuLabel31.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel31.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel29
-            // 
-            this.bunifuLabel29.AllowParentOverrides = false;
-            this.bunifuLabel29.AutoEllipsis = false;
-            this.bunifuLabel29.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel29.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel29.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel29.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel29.Location = new System.Drawing.Point(43, 375);
-            this.bunifuLabel29.Name = "bunifuLabel29";
-            this.bunifuLabel29.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel29.Size = new System.Drawing.Size(118, 26);
-            this.bunifuLabel29.TabIndex = 20;
-            this.bunifuLabel29.Text = "Today status:";
-            this.bunifuLabel29.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel29.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel17
             // 
@@ -1561,7 +1490,7 @@ namespace GUI
             this.bunifuLabel17.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel17.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel17.ForeColor = System.Drawing.Color.Olive;
-            this.bunifuLabel17.Location = new System.Drawing.Point(43, 321);
+            this.bunifuLabel17.Location = new System.Drawing.Point(38, 335);
             this.bunifuLabel17.Name = "bunifuLabel17";
             this.bunifuLabel17.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel17.Size = new System.Drawing.Size(211, 34);
@@ -2098,6 +2027,7 @@ namespace GUI
             this.gv_StudentInfo.Size = new System.Drawing.Size(496, 342);
             this.gv_StudentInfo.TabIndex = 26;
             this.gv_StudentInfo.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.gv_StudentInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_StudentInfo_CellContentClick);
             this.gv_StudentInfo.SelectionChanged += new System.EventHandler(this.gv_StudentInfo_SelectionChanged);
             // 
             // bunifuLabel21
@@ -2580,6 +2510,7 @@ namespace GUI
             this.bunifuDataGridView3.Size = new System.Drawing.Size(770, 129);
             this.bunifuDataGridView3.TabIndex = 36;
             this.bunifuDataGridView3.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView3_CellContentClick);
             // 
             // gvMealSchedule
             // 
@@ -2641,6 +2572,7 @@ namespace GUI
             this.gvMealSchedule.Size = new System.Drawing.Size(770, 165);
             this.gvMealSchedule.TabIndex = 36;
             this.gvMealSchedule.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.gvMealSchedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvMealSchedule_CellContentClick);
             // 
             // bunifuLabel37
             // 
@@ -2983,9 +2915,7 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuDataGridView gv_attendancereports;
         private Bunifu.Framework.UI.BunifuThinButton2 btnTodayAttendance;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel31;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel29;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel17;
-        private Bunifu.UI.WinForms.BunifuCheckBox btnTodayStatus;
         private Bunifu.Framework.UI.BunifuThinButton2 btnEditAttendance;
         private System.Windows.Forms.TabPage Information;
         private Bunifu.Framework.UI.BunifuCards crd_Sudent;

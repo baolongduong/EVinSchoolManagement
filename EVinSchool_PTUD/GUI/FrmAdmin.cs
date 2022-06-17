@@ -21,6 +21,7 @@ namespace GUI
         TeacherBUS teacherBUS = new TeacherBUS();
         ClassroomBUS classroomBUS = new ClassroomBUS();
         StudentBUS studentBUS = new StudentBUS();
+        AttendanceBUS attendanceBUS = new AttendanceBUS();
         public FrmAdmin(int teacherID)
         {
             InitializeComponent();
@@ -102,6 +103,9 @@ namespace GUI
             gvMealSchedule.Columns[0].Visible = false;
             gvMealSchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
             gvMealSchedule.Columns[5].Visible = false;
+
+            List<Student> st = new StudentBUS().GetAll();
+            gv_attendancereports.DataSource = st;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -209,6 +213,38 @@ namespace GUI
         }
 
         private void btnFoodEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTodayAttendance_Click(object sender, EventArgs e)
+        {
+            FrmAttendace frmattendace = new FrmAttendace();
+            frmattendace.Owner = this;
+            frmattendace.Show();
+        }
+
+        private void gv_StudentInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gvMealSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Attendance_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void gv_attendancereports_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void bunifuDataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

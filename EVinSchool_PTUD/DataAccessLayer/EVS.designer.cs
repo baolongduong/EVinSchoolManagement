@@ -430,7 +430,9 @@ namespace DataAccessLayer
 		private System.Nullable<int> _AttendanceTeacher;
 		
 		private System.Nullable<bool> _AttendanceStatus;
-		
+
+		private System.Nullable<int> _CheckAttendance;
+
 		private EntityRef<Teacher> _Teacher;
 		
 		private EntityRef<Classroom> _Classroom;
@@ -447,7 +449,10 @@ namespace DataAccessLayer
     partial void OnAttendanceDateChanged();
     partial void OnAttendanceClassChanging(System.Nullable<int> value);
     partial void OnAttendanceClassChanged();
-    partial void OnAttendanceStudentChanging(System.Nullable<int> value);
+
+	partial void OnCheckAttendanceChanging(System.Nullable<int> value);
+	partial void OnCheckAttendanceChanging();
+	partial void OnAttendanceStudentChanging(System.Nullable<int> value);
     partial void OnAttendanceStudentChanged();
     partial void OnAttendanceTeacherChanging(System.Nullable<int> value);
     partial void OnAttendanceTeacherChanged();
@@ -482,7 +487,26 @@ namespace DataAccessLayer
 				}
 			}
 		}
-		
+
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_CheckAttendance", DbType = "Int")]
+		public System.Nullable<int> CheckAttendance
+		{
+			get
+			{
+				return this._CheckAttendance;
+			}
+			set
+			{
+				if ((this._CheckAttendance != value))
+				{
+					this.OnCheckAttendanceChanging(value);
+					this.SendPropertyChanging();
+					this._CheckAttendance = value;
+					this.SendPropertyChanged("CheckAttendance");
+					this.OnAttendanceIdChanged();
+				}
+			}
+		}
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AttendanceDate", DbType="Date")]
 		public System.Nullable<System.DateTime> AttendanceDate
 		{
@@ -1575,6 +1599,8 @@ namespace DataAccessLayer
 		private System.Nullable<int> _StudentClass;
 		
 		private string _StudentImage;
+
+		
 		
 		private EntitySet<Attendance> _Attendances;
 		
@@ -1714,7 +1740,9 @@ namespace DataAccessLayer
 				}
 			}
 		}
+
 		
+
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudentImage", DbType="VarChar(MAX)")]
 		public string StudentImage
 		{

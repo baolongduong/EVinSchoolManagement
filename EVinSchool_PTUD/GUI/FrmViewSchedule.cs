@@ -45,5 +45,10 @@ namespace GUI
         {
             this.Dispose();
         }
+
+        private void dtp_Schedule_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

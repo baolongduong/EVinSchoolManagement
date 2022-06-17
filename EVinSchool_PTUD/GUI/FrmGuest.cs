@@ -79,8 +79,7 @@ namespace GUI
             gvClassification.DataSource = classifications;
         }
 
-<<<<<<< Updated upstream
-=======
+
 
         private void bnf_Dashbroad_Click(object sender, EventArgs e)
         {
@@ -120,16 +119,28 @@ namespace GUI
         private void gvClassification_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
->>>>>>> Stashed changes
+
         private void btn_SearchStudent_Click(object sender, EventArgs e)
         {
             String keyword = txt_SearchStudent.Text.Trim();
             List<Student> students = new StudentBUS().SelectByKeyword(keyword);
             gvStudent.DataSource = students;
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
+        }
+
+        private void gvAttendance_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gvClassSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gvMealSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

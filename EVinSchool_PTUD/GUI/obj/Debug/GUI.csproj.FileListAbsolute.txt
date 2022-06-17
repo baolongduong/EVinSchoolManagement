@@ -182,7 +182,6 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuT
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.xml
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.UI.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmGuest.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmRegister.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAdmin.resources
@@ -198,3 +197,6 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.exe
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.pdb
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmViewSchedule.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmFoodSchedule.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAttendace.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmEditAttendance.resources

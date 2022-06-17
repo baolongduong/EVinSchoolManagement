@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceDAO.cs" />
+    <Compile Include="Check_Attendance.cs" />
     <Compile Include="ClassificationDAO.cs" />
     <Compile Include="ClassroomDAO.cs" />
     <Compile Include="EVS.designer.cs">
