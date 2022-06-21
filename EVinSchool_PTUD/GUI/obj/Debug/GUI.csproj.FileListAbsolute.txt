@@ -180,7 +180,6 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuT
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmStudySchedule.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmGuest.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmRegister.resources
@@ -201,3 +200,5 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddedStudent.resour
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddMark.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAttendace.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmClass.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmEditAttendance.resources

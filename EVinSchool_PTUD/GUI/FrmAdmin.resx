@@ -883,20 +883,17 @@ the school decided to deploy the EVinSchool management system.</value>
   <data name="btnAddMark.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACsAAAAuCAYAAACxkOBzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALjSURBVGhD7ZhNTBNBFMd79MjRo0ePHj169GS8mHj0aLwI
-        iEAFutW20FKKZWVLS0ugkkDiVwzxgygoidZKaiSSaBMwoFGDgrgWUqquyTj/9bWEVmytbXcO+0sm2WRm
-        3/z37Zt5b8ZiYmJiUh4NUt/B09JFe3t3KN7mCc61dCpr9XY/K6VhLN5Bgw1u6zCZrRzccN05T3Cw2aWk
-        3MqoevdhnCUX37DF5XdsXU2xUsFYvIMGG/LQFbXxgqxx21f5HPtouvJp7Qq4re4BdTr2TNvYTNO0lUPT
-        frLZuZfM1hNW4RBJGt5DU5cOvNnhHZy9NRXLbGW+kenqAdFwCJ9zoUnq30syioNfYu+NJF8tLH8nWzXj
-        /coqs/nCK1zDAZKzO/AohOIlo0C4cQ2rReMYv94Ij+bzae0Lk3yRJTiPpO2k3ROSJ2eeZmi84SReJH/Y
-        vOFJkrcNgpqvxhQCXSQcfcNfC+IX2wZWI40Rhvnka9bWHXxAMi0W7G0tLmWjFltUOfC9Pp3bzpD2kE2o
-        TzjGb95P10v+k7rY5k4lMBN/Tl3isSMUUJQg14sKtjFr18AHXSzP/UtGJoFiYC01OS5t6WLxIOriyoIS
-        UxeLB9ExxVaLnFhU66Kl2XxyYrEtYHsQFTgSDtXF4gCHc5Go4OyGw6Yu1uoORmOJeeoSDyQsJC5dLC/B
-        TkSv3dmkPuG4Pf1EO+OQnVmxdWed/cJmhYKaFoUCCgbRQBmAcoBk/gbK8QU0RhgCl2/Aq0dJ5jaiefeP
-        Xs2Cavx879Dbf7kSqhYorJzyyMdGSd5P8gpBOLjkkc9GZzQlen2dH2eOkazd4UfyIxBcjbutYsCjENrh
-        DZ0iOcWBh3GNU8vMhhjFry/Jo/kghpGKe0JjajVPElgjkfGJFBbTX2O0FLiXD8GQ3RdJTdx7rMHb/xvT
-        sDH1KMFw34u83yD5j9N0lQFfzY/ErfA2qiCUbeU22OBZ04ubdDJvYmJiHBbLL4NFH88qJMCnAAAAAElF
-        TkSuQmCC
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJMSURBVGhD7ZhbSwJBGED7yb300EtEBAX14INQ0YWQiiIh
+        IaEI6UJEhGBgRERBgUFUVFR0gYIvzrizrOuurta4U+yBwV1Zx7Pf3L6ZLvlDJLKmSGRN8b9lLyvXsra1
+        LxNzOUnPZmUgNSPd/alIhWf5DYU6Ts4unVqjEUn27f1DVtZ3pG90UlJTS+4fnV1U5P7xyXmqOTzLbyj6
+        hXsG07KQ24hUT1NZKiUi2/sleX55db79PT4/v+Tg8FiG0hkVEO7DCJUlmrw5slybBkkCQsuFBSVQliah
+        X7Xap36Dq+tbGRmfV59+6mSJIqJBD3cKIouwvx/XydL0cUTUz83dg+oS3i5YI5sv7Elht+jcxU/p6FQy
+        2TXnziNL6Bn1jUZjHHj7ryvLtMFotI3yyblML66qayVLNJnwOzFFtQNutLySZUAxsGxlOb8pe8VyVdbW
+        LqDRXUHJ2jJdhcE0xnKsZMNWDFtgLPUOj1VlubB1cGlIMZUsF7aTyJrClSVbt22Z9ePKMi0wPdgKgSSg
+        Spb8lX2RrZDXkmQpWb2c2YpOB5QsGzZ2mLbCPpCiZPUKYSt6hVWyQKJAwmAbSCILrqz3S5vwBtGVBdui
+        6w9gjSzZODvKKEc5pmEc4eKd/2tkgbfhobhXtKBWrpMF5rVGxzgmIaKIMp36CZQF3V86ubLpVg0bN6Gy
+        QGT1eSoVmYIxwmEGwWmUozSU1RBdKiLh4dSG+5/2aerg9IdIsu5z+tKMSLIa3po/INJkQaRt7Rbq4MU5
+        SY9KS7Jxk8iaIpE1g8g3/iMgZ1shDtYAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuLabel27.BaseStylesheet" xml:space="preserve">

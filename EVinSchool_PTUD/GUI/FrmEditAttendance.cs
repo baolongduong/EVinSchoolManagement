@@ -7,23 +7,97 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using Bunifu.Utils;
 using BusinessLogicLayer;
 using DataAccessLayer;
+using System.IO;
+using System.Data.SqlClient;
 
 namespace GUI
 {
     public partial class FrmEditAttendance : BunifuForm
     {
+        StudentBUS studentBUS = new StudentBUS();
+        AttendanceBUS attendanceBUS = new AttendanceBUS();
         public FrmEditAttendance()
         {
             InitializeComponent();
         }
 
-        private void drp_Student_SelectedIndexChanged(object sender, EventArgs e)
+        private void FrmEditAttendance_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void drp_Student_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int value = 1;
+            if (drp_Student.SelectedIndex > 0)
+            {
+                value = Convert.ToInt32(drp_Student.SelectedValue.ToString());
+                List<Student> stu = new StudentBUS().GetDetailsByClassId(value);
+                gv_EditAttendance.DataSource = stu;
+
+            }
+            else
+            {
+                List<Student> stu = new StudentBUS().GetDetailsByClassId(value);
+                gv_EditAttendance.DataSource = stu;
+            }
+
+        }
+        private void drp_Student_DropDown(object sender, EventArgs e)
+        {
+            loadClass();
+        }
+        private void loadClass()
+        {
+            List<Classroom> classrooms = new ClassroomBUS().GetAll();
+            drp_Student.DataSource = classrooms;
+            drp_Student.DisplayMember = "ClassName";
+            drp_Student.ValueMember = "ClassId";
+
+
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+            int classID = 0;
+            foreach (DataGridViewRow item in gv_EditAttendance.Rows)
+            {
+                if (item.Cells[0].Value != null)
+                {
+                    if ((bool)item.Cells[0].Value == true)
+                    {
+                        count = count + 1;
+                        classID = Int32.Parse(item.Cells[5].Value.ToString());
+                    }
+
+                }
+
+            }
+            Attendance att = new Attendance()
+            {
+
+                AttendanceDate = dtp_Schedule.Value,
+                CheckAttendance = count,
+                AttendanceClass = classID,
+            };
+
+            bool result = attendanceBUS.Update(att);
+            if (result)
+            {
+                //loadAttendance();
+                bunifuSnackbar1.Show(this, "You save student attendance successfully");
+                //Clear();
+                this.Owner.Refresh();
+                this.Owner.Activate();
+            }
+            else
+            {
+                bunifuSnackbar1.Show(this, "Can't save");
+            }
         }
     }
 }

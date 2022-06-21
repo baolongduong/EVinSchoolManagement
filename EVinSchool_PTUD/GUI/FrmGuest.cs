@@ -302,5 +302,20 @@ namespace GUI
             dataAdapter.Fill(DS);
             gv_Mark.DataSource = DS.Tables[0];
         }
+
+        private void gv_Classroom_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Classroom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gv_Subjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
