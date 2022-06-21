@@ -23,8 +23,8 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\bin\Debug\BusinessLog
 D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
 D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
 D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll.config
-D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
 D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
 D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
 D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojAssemblyReference.cache

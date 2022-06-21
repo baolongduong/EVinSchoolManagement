@@ -376,6 +376,7 @@ namespace GUI
             this.txtName.TextPlaceholder = "Enter your teacher\'s name";
             this.txtName.UseSystemPasswordChar = false;
             this.txtName.WordWrap = true;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // btnSave
             // 
@@ -517,6 +518,7 @@ namespace GUI
             this.lbl_Class.Text = "Teacher Class";
             this.lbl_Class.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_Class.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbl_Class.Click += new System.EventHandler(this.lbl_Class_Click);
             // 
             // bunifuFormDock1
             // 

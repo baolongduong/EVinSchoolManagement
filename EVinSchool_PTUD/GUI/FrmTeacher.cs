@@ -114,5 +114,15 @@ namespace GUI
         {
             this.Dispose();
         }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_Class_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
