@@ -45,6 +45,10 @@ namespace GUI
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.btnAddStudent = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnUpload = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -64,6 +68,8 @@ namespace GUI
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.openFilePic = new System.Windows.Forms.OpenFileDialog();
             this.drp_Classroom = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.dtp_StudentDOB = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.txtParentName = new Bunifu.UI.WinForms.BunifuTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -205,7 +211,7 @@ namespace GUI
             this.btnUpload.IdleIconLeftImage = null;
             this.btnUpload.IdleIconRightImage = null;
             this.btnUpload.IndicateFocus = false;
-            this.btnUpload.Location = new System.Drawing.Point(105, 407);
+            this.btnUpload.Location = new System.Drawing.Point(111, 424);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnUpload.OnDisabledState.BorderRadius = 20;
@@ -282,11 +288,11 @@ namespace GUI
             this.txtParentPhone.BorderThickness = 1;
             this.txtParentPhone.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtParentPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtParentPhone.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtParentPhone.DefaultFont = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParentPhone.DefaultText = "";
             this.txtParentPhone.FillColor = System.Drawing.Color.White;
             this.txtParentPhone.HideSelection = true;
-            this.txtParentPhone.IconLeft = global::GUI.Properties.Resources.signature;
+            this.txtParentPhone.IconLeft = null;
             this.txtParentPhone.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtParentPhone.IconPadding = 10;
             this.txtParentPhone.IconRight = null;
@@ -321,21 +327,21 @@ namespace GUI
             this.txtParentPhone.Padding = new System.Windows.Forms.Padding(3);
             this.txtParentPhone.PasswordChar = '\0';
             this.txtParentPhone.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtParentPhone.PlaceholderText = "Enter student\'s parent phone number";
+            this.txtParentPhone.PlaceholderText = "Parent Phone";
             this.txtParentPhone.ReadOnly = false;
             this.txtParentPhone.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtParentPhone.SelectedText = "";
             this.txtParentPhone.SelectionLength = 0;
             this.txtParentPhone.SelectionStart = 0;
             this.txtParentPhone.ShortcutsEnabled = true;
-            this.txtParentPhone.Size = new System.Drawing.Size(362, 41);
+            this.txtParentPhone.Size = new System.Drawing.Size(129, 43);
             this.txtParentPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtParentPhone.TabIndex = 118;
             this.txtParentPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtParentPhone.TextMarginBottom = 0;
             this.txtParentPhone.TextMarginLeft = 3;
             this.txtParentPhone.TextMarginTop = 0;
-            this.txtParentPhone.TextPlaceholder = "Enter student\'s parent phone number";
+            this.txtParentPhone.TextPlaceholder = "Parent Phone";
             this.txtParentPhone.UseSystemPasswordChar = false;
             this.txtParentPhone.WordWrap = true;
             // 
@@ -356,11 +362,11 @@ namespace GUI
             this.txtStudentAddress.BorderThickness = 1;
             this.txtStudentAddress.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtStudentAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStudentAddress.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtStudentAddress.DefaultFont = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStudentAddress.DefaultText = "";
             this.txtStudentAddress.FillColor = System.Drawing.Color.White;
             this.txtStudentAddress.HideSelection = true;
-            this.txtStudentAddress.IconLeft = global::GUI.Properties.Resources.home;
+            this.txtStudentAddress.IconLeft = null;
             this.txtStudentAddress.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtStudentAddress.IconPadding = 10;
             this.txtStudentAddress.IconRight = null;
@@ -402,7 +408,7 @@ namespace GUI
             this.txtStudentAddress.SelectionLength = 0;
             this.txtStudentAddress.SelectionStart = 0;
             this.txtStudentAddress.ShortcutsEnabled = true;
-            this.txtStudentAddress.Size = new System.Drawing.Size(362, 41);
+            this.txtStudentAddress.Size = new System.Drawing.Size(411, 43);
             this.txtStudentAddress.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtStudentAddress.TabIndex = 119;
             this.txtStudentAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -430,11 +436,11 @@ namespace GUI
             this.txtStudentName.BorderThickness = 1;
             this.txtStudentName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtStudentName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStudentName.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtStudentName.DefaultFont = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStudentName.DefaultText = "";
             this.txtStudentName.FillColor = System.Drawing.Color.White;
             this.txtStudentName.HideSelection = true;
-            this.txtStudentName.IconLeft = global::GUI.Properties.Resources.usericon;
+            this.txtStudentName.IconLeft = null;
             this.txtStudentName.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtStudentName.IconPadding = 10;
             this.txtStudentName.IconRight = null;
@@ -476,7 +482,7 @@ namespace GUI
             this.txtStudentName.SelectionLength = 0;
             this.txtStudentName.SelectionStart = 0;
             this.txtStudentName.ShortcutsEnabled = true;
-            this.txtStudentName.Size = new System.Drawing.Size(362, 41);
+            this.txtStudentName.Size = new System.Drawing.Size(411, 43);
             this.txtStudentName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtStudentName.TabIndex = 120;
             this.txtStudentName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -498,9 +504,9 @@ namespace GUI
             this.bunifuLabel4.Location = new System.Drawing.Point(377, 298);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(124, 26);
+            this.bunifuLabel4.Size = new System.Drawing.Size(208, 26);
             this.bunifuLabel4.TabIndex = 113;
-            this.bunifuLabel4.Text = "Parent Phone";
+            this.bunifuLabel4.Text = "Parent Phone & Name";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -595,7 +601,7 @@ namespace GUI
             this.pic_StudentAvatar.BorderRadius = 147;
             this.pic_StudentAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pic_StudentAvatar.Image")));
             this.pic_StudentAvatar.IsCircle = true;
-            this.pic_StudentAvatar.Location = new System.Drawing.Point(28, 76);
+            this.pic_StudentAvatar.Location = new System.Drawing.Point(31, 76);
             this.pic_StudentAvatar.Name = "pic_StudentAvatar";
             this.pic_StudentAvatar.Size = new System.Drawing.Size(295, 295);
             this.pic_StudentAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -767,11 +773,113 @@ namespace GUI
             this.drp_Classroom.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.drp_Classroom.TextLeftMargin = 5;
             // 
+            // dtp_StudentDOB
+            // 
+            this.dtp_StudentDOB.BackColor = System.Drawing.Color.White;
+            this.dtp_StudentDOB.BorderRadius = 1;
+            this.dtp_StudentDOB.CalendarForeColor = System.Drawing.Color.Navy;
+            this.dtp_StudentDOB.CalendarMonthBackground = System.Drawing.SystemColors.HighlightText;
+            this.dtp_StudentDOB.CalendarTrailingForeColor = System.Drawing.SystemColors.Control;
+            this.dtp_StudentDOB.Color = System.Drawing.Color.Silver;
+            this.dtp_StudentDOB.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dtp_StudentDOB.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtp_StudentDOB.DisabledColor = System.Drawing.Color.Gray;
+            this.dtp_StudentDOB.DisplayWeekNumbers = false;
+            this.dtp_StudentDOB.DPHeight = 0;
+            this.dtp_StudentDOB.FillDatePicker = false;
+            this.dtp_StudentDOB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_StudentDOB.ForeColor = System.Drawing.Color.Black;
+            this.dtp_StudentDOB.Icon = ((System.Drawing.Image)(resources.GetObject("dtp_StudentDOB.Icon")));
+            this.dtp_StudentDOB.IconColor = System.Drawing.Color.Gray;
+            this.dtp_StudentDOB.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtp_StudentDOB.LeftTextMargin = 5;
+            this.dtp_StudentDOB.Location = new System.Drawing.Point(92, 383);
+            this.dtp_StudentDOB.MinimumSize = new System.Drawing.Size(0, 32);
+            this.dtp_StudentDOB.Name = "dtp_StudentDOB";
+            this.dtp_StudentDOB.Size = new System.Drawing.Size(196, 32);
+            this.dtp_StudentDOB.TabIndex = 131;
+            // 
+            // txtParentName
+            // 
+            this.txtParentName.AcceptsReturn = false;
+            this.txtParentName.AcceptsTab = false;
+            this.txtParentName.AnimationSpeed = 200;
+            this.txtParentName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtParentName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtParentName.BackColor = System.Drawing.Color.Transparent;
+            this.txtParentName.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtParentName.BackgroundImage")));
+            this.txtParentName.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtParentName.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtParentName.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtParentName.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtParentName.BorderRadius = 10;
+            this.txtParentName.BorderThickness = 1;
+            this.txtParentName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtParentName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtParentName.DefaultFont = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParentName.DefaultText = "";
+            this.txtParentName.FillColor = System.Drawing.Color.White;
+            this.txtParentName.HideSelection = true;
+            this.txtParentName.IconLeft = null;
+            this.txtParentName.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtParentName.IconPadding = 10;
+            this.txtParentName.IconRight = null;
+            this.txtParentName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtParentName.Lines = new string[0];
+            this.txtParentName.Location = new System.Drawing.Point(512, 330);
+            this.txtParentName.MaxLength = 32767;
+            this.txtParentName.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtParentName.Modified = false;
+            this.txtParentName.Multiline = false;
+            this.txtParentName.Name = "txtParentName";
+            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtParentName.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtParentName.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtParentName.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.Silver;
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtParentName.OnIdleState = stateProperties16;
+            this.txtParentName.Padding = new System.Windows.Forms.Padding(3);
+            this.txtParentName.PasswordChar = '\0';
+            this.txtParentName.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtParentName.PlaceholderText = "Parent Name";
+            this.txtParentName.ReadOnly = false;
+            this.txtParentName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtParentName.SelectedText = "";
+            this.txtParentName.SelectionLength = 0;
+            this.txtParentName.SelectionStart = 0;
+            this.txtParentName.ShortcutsEnabled = true;
+            this.txtParentName.Size = new System.Drawing.Size(276, 43);
+            this.txtParentName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtParentName.TabIndex = 130;
+            this.txtParentName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtParentName.TextMarginBottom = 0;
+            this.txtParentName.TextMarginLeft = 3;
+            this.txtParentName.TextMarginTop = 0;
+            this.txtParentName.TextPlaceholder = "Parent Name";
+            this.txtParentName.UseSystemPasswordChar = false;
+            this.txtParentName.WordWrap = true;
+            // 
             // FrmAddedStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 484);
+            this.Controls.Add(this.dtp_StudentDOB);
+            this.Controls.Add(this.txtParentName);
             this.Controls.Add(this.drp_Classroom);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.btnUpload);
@@ -804,6 +912,8 @@ namespace GUI
             this.Controls.SetChildIndex(this.btnUpload, 0);
             this.Controls.SetChildIndex(this.btnAddStudent, 0);
             this.Controls.SetChildIndex(this.drp_Classroom, 0);
+            this.Controls.SetChildIndex(this.txtParentName, 0);
+            this.Controls.SetChildIndex(this.dtp_StudentDOB, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -831,5 +941,7 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
         private System.Windows.Forms.OpenFileDialog openFilePic;
         private Bunifu.UI.WinForms.BunifuDropdown drp_Classroom;
+        private Bunifu.UI.WinForms.BunifuDatePicker dtp_StudentDOB;
+        private Bunifu.UI.WinForms.BunifuTextBox txtParentName;
     }
 }

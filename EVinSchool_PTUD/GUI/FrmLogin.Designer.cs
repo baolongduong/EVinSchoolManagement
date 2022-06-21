@@ -56,6 +56,7 @@ namespace GUI
             this.btnGuest = new Bunifu.Framework.UI.BunifuThinButton2();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.btnAdmin = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -407,7 +408,6 @@ namespace GUI
             this.txtEmail.TextPlaceholder = "Enter your teacher\'s email";
             this.txtEmail.UseSystemPasswordChar = false;
             this.txtEmail.WordWrap = true;
-         
             // 
             // bunifuLabel3
             // 
@@ -461,7 +461,7 @@ namespace GUI
             this.btnRegister.IdleFillColor = System.Drawing.Color.White;
             this.btnRegister.IdleForecolor = System.Drawing.Color.DarkOrange;
             this.btnRegister.IdleLineColor = System.Drawing.Color.Orange;
-            this.btnRegister.Location = new System.Drawing.Point(697, 522);
+            this.btnRegister.Location = new System.Drawing.Point(613, 522);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(5);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(117, 40);
@@ -473,9 +473,9 @@ namespace GUI
             // 
             this.btnGuest.ActiveBorderThickness = 1;
             this.btnGuest.ActiveCornerRadius = 20;
-            this.btnGuest.ActiveFillColor = System.Drawing.Color.DarkSalmon;
+            this.btnGuest.ActiveFillColor = System.Drawing.Color.Black;
             this.btnGuest.ActiveForecolor = System.Drawing.Color.White;
-            this.btnGuest.ActiveLineColor = System.Drawing.Color.Red;
+            this.btnGuest.ActiveLineColor = System.Drawing.Color.DimGray;
             this.btnGuest.BackColor = System.Drawing.SystemColors.Window;
             this.btnGuest.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuest.BackgroundImage")));
             this.btnGuest.ButtonText = "Guest";
@@ -485,9 +485,9 @@ namespace GUI
             this.btnGuest.IdleBorderThickness = 1;
             this.btnGuest.IdleCornerRadius = 20;
             this.btnGuest.IdleFillColor = System.Drawing.Color.White;
-            this.btnGuest.IdleForecolor = System.Drawing.Color.DarkRed;
-            this.btnGuest.IdleLineColor = System.Drawing.Color.Red;
-            this.btnGuest.Location = new System.Drawing.Point(834, 522);
+            this.btnGuest.IdleForecolor = System.Drawing.Color.Black;
+            this.btnGuest.IdleLineColor = System.Drawing.Color.Black;
+            this.btnGuest.Location = new System.Drawing.Point(894, 522);
             this.btnGuest.Margin = new System.Windows.Forms.Padding(5);
             this.btnGuest.Name = "btnGuest";
             this.btnGuest.Size = new System.Drawing.Size(117, 40);
@@ -568,12 +568,40 @@ namespace GUI
             this.bunifuSnackbar1.WarningOptions.IconLeftMargin = 12;
             this.bunifuSnackbar1.ZoomCloseIcon = true;
             // 
+            // btnAdmin
+            // 
+            this.btnAdmin.ActiveBorderThickness = 1;
+            this.btnAdmin.ActiveCornerRadius = 20;
+            this.btnAdmin.ActiveFillColor = System.Drawing.Color.DarkSalmon;
+            this.btnAdmin.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAdmin.ActiveLineColor = System.Drawing.Color.Red;
+            this.btnAdmin.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdmin.BackgroundImage")));
+            this.btnAdmin.ButtonText = "Admin";
+            this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdmin.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.ForeColor = System.Drawing.Color.Black;
+            this.btnAdmin.IdleBorderThickness = 1;
+            this.btnAdmin.IdleCornerRadius = 20;
+            this.btnAdmin.IdleFillColor = System.Drawing.Color.White;
+            this.btnAdmin.IdleForecolor = System.Drawing.Color.DarkRed;
+            this.btnAdmin.IdleLineColor = System.Drawing.Color.Red;
+            this.btnAdmin.Location = new System.Drawing.Point(757, 522);
+            this.btnAdmin.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(117, 40);
+            this.btnAdmin.TabIndex = 24;
+            this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1055, 585);
+            this.ControlBoxColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnGuest);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.bunifuLabel5);
@@ -594,6 +622,7 @@ namespace GUI
             this.Controls.SetChildIndex(this.bunifuLabel5, 0);
             this.Controls.SetChildIndex(this.btnRegister, 0);
             this.Controls.SetChildIndex(this.btnGuest, 0);
+            this.Controls.SetChildIndex(this.btnAdmin, 0);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
@@ -621,5 +650,6 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnAdmin;
     }
 }

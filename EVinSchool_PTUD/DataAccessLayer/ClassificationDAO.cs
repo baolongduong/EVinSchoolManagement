@@ -154,6 +154,55 @@ namespace DataAccessLayer
             return q.FirstOrDefault();
         }
 
+        public List<ClasstificationsScoreModel> getAllRanked()
+        {
+            var query = from cl in db.Classifications
+                        join st in db.Students on cl.StudentId equals st.StudentId
+                        join cls in db.Classrooms on st.StudentClass equals cls.ClassId
+                        select new ClasstificationsScoreModel
+                        {
+                            Name = st.StudentName,
+                            Class = cls.ClassName,
+                            Math = cl.Math,
+                            Vietnamese = cl.Vietnamese,
+                            English = cl.English,
+                            Morality = cl.Morality,
+                            NatureSocial = cl.NatureSocial,
+                            HistoryGeography = cl.HistoryGeography,
+                            Music = cl.Music,
+                            Arts = cl.Arts,
+                            Sports = cl.Sports,
+                            Attendance = cl.AttendanceClass,
+                            Total = cl.TotalMark,
+                            Result = cl.ClassificationResult
+                        };
+            return query.ToList();
+        }
 
+        public List<ClasstificationsScoreModel> findByName(string keyword)
+        {
+            var query = from cl in db.Classifications
+                        join st in db.Students on cl.StudentId equals st.StudentId
+                        join cls in db.Classrooms on st.StudentClass equals cls.ClassId
+                        where st.StudentName.Contains(keyword)
+                        select new ClasstificationsScoreModel
+                        {
+                            Name = st.StudentName,
+                            Class = cls.ClassName,
+                            Math = cl.Math,
+                            Vietnamese = cl.Vietnamese,
+                            English = cl.English,
+                            Morality = cl.Morality,
+                            NatureSocial = cl.NatureSocial,
+                            HistoryGeography = cl.HistoryGeography,
+                            Music = cl.Music,
+                            Arts = cl.Arts,
+                            Sports = cl.Sports,
+                            Attendance = cl.AttendanceClass,
+                            Total = cl.TotalMark,
+                            Result = cl.ClassificationResult
+                        };
+            return query.ToList();
+        }
     }
 }

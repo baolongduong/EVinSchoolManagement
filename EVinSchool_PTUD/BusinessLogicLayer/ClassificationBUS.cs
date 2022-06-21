@@ -32,7 +32,16 @@ namespace BusinessLogicLayer
             List<Subject> classtification = new ClassificationDAO().CheckInvalidSubject(studentId);
             return classtification;
         }
-       
+        public List<ClasstificationsScoreModel> getAllRanked()
+        {
+            List<ClasstificationsScoreModel> classtification = new ClassificationDAO().getAllRanked();
+            return classtification;
+        }
+        public List<ClasstificationsScoreModel> findByStudentName(string keyword)
+        {
+            List<ClasstificationsScoreModel> classifications = new ClassificationDAO().findByName(keyword);
+            return classifications;
+        }
         public List<Classification> SelectByKeyword(string keyword)
         {
             List<Classification> classifications = new ClassificationDAO().SelectByKeyword(keyword);

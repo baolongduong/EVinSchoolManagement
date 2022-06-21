@@ -138,7 +138,7 @@ namespace GUI
             this.txtEmail.BorderThickness = 1;
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtEmail.DefaultFont = new System.Drawing.Font("Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.DefaultText = "";
             this.txtEmail.FillColor = System.Drawing.Color.White;
             this.txtEmail.HideSelection = true;
@@ -184,7 +184,7 @@ namespace GUI
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(362, 41);
+            this.txtEmail.Size = new System.Drawing.Size(362, 40);
             this.txtEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEmail.TabIndex = 87;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -229,7 +229,7 @@ namespace GUI
             this.txtPassword.BorderThickness = 1;
             this.txtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtPassword.DefaultFont = new System.Drawing.Font("Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.DefaultText = "";
             this.txtPassword.FillColor = System.Drawing.Color.White;
             this.txtPassword.HideSelection = true;
@@ -275,7 +275,7 @@ namespace GUI
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(362, 41);
+            this.txtPassword.Size = new System.Drawing.Size(362, 40);
             this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPassword.TabIndex = 87;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -320,7 +320,7 @@ namespace GUI
             this.txtName.BorderThickness = 1;
             this.txtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtName.DefaultFont = new System.Drawing.Font("Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.DefaultText = "";
             this.txtName.FillColor = System.Drawing.Color.White;
             this.txtName.HideSelection = true;
@@ -366,7 +366,7 @@ namespace GUI
             this.txtName.SelectionLength = 0;
             this.txtName.SelectionStart = 0;
             this.txtName.ShortcutsEnabled = true;
-            this.txtName.Size = new System.Drawing.Size(362, 41);
+            this.txtName.Size = new System.Drawing.Size(362, 40);
             this.txtName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtName.TabIndex = 87;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -424,7 +424,7 @@ namespace GUI
             this.btnSave.IdleIconLeftImage = null;
             this.btnSave.IdleIconRightImage = null;
             this.btnSave.IndicateFocus = false;
-            this.btnSave.Location = new System.Drawing.Point(497, 453);
+            this.btnSave.Location = new System.Drawing.Point(634, 453);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSave.OnDisabledState.BorderRadius = 20;
@@ -458,7 +458,7 @@ namespace GUI
             this.btnSave.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnSave.OnPressedState.IconLeftImage = null;
             this.btnSave.OnPressedState.IconRightImage = null;
-            this.btnSave.Size = new System.Drawing.Size(145, 39);
+            this.btnSave.Size = new System.Drawing.Size(105, 35);
             this.btnSave.TabIndex = 88;
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -507,12 +507,12 @@ namespace GUI
             this.lbl_Class.AutoEllipsis = false;
             this.lbl_Class.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_Class.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbl_Class.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Class.Font = new System.Drawing.Font("Garamond", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Class.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbl_Class.Location = new System.Drawing.Point(438, 416);
+            this.lbl_Class.Location = new System.Drawing.Point(438, 421);
             this.lbl_Class.Name = "lbl_Class";
             this.lbl_Class.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_Class.Size = new System.Drawing.Size(124, 26);
+            this.lbl_Class.Size = new System.Drawing.Size(99, 21);
             this.lbl_Class.TabIndex = 86;
             this.lbl_Class.Text = "Teacher Class";
             this.lbl_Class.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -678,7 +678,7 @@ namespace GUI
             this.Controls.Add(this.pic_TeacherAvatar);
             this.HeaderBackColor = System.Drawing.Color.Navy;
             this.Name = "FrmTeacher";
-            this.Text = "FrmTeacher";
+            this.Text = "Edit teacher profile [Adminstrator]";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmTeacher_FormClosing);
             this.Load += new System.EventHandler(this.FrmTeacher_Load);
             this.Controls.SetChildIndex(this.pic_TeacherAvatar, 0);

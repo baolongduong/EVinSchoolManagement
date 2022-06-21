@@ -28,7 +28,11 @@ namespace BusinessLogicLayer
             Teacher teachers = new TeacherDAO().GetID(email);
             return teachers;
         }
-
+        public List<Teacher> GetDetailsByClassId(int classid)
+        {
+            List<Teacher> teachers = new TeacherDAO().SelectByClassId(classid);
+            return teachers;
+        }
         public List<Teacher> SelectByKeyword(string keyword)
         {
             List<Teacher> teachers = new TeacherDAO().SelectByKeyword(keyword);
