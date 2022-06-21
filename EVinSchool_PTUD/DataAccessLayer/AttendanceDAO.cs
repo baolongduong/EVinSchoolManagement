@@ -50,10 +50,7 @@ namespace DataAccessLayer
                 try
                 {
                     dbAttendance.AttendanceDate = newAttendance.AttendanceDate;
-                    dbAttendance.AttendanceClass = newAttendance.AttendanceClass;
-                    dbAttendance.AttendanceTeacher = newAttendance.AttendanceTeacher;
-                    dbAttendance.AttendanceStudent = newAttendance.AttendanceStudent;
-                    dbAttendance.AttendanceStatus = newAttendance.AttendanceStatus;
+                   
                     db.SubmitChanges();
                     return true;
                 }

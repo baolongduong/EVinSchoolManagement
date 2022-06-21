@@ -50,6 +50,7 @@
     <Compile Include="ClassificationBUS.cs" />
     <Compile Include="StudentBUS.cs" />
     <Compile Include="SubjectBUS.cs" />
+    <Compile Include="AdminBUS.cs" />
     <Compile Include="TeacherBUS.cs" />
   </ItemGroup>
   <ItemGroup>

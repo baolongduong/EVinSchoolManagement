@@ -21,12 +21,26 @@ namespace BusinessLogicLayer
             return marks;
         }
 
-        //public List<Mark> SelectByKeyword(string keyword)
-        //{
-        //    List<Mark> marks = new MarkDAO().SelectByKeyword(keyword);
-        //    return marks;
-        //}
-
+        public List<MarkJoinedModel> GetAllMarkJoined()
+        {
+            List<MarkJoinedModel> marks = new MarkDAO().GetAllMarkJoined();
+            return marks;
+        }
+        public List<MarkJoinedModel> findByName(string keyword)
+        {
+            List<MarkJoinedModel> marks = new MarkDAO().findByName(keyword);
+            return marks;
+        }
+        public List<MarkJoinedModel> findBySubject(int subjectId)
+        {
+            List<MarkJoinedModel> marks = new MarkDAO().getSubjectByID(subjectId);
+            return marks;
+        }
+        public List<MarkJoinedModel> findByClass(int classId)
+        {
+            List<MarkJoinedModel> marks = new MarkDAO().getClassByID(classId);
+            return marks;
+        }
         public bool Insert(Mark newMark)
         {
             bool result = new MarkDAO().Insert(newMark);

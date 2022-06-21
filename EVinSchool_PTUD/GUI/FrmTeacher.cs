@@ -51,7 +51,8 @@ namespace GUI
                 TeacherEmail = txtEmail.Text.Trim(),
                 TeacherPassword = txtPassword.Text.Trim(),
                 TeacherName = txtName.Text.Trim(),
-            };
+                TeacherImage = fileName,
+        };
             if (string.IsNullOrEmpty(txtName.Text))
             {
                 errorProvider1.SetError(txtName, "Your name is left blank");
@@ -68,24 +69,10 @@ namespace GUI
             {
                 errorProvider1.SetError(txtName, null);
                 errorProvider1.SetError(txtPassword, null);
-                oc.Cancel = false;
-                try
-                {
-                    string fileName = openFilePic.SafeFileName;
-                    string rootPath = @"../../upload";
-                    teacher.TeacherImage = fileName;
-                        File.Copy(openFilePic.FileName, rootPath + "/" + fileName, true);
-                    bunifuSnackbar1.Show(this, "You have changed your avatar");
-                }
-                catch (Exception ex)
-                {
-                    bunifuSnackbar1.Show(this, "You can't change your avatar");
-                }
+                oc.Cancel = false;              
                 bool result = teacherBUS.Update(teacher);              
                 if (result)
-                {
-                   
-
+                {                   
                     bunifuSnackbar1.Show(this, "You edit your profile successfully");
                     this.Owner.Refresh();
                     this.Owner.Activate();
@@ -122,11 +109,36 @@ namespace GUI
             {
                 bunifuSnackbar1.Show(this, "Your didn't change your avatar");
             }
+            try
+            {
+                Teacher teacher = new Teacher()
+                {
+                    TeacherId = Int32.Parse(lbl_TeacherID.Text.ToString()),
+                };
+                fileName = openFilePic.SafeFileName;
+                string rootPath = @"../../upload";
+                File.Copy(openFilePic.FileName, rootPath + "/" + fileName, true);
+                bunifuSnackbar1.Show(this, "You edit your profile successfully");
+            }
+            catch (Exception ex)
+            {
+                bunifuSnackbar1.Show(this, "You can't change your avatar");
+            }
         }
 
         private void FrmTeacher_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_Class_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,6 +15,7 @@ namespace GUI
 {
     public partial class FrmLogin : BunifuForm
     {
+      
         TeacherBUS teacherBUS = new TeacherBUS();
 
         public FrmLogin()
@@ -88,6 +89,12 @@ namespace GUI
 
         }
 
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            FrmLoginAdmin frmAminstrator = new FrmLoginAdmin();
+            frmAminstrator.Owner = this;
+            frmAminstrator.ShowDialog();
+        }
     }
 }
 

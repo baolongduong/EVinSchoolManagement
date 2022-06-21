@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="StudentManagementDB" Class="EVSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=StudentManagementDB.mssql.somee.com;Initial Catalog=StudentManagementDB;Persist Security Info=True;User ID=baolongsbs_SQLLogin_1" SettingsObjectName="DataAccessLayer.Properties.Settings" SettingsPropertyName="StudentManagementDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Teacher" Member="Teachers">
+    <Type Name="Teacher">
+      <Column Name="TeacherId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TeacherEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TeacherPassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TeacherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TeacherClass" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TeacherImage" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Teacher_Attendance" Member="Attendances" ThisKey="TeacherId" OtherKey="AttendanceTeacher" Type="Attendance" />
+      <Association Name="Classroom_Teacher" Member="Classroom" ThisKey="TeacherClass" OtherKey="ClassId" Type="Classroom" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Admin" Member="Admins">
+    <Type Name="Admin">
+      <Column Name="AdminID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdminEmail" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdminPassword" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdminName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.Attendance" Member="Attendances">
     <Type Name="Attendance">
       <Column Name="AttendanceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -10,9 +30,9 @@
       <Column Name="AttendanceStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="CheckAttendance" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Teacher_Attendance" Member="Teacher" ThisKey="AttendanceTeacher" OtherKey="TeacherId" Type="Teacher" IsForeignKey="true" />
       <Association Name="Classroom_Attendance" Member="Classroom" ThisKey="AttendanceClass" OtherKey="ClassId" Type="Classroom" IsForeignKey="true" />
       <Association Name="Student_Attendance" Member="Student" ThisKey="AttendanceStudent" OtherKey="StudentId" Type="Student" IsForeignKey="true" />
-      <Association Name="Teacher_Attendance" Member="Teacher" ThisKey="AttendanceTeacher" OtherKey="TeacherId" Type="Teacher" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Classification" Member="Classifications">
@@ -38,11 +58,11 @@
     <Type Name="Classroom">
       <Column Name="ClassId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ClassName" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Classroom_Teacher" Member="Teachers" ThisKey="ClassId" OtherKey="TeacherClass" Type="Teacher" />
       <Association Name="Classroom_Attendance" Member="Attendances" ThisKey="ClassId" OtherKey="AttendanceClass" Type="Attendance" />
       <Association Name="Classroom_FoodSchedule" Member="FoodSchedules" ThisKey="ClassId" OtherKey="ClassId" Type="FoodSchedule" />
       <Association Name="Classroom_Student" Member="Students" ThisKey="ClassId" OtherKey="StudentClass" Type="Student" />
       <Association Name="Classroom_StudySchedule" Member="StudySchedules" ThisKey="ClassId" OtherKey="ClassID" Type="StudySchedule" />
-      <Association Name="Classroom_Teacher" Member="Teachers" ThisKey="ClassId" OtherKey="TeacherClass" Type="Teacher" />
     </Type>
   </Table>
   <Table Name="dbo.FoodSchedule" Member="FoodSchedules">
@@ -74,6 +94,8 @@
       <Column Name="ParentPhone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="StudentClass" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="StudentImage" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="StudentDOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ParentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="Student_Attendance" Member="Attendances" ThisKey="StudentId" OtherKey="AttendanceStudent" Type="Attendance" />
       <Association Name="Student_Classification" Member="Classifications" ThisKey="StudentId" OtherKey="StudentId" Type="Classification" />
       <Association Name="Student_Mark" Member="Marks" ThisKey="StudentId" OtherKey="StudentId" Type="Mark" />
@@ -98,18 +120,6 @@
       <Column Name="SubjectName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="Subject_Mark" Member="Marks" ThisKey="SubjectId" OtherKey="SubjectId" Type="Mark" />
       <Association Name="Subject_StudySchedule" Member="StudySchedules" ThisKey="SubjectId" OtherKey="StudySubject" Type="StudySchedule" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Teacher" Member="Teachers">
-    <Type Name="Teacher">
-      <Column Name="TeacherId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TeacherEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="TeacherPassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="TeacherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="TeacherClass" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TeacherImage" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Association Name="Teacher_Attendance" Member="Attendances" ThisKey="TeacherId" OtherKey="AttendanceTeacher" Type="Attendance" />
-      <Association Name="Classroom_Teacher" Member="Classroom" ThisKey="TeacherClass" OtherKey="ClassId" Type="Classroom" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

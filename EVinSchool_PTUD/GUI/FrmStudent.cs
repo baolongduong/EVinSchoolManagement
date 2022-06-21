@@ -33,21 +33,18 @@ namespace GUI
             {
                 drp_Classroom.Items.Add(classes.ClassName);
             }
-
             int code = Int32.Parse(txt_Id.Text.ToString());
-
-
-
             Student student = studentBUS.GetDetails(code);
-            Classroom clsname = new ClassroomBUS().GetDetails((int)student.StudentClass);
-
+            dtp_StudentDOB.Value = (DateTime)student.StudentDOB;
             txtStudentName.Text = student.StudentName;
             txtStudentAddress.Text = student.StudentAddress;
             txtParentPhone.Text = student.ParentPhone;
-            lbl_ClassId.Text = student.StudentClass.ToString();
-            drp_Classroom.SelectedItem = clsname.ClassName;
+            txtParentName.Text = student.ParentName;
+            lbl_ClassId.Text = student.StudentClass.ToString() ;
+            drp_Classroom.SelectedItem = student.Classroom.ClassName;
             pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
         }
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -63,17 +60,37 @@ namespace GUI
                 StudentName = txtStudentName.Text.Trim(),
                 StudentAddress = txtStudentAddress.Text.Trim(),
                 ParentPhone = txtParentPhone.Text.Trim(),
-                StudentClass = Int32.Parse(clsname.ClassId.ToString()),
-                StudentImage = fileName
+                StudentClass = Int32.Parse(clsname.ClassId.ToString()),               
+                StudentDOB = dtp_StudentDOB.Value,
+                StudentImage = fileName,
+                ParentName = txtParentName.Text.Trim()
             };
             if (string.IsNullOrEmpty(txtStudentName.Text))
             {
                 errorProvider1.SetError(txtStudentName, "Student's name is left blank");
-            }          
+            }
+            else if (string.IsNullOrEmpty(txtStudentAddress.Text))
+            {
+                errorProvider1.SetError(txtStudentAddress, "Student's address is left blank");
+            }
+            else if(string.IsNullOrEmpty(txtParentPhone.Text))
+            {
+                errorProvider1.SetError(txtParentPhone, "Student's parent phone is left blank");
+            }
+            else if(string.IsNullOrEmpty(txtParentName.Text))
+            {
+                errorProvider1.SetError(txtParentName, "Student's parent name is left blank");
+            }
+            else if (txtParentPhone.Text.Trim().Length != 10)
+            {
+                errorProvider1.SetError(txtParentPhone, "Phone number must be 10 characters");
+            }
             else
             {
                 errorProvider1.SetError(txtStudentName, null);
+                errorProvider1.SetError(txtStudentAddress, null);
                 errorProvider1.SetError(txtParentPhone, null);
+                errorProvider1.SetError(txtParentName, null);
                 oc.Cancel = false;
 
                 bool result = studentBUS.Update(student);
@@ -89,6 +106,8 @@ namespace GUI
                 }
             }
         }
+
+
         private void FrmStudent_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
