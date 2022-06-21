@@ -16,8 +16,6 @@ namespace GUI
 {
     public partial class FrmAddMark : BunifuForm
     {
-        string conStr = "server = StudentManagementDB.mssql.somee.com; User ID = baolongsbs_SQLLogin_1; password=7bxn3rbj94;database = StudentManagementDB";
-        string listStudentMark = "SELECT m.MarkId, st.StudentName, cl.ClassName, sj.SubjectName, m.Score FROM Student as st, Classroom as cl, Subject as sj, Mark as m WHERE st.StudentClass = cl.ClassId and m.StudentId = st.StudentId and sj.SubjectId = m.SubjectId";
         MarkBUS markBUS = new MarkBUS();
         bool isValidation = false;
         List<string> getValidList = new List<string>();
@@ -28,6 +26,8 @@ namespace GUI
         private void btn_RefreshMark_Click(object sender, EventArgs e)
         {
             loadMark();
+            autoSendToRanking();
+          
         }
 
         private void btn_Clear_Click(object sender, EventArgs e)
@@ -36,12 +36,175 @@ namespace GUI
         }
         private void loadMark()
         {
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark, conStr);
-            DataSet DS = new DataSet();
-            dataAdapter.Fill(DS);
-            gv_Mark.DataSource = DS.Tables[0];
+            List<MarkJoinedModel> markJoineds = markBUS.GetAllMarkJoined();
+            gv_Mark.DataSource = markJoineds;
         }
+        private void autoSendToRanking()
+        {
+            int numOfStudentAddToRanking = 0;
+            int numOfStudentUpdateToRanking = 0;
+            List<Student> students = new StudentBUS().GetAll();
+            foreach (var student in students)
+            {
+                List<ClasstificationJoinedModel> getFirst = new ClassificationDAO().GetFirstScore(student.StudentId);
+                List<Subject> getNoUpdatedSubject = new ClassificationDAO().CheckInvalidSubject(student.StudentId);
+                Student studentCard = new StudentBUS().GetDetails(student.StudentId);
+                if (studentCard != null)
+                {
+                    getValidList.Clear();
+                    lblStudentID.Text = student.StudentId.ToString();
+                    lblStudentName.Text = student.StudentName;
+                    pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
+                    lstBox_invalidSubjects.Items.Clear();
+                    lstView_demo.Groups.Clear();
+                    lstView_demo.Items.Clear();
+                    foreach (var st in getFirst)
+                    {
+                        ListViewGroup lvg = lstView_demo.Groups.Cast<ListViewGroup>().Where(x => x.Header == st.Subject).FirstOrDefault();
+                        if (lvg == null)
+                        {
+                            lvg = new ListViewGroup(st.Subject, HorizontalAlignment.Left);
+                            lstView_demo.Groups.Add(lvg);
+                        }
+                        lstView_demo.Items.Add(new ListViewItem { Text = st.Score.ToString(), Group = lvg });
+                    }
+                    foreach (ListViewGroup group in lstView_demo.Groups)
+                    {
+                        if (group.Items.Count == 2)
+                        {
+                            var avg = group.Items.Cast<ListViewItem>().Average(item => decimal.Parse(item.SubItems[0].Text));
+                            lstView_demo.Items.Add(new ListViewItem { Text = avg.ToString(), Group = group, BackColor = Color.Green, ForeColor = Color.White });
+                            getValidList.Add(avg.ToString());
+                        }
+                        else if (group.Items.Count < 2)
+                        {
+                            lstView_demo.Items.Add(new ListViewItem { Text = "X", Group = group, BackColor = Color.Red, ForeColor = Color.White });
+                        }
+                    }
 
+                    foreach (var nup in getNoUpdatedSubject)
+                    {
+                        lstBox_invalidSubjects.Items.Add(nup.SubjectName);
+                    }
+                    //Handle validation for add classtification               
+                    //20 for score/ subjects + 10 for avg score
+                    if (lstBox_invalidSubjects.Items.Count == 0 && lstView_demo.Items.Count == 30 && getValidList.Count == 10)
+                    {
+                        isValidation = true;
+                    }
+                    else
+                    {
+                        isValidation = false;
+                    }
+                    bool result = new ClassificationDAO().checkStudentID(Int32.Parse(lblStudentID.Text.ToString()));
+                    if (result == false)
+                    {
+                        if (isValidation == true)
+                        {
+                            Classification classification = new Classification()
+                            {
+                                ClasstificationID = 0,
+                                StudentId = Int32.Parse(lblStudentID.Text.ToString()),
+                                Math = Decimal.Parse(getValidList[0].ToString()),
+                                Vietnamese = Decimal.Parse(getValidList[1].ToString()),
+                                English = Decimal.Parse(getValidList[2].ToString()),
+                                Morality = Decimal.Parse(getValidList[3].ToString()),
+                                NatureSocial = Decimal.Parse(getValidList[4].ToString()),
+                                HistoryGeography = Decimal.Parse(getValidList[5].ToString()),
+                                Music = Decimal.Parse(getValidList[6].ToString()),
+                                Arts = Decimal.Parse(getValidList[7].ToString()),
+                                Sports = Decimal.Parse(getValidList[8].ToString()),
+                                AttendanceClass = Decimal.Parse(getValidList[9].ToString()),
+                            };
+                            decimal totalMark = (decimal)(
+                                classification.Math + classification.Vietnamese +
+                                classification.English + classification.Morality +
+                                classification.NatureSocial + classification.HistoryGeography +
+                                classification.Music + classification.Arts +
+                                classification.Sports + classification.AttendanceClass
+                                ) / 10;
+                            classification.TotalMark = totalMark;
+                            if (totalMark > 9)
+                            {
+                                classification.ClassificationResult = "Excellent";
+                            }
+                            else if (totalMark > 7)
+                            {
+                                classification.ClassificationResult = "Good";
+                            }
+                            else if (totalMark >= 5)
+                            {
+                                classification.ClassificationResult = "Average";
+                            }
+                            else
+                            {
+                                classification.ClassificationResult = "Bad";
+                            }
+                            bool success = new ClassificationDAO().Insert(classification);
+                            if (success == true)
+                            {
+                                numOfStudentAddToRanking++;
+                            }
+                        }
+                    }
+                    //Edit when ID is already exists
+                    else
+                    {
+                        if (isValidation == true)
+                        {
+                            bunifuSnackbar1.Show(this, "Update ready");
+                            Classification classificationID = new ClassificationDAO().getStudentRanked(studentCard.StudentId);
+                            Classification classification = new Classification()
+                            {
+                                ClasstificationID = classificationID.ClasstificationID,
+                                StudentId = Int32.Parse(lblStudentID.Text.ToString()),
+                                Math = Decimal.Parse(getValidList[0].ToString()),
+                                Vietnamese = Decimal.Parse(getValidList[1].ToString()),
+                                English = Decimal.Parse(getValidList[2].ToString()),
+                                Morality = Decimal.Parse(getValidList[3].ToString()),
+                                NatureSocial = Decimal.Parse(getValidList[4].ToString()),
+                                HistoryGeography = Decimal.Parse(getValidList[5].ToString()),
+                                Music = Decimal.Parse(getValidList[6].ToString()),
+                                Arts = Decimal.Parse(getValidList[7].ToString()),
+                                Sports = Decimal.Parse(getValidList[8].ToString()),
+                                AttendanceClass = Decimal.Parse(getValidList[9].ToString()),
+                            };
+                            decimal sum = (decimal)(
+                                classification.Math + classification.Vietnamese +
+                                classification.English + classification.Morality +
+                                classification.NatureSocial + classification.HistoryGeography +
+                                classification.Music + classification.Arts +
+                                classification.Sports + classification.AttendanceClass
+                                );
+                            decimal totalMark = sum / 10;
+                            classification.TotalMark = totalMark;
+                            if (totalMark > 9)
+                            {
+                                classification.ClassificationResult = "Excellent";
+                            }
+                            else if (totalMark > 7)
+                            {
+                                classification.ClassificationResult = "Good";
+                            }
+                            else if (totalMark >= 5)
+                            {
+                                classification.ClassificationResult = "Average";
+                            }
+                            else
+                            {
+                                classification.ClassificationResult = "Bad";
+                            }
+                            bool success = new ClassificationDAO().Update(classification);
+                            if (success == true)
+                            {
+                                numOfStudentUpdateToRanking++;
+                            }
+                        }
+                    }
+                }             
+            }
+            MessageBox.Show("Vertifed Students: " + numOfStudentUpdateToRanking+ "\r"+"\n" + "New vertifed Students: "+ numOfStudentAddToRanking);
+        }
         private void FrmAddMark_Load(object sender, EventArgs e)
         {
             //Load Classrooms
@@ -72,6 +235,8 @@ namespace GUI
 
             //Load Marks
             loadMark();
+            MessageBox.Show("Wait some minutes to check...");
+            autoSendToRanking();
         }
 
         //Clear
@@ -91,7 +256,6 @@ namespace GUI
         //Details
         private void gv_Mark_SelectionChanged(object sender, EventArgs e)
         {
-
             if (gv_Mark.SelectedRows.Count > 0)
             {
                 int markCode = int.Parse(gv_Mark.SelectedRows[0].Cells["MarkId"].Value.ToString());
@@ -273,10 +437,8 @@ namespace GUI
         private void txt_StudentName_TextChange(object sender, EventArgs e)
         {
             String keyword = txt_StudentName.Text.Trim();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and st.StudentName LIKE '%" + keyword + "%'", conStr);
-            DataSet DS = new DataSet();
-            dataAdapter.Fill(DS);
-            gv_Mark.DataSource = DS.Tables[0];
+            List<MarkJoinedModel> marks = markBUS.findByName(keyword);
+            gv_Mark.DataSource = marks;
         }
 
 

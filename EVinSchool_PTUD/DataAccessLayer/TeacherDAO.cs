@@ -27,6 +27,11 @@ namespace DataAccessLayer
             Teacher teachers = db.Teachers.SingleOrDefault(b => b.TeacherEmail.Equals(email));
             return teachers;
         }
+        public List<Teacher> SelectByClassId(int classid)
+        {
+            List<Teacher> teachers = db.Teachers.Where(b => b.TeacherClass == classid).ToList();
+            return teachers;
+        }
         public List<Teacher> SelectByKeyword(string keyword)
         {
             List<Teacher> classrooms = db.Teachers.Where(b => b.TeacherName.Contains(keyword)).ToList();

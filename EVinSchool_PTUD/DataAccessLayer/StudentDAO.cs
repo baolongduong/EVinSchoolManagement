@@ -65,6 +65,8 @@ namespace DataAccessLayer
                     dbStudent.StudentAddress = newStudent.StudentAddress;
                     dbStudent.ParentPhone = newStudent.ParentPhone;
                     dbStudent.StudentImage = newStudent.StudentImage;
+                    dbStudent.StudentDOB = newStudent.StudentDOB;
+                    dbStudent.ParentName = newStudent.ParentName;
                     db.SubmitChanges();
                     return true;
                 }

@@ -165,6 +165,12 @@
     <Compile Include="FrmAddMark.Designer.cs">
       <DependentUpon>FrmAddMark.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAdminSchool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminSchool.Designer.cs">
+      <DependentUpon>FrmAdminSchool.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAttendace.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,12 @@
     <Compile Include="FrmFoodSchedule.Designer.cs">
       <DependentUpon>FrmFoodSchedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginAdmin.Designer.cs">
+      <DependentUpon>FrmLoginAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmViewSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddMark.resx">
       <DependentUpon>FrmAddMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminSchool.resx">
+      <DependentUpon>FrmAdminSchool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAttendace.resx">
       <DependentUpon>FrmAttendace.cs</DependentUpon>
@@ -274,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFoodSchedule.resx">
       <DependentUpon>FrmFoodSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginAdmin.resx">
+      <DependentUpon>FrmLoginAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmViewSchedule.resx">
       <DependentUpon>FrmViewSchedule.cs</DependentUpon>
@@ -345,6 +363,9 @@
     <None Include="images\restaurant.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="images\admin.png" />
+    <None Include="images\admin_black.png" />
+    <None Include="images\admin_config.png" />
     <Content Include="images\camera.png" />
     <Content Include="images\check-mark.png" />
     <Content Include="images\edit.png" />
@@ -369,6 +390,7 @@
     <Content Include="upload\images.png" />
     <Content Include="upload\jsomin.jpg" />
     <Content Include="upload\khabanh.jfif" />
+    <Content Include="upload\noimage.jpg" />
     <Content Include="upload\wojakcry.png" />
     <Content Include="upload\Wojak_cropped.jpg" />
   </ItemGroup>

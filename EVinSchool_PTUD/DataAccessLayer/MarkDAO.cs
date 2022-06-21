@@ -102,5 +102,73 @@ namespace DataAccessLayer
                 return true;
             }
         }
+
+        public List<MarkJoinedModel> GetAllMarkJoined()
+        {
+            var query = from st in db.Students
+                        join cls in db.Classrooms on st.StudentClass equals cls.ClassId
+                        join mark in db.Marks on st.StudentId equals mark.StudentId
+                        join subj in db.Subjects on mark.SubjectId equals subj.SubjectId
+                        select new MarkJoinedModel
+                        {
+                            MarkId = mark.MarkId,
+                            StudentName = st.StudentName,
+                            SubjectName = subj.SubjectName,
+                            ClassName = cls.ClassName,
+                            Score = mark.Score
+                        };
+            return query.ToList();
+        }
+
+        public List<MarkJoinedModel> findByName(string keyword)
+        {
+            var query = from st in db.Students
+                        join cls in db.Classrooms on st.StudentClass equals cls.ClassId
+                        join mark in db.Marks on st.StudentId equals mark.StudentId
+                        join subj in db.Subjects on mark.SubjectId equals subj.SubjectId
+                        where st.StudentName.Contains(keyword)
+                        select new MarkJoinedModel
+                        {
+                            StudentName = st.StudentName,
+                            SubjectName = subj.SubjectName,
+                            ClassName = cls.ClassName,
+                            Score = mark.Score
+                        };
+            return query.ToList();
+        }
+
+        public List<MarkJoinedModel> getSubjectByID(int subjectId)
+        {
+            var query = from st in db.Students
+                        join cls in db.Classrooms on st.StudentClass equals cls.ClassId
+                        join mark in db.Marks on st.StudentId equals mark.StudentId
+                        join subj in db.Subjects on mark.SubjectId equals subj.SubjectId
+                        where subj.SubjectId == subjectId
+                        select new MarkJoinedModel
+                        {
+                            StudentName = st.StudentName,
+                            SubjectName = subj.SubjectName,
+                            ClassName = cls.ClassName,
+                            Score = mark.Score
+                        };
+            return query.ToList();
+        }
+
+        public List<MarkJoinedModel> getClassByID(int classId)
+        {
+            var query = from st in db.Students
+                        join cls in db.Classrooms on st.StudentClass equals cls.ClassId
+                        join mark in db.Marks on st.StudentId equals mark.StudentId
+                        join subj in db.Subjects on mark.SubjectId equals subj.SubjectId
+                        where cls.ClassId == classId
+                        select new MarkJoinedModel
+                        {
+                            StudentName = st.StudentName,
+                            SubjectName = subj.SubjectName,
+                            ClassName = cls.ClassName,
+                            Score = mark.Score
+                        };
+            return query.ToList();
+        }
     }
 }

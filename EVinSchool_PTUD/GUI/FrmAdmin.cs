@@ -18,9 +18,6 @@ namespace GUI
 {
     public partial class FrmAdmin : BunifuForm
     {
-        string conStr = "server = StudentManagementDB.mssql.somee.com; User ID = baolongsbs_SQLLogin_1; password=7bxn3rbj94;database = StudentManagementDB";
-        string listStudentMark = "SELECT st.StudentName, cl.ClassName, sj.SubjectName, m.Score FROM Student as st, Classroom as cl, Subject as sj, Mark as m WHERE st.StudentClass = cl.ClassId and m.StudentId = st.StudentId and sj.SubjectId = m.SubjectId";
-        string listClasstification = "SELECT st.StudentName, cl.ClassName, cs.Math, cs.Vietnamese, cs.English, cs.Morality, cs.NatureSocial, cs.HistoryGeography, cs.Music, cs.Sports, cs.Arts, cs.AttendanceClass, cs.TotalMark, cs.ClassificationResult FROM Student as st, Classroom as cl, Classification as cs WHERE st.StudentClass = cl.ClassId and cs.StudentId = st.StudentId";
         TeacherBUS teacherBUS = new TeacherBUS();
         ClassroomBUS classroomBUS = new ClassroomBUS();
         StudentBUS studentBUS = new StudentBUS();
@@ -31,11 +28,7 @@ namespace GUI
             lblTeacherID.Text = teacherID.ToString();
         }
 
-        private void FrmSchool_Load(object sender, EventArgs e)
-        {
-
-        }
-
+    
         private void bnf_Dashbroad_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 0;
@@ -279,18 +272,14 @@ namespace GUI
 
         private void loadMarkTable()
         {
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark, conStr);
-            DataSet DS = new DataSet();
-            dataAdapter.Fill(DS);
-            gv_Mark.DataSource = DS.Tables[0];
+            List<MarkJoinedModel> markJoineds = new MarkBUS().GetAllMarkJoined();
+            gv_Mark.DataSource = markJoineds;
         }
 
         private void loadClasstificationTable()
         {
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(listClasstification, conStr);
-            DataSet DS = new DataSet();
-            dataAdapter.Fill(DS);
-            gv_Classtification.DataSource = DS.Tables[0];
+            List<ClasstificationsScoreModel> classtificcationJoineds = new ClassificationBUS().getAllRanked();
+            gv_Classtification.DataSource = classtificcationJoineds;
             gv_Classtification.Columns[0].Width = 200;
             gv_Classtification.Columns[12].DefaultCellStyle.ForeColor = Color.Green;
             gv_Classtification.Columns[13].DefaultCellStyle.ForeColor = Color.Green;
@@ -304,25 +293,18 @@ namespace GUI
             if (drp_Subject.SelectedIndex > 0)
             {
                 value = Convert.ToInt32(drp_Subject.SelectedValue.ToString());
-                //MessageBox.Show(drp_StudentFilter.SelectedValue.ToString());
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and sj.SubjectId ='" + value + "'", conStr);
-                DataSet DS = new DataSet();
-                dataAdapter.Fill(DS);
-                gv_Mark.DataSource = DS.Tables[0];
+                List<MarkJoinedModel> markJoineds = new MarkBUS().findBySubject(value);
+                gv_Mark.DataSource = markJoineds;
             }
             else if (drp_Subject.SelectedIndex == -1)
             {
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark, conStr);
-                DataSet DS = new DataSet();
-                dataAdapter.Fill(DS);
-                gv_Mark.DataSource = DS.Tables[0];
+                List<MarkJoinedModel> markJoineds = new MarkBUS().GetAllMarkJoined();
+                gv_Mark.DataSource = markJoineds;
             }
             else
             {
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and sj.SubjectId ='" + value + "'", conStr);
-                DataSet DS = new DataSet();
-                dataAdapter.Fill(DS);
-                gv_Mark.DataSource = DS.Tables[0];
+                List<MarkJoinedModel> markJoineds = new MarkBUS().findBySubject(value);
+                gv_Mark.DataSource = markJoineds;
             }
         }
 
@@ -332,18 +314,13 @@ namespace GUI
             if (drp_MarkClassroom.SelectedIndex > 0)
             {
                 value = Convert.ToInt32(drp_MarkClassroom.SelectedValue.ToString());
-                //MessageBox.Show(drp_StudentFilter.SelectedValue.ToString());
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and cl.ClassId ='" + value + "'", conStr);
-                DataSet DS = new DataSet();
-                dataAdapter.Fill(DS);
-                gv_Mark.DataSource = DS.Tables[0];
+                List<MarkJoinedModel> markJoineds = new MarkBUS().findByClass(value);
+                gv_Mark.DataSource = markJoineds;
             }
             else
             {
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and cl.ClassId ='" + value + "'", conStr);
-                DataSet DS = new DataSet();
-                dataAdapter.Fill(DS);
-                gv_Mark.DataSource = DS.Tables[0];
+                List<MarkJoinedModel> markJoineds = new MarkBUS().findByClass(value);
+                gv_Mark.DataSource = markJoineds;
             }
         }
 
@@ -372,9 +349,7 @@ namespace GUI
 
         private void btn_AddClass_Click(object sender, EventArgs e)
         {
-            FrmClass frmClass = new FrmClass();
-            frmClass.Owner = this;
-            frmClass.ShowDialog();
+          
         }
 
         private void btn_AddStudent_Click(object sender, EventArgs e)
@@ -387,19 +362,20 @@ namespace GUI
         private void txt_StudentName_TextChange(object sender, EventArgs e)
         {
             String keyword = txt_StudentName.Text.Trim();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and st.StudentName LIKE '%" + keyword + "%'", conStr);
-            DataSet DS = new DataSet();
-            dataAdapter.Fill(DS);
-            gv_Mark.DataSource = DS.Tables[0];
+            List<MarkJoinedModel> marks = new MarkBUS().findByName(keyword);
+            gv_Mark.DataSource = marks;
         }
 
         private void txt_Classtification_TextChange(object sender, EventArgs e)
         {
             String keyword = txt_Classtification.Text.Trim();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(listClasstification + " and st.StudentName LIKE '%" + keyword + "%'", conStr);
-            DataSet DS = new DataSet();
-            dataAdapter.Fill(DS);
-            gv_Classtification.DataSource = DS.Tables[0];
+            List<ClasstificationsScoreModel> classtificcationJoineds = new ClassificationBUS().findByStudentName(keyword);
+            gv_Classtification.DataSource = classtificcationJoineds;
+        }
+
+        private void FrmAdmin_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void gvMealSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
