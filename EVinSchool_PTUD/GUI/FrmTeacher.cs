@@ -18,11 +18,13 @@ namespace GUI
     {
         TeacherBUS teacherBUS = new TeacherBUS();
         ClassroomBUS classroomBUS = new ClassroomBUS();
-
+        string fileName = null;
         public FrmTeacher(int code)
         {
             InitializeComponent();
             lbl_TeacherID.Text = code.ToString();
+            Teacher teacher = teacherBUS.GetDetails(code);
+            fileName = teacher.TeacherImage;
         }
 
         private void FrmTeacher_Load(object sender, EventArgs e)
@@ -102,7 +104,23 @@ namespace GUI
             if (openFilePic.ShowDialog() == DialogResult.OK)
             {
                 pic_TeacherAvatar.Image = new Bitmap(openFilePic.OpenFile());
-                bunifuSnackbar1.Show(this, "You choose "+ openFilePic.FileName);
+                bunifuSnackbar1.Show(this, "You choose " + openFilePic.FileName);
+            }
+
+            try
+            {
+                Teacher teacher = new Teacher()
+                {
+                    TeacherId = Int32.Parse(lbl_TeacherID.Text.ToString()),
+                };
+                fileName = openFilePic.SafeFileName;
+                string rootPath = @"../../upload";
+                File.Copy(openFilePic.FileName, rootPath + "/" + fileName, true);
+                bunifuSnackbar1.Show(this, "You have upload your avatar successfully");
+            }
+            catch (Exception ex)
+            {
+                bunifuSnackbar1.Show(this, "Your didn't change your avatar");
             }
         }
 

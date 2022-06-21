@@ -22,6 +22,8 @@ namespace GUI
         {
             InitializeComponent();
             txt_Id.Text = studentid.ToString();
+            Student student = studentBUS.GetDetails(studentid);
+            fileName = student.StudentImage;
         }
 
         private void FrmStudent_Load(object sender, EventArgs e)
@@ -115,7 +117,11 @@ namespace GUI
             {
                 bunifuSnackbar1.Show(this, "Your didn't change your avatar");
             }
-        } 
-        
+        }
+
+        private void bunifuFormDock1_FormDragging(object sender, Bunifu.UI.WinForms.BunifuFormDock.FormDraggingEventArgs e)
+        {
+
+        }
     }
 }

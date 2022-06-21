@@ -23,7 +23,12 @@ namespace GUI
         string conStr = "server = StudentManagementDB.mssql.somee.com; User ID = baolongsbs_SQLLogin_1; password=7bxn3rbj94;database = StudentManagementDB";
         string listStudentMark = "SELECT st.StudentName, cl.ClassName, sj.SubjectName, m.Score FROM Student as st, Classroom as cl, Subject as sj, Mark as m WHERE st.StudentClass = cl.ClassId and m.StudentId = st.StudentId and sj.SubjectId = m.SubjectId";
         string listClasstification = "SELECT st.StudentName, cl.ClassName, cs.Math, cs.Vietnamese, cs.English, cs.Morality, cs.NatureSocial, cs.HistoryGeography, cs.Music, cs.Sports, cs.Arts, cs.AttendanceClass, cs.TotalMark, cs.ClassificationResult FROM Student as st, Classroom as cl, Classification as cs WHERE st.StudentClass = cl.ClassId and cs.StudentId = st.StudentId";
-       
+        string listHSG = "SELECT cl.ClassName, COUNT(case when cs.TotalMark>=8.0 then 1 end) AS HSG, COUNT(case when (cs.TotalMark>=6.0 and cs.TotalMark<8.0) then 1 end) AS HSK "
+                        + "FROM Classroom as cl, Classification as cs, Student as st "
+                        + "WHERE cs.StudentId = st.StudentId and st.StudentClass = cl.ClassId "
+                        + "GROUP BY cl.ClassName";
+
+
         public FrmGuest()
         {
             InitializeComponent();
@@ -33,84 +38,41 @@ namespace GUI
         {
             List<Student> students = new StudentBUS().GetAll();
            
-            gv_StudentInfo.DataSource = students;
-            gv_StudentInfo.Columns[0].Visible = false;
-            gv_StudentInfo.Columns[5].Visible = false;
-            gv_StudentInfo.Columns[6].Visible = false;
             //Schedule
             dtp_Schedule.Value = DateTime.Now;
 
             //Subjects
             List<Subject> subjects = new SubjectBUS().GetAll();
             gv_Subjects.DataSource = subjects;
+            gv_Subjects.Columns[0].Width = 100;
 
             List<ClassroomJoined> classrooms = new ClassroomBUS().GetAllClassesJoined();
             gv_Classroom.DataSource = classrooms;
+            gv_Classroom.Columns[0].Width = 100;
             //Mark
             loadMarkTable();
 
             //Classtification
             loadClasstificationTable();
         }
-
-        private void bnf_Dashbroad_Click(object sender, EventArgs e)
+        private void bnf_Classroom_Click(object sender, EventArgs e)
         {
             guestpages.PageIndex = 0;
         }
 
-        private void bnf_Attendance_Click(object sender, EventArgs e)
+        private void bnf_Mark_Click(object sender, EventArgs e)
         {
             guestpages.PageIndex = 1;
         }
 
-        private void bnf_Classroom_Click(object sender, EventArgs e)
+        private void bnf_Schedule_Click(object sender, EventArgs e)
         {
             guestpages.PageIndex = 2;
         }
 
-        private void bnf_Mark_Click(object sender, EventArgs e)
-        {
-            guestpages.PageIndex = 3;
-        }
-
-        private void bnf_Schedule_Click(object sender, EventArgs e)
-        {
-            guestpages.PageIndex = 4;
-        }
-
         private void bnf_Classfication_Click(object sender, EventArgs e)
         {
-            guestpages.PageIndex = 5;
-        }
-
-        private void btnFind_Click(object sender, EventArgs e)
-        {
-            String keyword = txtStudent.Text.Trim();
-            List<Student> students = new StudentBUS().SelectByKeyword(keyword);
-            gv_StudentInfo.DataSource = students;
-        }
-
-        private void gv_StudentInfo_SelectionChanged(object sender, EventArgs e)
-        {        
-
-            if (gv_StudentInfo.SelectedRows.Count > 0)
-            {
-                int code = int.Parse(gv_StudentInfo.SelectedRows[0].Cells["StudentId"].Value.ToString());
-               
-                Student student = new StudentBUS().GetDetails(code);
-                if (student != null)
-                {
-                    lblStudentID.Text = student.StudentId.ToString();
-                    lblStudentName.Text = student.StudentName;
-                    lblStudentClass.Text = student.StudentClass.ToString();
-                    lblParentPhone.Text = student.ParentPhone;
-                    lblStudentAddress.Text = student.StudentAddress;
-                    pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
-                }
-                int classid = Int32.Parse(lblStudentClass.Text.ToString());
-                Classroom cls = new ClassroomBUS().GetDetails(classid);
-                lbl_ClassDetails.Text = "("+" "+cls.ClassName.ToString()+" "+")";
-            }
+            guestpages.PageIndex = 3;
         }
 
         private void FrmGuest_FormClosing_1(object sender, FormClosingEventArgs e)
@@ -276,13 +238,13 @@ namespace GUI
 
         private void loadClasstificationTable()
         {
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(listClasstification, conStr);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(listHSG, conStr);
             DataSet DS = new DataSet();
             dataAdapter.Fill(DS);
             gv_Classtification.DataSource = DS.Tables[0];
             gv_Classtification.Columns[0].Width = 200;
-            gv_Classtification.Columns[12].DefaultCellStyle.ForeColor = Color.Green;
-            gv_Classtification.Columns[13].DefaultCellStyle.ForeColor = Color.Green;
+            gv_Classtification.Columns[1].DefaultCellStyle.ForeColor = Color.Green;
+            gv_Classtification.Columns[2].DefaultCellStyle.ForeColor = Color.Green;
         }
 
         private void txt_Classtification_TextChange(object sender, EventArgs e)

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 17.625" name="EVS">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 17" name="EVS">
   <DataContextMoniker Name="/EVSDataContext" />
   <nestedChildShapes>
     <classShape Id="319bddeb-d688-4449-a260-766e596394bb" absoluteBounds="9.25, 12, 2, 2.3478011067708344">
@@ -50,62 +50,62 @@
         <elementListCompartment Id="853c1706-fb89-4116-aba1-6f7cfbe54253" absoluteBounds="3.515, 3.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="6f730bc7-7eba-409d-9872-c9200d67d59e" absoluteBounds="3.5, 15.375, 2, 1.9631982421875005">
+    <classShape Id="6f730bc7-7eba-409d-9872-c9200d67d59e" absoluteBounds="3.5, 14.75, 2, 1.9631982421875005">
       <DataClassMoniker Name="/EVSDataContext/Teacher" />
       <nestedChildShapes>
-        <elementListCompartment Id="b13e587f-96cd-4c9f-bee6-564ad131877d" absoluteBounds="3.515, 15.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b13e587f-96cd-4c9f-bee6-564ad131877d" absoluteBounds="3.515, 15.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 10.2219962565104); (3.25 : 10.2219962565104); (3.25 : 11.3381982421875); (5.66817781916066 : 11.3381982421875 : JumpStart); (5.95833333333333 : 11.3381982421875 : JumpEnd); (6 : 11.3381982421875); (6 : 10.625); (6.01041666666667 : 10.625 : JumpStart); (6.17708333333333 : 10.625 : JumpEnd); (9.63541416666667 : 10.625 : JumpStart); (9.80208083333333 : 10.625 : JumpEnd); (10.25 : 10.625); (10.25 : 12)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 10.2219962565104); (3.25 : 10.2219962565104); (3.25 : 11.3381982421875); (5.66817781916067 : 11.3381982421875 : JumpStart); (5.95833333333333 : 11.3381982421875 : JumpEnd); (6 : 11.3381982421875); (6 : 10.625); (6.01041666666667 : 10.625 : JumpStart); (6.17708333333333 : 10.625 : JumpEnd); (9.63541416666667 : 10.625 : JumpStart); (9.80208083333333 : 10.625 : JumpEnd); (10.25 : 10.625); (10.25 : 12)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EVSDataContext/Classroom/Classroom_Attendance" />
       <nodes>
         <classShapeMoniker Id="2bf27a33-f10b-4a9f-8a21-b1718b0828e9" />
         <classShapeMoniker Id="319bddeb-d688-4449-a260-766e596394bb" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 9.625); (1.75 : 6.76044840494792); (3.5 : 6.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.75 : 9.625); (1.75 : 6.76044840494792); (3.5 : 6.76044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EVSDataContext/Classroom/Classroom_FoodSchedule" />
       <nodes>
         <classShapeMoniker Id="2bf27a33-f10b-4a9f-8a21-b1718b0828e9" />
         <classShapeMoniker Id="16541adb-7758-4288-bb4e-f01ba1c736d1" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 10.3541984049479); (6.01041666666667 : 10.3541984049479 : JumpStart); (6.17708333333333 : 10.3541984049479 : JumpEnd); (9.7187475 : 10.3541984049479); (9.7187475 : 12)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 10.3541984049479); (9.7187475 : 10.3541984049479); (9.7187475 : 12)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EVSDataContext/Student/Student_Attendance" />
       <nodes>
         <classShapeMoniker Id="c8c55b78-e934-4325-bf6f-076c84f57221" />
         <classShapeMoniker Id="319bddeb-d688-4449-a260-766e596394bb" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 11.0866870896935); (5.875 : 11.4616870896935); (5.875 : 10.5); (6.03482443490112 : 10.6598244349011 : JumpStart); (6.15267556509888 : 10.7776755650989 : JumpEnd); (6.25 : 10.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 11.0866870896935); (5.875 : 11.4616870896935); (5.875 : 10.5); (6.25 : 10.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EVSDataContext/Student/Student_Classification" />
       <nodes>
         <classShapeMoniker Id="c8c55b78-e934-4325-bf6f-076c84f57221" />
         <classShapeMoniker Id="7e8295fc-c7b2-4dde-89b0-8cf9ba7f6a86" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 9.57294840494792); (6.01041666666667 : 9.57294840494792 : JumpStart); (6.17708333333333 : 9.57294840494792 : JumpEnd); (6.25 : 9.57294840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 9.57294840494792); (6.25 : 9.57294840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EVSDataContext/Student/Student_Mark" />
       <nodes>
         <classShapeMoniker Id="c8c55b78-e934-4325-bf6f-076c84f57221" />
         <classShapeMoniker Id="631ff7ea-8701-4960-a2ef-99ae40528619" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 9.86099812825521); (3.5 : 9.86099812825521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 9.86099812825521); (3.5 : 9.86099812825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EVSDataContext/Classroom/Classroom_Student" />
       <nodes>
         <classShapeMoniker Id="2bf27a33-f10b-4a9f-8a21-b1718b0828e9" />
         <classShapeMoniker Id="c8c55b78-e934-4325-bf6f-076c84f57221" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 10.8189925130208); (1.75 : 13.2315991210937); (2.19791916666667 : 13.2315991210937 : JumpStart); (2.36458583333333 : 13.2315991210937 : JumpEnd); (3.5 : 13.2315991210937)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(1.75 : 10.8189925130208); (1.75 : 13.2315991210937); (2.19791916666667 : 13.2315991210937 : JumpStart); (2.36458583333333 : 13.2315991210937 : JumpEnd); (3.5 : 13.2315991210937)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EVSDataContext/Classroom/Classroom_StudySchedule" />
       <nodes>
         <classShapeMoniker Id="2bf27a33-f10b-4a9f-8a21-b1718b0828e9" />
         <classShapeMoniker Id="be463ed3-1b26-45f1-aee9-37e7db083c0c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 4.09699625651042); (7.25 : 4.09699625651042); (7.25 : 8.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 4.09699625651042); (7.25 : 4.09699625651042); (7.25 : 8.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EVSDataContext/Subject/Subject_Mark" />
       <nodes>
         <classShapeMoniker Id="1a3a0aab-d596-4aef-bea3-09457e0cf9d3" />
@@ -119,14 +119,14 @@
         <classShapeMoniker Id="be463ed3-1b26-45f1-aee9-37e7db083c0c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 16.3565991210938); (10.25 : 16.3565991210938); (10.25 : 14.3478011067708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 15.7315991210938); (10.25 : 15.7315991210938); (10.25 : 14.3478011067708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/EVSDataContext/Teacher/Teacher_Attendance" />
       <nodes>
         <classShapeMoniker Id="6f730bc7-7eba-409d-9872-c9200d67d59e" />
         <classShapeMoniker Id="319bddeb-d688-4449-a260-766e596394bb" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.2812525 : 10.8189925130208); (2.2812525 : 16.3565991210938); (3.5 : 16.3565991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.2812525 : 10.8189925130208); (2.2812525 : 15.7315991210938); (3.5 : 15.7315991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/EVSDataContext/Classroom/Classroom_Teacher" />
       <nodes>
         <classShapeMoniker Id="2bf27a33-f10b-4a9f-8a21-b1718b0828e9" />

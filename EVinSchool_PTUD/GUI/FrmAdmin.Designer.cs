@@ -387,7 +387,7 @@ namespace GUI
             this.bnf_Classfication.IdleBorderRadius = 10;
             this.bnf_Classfication.IdleBorderThickness = 1;
             this.bnf_Classfication.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bnf_Classfication.IdleIconLeftImage = global::GUI.Properties.Resources.score;
+            this.bnf_Classfication.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Classfication.IdleIconLeftImage")));
             this.bnf_Classfication.IdleIconRightImage = null;
             this.bnf_Classfication.IndicateFocus = false;
             this.bnf_Classfication.Location = new System.Drawing.Point(16, 459);
@@ -415,7 +415,7 @@ namespace GUI
             this.bnf_Classfication.OnIdleState.BorderThickness = 1;
             this.bnf_Classfication.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bnf_Classfication.OnIdleState.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.bnf_Classfication.OnIdleState.IconLeftImage = global::GUI.Properties.Resources.score;
+            this.bnf_Classfication.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Classfication.OnIdleState.IconLeftImage")));
             this.bnf_Classfication.OnIdleState.IconRightImage = null;
             this.bnf_Classfication.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.bnf_Classfication.OnPressedState.BorderRadius = 10;
@@ -478,7 +478,7 @@ namespace GUI
             this.bnf_Schedule.IdleBorderRadius = 10;
             this.bnf_Schedule.IdleBorderThickness = 1;
             this.bnf_Schedule.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bnf_Schedule.IdleIconLeftImage = global::GUI.Properties.Resources.schedule;
+            this.bnf_Schedule.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Schedule.IdleIconLeftImage")));
             this.bnf_Schedule.IdleIconRightImage = null;
             this.bnf_Schedule.IndicateFocus = false;
             this.bnf_Schedule.Location = new System.Drawing.Point(16, 407);
@@ -506,7 +506,7 @@ namespace GUI
             this.bnf_Schedule.OnIdleState.BorderThickness = 1;
             this.bnf_Schedule.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bnf_Schedule.OnIdleState.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.bnf_Schedule.OnIdleState.IconLeftImage = global::GUI.Properties.Resources.schedule;
+            this.bnf_Schedule.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Schedule.OnIdleState.IconLeftImage")));
             this.bnf_Schedule.OnIdleState.IconRightImage = null;
             this.bnf_Schedule.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.bnf_Schedule.OnPressedState.BorderRadius = 10;
@@ -569,7 +569,7 @@ namespace GUI
             this.bnf_Mark.IdleBorderRadius = 10;
             this.bnf_Mark.IdleBorderThickness = 1;
             this.bnf_Mark.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bnf_Mark.IdleIconLeftImage = global::GUI.Properties.Resources.grade;
+            this.bnf_Mark.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Mark.IdleIconLeftImage")));
             this.bnf_Mark.IdleIconRightImage = null;
             this.bnf_Mark.IndicateFocus = false;
             this.bnf_Mark.Location = new System.Drawing.Point(16, 355);
@@ -597,7 +597,7 @@ namespace GUI
             this.bnf_Mark.OnIdleState.BorderThickness = 1;
             this.bnf_Mark.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bnf_Mark.OnIdleState.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.bnf_Mark.OnIdleState.IconLeftImage = global::GUI.Properties.Resources.grade;
+            this.bnf_Mark.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Mark.OnIdleState.IconLeftImage")));
             this.bnf_Mark.OnIdleState.IconRightImage = null;
             this.bnf_Mark.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.bnf_Mark.OnPressedState.BorderRadius = 10;
@@ -660,7 +660,7 @@ namespace GUI
             this.bnf_Info.IdleBorderRadius = 10;
             this.bnf_Info.IdleBorderThickness = 1;
             this.bnf_Info.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bnf_Info.IdleIconLeftImage = global::GUI.Properties.Resources.usericon1;
+            this.bnf_Info.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Info.IdleIconLeftImage")));
             this.bnf_Info.IdleIconRightImage = null;
             this.bnf_Info.IndicateFocus = false;
             this.bnf_Info.Location = new System.Drawing.Point(16, 302);
@@ -688,7 +688,7 @@ namespace GUI
             this.bnf_Info.OnIdleState.BorderThickness = 1;
             this.bnf_Info.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bnf_Info.OnIdleState.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.bnf_Info.OnIdleState.IconLeftImage = global::GUI.Properties.Resources.usericon1;
+            this.bnf_Info.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Info.OnIdleState.IconLeftImage")));
             this.bnf_Info.OnIdleState.IconRightImage = null;
             this.bnf_Info.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.bnf_Info.OnPressedState.BorderRadius = 10;
@@ -751,7 +751,7 @@ namespace GUI
             this.bnf_Attendance.IdleBorderRadius = 10;
             this.bnf_Attendance.IdleBorderThickness = 1;
             this.bnf_Attendance.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bnf_Attendance.IdleIconLeftImage = global::GUI.Properties.Resources.check_mark;
+            this.bnf_Attendance.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Attendance.IdleIconLeftImage")));
             this.bnf_Attendance.IdleIconRightImage = null;
             this.bnf_Attendance.IndicateFocus = false;
             this.bnf_Attendance.Location = new System.Drawing.Point(16, 246);
@@ -779,7 +779,7 @@ namespace GUI
             this.bnf_Attendance.OnIdleState.BorderThickness = 1;
             this.bnf_Attendance.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bnf_Attendance.OnIdleState.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.bnf_Attendance.OnIdleState.IconLeftImage = global::GUI.Properties.Resources.check_mark;
+            this.bnf_Attendance.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Attendance.OnIdleState.IconLeftImage")));
             this.bnf_Attendance.OnIdleState.IconRightImage = null;
             this.bnf_Attendance.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.bnf_Attendance.OnPressedState.BorderRadius = 10;
@@ -838,11 +838,11 @@ namespace GUI
             this.bnf_Dashbroad.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.bnf_Dashbroad.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.bnf_Dashbroad.IconSize = 25;
-            this.bnf_Dashbroad.IdleBorderColor = System.Drawing.Color.DimGray;
+            this.bnf_Dashbroad.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bnf_Dashbroad.IdleBorderRadius = 10;
             this.bnf_Dashbroad.IdleBorderThickness = 1;
             this.bnf_Dashbroad.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bnf_Dashbroad.IdleIconLeftImage = global::GUI.Properties.Resources.home;
+            this.bnf_Dashbroad.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Dashbroad.IdleIconLeftImage")));
             this.bnf_Dashbroad.IdleIconRightImage = null;
             this.bnf_Dashbroad.IndicateFocus = false;
             this.bnf_Dashbroad.Location = new System.Drawing.Point(16, 196);
@@ -864,13 +864,13 @@ namespace GUI
             this.bnf_Dashbroad.onHoverState.ForeColor = System.Drawing.Color.White;
             this.bnf_Dashbroad.onHoverState.IconLeftImage = null;
             this.bnf_Dashbroad.onHoverState.IconRightImage = null;
-            this.bnf_Dashbroad.OnIdleState.BorderColor = System.Drawing.Color.DimGray;
+            this.bnf_Dashbroad.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bnf_Dashbroad.OnIdleState.BorderRadius = 10;
             this.bnf_Dashbroad.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bnf_Dashbroad.OnIdleState.BorderThickness = 1;
             this.bnf_Dashbroad.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bnf_Dashbroad.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bnf_Dashbroad.OnIdleState.IconLeftImage = global::GUI.Properties.Resources.home;
+            this.bnf_Dashbroad.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bnf_Dashbroad.OnIdleState.IconLeftImage")));
             this.bnf_Dashbroad.OnIdleState.IconRightImage = null;
             this.bnf_Dashbroad.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.bnf_Dashbroad.OnPressedState.BorderRadius = 10;
@@ -912,7 +912,7 @@ namespace GUI
             this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox1.AutoSizeHeight = true;
             this.bunifuPictureBox1.BorderRadius = 88;
-            this.bunifuPictureBox1.Image = global::GUI.Properties.Resources.evs_logo;
+            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(16, 11);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
@@ -959,10 +959,10 @@ namespace GUI
             this.adminpages.Location = new System.Drawing.Point(12, 27);
             this.adminpages.Multiline = true;
             this.adminpages.Name = "adminpages";
-            this.adminpages.Page = this.Mark;
-            this.adminpages.PageIndex = 3;
-            this.adminpages.PageName = "Mark";
-            this.adminpages.PageTitle = "Mark";
+            this.adminpages.Page = this.Dashboard;
+            this.adminpages.PageIndex = 0;
+            this.adminpages.PageName = "Dashboard";
+            this.adminpages.PageTitle = "Dashbroad";
             this.adminpages.SelectedIndex = 0;
             this.adminpages.Size = new System.Drawing.Size(818, 518);
             this.adminpages.TabIndex = 20;
@@ -1021,7 +1021,7 @@ namespace GUI
             this.pic_TeacherAvatar.BorderRadius = 71;
             this.pic_TeacherAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pic_TeacherAvatar.Image")));
             this.pic_TeacherAvatar.IsCircle = true;
-            this.pic_TeacherAvatar.Location = new System.Drawing.Point(613, 298);
+            this.pic_TeacherAvatar.Location = new System.Drawing.Point(530, 312);
             this.pic_TeacherAvatar.Name = "pic_TeacherAvatar";
             this.pic_TeacherAvatar.Size = new System.Drawing.Size(142, 142);
             this.pic_TeacherAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1751,7 +1751,7 @@ namespace GUI
             this.bunifuPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox4.AutoSizeHeight = true;
             this.bunifuPictureBox4.BorderRadius = 20;
-            this.bunifuPictureBox4.Image = global::GUI.Properties.Resources.evs_logo;
+            this.bunifuPictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox4.Image")));
             this.bunifuPictureBox4.IsCircle = true;
             this.bunifuPictureBox4.Location = new System.Drawing.Point(191, 7);
             this.bunifuPictureBox4.Name = "bunifuPictureBox4";
@@ -2830,7 +2830,7 @@ namespace GUI
             this.txt_Classtification.IconLeft = null;
             this.txt_Classtification.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Classtification.IconPadding = 10;
-            this.txt_Classtification.IconRight = global::GUI.Properties.Resources.grade;
+            this.txt_Classtification.IconRight = ((System.Drawing.Image)(resources.GetObject("txt_Classtification.IconRight")));
             this.txt_Classtification.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Classtification.Lines = new string[0];
             this.txt_Classtification.Location = new System.Drawing.Point(226, 66);
