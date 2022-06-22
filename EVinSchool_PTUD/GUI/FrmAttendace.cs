@@ -79,6 +79,13 @@ namespace GUI
 
 
         }
+        //private void loadAttendance()
+        //{
+        //    SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark, conStr);
+        //    DataSet DS = new DataSet();
+        //    dataAdapter.Fill(DS);
+        //    gv_attendance.DataSource = DS.Tables[0];
+        //}
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -105,8 +112,21 @@ namespace GUI
             };
            
             bool result = attendanceBUS.Insert(att);
+            if (result)
+            {
+                //loadAttendance();
+                bunifuSnackbar1.Show(this, "You save student attendance successfully");
+                //Clear();
+                this.Owner.Refresh();
+                this.Owner.Activate();
+            }
+            else
+            {
+                bunifuSnackbar1.Show(this, "Can't save");
+            }
         }
 
+       
     }
     
 }

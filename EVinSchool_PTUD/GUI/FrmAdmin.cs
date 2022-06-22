@@ -21,6 +21,7 @@ namespace GUI
         TeacherBUS teacherBUS = new TeacherBUS();
         ClassroomBUS classroomBUS = new ClassroomBUS();
         StudentBUS studentBUS = new StudentBUS();
+        AttendanceBUS attendanceBUS = new AttendanceBUS();
         public FrmAdmin(int teacherID)
         {
             InitializeComponent();
@@ -120,6 +121,16 @@ namespace GUI
 
             //Classtification
             loadClasstificationTable();
+
+           
+
+            List<Attendance> att = new AttendanceBUS().GetAll();
+            gv_attendance.DataSource = att;
+            gv_attendance.Columns[0].Visible = false;
+            gv_attendance.Columns[3].Visible = false;
+            gv_attendance.Columns[4].Visible = false;
+            gv_attendance.Columns[5].Visible = false;
+            gv_attendance.Columns[7].Visible = false;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -274,6 +285,8 @@ namespace GUI
             gv_Classtification.Columns[13].DefaultCellStyle.ForeColor = Color.Green;
         }
 
+      
+
         private void drp_Subject_SelectedIndexChanged(object sender, EventArgs e)
         {
             int value = 1;
@@ -361,6 +374,36 @@ namespace GUI
         }
 
         private void FrmAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gvMealSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gv_StudentInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnTodayAttendance_Click(object sender, EventArgs e)
+        {
+            FrmAttendace frmAttendance = new FrmAttendace();
+            frmAttendance.Owner = this;
+            frmAttendance.ShowDialog();
+        }
+
+        
+        private void btnEditAttendance_Click(object sender, EventArgs e)
+        {
+            FrmEditAttendance frmEditAttendance = new FrmEditAttendance();
+            frmEditAttendance.Owner = this;
+            frmEditAttendance.ShowDialog();
+        }
+
+        private void Attendance_Click(object sender, EventArgs e)
         {
 
         }

@@ -136,7 +136,11 @@ namespace GUI
             {
                 bunifuSnackbar1.Show(this, "Your didn't change your avatar");
             }
-        } 
-        
+        }
+
+        private void bunifuFormDock1_FormDragging(object sender, Bunifu.UI.WinForms.BunifuFormDock.FormDraggingEventArgs e)
+        {
+
+        }
     }
 }
