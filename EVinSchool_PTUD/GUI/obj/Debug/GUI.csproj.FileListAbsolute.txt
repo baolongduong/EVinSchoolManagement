@@ -203,3 +203,4 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAttendace.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmClass.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAdminSchool.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmLoginAdmin.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmEditAttendance.resources

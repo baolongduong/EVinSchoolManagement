@@ -27,4 +27,4 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLog
 D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
 D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
-D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojAssemblyReference.cache
+D:\EVinSchoolManagement\EVinSchool_PTUD\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache

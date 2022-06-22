@@ -36,13 +36,13 @@ namespace GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.gv_Attendance = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.drp_Student = new Bunifu.UI.WinForms.BunifuDropdown();
             this.dtp_Schedule = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.lbl_ID = new Bunifu.UI.WinForms.BunifuLabel();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Attendance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -201,6 +201,12 @@ namespace GUI
             this.gv_Attendance.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.gv_Attendance.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Check";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
             // drp_Student
             // 
             this.drp_Student.BackColor = System.Drawing.Color.Transparent;
@@ -235,7 +241,7 @@ namespace GUI
             this.drp_Student.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.drp_Student.ItemHighLightForeColor = System.Drawing.Color.White;
             this.drp_Student.ItemTopMargin = 3;
-            this.drp_Student.Location = new System.Drawing.Point(728, 145);
+            this.drp_Student.Location = new System.Drawing.Point(783, 145);
             this.drp_Student.Name = "drp_Student";
             this.drp_Student.Size = new System.Drawing.Size(109, 32);
             this.drp_Student.TabIndex = 102;
@@ -329,7 +335,7 @@ namespace GUI
             this.lbl_ID.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_ID.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ID.ForeColor = System.Drawing.Color.Olive;
-            this.lbl_ID.Location = new System.Drawing.Point(200, 77);
+            this.lbl_ID.Location = new System.Drawing.Point(614, 84);
             this.lbl_ID.Name = "lbl_ID";
             this.lbl_ID.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_ID.Size = new System.Drawing.Size(26, 26);
@@ -337,12 +343,6 @@ namespace GUI
             this.lbl_ID.Text = "ID";
             this.lbl_ID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_ID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Check";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
             // 
             // FrmAttendace
             // 

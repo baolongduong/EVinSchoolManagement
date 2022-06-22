@@ -19,8 +19,7 @@ namespace GUI
     public partial class FrmAdminSchool : BunifuForm
     {
         AdminBUS adminBUS = new AdminBUS();
-        ClassroomBUS classroomBUS = new ClassroomBUS();
-        StudentBUS studentBUS = new StudentBUS();
+        AttendanceBUS attendanceBUS = new AttendanceBUS();
 
         public FrmAdminSchool(int adminId)
         {
@@ -132,6 +131,10 @@ namespace GUI
 
             //Classtification
             loadClasstificationTable();
+
+            //Attendance
+            List<Student> st = new StudentBUS().GetAll();
+            gv_attendancereports.DataSource = st;
 
 
             //Food Schedule
@@ -534,6 +537,18 @@ namespace GUI
             FrmClass frmClass = new FrmClass();
             frmClass.Owner = this;
             frmClass.ShowDialog();
+        }
+
+        private void btnTodayAttendance_Click(object sender, EventArgs e)
+        {
+            FrmAttendace frmattendace = new FrmAttendace();
+            frmattendace.Owner = this;
+            frmattendace.Show();
+        }
+
+        private void btnEditAttendance_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

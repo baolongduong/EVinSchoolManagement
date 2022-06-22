@@ -183,6 +183,12 @@
     <Compile Include="FrmClass.Designer.cs">
       <DependentUpon>FrmClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEditAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditAttendance.Designer.cs">
+      <DependentUpon>FrmEditAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStudySchedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClass.resx">
       <DependentUpon>FrmClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditAttendance.resx">
+      <DependentUpon>FrmEditAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStudySchedule.resx">
       <DependentUpon>FrmStudySchedule.cs</DependentUpon>
