@@ -334,7 +334,7 @@ namespace GUI
                 {
                     lblStudentID.Text = student.StudentId.ToString();
                     lblStudentName.Text = student.StudentName;
-                    lblStudentClass.Text = student.Classroom.ClassName;
+                    lblStudentClass.Text = student.Classroom.ClassName; 
                     lblParentPhone.Text = student.ParentPhone;
                     lbl_ParentName.Text = student.ParentName;
                     lblStudentAddress.Text = student.StudentAddress;

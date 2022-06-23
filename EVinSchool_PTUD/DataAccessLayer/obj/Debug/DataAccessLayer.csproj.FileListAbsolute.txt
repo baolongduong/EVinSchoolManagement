@@ -19,3 +19,10 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLaye
 D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 D:\EVinSchoolManagement\EVinSchool_PTUD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\New folder\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\New folder\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\New folder\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\New folder\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\New folder\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\New folder\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\New folder\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

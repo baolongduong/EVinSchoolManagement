@@ -15,56 +15,41 @@ using DataAccessLayer;
 
 namespace GUI
 {
-    public partial class FrmAddedStudent_Teacher : BunifuForm
+    public partial class FrmAddedStudeentTeacher : BunifuForm
     {
-        TeacherBUS teacherBUS = new TeacherBUS();
+        TeacherBUS teaherBUS = new TeacherBUS();
         StudentBUS studentBUS = new StudentBUS();
-        ClassroomBUS classroomBUS = new ClassroomBUS();
         string filename = null;
-        int tchID = 0;
-        public FrmAddedStudent_Teacher(int teacherID)
+        public FrmAddedStudeentTeacher(int teacherID)
         {
             InitializeComponent();
-            tchID = teacherID;
+            lblTeacherID.Text = teacherID.ToString();
         }
 
         private void FrmAddedStudeentTeacher_Load(object sender, EventArgs e)
         {
-            Teacher teacher = teacherBUS.GetDetails(tchID);
-            Classroom classroom = classroomBUS.GetDetails((int)teacher.TeacherClass);
-            txtClassName.Text = classroom.ClassName;
+            List<Classroom> classrooms = new ClassroomBUS().GetAll();
+            Teacher teacher = new TeacherBUS().GetDetails(int.Parse(lblTeacherID.Text));
+            txtClassName.Text = teacher.TeacherClass.ToString();
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            Classroom cls = classroomBUS.GetID(txtClassName.Text);
             CancelEventArgs oc = new CancelEventArgs();
             oc.Cancel = true;
+            string name = txtClassName.Text.Trim();
+            Classroom clsname = new ClassroomBUS().GetID(name);
             Student student = new Student()
             {
                 StudentName = txtStudentName.Text.Trim(),
                 StudentAddress = txtStudentAddress.Text.Trim(),
                 ParentPhone = txtParentPhone.Text.Trim(),
-                StudentDOB = dtp_StudentDOB.Value,
-                StudentClass = cls.ClassId,
-                ParentName = txtParentName.Text.Trim(),
+                StudentClass = clsname.ClassId,
                 StudentImage = filename
             };
             if (string.IsNullOrEmpty(txtStudentName.Text))
             {
                 errorProvider1.SetError(txtStudentName, "Student's name is left blank");
-            }
-            else if (string.IsNullOrEmpty(txtStudentAddress.Text))
-            {
-                errorProvider1.SetError(txtStudentAddress, "Student's address is left blank");
-            }
-            else if (string.IsNullOrEmpty(txtParentPhone.Text))
-            {
-                errorProvider1.SetError(txtParentPhone, "Student's parent phone is left blank");
-            }
-            else if (string.IsNullOrEmpty(txtParentName.Text))
-            {
-                errorProvider1.SetError(txtParentName, "Student's parent name is left blank");
             }
             else if (txtParentPhone.Text.Trim().Length != 10)
             {
@@ -73,9 +58,7 @@ namespace GUI
             else
             {
                 errorProvider1.SetError(txtStudentName, null);
-                errorProvider1.SetError(txtStudentAddress, null);
                 errorProvider1.SetError(txtParentPhone, null);
-                errorProvider1.SetError(txtParentName, null);
                 oc.Cancel = false;
 
                 bool result = studentBUS.Insert(student);
@@ -85,9 +68,8 @@ namespace GUI
                     txtStudentName.Text = null;
                     txtStudentAddress.Text = null;
                     txtParentPhone.Text = null;
-                    pic_StudentAvatar.ImageLocation = @"../../upload/noimage.jpg";
-                    dtp_StudentDOB.Value = DateTime.Now;
-                    txtParentName.Text = null;
+                    txtClassName.Text = null;
+                    pic_StudentAvatar.ImageLocation = null;
                     this.Owner.Refresh();
                     this.Owner.Activate();
                 }
