@@ -184,7 +184,6 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.csproj.AssemblyReferen
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmStudySchedule.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmGuest.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmRegister.resources
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAdmin.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmLogin.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmStudent.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmFoodSchedule.resources
@@ -204,3 +203,9 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmClass.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAdminSchool.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmLoginAdmin.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmEditAttendance.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.UI.xml
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddMark_Teacher.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmEditStudentTeacher.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddedStudent_Teacher.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmTeacherSchool.resources

@@ -98,5 +98,20 @@ namespace DataAccessLayer
                         };
             return query.Distinct().ToList();
         }
+
+        public bool isNameExisted(string keyword)
+        {
+            var q = from p in db.Classrooms
+                    where p.ClassName == keyword
+                    select p;
+            if (q.Any())
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

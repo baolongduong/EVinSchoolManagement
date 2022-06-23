@@ -12,17 +12,17 @@ using DataAccessLayer;
 using Bunifu.UI.WinForms;
 using Bunifu.Utils;
 
-using System.Data.SqlClient;
 
 namespace GUI
 {
-    public partial class FrmAdmin : BunifuForm
+    public partial class FrmTeacherSchool : BunifuForm
     {
         TeacherBUS teacherBUS = new TeacherBUS();
         ClassroomBUS classroomBUS = new ClassroomBUS();
         StudentBUS studentBUS = new StudentBUS();
         AttendanceBUS attendanceBUS = new AttendanceBUS();
-        public FrmAdmin(int teacherID)
+
+        public FrmTeacherSchool(int teacherID)
         {
             InitializeComponent();
             lblTeacherID.Text = teacherID.ToString();
@@ -42,25 +42,54 @@ namespace GUI
         private void bnf_Info_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 2;
-          
+
+            //Information
+            List<Student> students = new StudentBUS().GetAll();
+            gv_StudentInfo.DataSource = students;
+            gv_StudentInfo.Columns[0].Visible = false;
+            gv_StudentInfo.Columns[4].Visible = false;
+            gv_StudentInfo.Columns[5].Visible = false;
+            gv_StudentInfo.Columns[6].Visible = false;
 
         }
 
         private void bnf_Mark_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 3;
-         
+            loadMarkTable();
         }
 
         private void bnf_Schedule_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 4;
-           
+            Teacher teacher = new TeacherBUS().GetDetails(Int32.Parse(lblTeacherID.Text.ToString()));
+            int classid = Convert.ToInt32(teacher.TeacherClass);
+            //Food Schedule
+            List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetDetailsByClassId(classid);
+            gvMealSchedule.DataSource = foodSchedules;
+            gvMealSchedule.Columns[0].Visible = false;
+            gvMealSchedule.Columns[3].Visible = false;
+            gvMealSchedule.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            gvMealSchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
+            gvMealSchedule.Columns[4].HeaderText = "Time";
+            gvMealSchedule.Columns[5].Visible = false;
+
+
+            //Study Schedule
+            List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleBUS().GetSDetailsByClass(classid);
+            gv_StudySchedule.DataSource = studySchedules;
+            gv_StudySchedule.Columns[0].Visible = false;
+            gv_StudySchedule.Columns[1].Visible = false;
+            gv_StudySchedule.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            gv_StudySchedule.Columns[3].DefaultCellStyle.Format = "HH:mm";
+            gv_StudySchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
+
         }
 
         private void bnf_Classfication_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 5;
+            loadClasstificationTable();
         }
 
         private void FrmAdmin_FormClosing(object sender, FormClosingEventArgs e)
@@ -87,50 +116,22 @@ namespace GUI
             lbl_CClassroom.Text = cls.ClassName;
             lbl_CEmail.Text = teacher.TeacherEmail;
             lblC_ID.Text = code.ToString();
-            pic_TeacherAvatar.ImageLocation = @"../../upload/" + teacher.TeacherImage;
-
-            //Food Schedule
-            List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetAll();
-            gvMealSchedule.DataSource = foodSchedules;
-            gvMealSchedule.Columns[0].Visible = false;
-            gvMealSchedule.Columns[3].Visible = false;
-            gvMealSchedule.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-            gvMealSchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
-            gvMealSchedule.Columns[4].HeaderText = "Time";
-            gvMealSchedule.Columns[5].Visible = false;
-
-            //Study Schedule
-            List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleBUS().GetAllBySubjectxClass();
-            gv_StudySchedule.DataSource = studySchedules;
-            gv_StudySchedule.Columns[0].Visible = false;
-            gv_StudySchedule.Columns[1].Visible = false;
-            gv_StudySchedule.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-            gv_StudySchedule.Columns[3].DefaultCellStyle.Format = "HH:mm";
-            gv_StudySchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
-
-            //Information
-            List<Student> students = new StudentBUS().GetAll();
-            gv_StudentInfo.DataSource = students;
-            gv_StudentInfo.Columns[0].Visible = false;
-            gv_StudentInfo.Columns[4].Visible = false;
-            gv_StudentInfo.Columns[5].Visible = false;
-            gv_StudentInfo.Columns[6].Visible = false;
-
-            //Mark
-            loadMarkTable();
-
-            //Classtification
-            loadClasstificationTable();
-
-           
-
-            List<Attendance> att = new AttendanceBUS().GetAll();
+            if (teacher.TeacherImage == null || teacher.TeacherImage == "")
+            {
+                pic_TeacherAvatar.ImageLocation = @"../../upload/noimage.jpg";
+            }
+            else
+            {
+                pic_TeacherAvatar.ImageLocation = @"../../upload/" + teacher.TeacherImage;
+            }
+       
+          /*  List<Attendance> att = new AttendanceBUS().GetAll();
             gv_attendance.DataSource = att;
             gv_attendance.Columns[0].Visible = false;
             gv_attendance.Columns[3].Visible = false;
             gv_attendance.Columns[4].Visible = false;
             gv_attendance.Columns[5].Visible = false;
-            gv_attendance.Columns[7].Visible = false;
+            gv_attendance.Columns[7].Visible = false;*/
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -160,7 +161,14 @@ namespace GUI
                     lblStudentClass.Text = student.StudentClass.ToString();
                     lblParentPhone.Text = student.ParentPhone;
                     lblStudentAddress.Text = student.StudentAddress;
-                    pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
+                    if (student.StudentImage == null || student.StudentImage == "")
+            {
+                pic_StudentAvatar.ImageLocation = @"../../upload/noimage.jpg";
+            }
+            else
+            {
+                pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
+            }
                 }
             }
         }
@@ -199,11 +207,6 @@ namespace GUI
             drp_StudentFilter.DataSource = classrooms;
             drp_StudentFilter.DisplayMember = "ClassName";
             drp_StudentFilter.ValueMember = "ClassId";
-
-
-            drpdown_FoodClass.DataSource = classrooms;
-            drpdown_FoodClass.DisplayMember = "ClassName";
-            drpdown_FoodClass.ValueMember = "ClassId";
         }
 
         private void drp_StudentFilter_DropDown(object sender, EventArgs e)
@@ -216,35 +219,6 @@ namespace GUI
             loadClass();
         }
 
-        private void drpdown_FoodClass_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int value = 1;
-            if (drpdown_FoodClass.SelectedIndex > 0)
-            {
-                value = Convert.ToInt32(drpdown_FoodClass.SelectedValue.ToString());
-                List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetDetailsByClassId(value);
-                gvMealSchedule.DataSource = foodSchedules;
-
-                List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleBUS().GetDetailsBySubjectxClass(value);
-                gv_StudySchedule.DataSource = studySchedules;
-            }
-            else if (drpdown_FoodClass.SelectedIndex == -1)
-            {
-                List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetAll();
-                gvMealSchedule.DataSource = foodSchedules;
-
-                List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleBUS().GetAllBySubjectxClass();
-                gv_StudySchedule.DataSource = studySchedules;
-            }
-            else
-            {
-                List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetDetailsByClassId(value);
-                gvMealSchedule.DataSource = foodSchedules;
-
-                List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleBUS().GetDetailsBySubjectxClass(value);
-                gv_StudySchedule.DataSource = studySchedules;
-            }
-        }
 
         private void btnGuestView_Click(object sender, EventArgs e)
         {
@@ -254,17 +228,18 @@ namespace GUI
         }
 
         private void btnFoodEdit_Click(object sender, EventArgs e)
-        {          
-                int classid = Convert.ToInt32(drpdown_FoodClass.SelectedValue.ToString());            
-                FrmFoodSchedule frmfoodschle = new FrmFoodSchedule(classid);
+        {
+            Teacher teacher = new TeacherBUS().GetDetails(Int32.Parse(lblTeacherID.Text.ToString()));
+            int classid = Convert.ToInt32(teacher.TeacherClass);
+            FrmFoodSchedule frmfoodschle = new FrmFoodSchedule(classid);
                 frmfoodschle.Owner = this;
-                frmfoodschle.Show();        
-           
+                frmfoodschle.Show();                  
         }
 
         private void btnStudyEdit_Click(object sender, EventArgs e)
         {
-            int classid = Convert.ToInt32(drpdown_FoodClass.SelectedValue.ToString());
+            Teacher teacher = new TeacherBUS().GetDetails(Int32.Parse(lblTeacherID.Text.ToString()));
+            int classid = Convert.ToInt32(teacher.TeacherClass);
             FrmStudySchedule frmstudyschle = new FrmStudySchedule(classid);
             frmstudyschle.Owner = this;
             frmstudyschle.Show();
@@ -272,7 +247,8 @@ namespace GUI
 
         private void loadMarkTable()
         {
-            List<MarkJoinedModel> markJoineds = new MarkBUS().GetAllMarkJoined();
+            Teacher teacher = new TeacherBUS().GetDetails(Int32.Parse(lblTeacherID.Text.ToString()));        
+            List<MarkJoinedModel> markJoineds = new MarkBUS().GetAllMarkJoinedByClass((int)teacher.TeacherClass);
             gv_Mark.DataSource = markJoineds;
         }
 
@@ -290,39 +266,26 @@ namespace GUI
         private void drp_Subject_SelectedIndexChanged(object sender, EventArgs e)
         {
             int value = 1;
+            Teacher teacher = new TeacherBUS().GetDetails(Int32.Parse(lblTeacherID.Text.ToString()));
             if (drp_Subject.SelectedIndex > 0)
             {
                 value = Convert.ToInt32(drp_Subject.SelectedValue.ToString());
-                List<MarkJoinedModel> markJoineds = new MarkBUS().findBySubject(value);
+                List<MarkJoinedModel> markJoineds = new MarkBUS().getSubjectByID_Teacher(value, (int)teacher.TeacherClass);
                 gv_Mark.DataSource = markJoineds;
             }
             else if (drp_Subject.SelectedIndex == -1)
             {
-                List<MarkJoinedModel> markJoineds = new MarkBUS().GetAllMarkJoined();
+                List<MarkJoinedModel> markJoineds = new MarkBUS().GetAllMarkJoinedByClass((int)teacher.TeacherClass);
                 gv_Mark.DataSource = markJoineds;
             }
             else
             {
-                List<MarkJoinedModel> markJoineds = new MarkBUS().findBySubject(value);
+                List<MarkJoinedModel> markJoineds = new MarkBUS().getSubjectByID_Teacher(value, (int)teacher.TeacherClass);
                 gv_Mark.DataSource = markJoineds;
             }
         }
 
-        private void drp_MarkClassroom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int value = 1;
-            if (drp_MarkClassroom.SelectedIndex > 0)
-            {
-                value = Convert.ToInt32(drp_MarkClassroom.SelectedValue.ToString());
-                List<MarkJoinedModel> markJoineds = new MarkBUS().findByClass(value);
-                gv_Mark.DataSource = markJoineds;
-            }
-            else
-            {
-                List<MarkJoinedModel> markJoineds = new MarkBUS().findByClass(value);
-                gv_Mark.DataSource = markJoineds;
-            }
-        }
+      
 
         private void drp_Subject_Click(object sender, EventArgs e)
         {
@@ -332,25 +295,15 @@ namespace GUI
             drp_Subject.ValueMember = "SubjectId";
         }
 
-        private void drp_MarkClassroom_Click(object sender, EventArgs e)
-        {
-            List<Classroom> classrooms = new ClassroomBUS().GetAll();
-            drp_MarkClassroom.DataSource = classrooms;
-            drp_MarkClassroom.DisplayMember = "ClassName";
-            drp_MarkClassroom.ValueMember = "ClassId";
-        }
 
         private void btnAddMark_Click(object sender, EventArgs e)
         {
-            FrmAddMark frmAddMark = new FrmAddMark();
+            Teacher teacher = new TeacherBUS().GetDetails(Int32.Parse(lblTeacherID.Text.ToString()));
+            FrmAddMark_Teacher frmAddMark = new FrmAddMark_Teacher((int)teacher.TeacherClass);
             frmAddMark.Owner = this;
             frmAddMark.ShowDialog();
         }
 
-        private void btn_AddClass_Click(object sender, EventArgs e)
-        {
-          
-        }
 
         private void btn_AddStudent_Click(object sender, EventArgs e)
         {
@@ -361,8 +314,9 @@ namespace GUI
 
         private void txt_StudentName_TextChange(object sender, EventArgs e)
         {
-            String keyword = txt_StudentName.Text.Trim();
-            List<MarkJoinedModel> marks = new MarkBUS().findByName(keyword);
+            Teacher teacher = new TeacherBUS().GetDetails(Int32.Parse(lblTeacherID.Text.ToString()));
+            String keyword = txt_StudentName_Mark.Text.Trim();
+            List<MarkJoinedModel> marks = new MarkBUS().findByName_Teacher(keyword, (int)teacher.TeacherClass);
             gv_Mark.DataSource = marks;
         }
 
@@ -371,21 +325,6 @@ namespace GUI
             String keyword = txt_Classtification.Text.Trim();
             List<ClasstificationsScoreModel> classtificcationJoineds = new ClassificationBUS().findByStudentName(keyword);
             gv_Classtification.DataSource = classtificcationJoineds;
-        }
-
-        private void FrmAdmin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gvMealSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void gv_StudentInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btnTodayAttendance_Click(object sender, EventArgs e)
@@ -407,5 +346,6 @@ namespace GUI
         {
 
         }
+
     }
 }

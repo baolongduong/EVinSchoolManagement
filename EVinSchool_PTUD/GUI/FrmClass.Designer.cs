@@ -50,7 +50,9 @@ namespace GUI
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_ClassID = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gv_Class)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // gv_Class
@@ -104,13 +106,13 @@ namespace GUI
             this.gv_Class.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.gv_Class.HeaderBgColor = System.Drawing.Color.Empty;
             this.gv_Class.HeaderForeColor = System.Drawing.Color.White;
-            this.gv_Class.Location = new System.Drawing.Point(32, 249);
+            this.gv_Class.Location = new System.Drawing.Point(32, 227);
             this.gv_Class.Name = "gv_Class";
             this.gv_Class.RowHeadersVisible = false;
             this.gv_Class.RowHeadersWidth = 51;
             this.gv_Class.RowTemplate.Height = 40;
             this.gv_Class.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gv_Class.Size = new System.Drawing.Size(444, 152);
+            this.gv_Class.Size = new System.Drawing.Size(444, 174);
             this.gv_Class.TabIndex = 0;
             this.gv_Class.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.gv_Class.SelectionChanged += new System.EventHandler(this.gv_Class_SelectionChanged);
@@ -142,7 +144,7 @@ namespace GUI
             this.txt_ClassName.IconRight = null;
             this.txt_ClassName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_ClassName.Lines = new string[0];
-            this.txt_ClassName.Location = new System.Drawing.Point(91, 186);
+            this.txt_ClassName.Location = new System.Drawing.Point(32, 181);
             this.txt_ClassName.MaxLength = 32767;
             this.txt_ClassName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_ClassName.Modified = false;
@@ -178,7 +180,7 @@ namespace GUI
             this.txt_ClassName.SelectionLength = 0;
             this.txt_ClassName.SelectionStart = 0;
             this.txt_ClassName.ShortcutsEnabled = true;
-            this.txt_ClassName.Size = new System.Drawing.Size(159, 26);
+            this.txt_ClassName.Size = new System.Drawing.Size(192, 36);
             this.txt_ClassName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_ClassName.TabIndex = 89;
             this.txt_ClassName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -295,7 +297,7 @@ namespace GUI
             this.btn_AddClass.IdleFillColor = System.Drawing.Color.White;
             this.btn_AddClass.IdleForecolor = System.Drawing.Color.DarkRed;
             this.btn_AddClass.IdleLineColor = System.Drawing.Color.IndianRed;
-            this.btn_AddClass.Location = new System.Drawing.Point(258, 176);
+            this.btn_AddClass.Location = new System.Drawing.Point(243, 176);
             this.btn_AddClass.Margin = new System.Windows.Forms.Padding(5);
             this.btn_AddClass.Name = "btn_AddClass";
             this.btn_AddClass.Size = new System.Drawing.Size(80, 43);
@@ -390,7 +392,7 @@ namespace GUI
             this.btn_EditClass.IdleFillColor = System.Drawing.Color.White;
             this.btn_EditClass.IdleForecolor = System.Drawing.Color.DarkRed;
             this.btn_EditClass.IdleLineColor = System.Drawing.Color.IndianRed;
-            this.btn_EditClass.Location = new System.Drawing.Point(347, 176);
+            this.btn_EditClass.Location = new System.Drawing.Point(333, 176);
             this.btn_EditClass.Margin = new System.Windows.Forms.Padding(5);
             this.btn_EditClass.Name = "btn_EditClass";
             this.btn_EditClass.Size = new System.Drawing.Size(80, 43);
@@ -406,7 +408,7 @@ namespace GUI
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.Olive;
-            this.bunifuLabel1.Location = new System.Drawing.Point(32, 145);
+            this.bunifuLabel1.Location = new System.Drawing.Point(32, 117);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(25, 26);
@@ -423,7 +425,7 @@ namespace GUI
             this.lbl_ClassID.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_ClassID.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ClassID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_ClassID.Location = new System.Drawing.Point(69, 145);
+            this.lbl_ClassID.Location = new System.Drawing.Point(69, 117);
             this.lbl_ClassID.Name = "lbl_ClassID";
             this.lbl_ClassID.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_ClassID.Size = new System.Drawing.Size(26, 26);
@@ -440,7 +442,7 @@ namespace GUI
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Garamond", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.Olive;
-            this.bunifuLabel2.Location = new System.Drawing.Point(32, 186);
+            this.bunifuLabel2.Location = new System.Drawing.Point(32, 149);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(50, 26);
@@ -448,6 +450,10 @@ namespace GUI
             this.bunifuLabel2.Text = "Class:";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmClass
             // 
@@ -478,6 +484,7 @@ namespace GUI
             this.Controls.SetChildIndex(this.bunifuLabel2, 0);
             this.Controls.SetChildIndex(this.lbl_ClassID, 0);
             ((System.ComponentModel.ISupportInitialize)(this.gv_Class)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,5 +504,6 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuLabel lbl_ClassID;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

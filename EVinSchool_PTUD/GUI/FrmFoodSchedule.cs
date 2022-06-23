@@ -67,26 +67,36 @@ namespace GUI
                 FoodDate = dp_FoodDate.Value,
                 ClassId = Int32.Parse(lbl_ClassID.Text.ToString())
             };
+            bool resultDateClass = foodScheduleBUS.isValidDateAndClassId((int)foodSchedule.ClassId, (DateTime)foodSchedule.FoodDate);
             if (drpdown_FoodTime.SelectedItem.ToString() == "11:00")
             {
                 DateTime time11 = new DateTime(2022, 1, 1, 11, 0, 0);
                 foodSchedule.FoodClassTime = time11;
-                MessageBox.Show(time11.ToString());
             }
             else if (drpdown_FoodTime.SelectedItem.ToString() == "14:20")
             {
                 DateTime time14 = new DateTime(2022, 1, 1, 14, 20, 0);
                 foodSchedule.FoodClassTime = time14;
-                MessageBox.Show(time14.ToString());
             }
-
+            bool resultmealTime = foodScheduleBUS.isValidOneTimeOneMeal((int)foodSchedule.ClassId, (DateTime)foodSchedule.FoodDate, (DateTime)foodSchedule.FoodClassTime);
+           
             if (string.IsNullOrEmpty(txtFoodName.Text))
             {
                 errorProvider1.SetError(txtFoodName, "Your food name is left blank");
-            }          
+            }
+            else if(resultDateClass == false)
+            {
+                errorProvider1.SetError(drpdown_FoodTime, "2 meals / day");
+            }
+            else if (resultmealTime == false)
+            {
+                errorProvider1.SetError(drpdown_FoodTime, "1 meal / 1 time / 1 day");
+            }
+           
             else
             {
                 errorProvider1.SetError(txtFoodName, null);
+                errorProvider1.SetError(drpdown_FoodTime, null);
                 oc.Cancel = false;
                 bool result = foodScheduleBUS.Insert(foodSchedule);
                 if (result)
@@ -116,7 +126,6 @@ namespace GUI
                     string item = newtime.Hour + ":" + newtime.Minute;
                     if(item.Equals("11:0"))
                     {
-
                         drpdown_FoodTime.SelectedItem = "11:00";
                     }   
                     else if(item.Equals("14:20"))
@@ -139,6 +148,7 @@ namespace GUI
                 FoodDate = dp_FoodDate.Value,
                 ClassId = Int32.Parse(lbl_ClassID.Text.ToString()),
             };
+            bool resultDateClass = foodScheduleBUS.isValidDateAndClassId((int)foodSchedule.ClassId, (DateTime)foodSchedule.FoodDate);
             if (drpdown_FoodTime.SelectedItem.ToString() == "11:00")
             {
                 DateTime time11 = new DateTime(2022, 1, 1, 11, 0, 0);
@@ -149,13 +159,23 @@ namespace GUI
                 DateTime time14 = new DateTime(2022, 1, 1, 14, 20, 0);
                 foodSchedule.FoodClassTime = time14;
             }
+            bool resultmealTime = foodScheduleBUS.isValidOneTimeOneMeal((int)foodSchedule.ClassId, (DateTime)foodSchedule.FoodDate, (DateTime)foodSchedule.FoodClassTime);
             if (string.IsNullOrEmpty(txtFoodName.Text))
             {
                 errorProvider1.SetError(txtFoodName, "Your food name is left blank");
             }
+            else if (resultDateClass == false)
+            {
+                errorProvider1.SetError(drpdown_FoodTime, "2 meals / day");
+            }
+            else if (resultmealTime == false)
+            {
+                errorProvider1.SetError(drpdown_FoodTime, "1 meal / 1 time / 1 day");
+            }
             else
             {
                 errorProvider1.SetError(txtFoodName, null);
+                errorProvider1.SetError(drpdown_FoodTime, null);
                 oc.Cancel = false;
                 bool result = foodScheduleBUS.Update(foodSchedule);
                 if (result)

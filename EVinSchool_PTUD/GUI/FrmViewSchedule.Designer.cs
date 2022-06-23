@@ -39,6 +39,14 @@ namespace GUI
             this.dtp_Schedule = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.pnl_ClassSchedule = new Bunifu.UI.WinForms.BunifuPanel();
+            this.fpl_Lunch = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Dinner = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpl_Lesson1 = new System.Windows.Forms.FlowLayoutPanel();
             this.fpl_Lesson2 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuLabel12 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -52,14 +60,6 @@ namespace GUI
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.fpl_Lesson1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.fpl_Lesson4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.fpl_Lesson3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.fpl_Lesson6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.fpl_Lesson5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.fpl_Lunch = new System.Windows.Forms.FlowLayoutPanel();
-            this.fpl_Lesson7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.fpl_Dinner = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.pnl_ClassSchedule.SuspendLayout();
@@ -78,7 +78,7 @@ namespace GUI
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Garamond", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.DarkRed;
-            this.bunifuLabel2.Location = new System.Drawing.Point(254, 59);
+            this.bunifuLabel2.Location = new System.Drawing.Point(287, 59);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(281, 37);
@@ -282,6 +282,94 @@ namespace GUI
             this.pnl_ClassSchedule.ShowBorders = true;
             this.pnl_ClassSchedule.Size = new System.Drawing.Size(782, 378);
             this.pnl_ClassSchedule.TabIndex = 89;
+            // 
+            // fpl_Lunch
+            // 
+            this.fpl_Lunch.AutoScroll = true;
+            this.fpl_Lunch.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lunch.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lunch.Location = new System.Drawing.Point(175, 212);
+            this.fpl_Lunch.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lunch.Name = "fpl_Lunch";
+            this.fpl_Lunch.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lunch.TabIndex = 2;
+            // 
+            // fpl_Lesson5
+            // 
+            this.fpl_Lesson5.AutoScroll = true;
+            this.fpl_Lesson5.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson5.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson5.Location = new System.Drawing.Point(175, 244);
+            this.fpl_Lesson5.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson5.Name = "fpl_Lesson5";
+            this.fpl_Lesson5.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson5.TabIndex = 2;
+            // 
+            // fpl_Dinner
+            // 
+            this.fpl_Dinner.AutoScroll = true;
+            this.fpl_Dinner.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Dinner.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Dinner.Location = new System.Drawing.Point(175, 307);
+            this.fpl_Dinner.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Dinner.Name = "fpl_Dinner";
+            this.fpl_Dinner.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Dinner.TabIndex = 2;
+            // 
+            // fpl_Lesson7
+            // 
+            this.fpl_Lesson7.AutoScroll = true;
+            this.fpl_Lesson7.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson7.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson7.Location = new System.Drawing.Point(175, 336);
+            this.fpl_Lesson7.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson7.Name = "fpl_Lesson7";
+            this.fpl_Lesson7.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson7.TabIndex = 2;
+            // 
+            // fpl_Lesson6
+            // 
+            this.fpl_Lesson6.AutoScroll = true;
+            this.fpl_Lesson6.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson6.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson6.Location = new System.Drawing.Point(175, 276);
+            this.fpl_Lesson6.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson6.Name = "fpl_Lesson6";
+            this.fpl_Lesson6.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson6.TabIndex = 2;
+            // 
+            // fpl_Lesson3
+            // 
+            this.fpl_Lesson3.AutoScroll = true;
+            this.fpl_Lesson3.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson3.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson3.Location = new System.Drawing.Point(175, 147);
+            this.fpl_Lesson3.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson3.Name = "fpl_Lesson3";
+            this.fpl_Lesson3.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson3.TabIndex = 2;
+            // 
+            // fpl_Lesson4
+            // 
+            this.fpl_Lesson4.AutoScroll = true;
+            this.fpl_Lesson4.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson4.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson4.Location = new System.Drawing.Point(175, 178);
+            this.fpl_Lesson4.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson4.Name = "fpl_Lesson4";
+            this.fpl_Lesson4.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson4.TabIndex = 2;
+            // 
+            // fpl_Lesson1
+            // 
+            this.fpl_Lesson1.AutoScroll = true;
+            this.fpl_Lesson1.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.fpl_Lesson1.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpl_Lesson1.Location = new System.Drawing.Point(175, 49);
+            this.fpl_Lesson1.Margin = new System.Windows.Forms.Padding(0);
+            this.fpl_Lesson1.Name = "fpl_Lesson1";
+            this.fpl_Lesson1.Size = new System.Drawing.Size(592, 30);
+            this.fpl_Lesson1.TabIndex = 2;
             // 
             // fpl_Lesson2
             // 
@@ -497,94 +585,6 @@ namespace GUI
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(220, 17);
             this.bunifuSeparator1.TabIndex = 90;
-            // 
-            // fpl_Lesson1
-            // 
-            this.fpl_Lesson1.AutoScroll = true;
-            this.fpl_Lesson1.AutoScrollMinSize = new System.Drawing.Size(5, 5);
-            this.fpl_Lesson1.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fpl_Lesson1.Location = new System.Drawing.Point(175, 49);
-            this.fpl_Lesson1.Margin = new System.Windows.Forms.Padding(0);
-            this.fpl_Lesson1.Name = "fpl_Lesson1";
-            this.fpl_Lesson1.Size = new System.Drawing.Size(592, 30);
-            this.fpl_Lesson1.TabIndex = 2;
-            // 
-            // fpl_Lesson4
-            // 
-            this.fpl_Lesson4.AutoScroll = true;
-            this.fpl_Lesson4.AutoScrollMinSize = new System.Drawing.Size(5, 5);
-            this.fpl_Lesson4.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fpl_Lesson4.Location = new System.Drawing.Point(175, 178);
-            this.fpl_Lesson4.Margin = new System.Windows.Forms.Padding(0);
-            this.fpl_Lesson4.Name = "fpl_Lesson4";
-            this.fpl_Lesson4.Size = new System.Drawing.Size(592, 30);
-            this.fpl_Lesson4.TabIndex = 2;
-            // 
-            // fpl_Lesson3
-            // 
-            this.fpl_Lesson3.AutoScroll = true;
-            this.fpl_Lesson3.AutoScrollMinSize = new System.Drawing.Size(5, 5);
-            this.fpl_Lesson3.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fpl_Lesson3.Location = new System.Drawing.Point(175, 147);
-            this.fpl_Lesson3.Margin = new System.Windows.Forms.Padding(0);
-            this.fpl_Lesson3.Name = "fpl_Lesson3";
-            this.fpl_Lesson3.Size = new System.Drawing.Size(592, 30);
-            this.fpl_Lesson3.TabIndex = 2;
-            // 
-            // fpl_Lesson6
-            // 
-            this.fpl_Lesson6.AutoScroll = true;
-            this.fpl_Lesson6.AutoScrollMinSize = new System.Drawing.Size(5, 5);
-            this.fpl_Lesson6.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fpl_Lesson6.Location = new System.Drawing.Point(175, 276);
-            this.fpl_Lesson6.Margin = new System.Windows.Forms.Padding(0);
-            this.fpl_Lesson6.Name = "fpl_Lesson6";
-            this.fpl_Lesson6.Size = new System.Drawing.Size(592, 30);
-            this.fpl_Lesson6.TabIndex = 2;
-            // 
-            // fpl_Lesson5
-            // 
-            this.fpl_Lesson5.AutoScroll = true;
-            this.fpl_Lesson5.AutoScrollMinSize = new System.Drawing.Size(5, 5);
-            this.fpl_Lesson5.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fpl_Lesson5.Location = new System.Drawing.Point(175, 244);
-            this.fpl_Lesson5.Margin = new System.Windows.Forms.Padding(0);
-            this.fpl_Lesson5.Name = "fpl_Lesson5";
-            this.fpl_Lesson5.Size = new System.Drawing.Size(592, 30);
-            this.fpl_Lesson5.TabIndex = 2;
-            // 
-            // fpl_Lunch
-            // 
-            this.fpl_Lunch.AutoScroll = true;
-            this.fpl_Lunch.AutoScrollMinSize = new System.Drawing.Size(5, 5);
-            this.fpl_Lunch.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fpl_Lunch.Location = new System.Drawing.Point(175, 212);
-            this.fpl_Lunch.Margin = new System.Windows.Forms.Padding(0);
-            this.fpl_Lunch.Name = "fpl_Lunch";
-            this.fpl_Lunch.Size = new System.Drawing.Size(592, 30);
-            this.fpl_Lunch.TabIndex = 2;
-            // 
-            // fpl_Lesson7
-            // 
-            this.fpl_Lesson7.AutoScroll = true;
-            this.fpl_Lesson7.AutoScrollMinSize = new System.Drawing.Size(5, 5);
-            this.fpl_Lesson7.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fpl_Lesson7.Location = new System.Drawing.Point(175, 336);
-            this.fpl_Lesson7.Margin = new System.Windows.Forms.Padding(0);
-            this.fpl_Lesson7.Name = "fpl_Lesson7";
-            this.fpl_Lesson7.Size = new System.Drawing.Size(592, 30);
-            this.fpl_Lesson7.TabIndex = 2;
-            // 
-            // fpl_Dinner
-            // 
-            this.fpl_Dinner.AutoScroll = true;
-            this.fpl_Dinner.AutoScrollMinSize = new System.Drawing.Size(5, 5);
-            this.fpl_Dinner.Font = new System.Drawing.Font("Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fpl_Dinner.Location = new System.Drawing.Point(175, 307);
-            this.fpl_Dinner.Margin = new System.Windows.Forms.Padding(0);
-            this.fpl_Dinner.Name = "fpl_Dinner";
-            this.fpl_Dinner.Size = new System.Drawing.Size(592, 30);
-            this.fpl_Dinner.TabIndex = 2;
             // 
             // FrmViewSchedule
             // 

@@ -80,7 +80,7 @@ namespace GUI
                 {
                     bunifuSnackbar1.Show(this, "Login successfully, it's moving to Admin Form");
                     this.Hide();
-                    FrmAdmin frmAdmin = new FrmAdmin(newteacher.TeacherId);
+                    FrmTeacherSchool frmAdmin = new FrmTeacherSchool(newteacher.TeacherId);
                     frmAdmin.Show();
                 }
                 else

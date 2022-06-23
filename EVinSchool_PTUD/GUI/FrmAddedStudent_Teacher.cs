@@ -15,12 +15,12 @@ using DataAccessLayer;
 
 namespace GUI
 {
-    public partial class FrmAddedStudeentTeacher : BunifuForm
+    public partial class FrmAddedStudent_Teacher : BunifuForm
     {
         TeacherBUS teaherBUS = new TeacherBUS();
         StudentBUS studentBUS = new StudentBUS();
         string filename = null;
-        public FrmAddedStudeentTeacher(int teacherID)
+        public FrmAddedStudent_Teacher(int teacherID)
         {
             InitializeComponent();
             lblTeacherID.Text = teacherID.ToString();
@@ -69,7 +69,7 @@ namespace GUI
                     txtStudentAddress.Text = null;
                     txtParentPhone.Text = null;
                     txtClassName.Text = null;
-                    pic_StudentAvatar.ImageLocation = null;
+                    pic_StudentAvatar.ImageLocation = @"../../upload/noimage.jpg";
                     this.Owner.Refresh();
                     this.Owner.Activate();
                 }

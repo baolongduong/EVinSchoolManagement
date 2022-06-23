@@ -14,36 +14,39 @@ using DataAccessLayer;
 
 namespace GUI
 {
-    public partial class FrmAddMark : BunifuForm
+    public partial class FrmAddMark_Teacher : BunifuForm
     {
         MarkBUS markBUS = new MarkBUS();
         bool isValidation = false;
         List<string> getValidList = new List<string>();
-        public FrmAddMark()
+        public FrmAddMark_Teacher(int classId)
         {
             InitializeComponent();
+            lbl_TeacherClass.Text = classId.ToString();
         }
         private void btn_RefreshMark_Click(object sender, EventArgs e)
         {
             loadMark();
-            autoSendToRanking();
-          
+            autoSendToRanking();        
         }
-
         private void btn_Clear_Click(object sender, EventArgs e)
         {
             Clear();
         }
         private void loadMark()
         {
-            List<MarkJoinedModel> markJoineds = markBUS.GetAllMarkJoined();
+            Classroom classroom = new ClassroomBUS().GetDetails(Int32.Parse(lbl_TeacherClass.Text.ToString()));
+            List<MarkJoinedModel> markJoineds = markBUS.GetAllMarkJoinedByClass(classroom.ClassId);
             gv_Mark.DataSource = markJoineds;
         }
         private void autoSendToRanking()
         {
             int numOfStudentAddToRanking = 0;
             int numOfStudentUpdateToRanking = 0;
-            List<Student> students = new StudentBUS().GetAll();
+            Classroom classroom = new ClassroomBUS().GetDetails(Int32.Parse(lbl_TeacherClass.Text.ToString()));
+            lbl_TeacherClassName.Text = classroom.ClassName;
+            //Load Students
+            List<Student> students = new StudentBUS().GetDetailsByClassId(classroom.ClassId);
             foreach (var student in students)
             {
                 List<ClasstificationJoinedModel> getFirst = new ClassificationDAO().GetFirstScore(student.StudentId);
@@ -212,26 +215,18 @@ namespace GUI
             }
             MessageBox.Show("Vertifed Students: " + numOfStudentUpdateToRanking+ "\r"+"\n" + "New vertifed Students: "+ numOfStudentAddToRanking);
         }
-
-
         private void FrmAddMark_Load(object sender, EventArgs e)
         {
-            //Load Classrooms
-            List<Classroom> classrooms = new ClassroomBUS().GetAll();
-            foreach (var classes in classrooms)
-            {
-                drp_Classroom.Items.Add(classes.ClassName);
-                drp_Classroom.ValueMember = "ClassId";
-            }
+           Classroom classroom = new ClassroomBUS().GetDetails(Int32.Parse(lbl_TeacherClass.Text.ToString()));
+            lbl_TeacherClassName.Text = classroom.ClassName;
             //Load Marks
             loadMark();
             MessageBox.Show("Wait a few minutes to check...");
             autoSendToRanking();
             //Load Marks again
             loadMark();
-
             //Load Students
-            List<Student> students = new StudentBUS().GetAll();
+            List<Student> students = new StudentBUS().GetDetailsByClassId(classroom.ClassId);
             foreach (var student in students)
             {
                 drp_Student.Items.Add(student.StudentName);
@@ -248,11 +243,9 @@ namespace GUI
                 drp_Subject.ValueMember = "SubjectId";
             }
         }
-
         //Clear
         public void Clear()
         {
-            drp_Classroom.SelectedItem = null;
             drp_Student.SelectedItem = null;
             drp_Subject.SelectedItem = null;
             txt_StudentName.Text = null;
@@ -262,7 +255,6 @@ namespace GUI
             lbl_markId.Text = "Id";
             lbl_StudentId.Text = "Id";
         }
-
         //Details
         private void gv_Mark_SelectionChanged(object sender, EventArgs e)
         {
@@ -283,7 +275,6 @@ namespace GUI
                 {
                     drp_Student.SelectedItem = mark.Student.StudentName;
                     drp_Subject.SelectedItem = subject.SubjectName;
-                    drp_Classroom.SelectedItem = classroom.ClassName;
                     lbl_markId.Text = mark.MarkId.ToString();
                     lbl_StudentId.Text = mark.StudentId.ToString();
                     dt_MarkDate.Value = mark.MarkDate.Value;
@@ -350,8 +341,6 @@ namespace GUI
                 }
             }
         }
-
-
         //Edit student's mark
         private void btn_EditMark_Click(object sender, EventArgs e)
         {
@@ -374,6 +363,7 @@ namespace GUI
             {
                 loadMark();
                 bunifuSnackbar1.Show(this, "You save student mark successfully");
+                Clear();
                 this.Owner.Refresh();
                 this.Owner.Activate();
             }
@@ -382,7 +372,6 @@ namespace GUI
                 bunifuSnackbar1.Show(this, "Can't save");
             }
         }
-
         //Add student's mark
         private void btn_AddMark_Click(object sender, EventArgs e)
         {
@@ -426,6 +415,7 @@ namespace GUI
                     {
                         loadMark();
                         bunifuSnackbar1.Show(this, "Added mark successfully !!");
+                        Clear();
                     }
                     else
                     {
@@ -434,14 +424,11 @@ namespace GUI
                 }
             }
         }
-
-
         //Change students in dropdown
         private void drp_Student_DropDown(object sender, EventArgs e)
         {
             drp_Student.Items.Clear();
-            string classId = drp_Classroom.SelectedItem.ToString();
-            Classroom cls = new ClassroomBUS().GetID(classId);
+            Classroom cls = new ClassroomBUS().GetID(lbl_TeacherClassName.Text.ToString());
             List<Student> students = new StudentBUS().GetDetailsByClassId(cls.ClassId);
             foreach (var student in students)
             {
@@ -455,9 +442,6 @@ namespace GUI
             List<MarkJoinedModel> marks = markBUS.findByName(keyword);
             gv_Mark.DataSource = marks;
         }
-
-
-
         //Vertify classtification
         private void btnSendClassstification_Click(object sender, EventArgs e)
         {
@@ -586,7 +570,6 @@ namespace GUI
 
 
         }
-
         private void drp_Student_SelectedIndexChanged(object sender, EventArgs e)
         {
 

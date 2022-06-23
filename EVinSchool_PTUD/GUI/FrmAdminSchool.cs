@@ -49,42 +49,87 @@ namespace GUI
 
         private void bnf_Teachers_Click(object sender, EventArgs e)
         {
-            adminpages.PageIndex = 1;
+            adminpages.PageIndex = 0;
+           
         }
 
         private void bnf_Parents_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 2;
+            loadClasstificationTable();
         }
 
         private void bnf_Students_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 3;
+
+
+            //Student Information
+            List<Student> students = new StudentBUS().GetAll();
+            gv_StudentInfo.DataSource = students;
+            gv_StudentInfo.Columns[0].Visible = false;
+            gv_StudentInfo.Columns[4].Visible = false;
+            gv_StudentInfo.Columns[5].Visible = false;
+            gv_StudentInfo.Columns[8].Visible = false;
+
         }
 
         private void bnf_Mark_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 4;
+            loadMarkTable();
         }
 
         private void bnf_Subjects_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 5;
+            //Classrooms
+            List<ClassroomJoined> classrooms = new ClassroomBUS().GetAllClassesJoined();
+            gv_Classroom.DataSource = classrooms;
         }
 
         private void bnf_Schedule_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 6;
+
+            //Food Schedule
+            List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetAll();
+            gvMealSchedule.DataSource = foodSchedules;
+            gvMealSchedule.Columns[0].Visible = false;
+            gvMealSchedule.Columns[3].Visible = false;
+            gvMealSchedule.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            gvMealSchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
+            gvMealSchedule.Columns[4].HeaderText = "Time";
+            gvMealSchedule.Columns[5].Visible = false;
+
+            //Study Schedule
+            List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleBUS().GetAllBySubjectxClass();
+            gv_StudySchedule.DataSource = studySchedules;
+            gv_StudySchedule.Columns[0].Visible = false;
+            gv_StudySchedule.Columns[1].Visible = false;
+            gv_StudySchedule.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            gv_StudySchedule.Columns[3].DefaultCellStyle.Format = "HH:mm";
+            gv_StudySchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
         }
 
         private void bnf_Attendance_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 7;
+            //Attendance
+            List<Attendance> att = new AttendanceBUS().GetAll();
+            gv_attendancereports.DataSource = att;
+            gv_attendancereports.Columns[0].Visible = false;
+            gv_attendancereports.Columns[3].Visible = false;
+            gv_attendancereports.Columns[4].Visible = false;
+            gv_attendancereports.Columns[5].Visible = false;
+            gv_attendancereports.Columns[7].Visible = false;
+            gv_attendancereports.Columns[8].Visible = false;
+            gv_attendancereports.Columns[9].Visible = false;
+            gv_attendancereports.Columns[10].Visible = false;
         }
-
         private void btnAdminInfo_Click(object sender, EventArgs e)
         {
-            adminpages.PageIndex = 0;
+            adminpages.PageIndex = 1;
         }
 
         private void btnEditAdmin_Click(object sender, EventArgs e)
@@ -118,47 +163,6 @@ namespace GUI
             gv_Teacher.Columns[5].Visible = false;
             gv_Teacher.Columns[6].Visible = false;
 
-            //Student Information
-            List<Student> students = new StudentBUS().GetAll();
-            gv_StudentInfo.DataSource = students;
-            gv_StudentInfo.Columns[0].Visible = false;
-            gv_StudentInfo.Columns[4].Visible = false;
-            gv_StudentInfo.Columns[5].Visible = false;
-            gv_StudentInfo.Columns[8].Visible = false;
-
-            //Mark
-            loadMarkTable();
-
-            //Classtification
-            loadClasstificationTable();
-
-            //Attendance
-            List<Student> st = new StudentBUS().GetAll();
-            gv_attendancereports.DataSource = st;
-
-
-            //Food Schedule
-            List<FoodSchedule> foodSchedules = new FoodScheduleBUS().GetAll();
-            gvMealSchedule.DataSource = foodSchedules;
-            gvMealSchedule.Columns[0].Visible = false;
-            gvMealSchedule.Columns[3].Visible = false;
-            gvMealSchedule.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-            gvMealSchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
-            gvMealSchedule.Columns[4].HeaderText = "Time";
-            gvMealSchedule.Columns[5].Visible = false;
-
-            //Study Schedule
-            List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleBUS().GetAllBySubjectxClass();
-            gv_StudySchedule.DataSource = studySchedules;
-            gv_StudySchedule.Columns[0].Visible = false;
-            gv_StudySchedule.Columns[1].Visible = false;
-            gv_StudySchedule.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-            gv_StudySchedule.Columns[3].DefaultCellStyle.Format = "HH:mm";
-            gv_StudySchedule.Columns[4].DefaultCellStyle.Format = "HH:mm";
-
-            //Classrooms
-            List<ClassroomJoined> classrooms = new ClassroomBUS().GetAllClassesJoined();
-            gv_Classroom.DataSource = classrooms;
         }
 
         private void loadClasstificationTable()
@@ -175,6 +179,7 @@ namespace GUI
             List<MarkJoinedModel> markJoineds = new MarkBUS().GetAllMarkJoined();
             gv_Mark.DataSource = markJoineds;
         }
+
         private void btnSaveAdmin_Click(object sender, EventArgs e)
         {
             CancelEventArgs oc = new CancelEventArgs();
@@ -339,7 +344,15 @@ namespace GUI
                     string month = dValue.Month.ToString();
                     string year = dValue.Year.ToString();
                     lblStudentDate.Text = "("+day+"/"+ month + "/"+ year + ")";
-                    pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
+                    if (student.StudentImage == null || student.StudentImage == "")
+                    {
+                        pic_StudentAvatar.ImageLocation = @"../../upload/noimage.jpg";
+                    }
+                    else
+                    {
+                        pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
+                    }
+                  
                 }
             }
         }
@@ -547,6 +560,11 @@ namespace GUI
         }
 
         private void btnEditAttendance_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gv_attendancereports_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

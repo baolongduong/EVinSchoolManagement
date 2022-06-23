@@ -79,7 +79,7 @@ namespace GUI
                 StudySubject = sjname.SubjectId,
                 ClassID = Int32.Parse(lbl_ClassID.Text.ToString()),              
             };
-
+            bool resultDateClass = studyScheduleBUS.isValidDateAndClassId((int)studySchedule.ClassID, (DateTime)studySchedule.StudyDate);
             if (drpdown_StudyTime.SelectedItem.ToString() == "Lesson 01")
             {
                 DateTime start = new DateTime(2022, 1, 1, 8, 0, 0);
@@ -129,14 +129,23 @@ namespace GUI
                 studySchedule.TimeStart = start;
                 studySchedule.TimeEnd = end;
             }
-
+            bool resultLessonsTime = studyScheduleBUS.isValidDifferentLessons((int)studySchedule.ClassID, (DateTime)studySchedule.StudyDate, (DateTime)studySchedule.TimeStart, (DateTime)studySchedule.TimeEnd);
             if (string.IsNullOrEmpty(lbl_FoodClass.Text))
             {
                 errorProvider1.SetError(lbl_FoodClass, "Your food name is left blank");
             }
+            else if (resultDateClass == false)
+            {
+                errorProvider1.SetError(drpdown_StudyTime, "7 lessons/ 1 class / 1 day");
+            }
+            else if (resultLessonsTime == false)
+            {
+                errorProvider1.SetError(drpdown_StudyTime, "Already have "+drpdown_StudyTime.SelectedItem.ToString()+" in "+studySchedule.StudyDate);
+            }
             else
             {
                 errorProvider1.SetError(lbl_FoodClass, null);
+                errorProvider1.SetError(drpdown_StudyTime, null);
                 oc.Cancel = false;
                 bool result = studyScheduleBUS.Insert(studySchedule);
                 if (result)
@@ -144,6 +153,7 @@ namespace GUI
                     bunifuSnackbar1.Show(this, "Create study schedule successfully");
                     LoadStudySchedule();
                 }
+            
                 else
                 {
                     bunifuSnackbar1.Show(this, "Create study schedule uncessfully");
@@ -166,7 +176,7 @@ namespace GUI
                 StudySubject = sjname.SubjectId,
                 ClassID = Int32.Parse(lbl_ClassID.Text.ToString()),
             };
-
+            bool resultDateClass = studyScheduleBUS.isValidDateAndClassId((int)studySchedule.ClassID, (DateTime)studySchedule.StudyDate);
             if (drpdown_StudyTime.SelectedItem.ToString() == "Lesson 01")
             {
                 DateTime start = new DateTime(2022, 1, 1, 8, 0, 0);
@@ -216,14 +226,23 @@ namespace GUI
                 studySchedule.TimeStart = start;
                 studySchedule.TimeEnd = end;
             }
-
+            bool resultLessonsTime = studyScheduleBUS.isValidDifferentLessons((int)studySchedule.ClassID, (DateTime)studySchedule.StudyDate, (DateTime)studySchedule.TimeStart, (DateTime)studySchedule.TimeEnd);
             if (string.IsNullOrEmpty(lbl_FoodClass.Text))
             {
                 errorProvider1.SetError(lbl_FoodClass, "Your food name is left blank");
             }
+            else if (resultDateClass == false)
+            {
+                errorProvider1.SetError(drpdown_StudyTime, "7 lessons/ 1 class / 1 day");
+            }
+            else if (resultLessonsTime == false)
+            {
+                errorProvider1.SetError(drpdown_StudyTime, "Already have " + drpdown_StudyTime.SelectedItem.ToString() + " in " + studySchedule.StudyDate.Value.Day+"/"+ studySchedule.StudyDate.Value.Month + "/" + studySchedule.StudyDate.Value.Year);
+            }
             else
             {
                 errorProvider1.SetError(lbl_FoodClass, null);
+                errorProvider1.SetError(drpdown_StudyTime, null);
                 oc.Cancel = false;
                 bool result = studyScheduleBUS.Update(studySchedule);
                 if (result)

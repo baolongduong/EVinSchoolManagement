@@ -37,7 +37,14 @@ namespace GUI
             lbl_Class.Text = cls.ClassName;
             txtEmail.Text = teacher.TeacherEmail;
             txtPassword.Text = teacher.TeacherPassword;
-            pic_TeacherAvatar.ImageLocation = @"../../upload/"+teacher.TeacherImage;
+            if (teacher.TeacherImage == null || teacher.TeacherImage == "")
+            {
+                pic_TeacherAvatar.ImageLocation = @"../../upload/noimage.jpg";
+            }
+            else
+            {
+                pic_TeacherAvatar.ImageLocation = @"../../upload/" + teacher.TeacherImage;
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)

@@ -75,7 +75,7 @@ namespace GUI
                     txtStudentAddress.Text = null;
                     txtParentPhone.Text = null;
                     drp_Classroom.Text = null;
-                    pic_StudentAvatar.ImageLocation = null;
+                    pic_StudentAvatar.ImageLocation = @"../../upload/noimage.jpg";
                     dtp_StudentDOB.Value = DateTime.Now;
                     txtParentName.Text = null;
                     this.Owner.Refresh();

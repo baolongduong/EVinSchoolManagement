@@ -242,7 +242,7 @@ namespace GUI
             this.drp_Student.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.drp_Student.ItemHighLightForeColor = System.Drawing.Color.White;
             this.drp_Student.ItemTopMargin = 3;
-            this.drp_Student.Location = new System.Drawing.Point(728, 145);
+            this.drp_Student.Location = new System.Drawing.Point(774, 145);
             this.drp_Student.Name = "drp_Student";
             this.drp_Student.Size = new System.Drawing.Size(109, 32);
             this.drp_Student.TabIndex = 102;
@@ -287,7 +287,7 @@ namespace GUI
             this.bunifuPictureBox1.BorderRadius = 53;
             this.bunifuPictureBox1.Image = global::GUI.Properties.Resources.evs_logo;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(0, 51);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(34, 51);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(106, 106);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -303,7 +303,7 @@ namespace GUI
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Garamond", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.ForeColor = System.Drawing.Color.DarkRed;
-            this.bunifuLabel2.Location = new System.Drawing.Point(315, 77);
+            this.bunifuLabel2.Location = new System.Drawing.Point(338, 77);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(290, 37);

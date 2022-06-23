@@ -91,6 +91,39 @@ namespace DataAccessLayer
             }
             return false;
         }
+
+        public bool isValidDateAndClassId(int classId, DateTime date)
+        {
+            var q = from p in db.FoodSchedules
+                    where p.FoodDate == date
+                    && p.ClassId == classId
+                    select p;
+            if (q.Count() == 2)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public bool isValidOneTimeOneMeal(int classId, DateTime date, DateTime fTime)
+        {
+            var q = from p in db.FoodSchedules
+                    where p.FoodDate == date
+                    && p.ClassId == classId && p.FoodClassTime == fTime
+                    select p;
+            if (q.Count() > 1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
     }
 
    

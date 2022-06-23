@@ -164,5 +164,55 @@ namespace DataAccessLayer
                         };
             return query.SingleOrDefault();
         }
+        public List<SubjectClassroomOfStudySchedule> GetSDetailsByClass(int classId)
+        {
+            var query = from study in db.StudySchedules
+                        join cls in db.Classrooms on study.ClassID equals cls.ClassId
+                        join subj in db.Subjects on study.StudySubject equals subj.SubjectId
+                        where study.ClassID == classId
+                        select new SubjectClassroomOfStudySchedule
+                        {
+                            StudyId = study.StudySID,
+                            ClassId = study.ClassID,
+                            StudyDate = study.StudyDate,
+                            TimeStart = study.TimeStart,
+                            TimeEnd = study.TimeEnd,
+                            SubjectName = subj.SubjectName,
+                            ClassName = cls.ClassName
+                        };
+            return query.ToList();
+        }
+
+        public bool isValidDateAndClassId(int classId, DateTime date)
+        {
+            var q = from p in db.StudySchedules
+                    where p.StudyDate == date
+                    && p.ClassID == classId
+                    select p;
+            if (q.Count() >= 7)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public bool isValidDifferentLessons(int classId, DateTime date, DateTime bTime, DateTime eTime)
+        {
+            var q = from p in db.StudySchedules
+                    where p.StudyDate == date
+                    && p.ClassID == classId && p.TimeStart == bTime && p.TimeEnd == eTime
+                    select p;
+            if (q.Count() > 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

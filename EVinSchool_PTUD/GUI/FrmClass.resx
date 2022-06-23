@@ -120,14 +120,15 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txt_ClassName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAaCAYAAACpZo6LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFoSURBVHhe7du/SsNAHMDxGzv6CI6OPomzj+Diswg+g6/g
-        2jT/avYOdmoRKlJDkAgx1BDi71d/IKVje16H7wduaC7dvhwXuHPAyYii6DrP83GapuVkMhkYjEOGdiQ9
-        PUlXN5bYPpk805dms1ldluXQtu0AHEo7qqpqmM/nTZZlz9LZuSX3R8Nbr9f2F+D46roepLMXCXBk2TmX
-        JMmtlPlp7wDeLBaLVgK8t/R+Vz1dGgHfmqbRfeCrpedcHMdfXdfZNOCXfohYes7pD+C/EB+CIT4EQ3wI
-        hvgQDPEhGOJDMMSHYIgPwRAfgiE+BEN8CGYnvjiOu77vbQrwayc+PWGqB/0A3zabzZAkSW3pbeO7Wy6X
-        nKmCd3paPs/zR0tve39jJAG+cW8DPunWbjqdfuzd45AHl1Lk+2q1+uZgKY5Jo9NLaUVRVLLIXVlyuyRA
-        vcH2oCebdVPIYBxj6AetdDWWvi4sNSAk534AqcRU6+7RuuIAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAMAAAAAkCAYAAADfCTWTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGPSURBVHhe7d2xTsJQFMbxOzL6CI6OPomzj+Dis5j4DL6C
+        K9BCkb2DTBCTElObxtSkNtiQeg6eRAlP4D3/X3IHuGX7vsJlOA0A/phMJtdZlo1ns1k1nU4HFuu/L82y
+        ZPpJsn1jMT8lm2d6UZ7nTVVVQ9d1AxADzXJd18NqtWrn8/mzZP3cYv9Lw1+WpX0EiFPTNINk/UVKMLLo
+        h5Cm6a2048OuAaK2Xq87KcG9xf/n7q9fEYAHbdvquWBr8Q8hSZLPvu9tG4ifHo4t/iHoC8ATCgDXKABc
+        owBwjQLANQoA1ygAXKMAcI0CwDUKANcoAFyjAHCNAsA1CgDXKABcowBwjQLANQoA1ygAXKMAcI0CwDUK
+        ANeOCpAkSb/f720LiN9RAXReoo6MAzzY7XZDmqaNxf9QgLvNZsNkLLigM3CzLHu0+B8mQ4+kBK9MhEbs
+        9Kf+YrF4P5kQLW9cSiveiqL4YkwiYqPB17H/y+Wylpv9lcX+mJRAnxHwoLNC9ZDAYsWy9I8eyfZYMn5h
+        cQe8C+EbbH79xOt7Pc0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
@@ -262,4 +263,7 @@
         SUVORK5CYII=
 </value>
   </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>514, 17</value>
+  </metadata>
 </root>

@@ -60,5 +60,17 @@ namespace BusinessLogicLayer
             List<FoodSchedule> foodSchedules = new FoodScheduleDAO().SelectByDate(date,start);
             return foodSchedules;
         }
+        public bool isValidDateAndClassId(int classId, DateTime date)
+        {
+            bool result = new FoodScheduleDAO().isValidDateAndClassId(classId,date);
+            return result;
+        }
+        public bool isValidOneTimeOneMeal(int classId, DateTime date, DateTime fTime)
+        {
+            bool result = new FoodScheduleDAO().isValidOneTimeOneMeal(classId, date, fTime);
+            return result;
+        }
+        
+
     }
 }

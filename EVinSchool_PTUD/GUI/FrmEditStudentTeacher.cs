@@ -46,7 +46,14 @@ namespace GUI
             txtParentPhone.Text = student.ParentPhone;
             lbl_ClassId.Text = student.StudentClass.ToString();
             txtClassName.Text = clsname.ClassName;
-            pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
+            if (student.StudentImage == null || student.StudentImage == "")
+            {
+                pic_StudentAvatar.ImageLocation = @"../../upload/noimage.jpg";
+            }
+            else
+            {
+                pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)

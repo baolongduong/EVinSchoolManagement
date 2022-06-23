@@ -153,11 +153,23 @@
     <Reference Include="TelerikCommon, Version=2022.2.510.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAddedStudent_Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddedStudent_Teacher.Designer.cs">
+      <DependentUpon>FrmAddedStudent_Teacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddedStudent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAddedStudent.Designer.cs">
       <DependentUpon>FrmAddedStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddMark_Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddMark_Teacher.Designer.cs">
+      <DependentUpon>FrmAddMark_Teacher.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAddMark.cs">
       <SubType>Form</SubType>
@@ -189,6 +201,12 @@
     <Compile Include="FrmEditAttendance.Designer.cs">
       <DependentUpon>FrmEditAttendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEditStudentTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditStudentTeacher.Designer.cs">
+      <DependentUpon>FrmEditStudentTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStudySchedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,11 +225,11 @@
     <Compile Include="FrmRegister.Designer.cs">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAdmin.cs">
+    <Compile Include="FrmTeacherSchool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAdmin.Designer.cs">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    <Compile Include="FrmTeacherSchool.Designer.cs">
+      <DependentUpon>FrmTeacherSchool.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -251,8 +269,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddedStudent_Teacher.resx">
+      <DependentUpon>FrmAddedStudent_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddedStudent.resx">
       <DependentUpon>FrmAddedStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddMark_Teacher.resx">
+      <DependentUpon>FrmAddMark_Teacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddMark.resx">
       <DependentUpon>FrmAddMark.cs</DependentUpon>
@@ -269,6 +293,9 @@
     <EmbeddedResource Include="FrmEditAttendance.resx">
       <DependentUpon>FrmEditAttendance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditStudentTeacher.resx">
+      <DependentUpon>FrmEditStudentTeacher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmStudySchedule.resx">
       <DependentUpon>FrmStudySchedule.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,8 +305,8 @@
     <EmbeddedResource Include="FrmRegister.resx">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAdmin.resx">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="FrmTeacherSchool.resx">
+      <DependentUpon>FrmTeacherSchool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -384,6 +411,7 @@
     <Content Include="upload\675fbf80eabf11721c93f345a156b40f.jpg" />
     <Content Include="upload\a7e235172b39d8678128.jpg" />
     <Content Include="upload\actor.jpg" />
+    <None Include="upload\alireza-attari-SBIak0pKUIE-unsplash.jpg" />
     <Content Include="upload\c578ff927732846cdd23.jpg" />
     <Content Include="upload\Crying Wojak.jpg" />
     <Content Include="upload\download.png" />

@@ -28,7 +28,6 @@ namespace GUI
                         + "WHERE cs.StudentId = st.StudentId and st.StudentClass = cl.ClassId "
                         + "GROUP BY cl.ClassName";
 
-
         public FrmGuest()
         {
             InitializeComponent();
@@ -49,8 +48,6 @@ namespace GUI
             List<ClassroomJoined> classrooms = new ClassroomBUS().GetAllClassesJoined();
             gv_Classroom.DataSource = classrooms;
             gv_Classroom.Columns[0].Width = 100;
-            //Mark
-            loadMarkTable();
 
             //Classtification
             loadClasstificationTable();
@@ -111,7 +108,7 @@ namespace GUI
                 btn.Name = "btnLS01" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson1.Controls.Add(btn);
             }
@@ -121,7 +118,7 @@ namespace GUI
                 btn.Name = "btnLS02" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson2.Controls.Add(btn);
             }
@@ -131,7 +128,7 @@ namespace GUI
                 btn.Name = "btnLS03" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson3.Controls.Add(btn);
             }
@@ -141,7 +138,7 @@ namespace GUI
                 btn.Name = "btnLS04" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson4.Controls.Add(btn);
             }
@@ -151,7 +148,7 @@ namespace GUI
                 btn.Name = "btnLS05" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson5.Controls.Add(btn);
             }
@@ -161,7 +158,7 @@ namespace GUI
                 btn.Name = "btnLS06" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson6.Controls.Add(btn);
             }
@@ -171,7 +168,7 @@ namespace GUI
                 btn.Name = "btnLS07" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson7.Controls.Add(btn);
             }
@@ -228,13 +225,6 @@ namespace GUI
             fpl_Dinner.BackColor = Color.White;
         }
 
-        private void loadMarkTable()
-        {
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark, conStr);
-            DataSet DS = new DataSet();
-            dataAdapter.Fill(DS);
-            gv_Mark.DataSource = DS.Tables[0];
-        }
 
         private void loadClasstificationTable()
         {
@@ -247,37 +237,11 @@ namespace GUI
             gv_Classtification.Columns[2].DefaultCellStyle.ForeColor = Color.Green;
         }
 
-        private void txt_Classtification_TextChange(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            String keyword = txt_Classtification.Text.Trim();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(listClasstification + " and st.StudentName LIKE '%" + keyword + "%'", conStr);
-            DataSet DS = new DataSet();
-            dataAdapter.Fill(DS);
-            gv_Classtification.DataSource = DS.Tables[0];
-        }
-
-        private void txt_StudentName_TextChange(object sender, EventArgs e)
-        {
-            String keyword = txt_StudentName.Text.Trim();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(listStudentMark + " and st.StudentName LIKE '%" + keyword + "%'", conStr);
-            DataSet DS = new DataSet();
-            dataAdapter.Fill(DS);
-            gv_Mark.DataSource = DS.Tables[0];
-        }
-
-        private void gv_Classroom_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Classroom_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gv_Subjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            this.Hide();
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
         }
     }
 }

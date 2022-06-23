@@ -42,7 +42,14 @@ namespace GUI
             txtParentName.Text = student.ParentName;
             lbl_ClassId.Text = student.StudentClass.ToString() ;
             drp_Classroom.SelectedItem = student.Classroom.ClassName;
-            pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
+            if (student.StudentImage == null || student.StudentImage == "")
+            {
+                pic_StudentAvatar.ImageLocation = @"../../upload/noimage.jpg";
+            }
+            else
+            {
+                pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
+            }
         }
 
 

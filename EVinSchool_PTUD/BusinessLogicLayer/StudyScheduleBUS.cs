@@ -23,11 +23,17 @@ namespace BusinessLogicLayer
             return studySchedule;
         }
 
-       /* public List<StudySchedule> SelectByKeyword(string keyword)
+        public bool isValidDateAndClassId(int classId, DateTime date)
         {
-            List<StudySchedule> studySchedules = new StudyScheduleDAO().SelectByKeyword(keyword);
-            return studySchedules;
-        }*/
+            bool result = new StudyScheduleDAO().isValidDateAndClassId(classId, date);
+            return result;
+        }
+
+        public bool isValidDifferentLessons(int classId, DateTime date, DateTime bTime, DateTime eTime)
+        {
+            bool result = new StudyScheduleDAO().isValidDifferentLessons(classId, date, bTime, eTime);
+            return result;
+        }
 
         public bool Insert(StudySchedule newStudySchedule)
         {
@@ -78,6 +84,12 @@ namespace BusinessLogicLayer
         {
             SubjectClassroomOfStudySchedule studySchedule = new StudyScheduleDAO().SelectBySCode(code);
             return studySchedule;
+        }
+
+        public List<SubjectClassroomOfStudySchedule> GetSDetailsByClass(int classId)
+        {
+            List<SubjectClassroomOfStudySchedule> studySchedules = new StudyScheduleDAO().GetSDetailsByClass(classId);
+            return studySchedules;
         }
     }
 }

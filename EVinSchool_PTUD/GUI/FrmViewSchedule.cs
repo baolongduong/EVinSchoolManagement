@@ -65,7 +65,7 @@ namespace GUI
                 btn.Name = "btnLS01" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson1.Controls.Add(btn);
             }
@@ -75,7 +75,7 @@ namespace GUI
                 btn.Name = "btnLS02" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson2.Controls.Add(btn);
             }
@@ -85,7 +85,7 @@ namespace GUI
                 btn.Name = "btnLS03" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson3.Controls.Add(btn);
             }
@@ -95,7 +95,7 @@ namespace GUI
                 btn.Name = "btnLS04" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson4.Controls.Add(btn);
             }
@@ -105,7 +105,7 @@ namespace GUI
                 btn.Name = "btnLS05" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson5.Controls.Add(btn);
             }
@@ -115,7 +115,7 @@ namespace GUI
                 btn.Name = "btnLS06" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson6.Controls.Add(btn);
             }
@@ -125,7 +125,7 @@ namespace GUI
                 btn.Name = "btnLS07" + stud.StudyId;
                 btn.Text = stud.ClassName + " - " + stud.SubjectName;
                 btn.IdleFillColor = Color.FromArgb(r.Next(0, 100), r.Next(0, 100), r.Next(0, 100));
-                btn.Size = new Size(100, 30);
+                btn.Size = new Size(200, 30);
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 fpl_Lesson7.Controls.Add(btn);
             }

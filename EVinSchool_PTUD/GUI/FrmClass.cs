@@ -32,24 +32,35 @@ namespace GUI
 
         private void btn_AddClass_Click(object sender, EventArgs e)
         {
+            CancelEventArgs oc = new CancelEventArgs();
+            oc.Cancel = true;
             Classroom newClass = new Classroom()
             {
                 ClassName = txt_ClassName.Text.Trim()
             };
-
-            bool result = classroomBUS.Insert(newClass);
-            DialogResult dialogResult = MessageBox.Show("ARE YOU SURE?", "CONFIRMATION", MessageBoxButtons.YesNo);
-            if(dialogResult == DialogResult.Yes)
+            bool checkName = classroomBUS.isNameExisted(newClass.ClassName);
+            if (checkName == false)
             {
-                if (result)
+                errorProvider1.SetError(txt_ClassName, "Class name is exists");
+            }
+            else
+            {
+                errorProvider1.SetError(txt_ClassName, null);
+                oc.Cancel = false;
+                bool result = classroomBUS.Insert(newClass);
+                DialogResult dialogResult = MessageBox.Show("ARE YOU SURE?", "CONFIRMATION", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    List<Classroom> classrooms = classroomBUS.GetAll();
-                    gv_Class.DataSource = classrooms;
-                    bunifuSnackbar1.Show(this, "Successfully !!");
-                }
-                else
-                {
-                    bunifuSnackbar1.Show(this, "Something wrong here !!");
+                    if (result)
+                    {
+                        List<Classroom> classrooms = classroomBUS.GetAll();
+                        gv_Class.DataSource = classrooms;
+                        bunifuSnackbar1.Show(this, "Successfully !!");
+                    }
+                    else
+                    {
+                        bunifuSnackbar1.Show(this, "Something wrong here !!");
+                    }
                 }
             }
         }
@@ -78,28 +89,37 @@ namespace GUI
         {
             CancelEventArgs oc = new CancelEventArgs();
             oc.Cancel = true;
-
             Classroom classroom = new Classroom()
             {
                 ClassId = int.Parse(lbl_ClassID.Text),
                 ClassName = txt_ClassName.Text.Trim()
             };
-
-            oc.Cancel = false;
-
-            bool result = classroomBUS.Update(classroom);
-            if (result)
+            bool checkName = classroomBUS.isNameExisted(classroom.ClassName);
+            if (checkName == false)
             {
-                bunifuSnackbar1.Show(this, "You save your classroom successfully");
-                List<Classroom> classrooms = classroomBUS.GetAll();
-                gv_Class.DataSource = classrooms;
-                this.Owner.Refresh();
-                this.Owner.Activate();
+                errorProvider1.SetError(txt_ClassName, "Class name is exists");
+            }    
+             else
+                    {
+                errorProvider1.SetError(txt_ClassName, null);
+                oc.Cancel = false;
+                bool result = classroomBUS.Update(classroom);
+
+                if (result)
+                {
+                    bunifuSnackbar1.Show(this, "You save your classroom successfully");
+                    List<Classroom> classrooms = classroomBUS.GetAll();
+                    gv_Class.DataSource = classrooms;
+                    this.Owner.Refresh();
+                    this.Owner.Activate();
+                }
+                else
+                {
+                    bunifuSnackbar1.Show(this, "Can't save");
+                }
             }
-            else
-            {
-                bunifuSnackbar1.Show(this, "Can't save");
-            }
+              
+           
         }
 
 

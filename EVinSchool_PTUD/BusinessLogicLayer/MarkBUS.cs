@@ -26,6 +26,11 @@ namespace BusinessLogicLayer
             List<MarkJoinedModel> marks = new MarkDAO().GetAllMarkJoined();
             return marks;
         }
+        public List<MarkJoinedModel> GetAllMarkJoinedByClass(int classId)
+        {
+            List<MarkJoinedModel> marks = new MarkDAO().GetAllMarkJoinedByClass(classId);
+            return marks;
+        }
         public List<MarkJoinedModel> findByName(string keyword)
         {
             List<MarkJoinedModel> marks = new MarkDAO().findByName(keyword);
@@ -36,11 +41,22 @@ namespace BusinessLogicLayer
             List<MarkJoinedModel> marks = new MarkDAO().getSubjectByID(subjectId);
             return marks;
         }
-        public List<MarkJoinedModel> findByClass(int classId)
+        public List<MarkJoinedModel> getSubjectByID_Teacher(int subjectId,int classId)
         {
-            List<MarkJoinedModel> marks = new MarkDAO().getClassByID(classId);
+            List<MarkJoinedModel> marks = new MarkDAO().getSubjectByID_Teacher(subjectId,classId);
             return marks;
         }
+        public List<MarkJoinedModel> findByName_Teacher(string keyword, int classId)
+        {
+            List<MarkJoinedModel> marks = new MarkDAO().findByName_Teacher(keyword,classId);
+            return marks;
+        }
+        public List<MarkJoinedModel> findByClass(int classId)
+        {
+            List<MarkJoinedModel> marks = new MarkDAO().findByClass(classId);
+            return marks;
+        }
+
         public bool Insert(Mark newMark)
         {
             bool result = new MarkDAO().Insert(newMark);

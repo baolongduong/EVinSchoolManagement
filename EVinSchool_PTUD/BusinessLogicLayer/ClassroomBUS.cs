@@ -57,5 +57,11 @@ namespace BusinessLogicLayer
             List<ClassroomJoined> classes = new ClassroomDAO().GetAllClassroomJoined();
             return classes;
         }
+
+        public bool isNameExisted(string keyword)
+        {
+            bool result = new ClassroomDAO().isNameExisted(keyword);
+            return result;
+        }
     }
 }
