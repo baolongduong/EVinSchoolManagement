@@ -78,5 +78,11 @@ namespace BusinessLogicLayer
             return result;
 
         }
+
+        public List<ClasstificationsScoreModel> findByClassId(int classId)
+        {
+            List<ClasstificationsScoreModel> classifications = new ClassificationDAO().findbyClass(classId);
+            return classifications;
+        }
     }
 }

@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>72</value>
+    <value>27</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pic_TeacherAvatar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -596,9 +596,6 @@
   <data name="bunifuLabel6.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(85, 107, 47); text-align: left; }</value>
   </data>
-  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 16.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
-  </data>
   <data name="bunifuLabel5.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 16.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
   </data>
@@ -627,22 +624,11 @@
 To support the management of information related to classes/students, 
 the school decided to deploy the EVinSchool management system.</value>
   </data>
+  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 16.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
+  </data>
   <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 19.8pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(139, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="btnEditAttendance.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHUAAAAhCAYAAADnG+RdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHPSURBVGhD7Zq9TgJBFEZ9UBoaGioaGhoaGhoaKt7AgoZH
-        oKHBKBrRSIw0aIFGNBIj0Yw5w87GDbCl7J18J5mELD/Fnrk/c5cTJ6JDUiNEUiNEUiNEUiNEUiMkV+rP
-        ZuNeRiP30O26u1bLXdVq7qxU0jrC4t7j4L7Tcc/DofterxNLuxyU+jaZ+B9CKGLfp1P3tVwm74r/hnuP
-        g9fx2M17Pe8GufvYkcoO4EuzdtttVqvkqigaeZ4yUvngTaNxcAeI4kFGvW02M1k0IxXzEmoP0jL1NpBK
-        xTihLGyyOD11T4OBf+2l0uVSeFVD7YJDSufnYrGVSsol9QrbEKlErJfK2YdWWdhmPZ/7aPVSr+t1H7bC
-        NqTg83J5K/WiUsmdUAg7MH3yUrGLZWGfVCqdr0aAcZBK5XzKOVXYhr6I/shLDa2wsE04mnqppF4Mq67a
-        JhxNvVR47Pf9EjYJz70hlUqUMhT+mM2SK8IKjHfJtOFYmkoFCm2YHwobIJRg5ElNICMViFTEhom/KC7U
-        TyL0r1DYkQqkYrphdgAdlZ7eFAdSbKifNEb7JoF7pQbYAbTIl9Vq+gcoreMuRrrhf2OHyJUqbCKpESKp
-        ESKpESKp0eHcL1FTrmVZt5STAAAAAElFTkSuQmCC
-</value>
   </data>
   <data name="btnTodayAttendance.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -658,27 +644,14 @@ the school decided to deploy the EVinSchool management system.</value>
         ECJCQogICSEiJITYw7l/v083EdXy+igAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="bunifuLabel17.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
+  </data>
   <data name="bunifuLabel16.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 16.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 128, 0); text-align: left; }</value>
   </data>
   <data name="bunifuLabel10.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 24pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(139, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="txtClassname.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAG0AAAApCAYAAAA/MacsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJNSURBVHhe7Zu7ahtBFIanVOkypUs/gsuUKVO6dOO3SJEH
-        CAT8GoF0hlSWtLqsCiEjhNTohgoh1suyXmRZSIsYn18+wQgLB4Njz5j/g1OInd1iPmbmrPYcQz4YxWKx
-        IHFSq9UuJK4qlUpcKpUs43UD84r5lbiU+T6VOFAFL0Nu/CIPSzqdThZFkU3T1C6XS0teH8wr5jeOY9vr
-        9ebVajUNguBMVfwbWBbjv1utVrparfSx5C3J89x2u90b8RCKj0+qZj8qbDKdTtd6P3lHkiSxYRhOxMuh
-        KnoKVhiFuQW2TfFypYp2wRmGLVHHEofo9/u3kl98V1UPiLACkg6eYW6y2Wxso9FIxNORKttKO0XWomOI
-        g4zH41yyyp+qbHuWXSLdJO4yn8+tSBupMmNka5wuFgu9TFwEW2S5XM5VmTHy4w7vBsRt8O+JKjMGP4j7
-        UJqHUJqHUJqHUJqHUJqHUJqHUJqHUJqHUJqHUJqHUJqHUJqHUJqHUJqHUJqHUJqH7EjDZ2x8ziZusyMN
-        DQCs03efHWmoGUcJMnEXFF6hAEuVbbfHb4PBgEvNYWazGUrofqmybbHqYb1eT3muuUu73b4RT19V2QNi
-        8cdwOGSVsYPIKlvLovqjqh5BPb9c6GRZpkOJC6C/QnKOa/GzvztULhyFYRiz2tgNIKzZbKLx4rMq2o8M
-        OBazk9FoxMTkHYmiaK0r7Hlhf5GBBbnhXCynyFrYAvU2oDQf/e3oc5ejqiweXt4wD8tIM4MgyPBix/i/
-        gZ4KWSwXMu8nqoB8DIy5BwbP4CO6WkWdAAAAAElFTkSuQmCC
-</value>
   </data>
   <data name="btn_AddStudent.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -694,15 +667,6 @@ the school decided to deploy the EVinSchool management system.</value>
         tRcOD3DdR5RwuB+3FiOXc20BWsWigxF3FL+AKaCJdukwlbKxMn+T55EJccHERZNO59anr7oTeFJsCXVs
         rIFD4ScFoZQOYB1XbN5dQMBfEgo9AY6G/AfrCEbYAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="lblStudentDate.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 10.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="bunifuLabel17.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(105, 105, 105); text-align: left; }</value>
-  </data>
-  <data name="lbl_ParentName.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 10.8pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="btnManageStudent.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1208,6 +1172,21 @@ the school decided to deploy the EVinSchool management system.</value>
   <data name="bunifuLabel22.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(105, 105, 105); text-align: left; }</value>
   </data>
+  <data name="btn_AddClass.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFoAAAAeCAYAAACsYQl4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIOSURBVGhD7dk7SEJRHMfxu1SX6KFcQxsKx9ZoCVpagqZo
+        CseWdsGlITihvTSpaCoogggclJrCIugxOYVEhEODRYOUxC16CDaczt/+UoL0PEPD7wNnuleHL5d7HtcA
+        AAAA+A+EqYbPsiLblhVONzZO5Q1jXGK8DepBXVyuyL7qNKyGg8P9hOhvbp6+HRiI3cdip/LgICuzWVvC
+        O+pBXba2MtLnSzw4nTN2Q8PkCAf8inC0tMxu9vSs2rncA/8lfIdtF+TQUPxOPeEp1dHDQasRDnXT5crK
+        cZF/C7+QTJ7Ltra5S9XTy2Er0ZOMyHrQK4Xe35z2I9FPrwu+DzTw+5OPap4b58BEmDTx4Z2sV6HwIr3e
+        hVvVt6McephmTb4OGk1MHL00NU3PlzLX109e0BIF9Eunc1L1vS6FpsV3JpPnS6ATvT7eNjhKTU3wkZYk
+        oB89wLW1oadSaNMMjQUCuwW+BhqtraWl0xmOl0LTwrq1NWrTYw569fWt36m+gxyaNiuR6OjoHlYeGm1s
+        nBTd7tkdTlwmTI8neppKXfFt8Be0J3G5Ijeqa7UTPdHR3j6fxwrkbyhyZ+cSbVR6OWw1opsOloLBQ0yO
+        v5BInBX5Sf4scpkwLSu82NW1bNOsia355+h4lM7s6eze7Y4eqX4//QAgemlponY29x+/LGBUjrq60DN9
+        hVK9fBwOAAAAKhnGKyyC+IOUQQCfAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnFind.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAArCAYAAAAkL+tRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1247,23 +1226,7 @@ the school decided to deploy the EVinSchool management system.</value>
   <data name="bunifuLabel21.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 24pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(139, 0, 0); text-align: center; }</value>
   </data>
-  <data name="btnAddMark.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACgAAAAtCAYAAADcMyneAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIySURBVFhH7Zgts4JAFEDf37UYLBaLwWIxWCwWg8ViMFgs
-        BovFYrBYDBaLxWC5b86VZRBZRBG57w1nhhGQj7N39+4HP2KcSjAvlWBe/p/gfr+X2Wwm/X5fer2etFot
-        qdVq3o3/uY6N+7bbbfCkbGQSvFwuMplMpNlsSrfbDV+02+3kdDoFVyXD/1zH5gpWr9dlNBo9vReeCvJQ
-        orBYLOR8Pgdn83G9XmW1Wkm73daCc+zDK0jUKC2C7BcBYhScWvEVPlGQ0NNmXm0v73I4HKTT6ehvnAdB
-        ooVc0sVFQgSRjLfLB0Gq9VuRi3M8HrW6o03qTnA6ncp8Pg+OymG9XstwOAyOIoKEmGxNy6hvEW2PoSDp
-        TkZZYLPZyGAw0H0VJGp0wkV1J++AD7WqgiQFyWGJ8Xgsy+XyJmipeh2umlWwzK7FB10OQ6EK+nrxMiEf
-        Go3GTZAdSwniYLqmguxY5O8IMoG0MILECQXJFrLGEgSMwKkg0yum5JZg2sXcQAVdr20JN7qpIOsDFjGW
-        YKnBpoKuU7SEGzxUEBj3GP8sgBiCEApGT5ZNNFihIFiIYjxQd4JMEFm0ZFnxFwG5wPujffKdIFACLipj
-        ZEmqwQdBoA9KW+1/GiKHHN1dnERBcG2h6BHG1Ziv7XsFgQi6T2c86JPQzln/EoS0eUCqoIMo8iAmFSzu
-        OX6njXIfHwaIGOMsi/RnZBJ0UFJeQESZaTAdemXjPgrIR9CsvCRYBpVgXirBfIj8AkBTSfNFd7QdAAAA
-        AElFTkSuQmCC
-</value>
-  </data>
-  <data name="txt_StudentName_Mark.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txt_StudentName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAO4AAAApCAYAAAAyAxUuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ8SURBVHhe7d29ihphFIDhKS1TptxyLyFlypQpt9wmd5Ei
@@ -1278,6 +1241,22 @@ the school decided to deploy the EVinSchool management system.</value>
         dgXgAp3pFcfxd2n0+JR62XCaJMmUqQaAGzTaRqOhw75eW6bHyQ6vpO7RYDDgYRXwhLIs29iZ9v5of5Ed
         S3LAZyk91ydZjN8EHoeOApJgizRN53LrWpUWj18e30dL18fPYRjO9YdfFov1f5fO8ZKT5oW0d2YZAnge
         guAWbVhzn4qHJ3sAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnAddMark.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACsAAAAuCAYAAACxkOBzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJMSURBVGhD7ZhbSwJBGED7yb300EtEBAX14INQ0YWQiiIh
+        IaEI6UJEhGBgRERBgUFUVFR0gYIvzrizrOuurta4U+yBwV1Zx7Pf3L6ZLvlDJLKmSGRN8b9lLyvXsra1
+        LxNzOUnPZmUgNSPd/alIhWf5DYU6Ts4unVqjEUn27f1DVtZ3pG90UlJTS+4fnV1U5P7xyXmqOTzLbyj6
+        hXsG07KQ24hUT1NZKiUi2/sleX55db79PT4/v+Tg8FiG0hkVEO7DCJUlmrw5slybBkkCQsuFBSVQliah
+        X7Xap36Dq+tbGRmfV59+6mSJIqJBD3cKIouwvx/XydL0cUTUz83dg+oS3i5YI5sv7Elht+jcxU/p6FQy
+        2TXnziNL6Bn1jUZjHHj7ryvLtMFotI3yyblML66qayVLNJnwOzFFtQNutLySZUAxsGxlOb8pe8VyVdbW
+        LqDRXUHJ2jJdhcE0xnKsZMNWDFtgLPUOj1VlubB1cGlIMZUsF7aTyJrClSVbt22Z9ePKMi0wPdgKgSSg
+        Spb8lX2RrZDXkmQpWb2c2YpOB5QsGzZ2mLbCPpCiZPUKYSt6hVWyQKJAwmAbSCILrqz3S5vwBtGVBdui
+        6w9gjSzZODvKKEc5pmEc4eKd/2tkgbfhobhXtKBWrpMF5rVGxzgmIaKIMp36CZQF3V86ubLpVg0bN6Gy
+        QGT1eSoVmYIxwmEGwWmUozSU1RBdKiLh4dSG+5/2aerg9IdIsu5z+tKMSLIa3po/INJkQaRt7Rbq4MU5
+        SY9KS7Jxk8iaIpE1g8g3/iMgZ1shDtYAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuLabel27.BaseStylesheet" xml:space="preserve">
@@ -1695,7 +1674,7 @@ the school decided to deploy the EVinSchool management system.</value>
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJh
-        d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL
+        d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAgD8L
 </value>
   </data>
   <data name="lblTeacherID.BaseStylesheet" xml:space="preserve">
@@ -3796,13 +3775,8 @@ the school decided to deploy the EVinSchool management system.</value>
   <data name="bnf_Dashbroad.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALAAAAAjCAYAAAA0RYCzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFKSURBVHhe7dwtcgJBFEXhlpGRkZGRkSwhEjlu3ExPm7HZ
-        AUuYJSCRWQISiURGIpHkPmgqSRGfuVXnq3r89CBPdaFe+inn3Gg2wzAcNGeGmdEc1OaH3nPN9ds4jo/1
-        4Vqz7Pv+uT4CZiGaLKW8qdNJjW5/NRrxapr6FZg1tbrQ7Nq2fUhxJctUnwEW1Oy72l1dbt+4mus5YKHr
-        uhcFvI+Aj/EfuJ4DNhTw+foCGCJgWCNgWCNgWCNgWCNgWCNgWCNgWCNgWCNgWCNgWCNgWCNgWCNgWCNg
-        WCNgWCNgWCNgWCNgWCNgWCNgWCNgWCNgWLsFfLqs6AHM3ALe5pwX9QywUEp5UrefEfAq9kzVc8CCmm3U
-        7jrF3wd92LNSFS7umtV1/BoHmsyeNMxVDXep23d3t5CyLrmeNEf96K8N2Qzz33NSn5vYTHmtNqUvwwmw
-        Pzy5Oc4AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAvSURBVHhe7cExAQAAAMKg9U9tDQ8gAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAADgXw1gYwABcGHYrQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="bnf_Dashbroad.IdleIconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

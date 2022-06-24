@@ -21,12 +21,16 @@ namespace GUI
         StudyScheduleBUS studyScheduleBUS = new StudyScheduleBUS();
         FoodScheduleBUS foodScheduleBUS = new FoodScheduleBUS();
         string conStr = "server = StudentManagementDB.mssql.somee.com; User ID = baolongsbs_SQLLogin_1; password=7bxn3rbj94;database = StudentManagementDB";
-        string listStudentMark = "SELECT st.StudentName, cl.ClassName, sj.SubjectName, m.Score FROM Student as st, Classroom as cl, Subject as sj, Mark as m WHERE st.StudentClass = cl.ClassId and m.StudentId = st.StudentId and sj.SubjectId = m.SubjectId";
-        string listClasstification = "SELECT st.StudentName, cl.ClassName, cs.Math, cs.Vietnamese, cs.English, cs.Morality, cs.NatureSocial, cs.HistoryGeography, cs.Music, cs.Sports, cs.Arts, cs.AttendanceClass, cs.TotalMark, cs.ClassificationResult FROM Student as st, Classroom as cl, Classification as cs WHERE st.StudentClass = cl.ClassId and cs.StudentId = st.StudentId";
-        string listHSG = "SELECT cl.ClassName, COUNT(case when cs.TotalMark>=8.0 then 1 end) AS HSG, COUNT(case when (cs.TotalMark>=6.0 and cs.TotalMark<8.0) then 1 end) AS HSK "
-                        + "FROM Classroom as cl, Classification as cs, Student as st "
-                        + "WHERE cs.StudentId = st.StudentId and st.StudentClass = cl.ClassId "
-                        + "GROUP BY cl.ClassName";
+        //string listStudentMark = "SELECT st.StudentName, cl.ClassName, sj.SubjectName, m.Score FROM Student as st, Classroom as cl, Subject as sj, Mark as m WHERE st.StudentClass = cl.ClassId and m.StudentId = st.StudentId and sj.SubjectId = m.SubjectId";
+        //string listClasstification = "SELECT st.StudentName, cl.ClassName, cs.Math, cs.Vietnamese, cs.English, cs.Morality, cs.NatureSocial, cs.HistoryGeography, cs.Music, cs.Sports, cs.Arts, cs.AttendanceClass, cs.TotalMark, cs.ClassificationResult FROM Student as st, Classroom as cl, Classification as cs WHERE st.StudentClass = cl.ClassId and cs.StudentId = st.StudentId";
+        string listHSG = "SELECT cl.ClassName, COUNT(case when cs.ClassificationResult = 'Execelent' then 1 end) AS ExecelentStudent, "
+            + "COUNT(case when cs.ClassificationResult = 'Good' then 1 end) AS GoodStudent, "
+            + "COUNT(case when cs.ClassificationResult = 'Average' then 1 end) AS AverageStudent, "
+            + "COUNT(case when cs.ClassificationResult = 'Bad' then 1 end) AS BadStudent, "
+            + "COUNT(st.StudentId) AS Total "
+            + "FROM Classroom as cl, Classification as cs, Student as st "
+            + "WHERE cs.StudentId = st.StudentId and st.StudentClass = cl.ClassId "
+            + "GROUP BY cl.ClassName";
 
         public FrmGuest()
         {

@@ -44,15 +44,23 @@ namespace GUI
             adminpages.PageIndex = 2;
 
             //Information
-            List<Student> students = new StudentBUS().GetAll();
+            loadInformation();
+        }
+        void loadInformation()
+        {
+            int code = Int32.Parse(lblTeacherID.Text.ToString());
+            Teacher teacher = teacherBUS.GetDetails(code);
+            int classcode = (int)teacher.TeacherClass;
+            Classroom cls = classroomBUS.GetDetails(classcode);
+            List<Student> students = new StudentBUS().GetDetailsByClassId((int)teacher.TeacherClass);
             gv_StudentInfo.DataSource = students;
             gv_StudentInfo.Columns[0].Visible = false;
             gv_StudentInfo.Columns[4].Visible = false;
             gv_StudentInfo.Columns[5].Visible = false;
             gv_StudentInfo.Columns[6].Visible = false;
-
+            gv_StudentInfo.Columns[8].Visible = false;
+            txtClassname.Text = cls.ClassName;
         }
-
         private void bnf_Mark_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 3;
@@ -88,8 +96,10 @@ namespace GUI
 
         private void bnf_Classfication_Click(object sender, EventArgs e)
         {
+            Teacher teacher = teacherBUS.GetDetails(Int32.Parse(lblTeacherID.Text.ToString()));
+            Classroom cls = classroomBUS.GetDetails((int)teacher.TeacherClass);
             adminpages.PageIndex = 5;
-            loadClasstificationTable();
+            loadClasstificationTable(cls.ClassId);
         }
 
         private void FrmAdmin_FormClosing(object sender, FormClosingEventArgs e)
@@ -161,6 +171,13 @@ namespace GUI
                     lblStudentClass.Text = student.StudentClass.ToString();
                     lblParentPhone.Text = student.ParentPhone;
                     lblStudentAddress.Text = student.StudentAddress;
+                    string sDate = student.StudentDOB.ToString();
+                    DateTime dValue = (Convert.ToDateTime(sDate.ToString()));
+                    string day = dValue.Day.ToString();
+                    string month = dValue.Month.ToString();
+                    string year = dValue.Year.ToString();
+                    lblStudentDate.Text = "(" + day + "/" + month + "/" + year + ")";
+                    lbl_ParentName.Text = student.ParentName;
                     if (student.StudentImage == null || student.StudentImage == "")
             {
                 pic_StudentAvatar.ImageLocation = @"../../upload/noimage.jpg";
@@ -173,50 +190,11 @@ namespace GUI
             }
         }
 
-        private void drp_StudentFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int value = 1;
-            if (drp_StudentFilter.SelectedIndex > 0)
-            {
-                value = Convert.ToInt32(drp_StudentFilter.SelectedValue.ToString());
-                List<Student> students = new StudentBUS().GetDetailsByClassId(value);
-                gv_StudentInfo.DataSource = students;
-            }
-            else if(drp_StudentFilter.SelectedIndex == -1)
-            {
-                List<Student> students = new StudentBUS().GetAll();
-                gv_StudentInfo.DataSource = students;
-            }
-            else
-            {
-                List<Student> students = new StudentBUS().GetDetailsByClassId(value);
-                gv_StudentInfo.DataSource = students;
-            }
-        }
-
         private void btnManageStudent_Click(object sender, EventArgs e)
         {
-            FrmStudent frmStudent = new FrmStudent(Int32.Parse(lblStudentID.Text));
+            FrmEditStudent_Teacher frmStudent = new FrmEditStudent_Teacher(Int32.Parse(lblStudentID.Text),Int32.Parse(lblTeacherID.Text));
             frmStudent.Owner = this;
             frmStudent.ShowDialog();
-        }
-
-        private void loadClass()
-        {
-            List<Classroom> classrooms = new ClassroomBUS().GetAll();
-            drp_StudentFilter.DataSource = classrooms;
-            drp_StudentFilter.DisplayMember = "ClassName";
-            drp_StudentFilter.ValueMember = "ClassId";
-        }
-
-        private void drp_StudentFilter_DropDown(object sender, EventArgs e)
-        {
-            loadClass();
-        }
-
-        private void drpdown_FoodClass_DropDown(object sender, EventArgs e)
-        {
-            loadClass();
         }
 
 
@@ -252,11 +230,12 @@ namespace GUI
             gv_Mark.DataSource = markJoineds;
         }
 
-        private void loadClasstificationTable()
+        private void loadClasstificationTable(int classId)
         {
-            List<ClasstificationsScoreModel> classtificcationJoineds = new ClassificationBUS().getAllRanked();
+            List<ClasstificationsScoreModel> classtificcationJoineds = new ClassificationBUS().findByClassId(classId);
             gv_Classtification.DataSource = classtificcationJoineds;
             gv_Classtification.Columns[0].Width = 200;
+            gv_Classtification.Columns[1].Visible = false;
             gv_Classtification.Columns[12].DefaultCellStyle.ForeColor = Color.Green;
             gv_Classtification.Columns[13].DefaultCellStyle.ForeColor = Color.Green;
         }
@@ -304,10 +283,9 @@ namespace GUI
             frmAddMark.ShowDialog();
         }
 
-
         private void btn_AddStudent_Click(object sender, EventArgs e)
         {
-            FrmAddedStudent frmAddStudent = new FrmAddedStudent();
+            FrmAddedStudent_Teacher frmAddStudent = new FrmAddedStudent_Teacher(int.Parse(lblTeacherID.Text));
             frmAddStudent.Owner = this;
             frmAddStudent.ShowDialog();
         }

@@ -59,7 +59,7 @@ namespace GUI
                 TeacherPassword = txtPassword.Text.Trim(),
                 TeacherName = txtName.Text.Trim(),
                 TeacherImage = fileName,
-        };
+            };
             if (string.IsNullOrEmpty(txtName.Text))
             {
                 errorProvider1.SetError(txtName, "Your name is left blank");
