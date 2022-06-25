@@ -171,7 +171,6 @@ namespace GUI
             this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblStudentID = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPictureBox4 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.pic_StudentAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel25 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel24 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -217,6 +216,7 @@ namespace GUI
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnTodayAttendance = new Bunifu.Framework.UI.BunifuThinButton2();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pic_StudentAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.bunifuShadowPanel1.SuspendLayout();
@@ -234,7 +234,6 @@ namespace GUI
             this.Students.SuspendLayout();
             this.crd_Sudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_StudentInfo)).BeginInit();
             this.Mark.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Mark)).BeginInit();
@@ -247,6 +246,7 @@ namespace GUI
             this.Attendance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_attendancereports)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuLabel1
@@ -1298,10 +1298,10 @@ namespace GUI
             this.adminpages.Location = new System.Drawing.Point(15, 11);
             this.adminpages.Multiline = true;
             this.adminpages.Name = "adminpages";
-            this.adminpages.Page = this.Attendance;
-            this.adminpages.PageIndex = 7;
-            this.adminpages.PageName = "Attendance";
-            this.adminpages.PageTitle = "Attendance";
+            this.adminpages.Page = this.Students;
+            this.adminpages.PageIndex = 3;
+            this.adminpages.PageName = "Students";
+            this.adminpages.PageTitle = "Students";
             this.adminpages.SelectedIndex = 0;
             this.adminpages.Size = new System.Drawing.Size(797, 497);
             this.adminpages.TabIndex = 21;
@@ -2590,11 +2590,11 @@ namespace GUI
             this.crd_Sudent.BorderRadius = 5;
             this.crd_Sudent.BottomSahddow = false;
             this.crd_Sudent.color = System.Drawing.Color.DarkRed;
+            this.crd_Sudent.Controls.Add(this.pic_StudentAvatar);
             this.crd_Sudent.Controls.Add(this.btnManageStudent);
             this.crd_Sudent.Controls.Add(this.bunifuLabel11);
             this.crd_Sudent.Controls.Add(this.lblStudentID);
             this.crd_Sudent.Controls.Add(this.bunifuPictureBox4);
-            this.crd_Sudent.Controls.Add(this.pic_StudentAvatar);
             this.crd_Sudent.Controls.Add(this.bunifuLabel25);
             this.crd_Sudent.Controls.Add(this.bunifuLabel8);
             this.crd_Sudent.Controls.Add(this.bunifuLabel24);
@@ -2689,23 +2689,6 @@ namespace GUI
             this.bunifuPictureBox4.TabIndex = 19;
             this.bunifuPictureBox4.TabStop = false;
             this.bunifuPictureBox4.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
-            // pic_StudentAvatar
-            // 
-            this.pic_StudentAvatar.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.pic_StudentAvatar.AllowFocused = false;
-            this.pic_StudentAvatar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pic_StudentAvatar.AutoSizeHeight = true;
-            this.pic_StudentAvatar.BorderRadius = 59;
-            this.pic_StudentAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pic_StudentAvatar.Image")));
-            this.pic_StudentAvatar.IsCircle = true;
-            this.pic_StudentAvatar.Location = new System.Drawing.Point(62, 48);
-            this.pic_StudentAvatar.Name = "pic_StudentAvatar";
-            this.pic_StudentAvatar.Size = new System.Drawing.Size(119, 119);
-            this.pic_StudentAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_StudentAvatar.TabIndex = 1;
-            this.pic_StudentAvatar.TabStop = false;
-            this.pic_StudentAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // bunifuLabel25
             // 
@@ -4005,6 +3988,22 @@ namespace GUI
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // pic_StudentAvatar
+            // 
+            this.pic_StudentAvatar.AllowFocused = false;
+            this.pic_StudentAvatar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pic_StudentAvatar.AutoSizeHeight = true;
+            this.pic_StudentAvatar.BorderRadius = 50;
+            this.pic_StudentAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pic_StudentAvatar.Image")));
+            this.pic_StudentAvatar.IsCircle = true;
+            this.pic_StudentAvatar.Location = new System.Drawing.Point(79, 70);
+            this.pic_StudentAvatar.Name = "pic_StudentAvatar";
+            this.pic_StudentAvatar.Size = new System.Drawing.Size(100, 100);
+            this.pic_StudentAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_StudentAvatar.TabIndex = 33;
+            this.pic_StudentAvatar.TabStop = false;
+            this.pic_StudentAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
             // FrmAdminSchool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -4047,7 +4046,6 @@ namespace GUI
             this.crd_Sudent.ResumeLayout(false);
             this.crd_Sudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_StudentInfo)).EndInit();
             this.Mark.ResumeLayout(false);
             this.Mark.PerformLayout();
@@ -4064,6 +4062,7 @@ namespace GUI
             this.Attendance.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_attendancereports)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4140,7 +4139,6 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
         private Bunifu.UI.WinForms.BunifuLabel lblStudentID;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox4;
-        private Bunifu.UI.WinForms.BunifuPictureBox pic_StudentAvatar;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel25;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel24;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel23;
@@ -4189,6 +4187,7 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel32;
         private Bunifu.Framework.UI.BunifuThinButton2 btnManageClassroom;
         private Bunifu.UI.WinForms.BunifuDataGridView gv_Classroom;
+        private Bunifu.UI.WinForms.BunifuPictureBox pic_StudentAvatar;
     }
 }
 

@@ -135,7 +135,26 @@
     <Reference Include="Bunifu.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.Utils.1.0.6\lib\net\Bunifu.Utils.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -275,6 +294,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StudentManagementDBDataSet.cs">
+      <DependentUpon>StudentManagementDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudentManagementDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentManagementDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudentManagementDBDataSetNew.cs">
+      <DependentUpon>StudentManagementDBDataSetNew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudentManagementDBDataSetNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentManagementDBDataSetNew.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Classification_Report.rdlc" />
     <EmbeddedResource Include="FrmAddedStudent_Teacher.resx">
       <DependentUpon>FrmAddedStudent_Teacher.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +389,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RP2.rdlc" />
+    <EmbeddedResource Include="test.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -410,6 +458,19 @@
     <Content Include="images\home.png" />
     <Content Include="images\schedule.png" />
     <Content Include="images\score.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="upload\0df6cd09fe270d795436.jpg" />
     <Content Include="upload\200527_전소민_프로필_013_작업2.jpg" />
     <Content Include="upload\200914_5f5ec57c9f9feA.jpeg" />
@@ -420,6 +481,28 @@
     <Content Include="upload\675fbf80eabf11721c93f345a156b40f.jpg" />
     <Content Include="upload\a7e235172b39d8678128.jpg" />
     <Content Include="upload\actor.jpg" />
+    <None Include="StudentManagementDBDataSet.xsc">
+      <DependentUpon>StudentManagementDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StudentManagementDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentManagementDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentManagementDBDataSet.xss">
+      <DependentUpon>StudentManagementDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StudentManagementDBDataSetNew.xsc">
+      <DependentUpon>StudentManagementDBDataSetNew.xsd</DependentUpon>
+    </None>
+    <None Include="StudentManagementDBDataSetNew.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentManagementDBDataSetNew.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentManagementDBDataSetNew.xss">
+      <DependentUpon>StudentManagementDBDataSetNew.xsd</DependentUpon>
+    </None>
     <None Include="upload\alireza-attari-SBIak0pKUIE-unsplash.jpg" />
     <Content Include="upload\c578ff927732846cdd23.jpg" />
     <Content Include="upload\Crying Wojak.jpg" />
