@@ -177,17 +177,23 @@
     <Compile Include="FrmAddMark.Designer.cs">
       <DependentUpon>FrmAddMark.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAdminAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminAttendance.Designer.cs">
+      <DependentUpon>FrmAdminAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAdminSchool.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAdminSchool.Designer.cs">
       <DependentUpon>FrmAdminSchool.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAttendace.cs">
+    <Compile Include="FrmAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAttendace.Designer.cs">
-      <DependentUpon>FrmAttendace.cs</DependentUpon>
+    <Compile Include="FrmAttendance.Designer.cs">
+      <DependentUpon>FrmAttendance.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmClass.cs">
       <SubType>Form</SubType>
@@ -281,11 +287,14 @@
     <EmbeddedResource Include="FrmAddMark.resx">
       <DependentUpon>FrmAddMark.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminAttendance.resx">
+      <DependentUpon>FrmAdminAttendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAdminSchool.resx">
       <DependentUpon>FrmAdminSchool.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAttendace.resx">
-      <DependentUpon>FrmAttendace.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAttendance.resx">
+      <DependentUpon>FrmAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClass.resx">
       <DependentUpon>FrmClass.cs</DependentUpon>

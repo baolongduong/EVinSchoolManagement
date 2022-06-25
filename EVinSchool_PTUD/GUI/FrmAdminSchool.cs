@@ -64,14 +64,6 @@ namespace GUI
             adminpages.PageIndex = 3;
 
 
-            //Student Information
-            List<Student> students = new StudentBUS().GetAll();
-            gv_StudentInfo.DataSource = students;
-            gv_StudentInfo.Columns[0].Visible = false;
-            gv_StudentInfo.Columns[4].Visible = false;
-            gv_StudentInfo.Columns[5].Visible = false;
-            gv_StudentInfo.Columns[8].Visible = false;
-
         }
 
         private void bnf_Mark_Click(object sender, EventArgs e)
@@ -115,17 +107,7 @@ namespace GUI
         private void bnf_Attendance_Click(object sender, EventArgs e)
         {
             adminpages.PageIndex = 7;
-            //Attendance
-            List<Attendance> att = new AttendanceBUS().GetAll();
-            gv_attendancereports.DataSource = att;
-            gv_attendancereports.Columns[0].Visible = false;
-            gv_attendancereports.Columns[3].Visible = false;
-            gv_attendancereports.Columns[4].Visible = false;
-            gv_attendancereports.Columns[5].Visible = false;
-            gv_attendancereports.Columns[7].Visible = false;
-            gv_attendancereports.Columns[8].Visible = false;
-            gv_attendancereports.Columns[9].Visible = false;
-            gv_attendancereports.Columns[10].Visible = false;
+           
         }
         private void btnAdminInfo_Click(object sender, EventArgs e)
         {
@@ -162,6 +144,28 @@ namespace GUI
             gv_Teacher.Columns[4].Visible = false;
             gv_Teacher.Columns[5].Visible = false;
             gv_Teacher.Columns[6].Visible = false;
+
+            //Student Information
+            List<Student> students = new StudentBUS().GetAll();
+            gv_StudentInfo.DataSource = students;
+            gv_StudentInfo.Columns[0].Visible = false;
+            gv_StudentInfo.Columns[4].Visible = false;
+            gv_StudentInfo.Columns[5].Visible = false;
+            gv_StudentInfo.Columns[8].Visible = false;
+
+            //Attendance
+            List<Attendance> att = new AttendanceBUS().GetAll();
+            gv_attendancereports.DataSource = att;
+            gv_attendancereports.Columns[0].Visible = false;
+            gv_attendancereports.Columns[3].Visible = false;
+            gv_attendancereports.Columns[4].Visible = false;
+            gv_attendancereports.Columns[5].Visible = false;
+            gv_attendancereports.Columns[7].Visible = false;
+            gv_attendancereports.Columns[8].Visible = false;
+            gv_attendancereports.Columns[9].Visible = false;
+            gv_attendancereports.Columns[10].Visible = false;
+
+
 
         }
 
@@ -554,7 +558,7 @@ namespace GUI
 
         private void btnTodayAttendance_Click(object sender, EventArgs e)
         {
-            FrmAttendace frmattendace = new FrmAttendace();
+            FrmAdminAttendance frmattendace = new FrmAdminAttendance();
             frmattendace.Owner = this;
             frmattendace.Show();
         }

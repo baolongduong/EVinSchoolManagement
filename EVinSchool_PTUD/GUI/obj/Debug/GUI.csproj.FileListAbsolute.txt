@@ -196,7 +196,6 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.exe
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.pdb
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddedStudent.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddMark.resources
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAttendace.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmClass.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAdminSchool.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmLoginAdmin.resources
@@ -204,7 +203,6 @@ D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmEditAttendance.reso
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.xml
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Telerik.WinControls.UI.xml
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddMark_Teacher.resources
-D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmEditStudentTeacher.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAddedStudent_Teacher.resources
 D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmTeacherSchool.resources
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\PTPMUD GITHUB\EVinSchoolManagement\EVinSchool_PTUD\GUI\bin\Debug\Bunifu.Licensing.dll
@@ -402,3 +400,6 @@ C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\New folder\GUI\obj\Debug\
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\New folder\GUI\obj\Debug\GUI.exe
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\New folder\GUI\obj\Debug\GUI.pdb
 C:\Users\Admin\Dropbox\My PC (LAPTOP-LGHU5JJA)\Desktop\New folder\GUI\obj\Debug\GUI.FrmEditStudent_Teacher.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAdminAttendance.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmEditStudent_Teacher.resources
+D:\EVinSchoolManagement\EVinSchool_PTUD\GUI\obj\Debug\GUI.FrmAttendance.resources

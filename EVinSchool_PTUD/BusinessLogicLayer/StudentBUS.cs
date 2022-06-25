@@ -39,7 +39,11 @@ namespace BusinessLogicLayer
             List<Student> students = new StudentDAO().SelectByKeyword(keyword);
             return students;
         }
-
+        public List<Student> SelectByKeyWordClass(string keyword, int classId)
+        {
+            List<Student> classrooms = new StudentDAO().SelectByKeyWordClass(keyword,classId);
+            return classrooms;
+        }
         public bool Insert(Student newStudent)
         {
             bool result = new StudentDAO().Insert(newStudent);

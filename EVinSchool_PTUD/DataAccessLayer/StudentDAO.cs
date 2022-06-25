@@ -38,6 +38,11 @@ namespace DataAccessLayer
             List<Student> classrooms = db.Students.Where(b => b.StudentName.Contains(keyword)).ToList();
             return classrooms;
         }
+        public List<Student> SelectByKeyWordClass(string keyword,int classId)
+        {
+            List<Student> classrooms = db.Students.Where(b => b.StudentName.Contains(keyword) && b.StudentClass == classId).ToList();
+            return classrooms;
+        }
 
         public bool Insert(Student newStudent)
         {
