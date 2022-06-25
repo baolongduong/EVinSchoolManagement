@@ -184,13 +184,13 @@ namespace GUI
                     string year = dValue.Year.ToString();
                     lblStudentDate.Text = "(" + day + "/" + month + "/" + year + ")";
                     if (student.StudentImage == null || student.StudentImage == "")
-            {
-                pic_StudentAvatar.ImageLocation = @"../../upload/noimage.jpg";
-            }
-            else
-            {
-                pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
-            }
+                    {
+                        pic_StudentAvatar.ImageLocation = @"../../upload/noimage.jpg";
+                    }
+                    else
+                    {
+                        pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
+                    }
                 }
             }
         }

@@ -356,7 +356,7 @@ namespace GUI
                     {
                         pic_StudentAvatar.ImageLocation = @"../../upload/" + student.StudentImage;
                     }
-                  
+
                 }
             }
         }
