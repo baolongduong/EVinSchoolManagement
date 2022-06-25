@@ -650,26 +650,6 @@
         rIFD4ScFoZQOYB1XbN5dQMBfEgo9AY6G/AfrCEbYAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnManageStudent.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADQAAAAfCAYAAACoE+4eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHZSURBVFhH7ZjNSgJRGIa7UDdu3LjJRS5qUYtaFIQQLsIL
-        CAxs4QW0cOPGKK0mSkwppsSf1HTKpPjiOTOa4lSbyHPKF14QRuech3O+Pxf6fZG/5DmQ7p4D6e7/BfTU
-        HUg1k5XSTlwu1zeksBiRo0Dg1826rF/cjkn1MCPOg+O7X/wpUCOXVy8qx+PSzGbl0bLkpV6XWYh1Wb+V
-        y0klkZDTSESB+e17Cgj6692EXG1uyaDd9l6pl14dR4Gxx16tPbH/CSBgrOUVaWQy3k/1Viefl4vVNena
-        dX8gTsYUmKG4isTXFBAxwxGaKDuZlNuD9AcQ2YwEoGvMfKe3wUCFSqdsu0BkDILMZN2n03Kzl3SByO+k
-        RJPlVCrqlBRQIRyWZ9v2Hpkprt1xMOgC8WFWRfMnRVehgMhu5HSTxQ07W4q6QKQ8Up/Jon5SRxUQlfY8
-        GlX30FSVYjGpZXMukDql/ZTcpVLeY7NE88xEAMcIiOJKC9ErFr2vmSGaAWJnOFKMgDCVllxuSgoHhkNo
-        5q0RwwQQbllFBUXl1Vk0ApzMOAyeAsJcP9oI6MkeuvR4zEHEC0Mn3Y3f5OoLNDT0pEI6ifGReFY+CYVU
-        8PO3gN9+8ZdAJnoOpLvnQHpb5B2M3UoqtWkhAwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="bunifuLabel11.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(105, 105, 105); text-align: left; }</value>
-  </data>
-  <data name="lblStudentID.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 10.8pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
   <data name="pic_StudentAvatar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAABGdBTUEAALGPC/xhBQAAAjpQTFRFxtr8
@@ -738,6 +718,26 @@
         IwDOEQDnCIBzBMA5AuAcAXCOADhHAJwjAM4RAOcIgHMEwDkC4BwBcI4AOEcAnCMAzgULQJ8+/wLcsCN4
         fyerrQAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="btnManageStudent.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADQAAAAfCAYAAACoE+4eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHZSURBVFhH7ZjNSgJRGIa7UDdu3LjJRS5qUYtaFIQQLsIL
+        CAxs4QW0cOPGKK0mSkwppsSf1HTKpPjiOTOa4lSbyHPKF14QRuech3O+Pxf6fZG/5DmQ7p4D6e7/BfTU
+        HUg1k5XSTlwu1zeksBiRo0Dg1826rF/cjkn1MCPOg+O7X/wpUCOXVy8qx+PSzGbl0bLkpV6XWYh1Wb+V
+        y0klkZDTSESB+e17Cgj6692EXG1uyaDd9l6pl14dR4Gxx16tPbH/CSBgrOUVaWQy3k/1Viefl4vVNena
+        dX8gTsYUmKG4isTXFBAxwxGaKDuZlNuD9AcQ2YwEoGvMfKe3wUCFSqdsu0BkDILMZN2n03Kzl3SByO+k
+        RJPlVCrqlBRQIRyWZ9v2Hpkprt1xMOgC8WFWRfMnRVehgMhu5HSTxQ07W4q6QKQ8Up/Jon5SRxUQlfY8
+        GlX30FSVYjGpZXMukDql/ZTcpVLeY7NE88xEAMcIiOJKC9ErFr2vmSGaAWJnOFKMgDCVllxuSgoHhkNo
+        5q0RwwQQbllFBUXl1Vk0ApzMOAyeAsJcP9oI6MkeuvR4zEHEC0Mn3Y3f5OoLNDT0pEI6ifGReFY+CYVU
+        8PO3gN9+8ZdAJnoOpLvnQHpb5B2M3UoqtWkhAwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuLabel11.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(105, 105, 105); text-align: left; }</value>
+  </data>
+  <data name="lblStudentID.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 10.8pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <data name="bunifuLabel25.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(105, 105, 105); text-align: left; }</value>
