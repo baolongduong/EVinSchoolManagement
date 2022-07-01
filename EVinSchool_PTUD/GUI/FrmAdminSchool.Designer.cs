@@ -167,6 +167,7 @@ namespace GUI
             this.Students = new System.Windows.Forms.TabPage();
             this.btn_AddStudent = new Bunifu.Framework.UI.BunifuThinButton2();
             this.crd_Sudent = new Bunifu.Framework.UI.BunifuCards();
+            this.pic_StudentAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.btnManageStudent = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblStudentID = new Bunifu.UI.WinForms.BunifuLabel();
@@ -214,9 +215,9 @@ namespace GUI
             this.gv_attendancereports = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuLabel16 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btnReport = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnTodayAttendance = new Bunifu.Framework.UI.BunifuThinButton2();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pic_StudentAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.bunifuShadowPanel1.SuspendLayout();
@@ -233,6 +234,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.gv_Classtification)).BeginInit();
             this.Students.SuspendLayout();
             this.crd_Sudent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_StudentInfo)).BeginInit();
             this.Mark.SuspendLayout();
@@ -246,7 +248,6 @@ namespace GUI
             this.Attendance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_attendancereports)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuLabel1
@@ -1298,10 +1299,10 @@ namespace GUI
             this.adminpages.Location = new System.Drawing.Point(15, 11);
             this.adminpages.Multiline = true;
             this.adminpages.Name = "adminpages";
-            this.adminpages.Page = this.Students;
-            this.adminpages.PageIndex = 3;
-            this.adminpages.PageName = "Students";
-            this.adminpages.PageTitle = "Students";
+            this.adminpages.Page = this.Attendance;
+            this.adminpages.PageIndex = 7;
+            this.adminpages.PageName = "Attendance";
+            this.adminpages.PageTitle = "Attendance";
             this.adminpages.SelectedIndex = 0;
             this.adminpages.Size = new System.Drawing.Size(797, 497);
             this.adminpages.TabIndex = 21;
@@ -2614,6 +2615,22 @@ namespace GUI
             this.crd_Sudent.Size = new System.Drawing.Size(234, 385);
             this.crd_Sudent.TabIndex = 31;
             // 
+            // pic_StudentAvatar
+            // 
+            this.pic_StudentAvatar.AllowFocused = false;
+            this.pic_StudentAvatar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pic_StudentAvatar.AutoSizeHeight = true;
+            this.pic_StudentAvatar.BorderRadius = 50;
+            this.pic_StudentAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pic_StudentAvatar.Image")));
+            this.pic_StudentAvatar.IsCircle = true;
+            this.pic_StudentAvatar.Location = new System.Drawing.Point(79, 70);
+            this.pic_StudentAvatar.Name = "pic_StudentAvatar";
+            this.pic_StudentAvatar.Size = new System.Drawing.Size(100, 100);
+            this.pic_StudentAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_StudentAvatar.TabIndex = 33;
+            this.pic_StudentAvatar.TabStop = false;
+            this.pic_StudentAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
             // btnManageStudent
             // 
             this.btnManageStudent.ActiveBorderThickness = 1;
@@ -3257,7 +3274,7 @@ namespace GUI
             this.txt_StudentName.IconRight = null;
             this.txt_StudentName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_StudentName.Lines = new string[0];
-            this.txt_StudentName.Location = new System.Drawing.Point(6, 26);
+            this.txt_StudentName.Location = new System.Drawing.Point(6, 20);
             this.txt_StudentName.MaxLength = 32767;
             this.txt_StudentName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_StudentName.Modified = false;
@@ -3293,7 +3310,7 @@ namespace GUI
             this.txt_StudentName.SelectionLength = 0;
             this.txt_StudentName.SelectionStart = 0;
             this.txt_StudentName.ShortcutsEnabled = true;
-            this.txt_StudentName.Size = new System.Drawing.Size(238, 41);
+            this.txt_StudentName.Size = new System.Drawing.Size(238, 40);
             this.txt_StudentName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_StudentName.TabIndex = 104;
             this.txt_StudentName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -3854,6 +3871,7 @@ namespace GUI
             this.Attendance.Controls.Add(this.gv_attendancereports);
             this.Attendance.Controls.Add(this.bunifuLabel16);
             this.Attendance.Controls.Add(this.bunifuLabel10);
+            this.Attendance.Controls.Add(this.btnReport);
             this.Attendance.Controls.Add(this.btnTodayAttendance);
             this.Attendance.Location = new System.Drawing.Point(4, 4);
             this.Attendance.Name = "Attendance";
@@ -3958,6 +3976,32 @@ namespace GUI
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // btnReport
+            // 
+            this.btnReport.ActiveBorderThickness = 1;
+            this.btnReport.ActiveCornerRadius = 20;
+            this.btnReport.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnReport.ActiveForecolor = System.Drawing.Color.White;
+            this.btnReport.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnReport.BackColor = System.Drawing.Color.White;
+            this.btnReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReport.BackgroundImage")));
+            this.btnReport.ButtonText = "Report";
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnReport.IdleBorderThickness = 1;
+            this.btnReport.IdleCornerRadius = 20;
+            this.btnReport.IdleFillColor = System.Drawing.Color.White;
+            this.btnReport.IdleForecolor = System.Drawing.Color.DarkRed;
+            this.btnReport.IdleLineColor = System.Drawing.Color.IndianRed;
+            this.btnReport.Location = new System.Drawing.Point(628, 92);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(5);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(132, 33);
+            this.btnReport.TabIndex = 22;
+            this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // btnTodayAttendance
             // 
             this.btnTodayAttendance.ActiveBorderThickness = 1;
@@ -3976,7 +4020,7 @@ namespace GUI
             this.btnTodayAttendance.IdleFillColor = System.Drawing.Color.White;
             this.btnTodayAttendance.IdleForecolor = System.Drawing.Color.DarkRed;
             this.btnTodayAttendance.IdleLineColor = System.Drawing.Color.IndianRed;
-            this.btnTodayAttendance.Location = new System.Drawing.Point(628, 91);
+            this.btnTodayAttendance.Location = new System.Drawing.Point(486, 91);
             this.btnTodayAttendance.Margin = new System.Windows.Forms.Padding(5);
             this.btnTodayAttendance.Name = "btnTodayAttendance";
             this.btnTodayAttendance.Size = new System.Drawing.Size(132, 33);
@@ -3987,22 +4031,6 @@ namespace GUI
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // pic_StudentAvatar
-            // 
-            this.pic_StudentAvatar.AllowFocused = false;
-            this.pic_StudentAvatar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pic_StudentAvatar.AutoSizeHeight = true;
-            this.pic_StudentAvatar.BorderRadius = 50;
-            this.pic_StudentAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pic_StudentAvatar.Image")));
-            this.pic_StudentAvatar.IsCircle = true;
-            this.pic_StudentAvatar.Location = new System.Drawing.Point(79, 70);
-            this.pic_StudentAvatar.Name = "pic_StudentAvatar";
-            this.pic_StudentAvatar.Size = new System.Drawing.Size(100, 100);
-            this.pic_StudentAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_StudentAvatar.TabIndex = 33;
-            this.pic_StudentAvatar.TabStop = false;
-            this.pic_StudentAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // FrmAdminSchool
             // 
@@ -4045,6 +4073,7 @@ namespace GUI
             this.Students.PerformLayout();
             this.crd_Sudent.ResumeLayout(false);
             this.crd_Sudent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_StudentInfo)).EndInit();
             this.Mark.ResumeLayout(false);
@@ -4062,7 +4091,6 @@ namespace GUI
             this.Attendance.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_attendancereports)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_StudentAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4187,6 +4215,7 @@ namespace GUI
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel32;
         private Bunifu.Framework.UI.BunifuThinButton2 btnManageClassroom;
         private Bunifu.UI.WinForms.BunifuDataGridView gv_Classroom;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnReport;
         private Bunifu.UI.WinForms.BunifuPictureBox pic_StudentAvatar;
     }
 }

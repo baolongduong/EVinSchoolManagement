@@ -117,42 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ClassificationBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>435, 17</value>
-  </metadata>
-  <metadata name="StudentManagementDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>161, 17</value>
-  </metadata>
-  <metadata name="studentManagementDBDataSetNewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 60</value>
-  </metadata>
-  <metadata name="StudentManagementDBDataSetNew.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>914, 17</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnReport.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAF4AAAAnCAYAAACG//9nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACDSURBVGhD7dChAYAwAMAwLtnL8B9n4Dc4AAs1EVF13cYx
+        z3GsxZ/m+Yx/C3zN+IjxEeMjxkeMjxgfMT5ifMT4iPER4yPGR4yPGB8xPmJ8xPiI8RHjI8ZHjI8YHzE+
+        YnzE+IjxEeMjxkeMjxgfMT5ifMT4iPER4yPGR7axz+st8KF9XjfgjkTtqP1mtgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(128, 0, 0); text-align: left; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Garamond'; font-size: 16.2pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(128, 0, 0); text-align: left; }</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnLoad.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAC8AAAAnCAYAAACfdBHBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAItSURBVFhH7Zk/SwNBEMWvtLS0uMtZWlpaWlqJjWBpKX4C
-        SwsLQXDvoljYiLVfwMpWrFIGLAIWIWIUjeLfkFnf7K3IhTHGmGQ3kAc/Uuze7LuZvb3xDP6iOKW5SOnN
-        QkLnoBQlVC8kWvdKdj2VTCzEDVNasEv1R7HSk1jkEDSilO4lE/2C42OdZpzQCdadthZ6U2FXbyPYfaRa
-        TWmxQWLWRdLiIz1h7XQnzjZKeREqepUCDwtOGqpxGe/rKWuts7hcMF4OE3qXAroAFajB16y1KMtmvCwF
-        cE2k6Kbjc2C2ikcZbwcVqHCCrd1vRUUqhqrldI//Bvx9IMGn1nImfiBQloZ0gW9EiX7I7X8+klwchz2j
-        6MwY53MU5h/FSd5Cz+b45FfyoN+c/YeekfA1PmEO5Amew1sH5tFkCYPeQ9UAp0xFHvQdeuHMv8iD/gPz
-        8sAoMDbvirF5V4zNu4I7ytHpJttA5qkqDfgOJ53Nl6RB34H5elBI6Vga9B86R2OmV9GcPckT/AR+m+Eu
-        bWWf8xS9SZN8Jfd3LDf20iRf4TbeGGfxXfDdSBM95CFUeslazzQq2c9l/Uvm201KV9IFvgB/13FRz1jL
-        eWXbp3UrXegeusPvsrUqK9qjRf9ugO7ChNatxc7KKkA1OdBw4a2C384Zbxc/A1nr4OaDFJLX4Ifzxz3e
-        jVCFeQ5igg2hA+Wvd9y3YJusWAv/F2cA74INrsZgbsLE3eH/ONolf1EQfALLiCs1TSgzeQAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
-  <metadata name="ClassificationTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>678, 17</value>
-  </metadata>
 </root>

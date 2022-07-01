@@ -572,5 +572,12 @@ namespace GUI
         {
 
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            ReportOfAttendance frmattendace = new ReportOfAttendance();
+            frmattendace.Owner = this;
+            frmattendace.Show();
+        }
     }
 }
